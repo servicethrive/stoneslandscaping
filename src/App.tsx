@@ -20,7 +20,7 @@ import DesignProcess from "./pages/DesignProcess";
 import OurProcess from "./pages/OurProcess";
 import Contact from "./pages/Contact";
 import ServiceAreas from "./pages/ServiceAreas";
-import SanJose from "./pages/SanJose";
+
 import Atherton from "./pages/Atherton";
 import LosGatos from "./pages/LosGatos";
 import Saratoga from "./pages/Saratoga";
@@ -58,7 +58,7 @@ const App = () => (
           <Route path="/our-process" element={<OurProcess />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/service-areas" element={<ServiceAreas />} />
-          <Route path="/service-areas/san-jose" element={<SanJose />} />
+          
           <Route path="/service-areas/atherton" element={<Atherton />} />
           <Route path="/service-areas/los-gatos" element={<LosGatos />} />
           <Route path="/service-areas/saratoga" element={<Saratoga />} />
