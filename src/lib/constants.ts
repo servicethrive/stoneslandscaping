@@ -19,7 +19,7 @@ export const SERVICES = [
     title: "Pavers",
     path: "/pavers",
     description: "Custom paver patios, walkways, and driveways built with premium materials and backed by a 20-year warranty.",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+    image: "/images/pavers-service.jpg",
   },
   {
     title: "Hardscape",
