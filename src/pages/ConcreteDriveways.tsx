@@ -15,7 +15,7 @@ const ConcreteDriveways = () => {
 
   const concreteTypes = [
     { name: "Standard Brushed Concrete", desc: "Clean, durable, and cost-effective. A brushed finish with proper reinforcement and control joints delivers the reliable, professional look that most Bay Area homes need — and it performs beautifully for decades." },
-    { name: "Stamped Concrete", desc: "Textured patterns that replicate the look of natural stone, brick, slate, or flagstone. Stamped concrete adds distinctive visual character to your driveway at a fraction of the cost of natural materials — a popular upgrade for homes in the $1.5M–$5M range." },
+    { name: "Stamped Concrete", desc: "Textured patterns that replicate the look of natural stone, brick, slate, or flagstone. Stamped concrete adds distinctive visual character to your driveway at a fraction of the cost of natural materials — a popular upgrade for homeowners seeking visual impact." },
     { name: "Colored & Stained Concrete", desc: "Integral color mixed throughout the concrete for a consistent, fade-resistant tone, or acid stains applied after curing for rich, variegated earth tones. Available in a range of colors to complement your home's exterior palette." },
   ];
 
