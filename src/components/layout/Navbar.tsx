@@ -32,7 +32,7 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center gap-1">
           {/* Services Mega Menu */}
           <div
-            className="relative"
+            className="relative pb-2"
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
@@ -42,7 +42,7 @@ const Navbar = () => {
               Services <ChevronDown className={`h-3.5 w-3.5 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
             </button>
             {servicesOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[520px] bg-white rounded-sm shadow-2xl border border-border/60 p-6">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[520px] bg-white rounded-sm shadow-2xl border border-border/60 pt-2 px-6 pb-6">
                 <div className="grid grid-cols-2 gap-x-6 gap-y-1">
                   {SERVICES.map((s) => (
                     <Link
@@ -93,7 +93,7 @@ const Navbar = () => {
             {BUSINESS.phone}
           </a>
           <Button asChild className="text-xs px-6 py-5 tracking-widest uppercase font-semibold font-body">
-            <Link to="/contact">Free Estimate</Link>
+            <Link to="/contact">Get A Free Estimate</Link>
           </Button>
         </div>
 
@@ -145,7 +145,7 @@ const Navbar = () => {
               <Phone className="h-4 w-4" /> {BUSINESS.phone}
             </a>
             <Button asChild className="w-full mt-3 text-xs tracking-widest uppercase font-semibold py-5">
-              <Link to="/contact" onClick={() => setMobileOpen(false)}>Get Free Estimate</Link>
+              <Link to="/contact" onClick={() => setMobileOpen(false)}>Get A Free Estimate</Link>
             </Button>
           </div>
         </div>
