@@ -32,6 +32,7 @@ import PatioWalkways from "./pages/PatioWalkways";
 import PergolasShade from "./pages/PergolasShade";
 import PaversVsConcrete from "./pages/PaversVsConcrete";
 import ArtificialTurfVsSod from "./pages/ArtificialTurfVsSod";
+import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
