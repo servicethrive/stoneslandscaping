@@ -6,6 +6,7 @@ import TrustBar from "@/components/sections/TrustBar";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
+import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS } from "@/lib/constants";
 import { CheckCircle } from "lucide-react";
 
@@ -26,7 +27,7 @@ const Pavers = () => {
     <Layout>
       <HeroSection
         title="Custom Paver Installations for Bay Area Homes"
-        subtitle={`Premium paver patios, walkways, and driveways crafted with the finest materials and backed by our ${BUSINESS.paverWarrantyYears}-year warranty. From $1.5M San Jose properties to $20M Atherton estates — built with precision.`}
+        subtitle={`Premium paver patios, walkways, and driveways crafted with the finest materials and backed by our ${BUSINESS.paverWarrantyYears}-year warranty — for Bay Area homes of every size and style, built with precision.`}
         backgroundImage={IMAGES.pavers}
       />
       <TrustBar />
@@ -39,20 +40,29 @@ const Pavers = () => {
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             Pavers are one of the most versatile and durable materials for outdoor surfaces. Whether you're building a sprawling backyard entertainment patio, replacing a front walkway to enhance curb appeal, or upgrading your driveway with an estate-quality finish, pavers offer a level of design flexibility and longevity that standard concrete simply cannot match.
           </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            At {BUSINESS.name}, paver installation is one of our core specialties. Every project starts with proper excavation and grading, followed by a compacted aggregate base, leveling sand, and precision-placed pavers with edge restraint and polymeric sand joints. The result is a surface that stays flat, drains correctly, and holds up for decades — not years.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            We've installed pavers across hundreds of residential properties in San Jose, Atherton, Los Gatos, Saratoga, and throughout Santa Clara County. Each project receives the same meticulous attention to detail: correct base depth, proper slope for drainage, clean cuts, and a finished product that looks precise and intentional. Our clients include homeowners in some of Silicon Valley's most prestigious neighborhoods — from Atherton estates to custom homes in the Los Gatos hills.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            The Bay Area's unique climate — warm, dry summers and cool, wet winters — demands a paver installation approach that accounts for temperature shifts, moisture, and soil movement. We design every base system to handle these conditions, ensuring your patio, walkway, or driveway performs beautifully through every season without cracking, shifting, or settling.
-          </p>
           <p className="text-muted-foreground leading-relaxed font-light">
-            Whether your project calls for a grand paver patio surrounding a custom fire pit, an elegant front entry walkway with natural stone borders, or a complete driveway transformation with interlocking pavers, our team brings the experience, equipment, and craftsmanship to deliver results that exceed expectations.
+            At {BUSINESS.name}, paver installation is one of our core specialties. Every project starts with proper excavation and grading, followed by a compacted aggregate base, leveling sand, and precision-placed pavers with edge restraint and polymeric sand joints. The result is a surface that stays flat, drains correctly, and holds up for decades — not years.
           </p>
         </div>
       </section>
+
+      <ZigZagSection items={[
+        {
+          title: "Hundreds of Bay Area Projects Completed",
+          text: "We've installed pavers across hundreds of residential properties in San Jose, Atherton, Los Gatos, Saratoga, and throughout Santa Clara County. Each project receives the same meticulous attention to detail: correct base depth, proper slope for drainage, clean cuts, and a finished product that looks precise and intentional. Our clients include homeowners in some of Silicon Valley's most prestigious neighborhoods.",
+          image: IMAGES.zigzag1,
+        },
+        {
+          title: "Built for Bay Area Conditions",
+          text: "The Bay Area's unique climate — warm, dry summers and cool, wet winters — demands a paver installation approach that accounts for temperature shifts, moisture, and soil movement. We design every base system to handle these conditions, ensuring your patio, walkway, or driveway performs beautifully through every season without cracking, shifting, or settling.",
+          image: IMAGES.zigzag2,
+        },
+        {
+          title: "Every Project, Every Scale",
+          text: "Whether your project calls for a grand paver patio surrounding a custom fire pit, an elegant front entry walkway with natural stone borders, or a complete driveway transformation with interlocking pavers, our team brings the experience, equipment, and craftsmanship to deliver results that exceed expectations.",
+          image: IMAGES.zigzag3,
+        },
+      ]} />
 
       {/* Materials */}
       <section className="py-20 lg:py-28 bg-brand-cream">

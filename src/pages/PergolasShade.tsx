@@ -5,6 +5,7 @@ import TrustBar from "@/components/sections/TrustBar";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
+import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS } from "@/lib/constants";
 import { CheckCircle } from "lucide-react";
 
@@ -34,22 +35,26 @@ const PergolasShade = () => {
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Pergolas That Define Your Outdoor Living Experience</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
-            A pergola transforms an open patio or deck into a defined outdoor room. It provides filtered shade, creates vertical architectural interest, and establishes a focal point that anchors your entire outdoor living space. Whether freestanding in the center of your backyard or attached to your home as a seamless extension, a well-designed pergola adds both daily function and lasting character to your property.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            In the Bay Area, where outdoor living is a year-round reality, pergolas solve a practical problem that many homeowners face: how to enjoy your patio comfortably during the warm months without retreating indoors. The afternoon sun in San Jose, Saratoga, and the South Bay can make an uncovered patio unusable from noon to five. A pergola with the right rafter spacing or a louvered roof system gives you control over sun exposure while keeping the space open and airy.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            At {BUSINESS.name}, we build custom pergolas and shade structures as part of larger outdoor renovation projects. Our pergola builds are designed and integrated with the surrounding hardscape, landscape, and outdoor features — not bolted on as afterthoughts. We recently built a cedar pergola over a complete outdoor kitchen for a homeowner in Los Gatos. The structure incorporated recessed LED lighting, a ceiling fan, and electrical outlets — making the space functional for evening entertaining long after the sun goes down.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            We work with premium materials: western red cedar, redwood, powder-coated aluminum, and engineered wood products. Each material offers different benefits in terms of maintenance, longevity, and aesthetic — and we help you choose the right one based on your property's architecture, your design preferences, and your budget. Every pergola we build includes proper post footings, engineered connections, and structural hardware rated for the loads and wind conditions in your area.
+            A pergola transforms an open patio or deck into a defined outdoor room. It provides filtered shade, creates vertical architectural interest, and establishes a focal point that anchors your entire outdoor living space.
           </p>
           <p className="text-muted-foreground leading-relaxed font-light">
-            Whether you're looking for a simple garden pergola to frame a walkway, a grand patio cover with integrated lighting and fans, or a modern louvered roof system that opens and closes at the push of a button — we design and build shade structures that are as beautiful as they are functional.
+            In the Bay Area, where outdoor living is a year-round reality, pergolas solve a practical problem: how to enjoy your patio comfortably during the warm months without retreating indoors.
           </p>
         </div>
       </section>
+
+      <ZigZagSection items={[
+        {
+          title: "Integrated Design, Not Afterthoughts",
+          text: `At ${BUSINESS.name}, we build custom pergolas and shade structures as part of larger outdoor renovation projects. Our pergola builds are designed and integrated with the surrounding hardscape, landscape, and outdoor features — not bolted on as afterthoughts. We recently built a cedar pergola over a complete outdoor kitchen for a homeowner in Los Gatos with recessed LED lighting, a ceiling fan, and electrical outlets.`,
+          image: IMAGES.zigzag3,
+        },
+        {
+          title: "Premium Materials & Engineering",
+          text: "We work with premium materials: western red cedar, redwood, powder-coated aluminum, and engineered wood products. Every pergola we build includes proper post footings, engineered connections, and structural hardware rated for the loads and wind conditions in your area.",
+          image: IMAGES.zigzag1,
+        },
+      ]} />
 
       <section className="py-20 lg:py-28 bg-brand-cream">
         <div className="container mx-auto px-4 max-w-5xl">

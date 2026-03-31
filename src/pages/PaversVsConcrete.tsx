@@ -47,7 +47,7 @@ const PaversVsConcrete = () => {
         { feature: "Long-Term Value", optionA: "Higher — less maintenance, longer life", optionB: "Moderate — cracking reduces lifespan" },
         { feature: "Color Stability", optionA: "Color-through technology", optionB: "Surface only — fades over time" },
         { feature: "Installation Time", optionA: "3–7 days", optionB: "1–3 days + curing" },
-        { feature: "Warranty (Stones)", optionA: "21 years", optionB: "Standard craftsmanship" },
+        { feature: "Warranty (Stones)", optionA: "20 years", optionB: "Standard craftsmanship" },
       ]} />
 
       <section className="py-20 lg:py-28 bg-brand-cream">

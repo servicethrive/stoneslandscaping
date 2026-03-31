@@ -5,6 +5,7 @@ import TrustBar from "@/components/sections/TrustBar";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
+import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS } from "@/lib/constants";
 import { CheckCircle } from "lucide-react";
 
@@ -15,7 +16,7 @@ const ConcreteDriveways = () => {
 
   const concreteTypes = [
     { name: "Standard Brushed Concrete", desc: "Clean, durable, and cost-effective. A brushed finish with proper reinforcement and control joints delivers the reliable, professional look that most Bay Area homes need — and it performs beautifully for decades." },
-    { name: "Stamped Concrete", desc: "Textured patterns that replicate the look of natural stone, brick, slate, or flagstone. Stamped concrete adds distinctive visual character to your driveway at a fraction of the cost of natural materials — a popular upgrade for homes in the $1.5M–$5M range." },
+    { name: "Stamped Concrete", desc: "Textured patterns that replicate the look of natural stone, brick, slate, or flagstone. Stamped concrete adds distinctive visual character to your driveway at a fraction of the cost of natural materials — a popular upgrade for homeowners seeking visual impact." },
     { name: "Colored & Stained Concrete", desc: "Integral color mixed throughout the concrete for a consistent, fade-resistant tone, or acid stains applied after curing for rich, variegated earth tones. Available in a range of colors to complement your home's exterior palette." },
   ];
 
@@ -33,22 +34,26 @@ const ConcreteDriveways = () => {
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">New Driveways and Complete Replacements</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
-            Your driveway is the first surface people see when they approach your home — and one of the most heavily used areas on your entire property. Whether it's cracked, sunken, stained beyond cleaning, or simply doesn't match the quality of the home behind it, a new concrete driveway transforms your curb appeal, improves daily functionality, and adds measurable value to your property.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            At {BUSINESS.name}, we handle complete driveway projects from demolition to final seal coat. We remove the old surface, evaluate the sub-base condition, correct any grading or drainage issues, install steel reinforcement, set precision forms, pour and finish the concrete to your chosen texture, and apply a protective sealant. Every driveway we build is properly reinforced with rebar, sloped for positive drainage away from your home, and designed to handle the Bay Area's expansive clay soils and seasonal moisture changes.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            Here's something most homeowners don't think about until it's too late: the sub-base is everything. A beautiful concrete surface poured over a poorly prepared base will crack within a few years, guaranteed. We excavate to the proper depth, compact the sub-grade, and install a gravel base layer before any concrete is placed. It's the part of the job you'll never see, but it's what makes the difference between a driveway that lasts five years and one that lasts thirty.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            We're licensed for concrete-related services under classification C-61/D06 (License #{BUSINESS.license}), and our work reflects that specialization. Concrete isn't a side service for us — it's one of the core trades we've built our reputation on. We've poured driveways for properties across San Jose, Campbell, Santa Clara, and throughout the South Bay, from straightforward two-car driveways to expansive multi-vehicle surfaces for larger properties in Saratoga and Los Gatos.
+            Your driveway is the first surface people see when they approach your home — and one of the most heavily used areas on your entire property. A new concrete driveway transforms your curb appeal, improves daily functionality, and adds measurable value.
           </p>
           <p className="text-muted-foreground leading-relaxed font-light">
-            Whether you need a clean, standard brushed-finish driveway, a stamped surface that mimics natural stone, or a colored concrete driveway that coordinates with your home's exterior — we deliver a finished product that looks sharp, drains correctly, and holds up to daily use for years to come.
+            At {BUSINESS.name}, we handle complete driveway projects from demolition to final seal coat. Every driveway we build is properly reinforced with rebar, sloped for positive drainage, and designed to handle the Bay Area's expansive clay soils.
           </p>
         </div>
       </section>
+
+      <ZigZagSection items={[
+        {
+          title: "The Sub-Base Is Everything",
+          text: "Here's something most homeowners don't think about until it's too late: the sub-base is everything. A beautiful concrete surface poured over a poorly prepared base will crack within a few years, guaranteed. We excavate to the proper depth, compact the sub-grade, and install a gravel base layer before any concrete is placed.",
+          image: IMAGES.zigzag7,
+        },
+        {
+          title: "Licensed Concrete Specialists",
+          text: `We're licensed for concrete-related services under classification C-61/D06 (License #${BUSINESS.license}), and our work reflects that specialization. Concrete isn't a side service for us — it's one of the core trades we've built our reputation on. We've poured driveways for properties across San Jose, Campbell, Santa Clara, and throughout the South Bay.`,
+          image: IMAGES.zigzag2,
+        },
+      ]} />
 
       <section className="py-20 lg:py-28 bg-brand-cream">
         <div className="container mx-auto px-4 max-w-5xl">
