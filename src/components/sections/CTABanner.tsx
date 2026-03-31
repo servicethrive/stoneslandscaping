@@ -29,7 +29,7 @@ const CTABanner = ({
         <p className={`text-lg mb-10 font-light leading-relaxed ${dark ? "text-white/70" : "text-muted-foreground"}`}>{subtitle}</p>
       )}
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <Button asChild size="lg" className="text-sm px-10 py-6 tracking-wide uppercase font-semibold">
+        <Button asChild size="lg" className="text-sm px-10 py-6 tracking-widest uppercase font-semibold font-display">
           <Link to="/contact">Request a Free Estimate</Link>
         </Button>
         <Button
