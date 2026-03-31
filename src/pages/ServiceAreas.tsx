@@ -16,7 +16,7 @@ const ServiceAreas = () => {
     <Layout>
       <HeroSection
         title="Serving San Jose & the Bay Area's Finest Communities"
-        subtitle="Premium landscaping, hardscape, and outdoor living construction across Santa Clara County — from $1.5M San Jose homes to $20M Atherton estates. Licensed, insured, and locally based."
+        subtitle="Premium landscaping, hardscape, and outdoor living construction across Santa Clara, San Mateo, Alameda, and Santa Cruz Counties — from first-time renovations to grand estate transformations. Licensed, insured, and locally based."
         backgroundImage={IMAGES.hero}
       />
       <TrustBar />
