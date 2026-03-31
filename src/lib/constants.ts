@@ -25,7 +25,7 @@ export const SERVICES = [
     title: "Hardscape",
     path: "/hardscape",
     description: "Complete hardscape construction including retaining walls, outdoor structures, and stone installations.",
-    image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=80",
+    image: "/images/hardscape-service.jpg",
   },
   {
     title: "Landscaping",
