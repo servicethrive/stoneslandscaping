@@ -1,29 +1,14 @@
 
 
-## Generate Custom Service Card Images
+## Replace "Why Silicon Valley Homeowners Choose Us" Image
 
-There are 7 services that still use generic Unsplash stock photos (Artificial Turf already has a custom image). The best approach is to generate them all in one batch using the AI image generation script.
-
-### Services needing images
-1. **Pavers** - beautiful paver patio/walkway in a luxury backyard
-2. **Hardscape** - stone hardscape installation, retaining walls and outdoor structure
-3. **Landscaping** - lush designed landscape in a Silicon Valley home yard
-4. **Concrete Driveways** - stamped/colored concrete driveway at an upscale home
-5. **Outdoor Kitchens** - custom outdoor kitchen with grill and counter in a backyard
-6. **Retaining Walls** - decorative stone retaining wall in a hillside yard
-7. **Patio & Walkways** - elegant paver patio and walkway in a manicured yard
+Replace the current Unsplash image in the "Why Choose Us" section on the homepage with the uploaded 3D landscape design render.
 
 ### Steps
-1. Copy the AI image generation script to `/tmp/`
-2. Run 7 image generation calls, saving each to `public/images/{service}-service.jpg`
-3. Update `src/lib/constants.ts` to point all SERVICES entries to their new local images
-
-### Prompt style
-Each prompt will specify: a photorealistic, high-end residential landscape photo of the specific service, sunny California setting, luxury home, no text or watermarks.
+1. Copy `user-uploads://3d_landscape_design.jpg` to `public/images/3d-landscape-design.jpg`
+2. Update `src/pages/Index.tsx` - change the `img src` in the "Why Choose Us" section from `{IMAGES.pavers}` to `/images/3d-landscape-design.jpg` and update the alt text to reference the 3D design rendering
 
 ### Files Changed
-- `public/images/` - 7 new generated images
-- `src/lib/constants.ts` - update image paths
-
-This will take a few minutes since each image generation call runs sequentially, but it's the cleanest approach to get consistent, service-specific imagery across all cards.
+- `public/images/3d-landscape-design.jpg` (new)
+- `src/pages/Index.tsx`
 
