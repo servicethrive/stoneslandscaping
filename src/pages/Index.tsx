@@ -21,7 +21,7 @@ const Index = () => {
   return (
     <Layout>
       <HeroSection
-        title="Luxury Outdoor Living, Built to Last"
+        title="Outdoor Living, Built to Last"
         subtitle="Custom paver patios, outdoor kitchens, pergolas, and complete backyard transformations for Silicon Valley's finest homes. Designed with precision, built with integrity."
         backgroundImage={IMAGES.hero}
         primaryCTA={{ text: "Request a Consultation", link: "/contact" }}
