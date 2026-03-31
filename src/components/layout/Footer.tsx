@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Shield } from "lucide-react";
 import { BUSINESS, SERVICES, SERVICE_AREAS } from "@/lib/constants";
+import logo from "@/assets/stones-landscaping-logo.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -21,9 +22,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div>
-            <h3 className="text-lg font-bold mb-4">
-              STONES <span className="text-primary">LANDSCAPING</span>
-            </h3>
+            <img src={logo} alt="Stones Landscaping" className="h-10 w-auto mb-4" />
             <p className="text-sm text-white/70 mb-4">
               Premium landscaping and hardscape contractor serving San Jose and the greater Bay Area since 2017.
             </p>
