@@ -60,7 +60,7 @@ export const SERVICES = [
 ] as const;
 
 export const SERVICE_AREAS = [
-  { name: "San Jose", path: "/service-areas/san-jose", primary: true },
+  { name: "San Jose", path: "/", primary: true },
   { name: "Atherton", path: "/service-areas/atherton", primary: false },
   { name: "Los Gatos", path: "/service-areas/los-gatos", primary: false },
   { name: "Saratoga", path: "/service-areas/saratoga", primary: false },

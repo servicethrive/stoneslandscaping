@@ -58,7 +58,7 @@ const App = () => (
           <Route path="/our-process" element={<OurProcess />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/service-areas" element={<ServiceAreas />} />
-          <Route path="/service-areas/san-jose" element={<SanJose />} />
+          
           <Route path="/service-areas/atherton" element={<Atherton />} />
           <Route path="/service-areas/los-gatos" element={<LosGatos />} />
           <Route path="/service-areas/saratoga" element={<Saratoga />} />
