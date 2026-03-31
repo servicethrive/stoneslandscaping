@@ -43,7 +43,7 @@ export const SERVICES = [
     title: "Outdoor Kitchens",
     path: "/outdoor-kitchens",
     description: "Custom outdoor kitchen design and construction for year-round entertaining in the Bay Area.",
-    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80",
+    image: "/images/outdoor-kitchens-service.jpg",
   },
   {
     title: "Retaining Walls",
