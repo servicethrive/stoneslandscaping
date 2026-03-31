@@ -49,7 +49,7 @@ export const SERVICES = [
     title: "Retaining Walls",
     path: "/retaining-walls",
     description: "Structural and decorative retaining walls that solve grading challenges and add visual impact.",
-    image: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=800&q=80",
+    image: "/images/retaining-walls-service.jpg",
   },
   {
     title: "Artificial Turf",
