@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BUSINESS, SERVICES } from "@/lib/constants";
+import logo from "@/assets/stones-landscaping-logo.png";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -31,9 +32,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 lg:h-20">
         <Link to="/" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
-          <span className={`text-lg lg:text-xl font-bold tracking-wide ${scrolled ? "text-foreground" : "text-white"}`}>
-            STONES <span className="text-primary">LANDSCAPING</span>
-          </span>
+          <img src={logo} alt="Stones Landscaping" className="h-8 lg:h-10 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
