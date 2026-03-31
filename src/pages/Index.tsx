@@ -82,8 +82,8 @@ const Index = () => {
             </div>
             <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
               <img
-                src={IMAGES.pavers}
-                alt="Professional paver patio installation by Stones Landscaping in San Jose"
+                src="/images/3d-landscape-design.jpg"
+                alt="3D landscape design rendering by Stones Landscaping showing a custom backyard transformation"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
