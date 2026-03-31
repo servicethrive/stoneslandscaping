@@ -1,17 +1,33 @@
 
 
-## Align Nav Links with Services Link
+## Create Blog Section & Move Comparison Articles
 
-The Services link wrapper `<div>` has `pb-2` (added for dropdown hover bridging), which makes it taller than the other nav links, causing vertical misalignment.
+Move "Pavers vs Concrete" and "Artificial Turf vs Sod" into a new `/blog` section.
 
-### Fix in `src/components/layout/Navbar.tsx`
+### 1. Create Blog Index Page (`src/pages/Blog.tsx`)
+- Simple listing page with cards linking to each article
+- Title: "Resources & Guides"
+- Each card shows article title, short description, and "Read More →"
 
-- **Line 32**: Add `items-center` is already there — good. The issue is the Services `<div>` wrapper has extra `pb-2`. Move the hover-bridge padding inside the dropdown positioning instead.
-- **Line 35**: Change `className="relative pb-2"` → `className="relative"` on the Services wrapper div.
-- **Line 45**: The dropdown panel already has `pt-2`. Add a pseudo-element or invisible bridge: wrap the dropdown in a container that starts flush with the trigger. Change the dropdown div to include `mt-0` and add `-mt-1` offset with an invisible padding bridge using `before:absolute before:content-[''] before:-top-2 before:left-0 before:right-0 before:h-4` on the dropdown panel so the hover zone extends upward without affecting the trigger's layout.
+### 2. Update Routes (`src/App.tsx`)
+- Add Blog index: `/blog`
+- Move routes: `/pavers-vs-concrete` → `/blog/pavers-vs-concrete`
+- Move routes: `/artificial-turf-vs-sod` → `/blog/artificial-turf-vs-sod`
 
-This way the Services trigger takes the same vertical space as the other links, and the dropdown hover bridge is handled by an invisible pseudo-element.
+### 3. Update Navigation (`src/components/layout/Navbar.tsx`)
+- Remove the "Compare: Pavers vs Concrete →" link from the Services dropdown
+- Add "Blog" as a top-level nav link
+
+### 4. Update Footer (`src/components/layout/Footer.tsx`)
+- Update the comparison article links to use `/blog/...` paths
+- Optionally rename section to "Resources" or "Blog"
+
+### 5. Update Internal Links
+- Any cross-links in `PaversVsConcrete.tsx` and `ArtificialTurfVsSod.tsx` remain unchanged (they link to service pages, not each other)
 
 ### Files Changed
+- `src/pages/Blog.tsx` (new)
+- `src/App.tsx`
 - `src/components/layout/Navbar.tsx`
+- `src/components/layout/Footer.tsx`
 
