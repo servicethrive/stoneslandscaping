@@ -20,7 +20,7 @@ import DesignProcess from "./pages/DesignProcess";
 import OurProcess from "./pages/OurProcess";
 import Contact from "./pages/Contact";
 import ServiceAreas from "./pages/ServiceAreas";
-import SanJose from "./pages/SanJose";
+
 import Atherton from "./pages/Atherton";
 import LosGatos from "./pages/LosGatos";
 import Saratoga from "./pages/Saratoga";
