@@ -1,22 +1,16 @@
 
 
-## Navbar CTA Text + Fix Services Dropdown
+## Align Nav Links with Services Link
 
-### 1. Update Navbar CTA Text
-Change "Free Estimate" → "Get A Free Estimate" in both desktop (line 96) and mobile (line 148) buttons.
+The Services link wrapper `<div>` has `pb-2` (added for dropdown hover bridging), which makes it taller than the other nav links, causing vertical misalignment.
 
-### 2. Fix Services Dropdown Collapsing
-The dropdown has `mt-1` (a gap between the trigger button and the panel). When the mouse crosses that gap, `onMouseLeave` fires and the menu closes. Fix:
+### Fix in `src/components/layout/Navbar.tsx`
 
-- Remove `mt-1` from the dropdown panel
-- Add a generous padding-bottom to the trigger button area so the hover zone connects seamlessly to the dropdown
-- Add `pt-2` padding-top to the dropdown panel to preserve visual spacing without creating a dead zone
+- **Line 32**: Add `items-center` is already there — good. The issue is the Services `<div>` wrapper has extra `pb-2`. Move the hover-bridge padding inside the dropdown positioning instead.
+- **Line 35**: Change `className="relative pb-2"` → `className="relative"` on the Services wrapper div.
+- **Line 45**: The dropdown panel already has `pt-2`. Add a pseudo-element or invisible bridge: wrap the dropdown in a container that starts flush with the trigger. Change the dropdown div to include `mt-0` and add `-mt-1` offset with an invisible padding bridge using `before:absolute before:content-[''] before:-top-2 before:left-0 before:right-0 before:h-4` on the dropdown panel so the hover zone extends upward without affecting the trigger's layout.
 
-**`src/components/layout/Navbar.tsx`** changes:
-- Line 34-37: Wrap the trigger `<div>` with extra bottom padding so hover zone extends into dropdown area
-- Line 45: Change `mt-1` → `pt-2` (padding inside the dropdown instead of margin outside)
-- Line 96: "Free Estimate" → "Get A Free Estimate"
-- Line 148: "Get Free Estimate" → "Get A Free Estimate"
+This way the Services trigger takes the same vertical space as the other links, and the dropdown hover bridge is handled by an invisible pseudo-element.
 
 ### Files Changed
 - `src/components/layout/Navbar.tsx`
