@@ -105,7 +105,7 @@ const Footer = () => {
 
         <div className="border-t border-white/8 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-xs text-white/40 font-light">
-            © {new Date().getFullYear()} {BUSINESS.name} All rights reserved. License #{BUSINESS.license} — {BUSINESS.licenseClassifications}
+            © {new Date().getFullYear()} {BUSINESS.name} All rights reserved. License #{BUSINESS.license} - {BUSINESS.licenseClassifications}
           </p>
           <div className="flex gap-6 text-xs text-white/40">
             <Link to="/blog/pavers-vs-concrete" className="hover:text-primary transition-colors font-light">Pavers vs Concrete</Link>

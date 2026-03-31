@@ -64,7 +64,7 @@ const Index = () => {
               <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">Why Silicon Valley Homeowners Choose Us</h2>
               <div className="space-y-5">
                 {[
-                  { title: "Uncompromising Quality", desc: "Every project is built with premium materials and meticulous attention to detail — from foundation to finish." },
+                  { title: "Uncompromising Quality", desc: "Every project is built with premium materials and meticulous attention to detail - from foundation to finish." },
                   { title: "Transparent Process", desc: "Detailed proposals with clear scope, pricing, and timelines. No hidden costs, no scope creep, no surprises." },
                   { title: "Industry-Leading Warranties", desc: `${BUSINESS.paverWarrantyYears}-year paver warranty and ${BUSINESS.landscapeWarrantyDays}-day landscape warranty. We stand behind our work.` },
                   { title: "2D/3D Design Visualization", desc: "See your project before construction begins with professional renderings for qualifying projects." },

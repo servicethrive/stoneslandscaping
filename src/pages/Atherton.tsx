@@ -19,7 +19,7 @@ const Atherton = () => {
     <Layout>
       <HeroSection
         title="Estate-Level Landscaping & Hardscape in Atherton"
-        subtitle="Premium outdoor renovations for Atherton's most distinguished properties. Custom pavers, outdoor kitchens, fire features, and complete landscape design-build — crafted for estates where only the finest will do."
+        subtitle="Premium outdoor renovations for Atherton's most distinguished properties. Custom pavers, outdoor kitchens, fire features, and complete landscape design-build - crafted for estates where only the finest will do."
         backgroundImage={IMAGES.hero}
       />
       <TrustBar />
@@ -30,10 +30,10 @@ const Atherton = () => {
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Outdoor Construction for Atherton's Finest Estates</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
-            Atherton is consistently ranked among the wealthiest communities in the United States, and the outdoor spaces here reflect that distinction. Properties routinely span one to three acres, with mature oak canopies, expansive lawns, and architecture that demands an outdoor environment of equal caliber. This isn't a market for template landscaping — it's a market that requires a contractor who understands estate-scale design, premium material sourcing, and the exacting standards of discerning homeowners.
+            Atherton is consistently ranked among the wealthiest communities in the United States, and the outdoor spaces here reflect that distinction. Properties routinely span one to three acres, with mature oak canopies, expansive lawns, and architecture that demands an outdoor environment of equal caliber. This isn't a market for template landscaping - it's a market that requires a contractor who understands estate-scale design, premium material sourcing, and the exacting standards of discerning homeowners.
           </p>
           <p className="text-muted-foreground leading-relaxed font-light">
-            {BUSINESS.name} serves Atherton homeowners with the same precision and craftsmanship we bring to every project — but with the capacity, crew depth, and design experience to handle the larger scopes and elevated material selections that Atherton properties demand.
+            {BUSINESS.name} serves Atherton homeowners with the same precision and craftsmanship we bring to every project - but with the capacity, crew depth, and design experience to handle the larger scopes and elevated material selections that Atherton properties demand.
           </p>
         </div>
       </section>
@@ -62,7 +62,7 @@ const Atherton = () => {
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">What We Build on Atherton Estates</h2>
           <p className="text-muted-foreground mb-8 font-light leading-relaxed">
-            Atherton projects often involve multiple outdoor zones — entertainment areas, garden rooms, utility spaces, and transitional corridors. Here's what we deliver most frequently for estate-level properties:
+            Atherton projects often involve multiple outdoor zones - entertainment areas, garden rooms, utility spaces, and transitional corridors. Here's what we deliver most frequently for estate-level properties:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
@@ -107,7 +107,7 @@ const Atherton = () => {
       <ProcessSteps title="Our Estate Project Process" steps={[
         { title: "Property Assessment", description: "We walk your grounds, discuss your vision, assess terrain and access, and take detailed measurements for estate-scale planning." },
         { title: "Design & Coordination", description: "Receive professional 2D/3D renderings. We coordinate with your architect, GC, or property manager to align timelines and specifications." },
-        { title: "Premium Construction", description: "Our crews handle excavation, grading, base preparation, material installation, and finish work — all managed by a dedicated project lead." },
+        { title: "Premium Construction", description: "Our crews handle excavation, grading, base preparation, material installation, and finish work - all managed by a dedicated project lead." },
         { title: "Final Walkthrough & Warranty", description: `Inspect every detail with us, confirm the finished scope, and receive your ${BUSINESS.paverWarrantyYears}-year warranty documentation.` },
       ]} />
 
@@ -115,7 +115,7 @@ const Atherton = () => {
         { question: "Do you have experience with large estate properties?", answer: "Yes. We regularly work on Atherton properties ranging from half-acre lots to multi-acre estates. Our crew capacity, equipment, and project management systems are built to handle complex, multi-phase outdoor construction at scale." },
         { question: "Can you coordinate with our architect or general contractor?", answer: "Absolutely. Many of our Atherton projects involve collaboration with architects, designers, and GCs. We integrate smoothly into larger build schedules and communicate proactively with all parties involved." },
         { question: "What premium paver materials do you recommend for Atherton estates?", answer: "For estate-level properties, we most often recommend Techo-Bloc's Blu Grande or Borealis series, natural travertine, and large-format porcelain pavers. Material selection depends on your architecture, desired aesthetic, and functional requirements." },
-        { question: "How long do large estate projects typically take?", answer: "Timeline depends on scope. A standalone paver motor court might take 2-3 weeks. A comprehensive outdoor renovation — driveway, patio, outdoor kitchen, landscaping, and lighting — can span 6-12 weeks. We provide a detailed schedule before construction begins." },
+        { question: "How long do large estate projects typically take?", answer: "Timeline depends on scope. A standalone paver motor court might take 2-3 weeks. A comprehensive outdoor renovation - driveway, patio, outdoor kitchen, landscaping, and lighting - can span 6-12 weeks. We provide a detailed schedule before construction begins." },
         { question: "Do you handle Atherton's permitting requirements?", answer: "Yes. We're familiar with the Town of Atherton's permitting process and setback requirements. We handle permit applications and ensure all work meets local building codes and HOA guidelines where applicable." },
         { question: "What warranty do you provide?", answer: `Our paver installations are backed by a ${BUSINESS.paverWarrantyYears}-year warranty covering materials and workmanship. Landscape installations include a ${BUSINESS.landscapeWarrantyDays}-day plant establishment warranty. We stand behind every project.` },
       ]} />

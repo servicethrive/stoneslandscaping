@@ -26,7 +26,7 @@ const Hardscape = () => {
     <Layout>
       <HeroSection
         title="Hardscape Construction Built to Last"
-        subtitle="From expansive paver patios to engineered retaining walls and custom outdoor kitchens — hardscape projects designed for Bay Area living and built to perform for decades."
+        subtitle="From expansive paver patios to engineered retaining walls and custom outdoor kitchens - hardscape projects designed for Bay Area living and built to perform for decades."
         backgroundImage={IMAGES.hardscape}
       />
       <TrustBar />
@@ -34,9 +34,9 @@ const Hardscape = () => {
       <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">What Is Hardscape — and Why It Matters More Than You Think</h2>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">What Is Hardscape - and Why It Matters More Than You Think</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
-            Hardscape refers to the non-living structural elements of your outdoor space — patios, walkways, retaining walls, driveways, fire features, outdoor kitchens, and pergolas. These are the permanent features that define how your yard functions, flows, and feels.
+            Hardscape refers to the non-living structural elements of your outdoor space - patios, walkways, retaining walls, driveways, fire features, outdoor kitchens, and pergolas. These are the permanent features that define how your yard functions, flows, and feels.
           </p>
           <p className="text-muted-foreground leading-relaxed font-light">
             At {BUSINESS.name}, hardscape construction is our primary specialty. We've built hundreds of hardscape projects across San Jose, Atherton, Los Gatos, Saratoga, Campbell, Santa Clara, and throughout the South Bay.
@@ -47,7 +47,7 @@ const Hardscape = () => {
       <ZigZagSection items={[
         {
           title: "The Details You Don't See",
-          text: "Here's what separates professional hardscape from the work you see failing after a few years: it's the parts you don't see. The excavation depth, the base material, the compaction, the grading for drainage, the edge restraint systems, the footing depth on walls — these invisible details determine whether your patio stays flat, your wall stays straight, and your outdoor kitchen stays level.",
+          text: "Here's what separates professional hardscape from the work you see failing after a few years: it's the parts you don't see. The excavation depth, the base material, the compaction, the grading for drainage, the edge restraint systems, the footing depth on walls - these invisible details determine whether your patio stays flat, your wall stays straight, and your outdoor kitchen stays level.",
           image: IMAGES.zigzag2,
         },
         {
@@ -57,7 +57,7 @@ const Hardscape = () => {
         },
         {
           title: "Transform Your Outdoor Living",
-          text: "Whether you're replacing an aging concrete patio, adding a retaining wall to reclaim a hillside, building a complete outdoor kitchen and entertainment area, or transforming your entire backyard into a luxury outdoor living space — hardscape is the foundation of a property that works as beautifully as it looks.",
+          text: "Whether you're replacing an aging concrete patio, adding a retaining wall to reclaim a hillside, building a complete outdoor kitchen and entertainment area, or transforming your entire backyard into a luxury outdoor living space - hardscape is the foundation of a property that works as beautifully as it looks.",
           image: IMAGES.zigzag1,
         },
       ]} />
@@ -67,7 +67,7 @@ const Hardscape = () => {
           <div className="text-center mb-14">
             <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Our Hardscape Services</h2>
-            <p className="text-muted-foreground mt-3 font-light">Each service is a dedicated specialty — not a side offering</p>
+            <p className="text-muted-foreground mt-3 font-light">Each service is a dedicated specialty - not a side offering</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {hardscapeServices.map((s) => (
@@ -88,7 +88,7 @@ const Hardscape = () => {
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Why Invest in Professional Hardscape</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            A well-built hardscape project changes how you use your property. It gives you defined spaces for cooking, dining, relaxing, and entertaining — without the limitations of a basic lawn or deteriorating concrete slab.
+            A well-built hardscape project changes how you use your property. It gives you defined spaces for cooking, dining, relaxing, and entertaining - without the limitations of a basic lawn or deteriorating concrete slab.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
             {[

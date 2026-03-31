@@ -18,7 +18,7 @@ const ArtificialTurf = () => {
     <Layout>
       <HeroSection
         title="Artificial Turf Installation for Bay Area Homes"
-        subtitle="A lush, maintenance-free yard year-round — no mowing, no watering, no brown patches. Professionally installed premium synthetic turf that looks and feels natural."
+        subtitle="A lush, maintenance-free yard year-round - no mowing, no watering, no brown patches. Professionally installed premium synthetic turf that looks and feels natural."
         backgroundImage={IMAGES.turf}
       />
       <TrustBar />
@@ -28,7 +28,7 @@ const ArtificialTurf = () => {
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Why Bay Area Homeowners Are Making the Switch</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
-            Water restrictions, recurring drought cycles, and the constant upkeep demands of natural grass have pushed more Bay Area homeowners toward artificial turf than ever before — and the results speak for themselves.
+            Water restrictions, recurring drought cycles, and the constant upkeep demands of natural grass have pushed more Bay Area homeowners toward artificial turf than ever before - and the results speak for themselves.
           </p>
           <p className="text-muted-foreground leading-relaxed font-light">
             At {BUSINESS.name}, we install premium artificial turf systems designed specifically for residential use. Every installation includes proper site grading, a compacted decomposed granite base layer, commercial-grade weed barrier fabric, and turf secured with appropriate infill for a natural look and feel.
@@ -44,7 +44,7 @@ const ArtificialTurf = () => {
         },
         {
           title: "Real Savings, Real Results",
-          text: "We recently converted a 2,500-square-foot backyard in the Willow Glen area of San Jose from patchy, water-hungry natural grass to premium artificial turf with integrated paver borders. Within the first year, the turf installation paid for itself in water savings alone — and the yard looked better on day 365 than their natural lawn ever did.",
+          text: "We recently converted a 2,500-square-foot backyard in the Willow Glen area of San Jose from patchy, water-hungry natural grass to premium artificial turf with integrated paver borders. Within the first year, the turf installation paid for itself in water savings alone - and the yard looked better on day 365 than their natural lawn ever did.",
           image: IMAGES.zigzag8,
         },
       ]} />
@@ -84,14 +84,14 @@ const ArtificialTurf = () => {
             <p><strong className="text-foreground font-medium">Eliminates water costs:</strong> No irrigation system needed. In drought-prone areas like the Bay Area, where water rates continue to climb, the savings add up fast. Most homeowners recoup their turf investment within 3–5 years in water savings alone.</p>
             <p><strong className="text-foreground font-medium">Zero mowing, fertilizing, or chemical treatments:</strong> Reclaim your weekends. No lawn equipment costs, no fertilizer runs, no seasonal aerating or overseeding. Your yard looks perfect without any of the work.</p>
             <p><strong className="text-foreground font-medium">Looks green year-round:</strong> No brown patches in August heat, no mud in January rain. Consistent, uniform appearance regardless of season, weather, or shade conditions.</p>
-            <p><strong className="text-foreground font-medium">Pet and kid-friendly:</strong> Modern premium turf drains quickly, resists odor with proper infill, and holds up to heavy daily use. Easy to rinse and keep clean — no more muddy paw prints tracked through the house.</p>
+            <p><strong className="text-foreground font-medium">Pet and kid-friendly:</strong> Modern premium turf drains quickly, resists odor with proper infill, and holds up to heavy daily use. Easy to rinse and keep clean - no more muddy paw prints tracked through the house.</p>
             <p><strong className="text-foreground font-medium">Long lifespan with minimal maintenance:</strong> Quality turf with proper professional installation lasts 15–20 years before needing replacement. Occasional brushing and rinsing is all that's required to keep it looking fresh.</p>
           </div>
         </div>
       </section>
 
       <ProcessSteps title="Turf Installation Process" steps={[
-        { title: "Site Assessment", description: "We measure your space, assess drainage patterns, evaluate soil conditions, and discuss your goals — pet area, full lawn replacement, or landscape integration." },
+        { title: "Site Assessment", description: "We measure your space, assess drainage patterns, evaluate soil conditions, and discuss your goals - pet area, full lawn replacement, or landscape integration." },
         { title: "Demolition & Base Prep", description: "Remove existing grass and organic material, grade the site for drainage, compact the sub-base, and install decomposed granite base and weed barrier." },
         { title: "Turf Installation", description: "Cut, fit, and seam premium turf to your space. Secure edges, apply infill for natural weight and feel, and brush fibers upright for a realistic finish." },
         { title: "Final Inspection", description: "Walk the completed installation, check seams, drainage, and edge details. Provide care instructions for long-term turf maintenance." },
@@ -102,10 +102,10 @@ const ArtificialTurf = () => {
         { question: "Does artificial turf get hot in the sun?", answer: "Direct sunlight can warm turf surfaces, similar to any outdoor surface including concrete, pavers, and natural stone. Shaded areas stay cool. Modern turf products with lighter-colored backing and specialized infill help manage heat. If heat is a concern, we can discuss turf products with enhanced cooling technology." },
         { question: "Is artificial turf safe for dogs and pets?", answer: "Yes. Premium turf drains well, is easy to clean with a simple hose rinse, and doesn't harbor fleas or ticks like natural grass. Proper antimicrobial infill keeps odor under control even with regular pet use. We install many turf projects specifically as dedicated pet areas." },
         { question: "How does artificial turf compare to natural grass on cost?", answer: "Artificial turf costs more upfront than sod installation, but the lifetime savings on water, maintenance equipment, fertilizer, and lawn care services are significant. Most Bay Area homeowners break even within 3–5 years and save money every year after that. See our detailed Artificial Turf vs Sod comparison page for a full breakdown." },
-        { question: "Can turf be installed over existing concrete or pavers?", answer: "In some cases, yes — turf can be installed over hard surfaces with proper padding and drainage. However, for the best results and longest lifespan, we recommend a full base installation with proper grading and drainage. We'll assess your specific situation during the consultation." },
+        { question: "Can turf be installed over existing concrete or pavers?", answer: "In some cases, yes - turf can be installed over hard surfaces with proper padding and drainage. However, for the best results and longest lifespan, we recommend a full base installation with proper grading and drainage. We'll assess your specific situation during the consultation." },
       ]} />
 
-      <CTABanner title="Get a Turf Installation Estimate" subtitle="Request a consultation and we'll provide a detailed proposal for your artificial turf project — no obligation." />
+      <CTABanner title="Get a Turf Installation Estimate" subtitle="Request a consultation and we'll provide a detailed proposal for your artificial turf project - no obligation." />
     </Layout>
   );
 };

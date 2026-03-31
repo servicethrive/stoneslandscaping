@@ -85,7 +85,7 @@ const Contact = () => {
                     required
                     value={form.message}
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
-                    placeholder="Tell us about your project — what you're looking for, your timeline, and any specific details."
+                    placeholder="Tell us about your project - what you're looking for, your timeline, and any specific details."
                     rows={5}
                     className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background mt-1 resize-none"
                   />

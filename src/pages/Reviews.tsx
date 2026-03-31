@@ -10,7 +10,7 @@ const reviewHighlights = [
   { name: "David & Lisa R.", text: "We hired them for a complete front yard renovation and couldn't be happier. The design process was clear, the timeline was accurate, and the results exceeded our expectations.", service: "Landscaping Design-Build" },
   { name: "James T.", text: "Our new driveway looks incredible. They handled the entire concrete replacement smoothly, kept the site clean, and finished on schedule. Highly recommend.", service: "Concrete Driveway" },
   { name: "Sarah M.", text: "The retaining wall they built solved our backyard drainage issues completely. Professional crew, great communication, and the wall looks beautiful. Couldn't ask for more.", service: "Retaining Wall" },
-  { name: "Robert & Ana K.", text: "Our outdoor kitchen is the centerpiece of our backyard now. They handled everything — design, construction, gas hookup, countertops. The quality is outstanding.", service: "Outdoor Kitchen" },
+  { name: "Robert & Ana K.", text: "Our outdoor kitchen is the centerpiece of our backyard now. They handled everything - design, construction, gas hookup, countertops. The quality is outstanding.", service: "Outdoor Kitchen" },
   { name: "Jennifer L.", text: "Switched to artificial turf and wish we'd done it years ago. The installation was clean, fast, and the turf looks amazing. No more mowing or watering!", service: "Artificial Turf" },
 ];
 

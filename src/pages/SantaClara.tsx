@@ -19,7 +19,7 @@ const SantaClara = () => {
     <Layout>
       <HeroSection
         title="Professional Landscaping & Hardscape in Santa Clara"
-        subtitle="Premium outdoor renovation for Santa Clara homeowners — pavers, landscaping, concrete driveways, outdoor kitchens, and complete backyard transformations built by a locally based, licensed contractor."
+        subtitle="Premium outdoor renovation for Santa Clara homeowners - pavers, landscaping, concrete driveways, outdoor kitchens, and complete backyard transformations built by a locally based, licensed contractor."
         backgroundImage={IMAGES.concrete}
       />
       <TrustBar />
@@ -40,12 +40,12 @@ const SantaClara = () => {
       <ZigZagSection items={[
         {
           title: "Thoughtful Transformations",
-          text: "What we see most often in Santa Clara is homeowners who've been in their homes for several years and are ready to invest in the outdoor space they've been imagining. Maybe the concrete patio has cracked and settled, or the lawn has become more work than it's worth. These are the projects we excel at — thoughtful transformations that make your home feel bigger, more functional, and more valuable.",
+          text: "What we see most often in Santa Clara is homeowners who've been in their homes for several years and are ready to invest in the outdoor space they've been imagining. Maybe the concrete patio has cracked and settled, or the lawn has become more work than it's worth. These are the projects we excel at - thoughtful transformations that make your home feel bigger, more functional, and more valuable.",
           image: IMAGES.zigzag7,
         },
         {
           title: "Professional Results, Every Time",
-          text: `Every Santa Clara project receives the same level of craftsmanship we deliver across the Bay Area — proper base preparation, premium materials, clean execution, and a finished product that lasts. Licensed (#${BUSINESS.license}), fully insured, and backed by our ${BUSINESS.paverWarrantyYears}-year paver warranty.`,
+          text: `Every Santa Clara project receives the same level of craftsmanship we deliver across the Bay Area - proper base preparation, premium materials, clean execution, and a finished product that lasts. Licensed (#${BUSINESS.license}), fully insured, and backed by our ${BUSINESS.paverWarrantyYears}-year paver warranty.`,
           image: IMAGES.zigzag2,
         },
       ]} />
@@ -96,12 +96,12 @@ const SantaClara = () => {
       <ProcessSteps title="Our Santa Clara Project Process" steps={[
         { title: "Free Consultation", description: "We visit your Santa Clara property, discuss your goals, evaluate conditions, and provide a detailed written estimate." },
         { title: "Design & Planning", description: "Select materials, finalize layout, and review your project plan. Qualifying projects include professional 2D/3D design renderings." },
-        { title: "Professional Construction", description: "Our crews handle excavation, preparation, installation, and finish work — managed by a dedicated project lead." },
+        { title: "Professional Construction", description: "Our crews handle excavation, preparation, installation, and finish work - managed by a dedicated project lead." },
         { title: "Walkthrough & Warranty", description: `Review the finished project with us, confirm every detail, and receive your ${BUSINESS.paverWarrantyYears}-year warranty documentation.` },
       ]} />
 
       <FAQAccordion faqs={[
-        { question: "How close are you to Santa Clara?", answer: "Our office is on Almaden Expressway in San Jose — a short drive from most Santa Clara neighborhoods." },
+        { question: "How close are you to Santa Clara?", answer: "Our office is on Almaden Expressway in San Jose - a short drive from most Santa Clara neighborhoods." },
         { question: "What outdoor projects add the most value in Santa Clara?", answer: "Paver patio installations, driveway upgrades, and front yard landscape redesigns consistently deliver the highest ROI." },
         { question: "How long does a typical Santa Clara project take?", answer: "A standard paver patio takes 3-7 days. A complete backyard renovation typically runs 2-4 weeks." },
         { question: "Do you handle Santa Clara permits?", answer: "Yes. We handle the application process for projects that require permits. All work meets local building codes." },

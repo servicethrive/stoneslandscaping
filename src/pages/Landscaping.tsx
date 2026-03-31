@@ -11,7 +11,7 @@ import { CheckCircle } from "lucide-react";
 
 const landscapeTypes = [
   { name: "Front Yard Landscaping", desc: "Transform your home's first impression with structured planting, clean hardscape borders, and drought-tolerant design that elevates curb appeal." },
-  { name: "Backyard Living Landscapes", desc: "Create functional outdoor living areas with defined zones for dining, cooking, relaxation, and entertaining — all connected by thoughtful landscape design." },
+  { name: "Backyard Living Landscapes", desc: "Create functional outdoor living areas with defined zones for dining, cooking, relaxation, and entertaining - all connected by thoughtful landscape design." },
   { name: "Low-Maintenance Luxury", desc: "Designed for busy professionals who want a beautiful, polished landscape without constant upkeep. Drought-tolerant natives, efficient smart irrigation, and premium ground covers." },
 ];
 
@@ -24,7 +24,7 @@ const Landscaping = () => {
     <Layout>
       <HeroSection
         title="Design-Build Landscaping for Bay Area Homes"
-        subtitle="Complete landscape design and installation — front yards, backyards, and full-property transformations. Thoughtfully planned for the Bay Area climate, professionally built to last."
+        subtitle="Complete landscape design and installation - front yards, backyards, and full-property transformations. Thoughtfully planned for the Bay Area climate, professionally built to last."
         backgroundImage={IMAGES.landscaping}
       />
       <TrustBar />
@@ -34,7 +34,7 @@ const Landscaping = () => {
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Landscaping That Transforms How You Experience Your Property</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
-            Landscaping is far more than planting a few shrubs and laying sod. A thoughtfully designed landscape changes how you experience your home every single day — it creates functional outdoor rooms, improves curb appeal, reduces long-term maintenance, and adds real, measurable value to your property.
+            Landscaping is far more than planting a few shrubs and laying sod. A thoughtfully designed landscape changes how you experience your home every single day - it creates functional outdoor rooms, improves curb appeal, reduces long-term maintenance, and adds real, measurable value to your property.
           </p>
           <p className="text-muted-foreground leading-relaxed font-light">
             At {BUSINESS.name}, we take a design-build approach to every landscaping project. That means we handle the entire process in-house: site evaluation, design concepts, material selection, irrigation planning, grading, drainage, and full installation.
@@ -45,12 +45,12 @@ const Landscaping = () => {
       <ZigZagSection items={[
         {
           title: "Every Property, Every Scale",
-          text: "We've designed and built landscapes for properties across the Bay Area spectrum — from San Jose homes where a front yard renovation transforms the entire street presence, to grand estates in Atherton and Hillsborough where the landscape needs to complement world-class architecture. The scope varies, but our approach doesn't: we start with your property's specific conditions, your lifestyle, and your vision.",
+          text: "We've designed and built landscapes for properties across the Bay Area spectrum - from San Jose homes where a front yard renovation transforms the entire street presence, to grand estates in Atherton and Hillsborough where the landscape needs to complement world-class architecture. The scope varies, but our approach doesn't: we start with your property's specific conditions, your lifestyle, and your vision.",
           image: IMAGES.zigzag8,
         },
         {
           title: "Climate-Smart Plant Selection",
-          text: "One thing we've learned building landscapes in this climate: the Bay Area's Mediterranean weather — warm dry summers and cool wet winters — rewards certain plants and punishes others. We select species that are proven performers in our specific microclimate, which means your landscape looks healthy and vibrant in August heat just as it does after January rains.",
+          text: "One thing we've learned building landscapes in this climate: the Bay Area's Mediterranean weather - warm dry summers and cool wet winters - rewards certain plants and punishes others. We select species that are proven performers in our specific microclimate, which means your landscape looks healthy and vibrant in August heat just as it does after January rains.",
           image: IMAGES.zigzag6,
         },
       ]} />
@@ -106,17 +106,17 @@ const Landscaping = () => {
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Our Landscape Warranty</h2>
           <p className="text-muted-foreground leading-relaxed font-light">
-            Every landscaping project we complete includes a {BUSINESS.landscapeWarrantyDays}-day warranty on plants and materials. If anything we installed doesn't perform as expected within that period, we'll address it — no runaround, no excuses. We also provide detailed care instructions, watering schedules, and seasonal maintenance guidance.
+            Every landscaping project we complete includes a {BUSINESS.landscapeWarrantyDays}-day warranty on plants and materials. If anything we installed doesn't perform as expected within that period, we'll address it - no runaround, no excuses. We also provide detailed care instructions, watering schedules, and seasonal maintenance guidance.
           </p>
         </div>
       </section>
 
       <FAQAccordion faqs={[
-        { question: "Do you offer landscape design services?", answer: "Yes — we're a design-build firm. For qualifying projects, we provide professional 2D and 3D renderings so you can visualize your new landscape before we break ground." },
-        { question: "What plants work best in the Bay Area?", answer: "We select plants suited to our Mediterranean climate — drought-tolerant California natives, ornamental grasses, succulents, flowering perennials, and select non-native species that thrive with efficient irrigation." },
+        { question: "Do you offer landscape design services?", answer: "Yes - we're a design-build firm. For qualifying projects, we provide professional 2D and 3D renderings so you can visualize your new landscape before we break ground." },
+        { question: "What plants work best in the Bay Area?", answer: "We select plants suited to our Mediterranean climate - drought-tolerant California natives, ornamental grasses, succulents, flowering perennials, and select non-native species that thrive with efficient irrigation." },
         { question: "How long does a landscaping project take?", answer: "Most residential landscaping projects take 1–3 weeks. Full-property renovations that include hardscape integration and drainage may take 3–6 weeks." },
         { question: "Do you handle irrigation systems?", answer: "Yes. We design and install complete irrigation systems, including drip and spray zones, smart WiFi controllers, rain sensors, and zone-specific scheduling." },
-        { question: "Can you coordinate landscaping with hardscape work?", answer: "Absolutely — and we strongly recommend it. Building the hardscape and landscape together ensures proper drainage integration and a cohesive overall design." },
+        { question: "Can you coordinate landscaping with hardscape work?", answer: "Absolutely - and we strongly recommend it. Building the hardscape and landscape together ensures proper drainage integration and a cohesive overall design." },
       ]} />
 
       <CTABanner title="Plan Your Landscape Renovation" subtitle="Request a complimentary consultation and receive a clear, detailed proposal for your landscaping project." />

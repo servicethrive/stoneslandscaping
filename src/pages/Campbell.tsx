@@ -19,7 +19,7 @@ const Campbell = () => {
     <Layout>
       <HeroSection
         title="Landscaping & Hardscape in Campbell"
-        subtitle="Quality outdoor renovations for Campbell homeowners — paver patios, custom landscaping, driveways, outdoor kitchens, and complete backyard transformations. Locally based and ready to serve your neighborhood."
+        subtitle="Quality outdoor renovations for Campbell homeowners - paver patios, custom landscaping, driveways, outdoor kitchens, and complete backyard transformations. Locally based and ready to serve your neighborhood."
         backgroundImage={IMAGES.hardscape}
       />
       <TrustBar />
@@ -40,12 +40,12 @@ const Campbell = () => {
       <ZigZagSection items={[
         {
           title: "Transforming Campbell Backyards",
-          text: "Many homeowners here are updating older properties with modern outdoor features — replacing tired concrete with interlocking pavers, adding outdoor kitchen areas for weekend entertaining, or installing artificial turf to eliminate maintenance while keeping the yard looking pristine year-round. We help them do it with professional design, premium materials, and construction that's built to last.",
+          text: "Many homeowners here are updating older properties with modern outdoor features - replacing tired concrete with interlocking pavers, adding outdoor kitchen areas for weekend entertaining, or installing artificial turf to eliminate maintenance while keeping the yard looking pristine year-round. We help them do it with professional design, premium materials, and construction that's built to last.",
           image: IMAGES.zigzag7,
         },
         {
           title: "Same Quality, Every Project",
-          text: `Campbell's flat terrain and typical lot sizes make most projects straightforward to plan and execute, which often translates to efficient timelines and competitive project costs. That said, we bring the same level of craftsmanship and attention to detail to every Campbell project that we deliver on the largest estate projects in the Bay Area — the same base preparation, the same premium materials, the same ${BUSINESS.paverWarrantyYears}-year warranty.`,
+          text: `Campbell's flat terrain and typical lot sizes make most projects straightforward to plan and execute, which often translates to efficient timelines and competitive project costs. That said, we bring the same level of craftsmanship and attention to detail to every Campbell project that we deliver on the largest estate projects in the Bay Area - the same base preparation, the same premium materials, the same ${BUSINESS.paverWarrantyYears}-year warranty.`,
           image: IMAGES.zigzag1,
         },
         {
@@ -97,21 +97,21 @@ const Campbell = () => {
       </section>
 
       <ProcessSteps title="Our Campbell Project Process" steps={[
-        { title: "Free On-Site Estimate", description: "We visit your Campbell property, discuss your goals, take measurements, and provide a detailed written estimate — no obligation." },
+        { title: "Free On-Site Estimate", description: "We visit your Campbell property, discuss your goals, take measurements, and provide a detailed written estimate - no obligation." },
         { title: "Design & Material Selection", description: "Choose from premium pavers, natural stone, concrete finishes, and landscape materials." },
-        { title: "Professional Installation", description: "Our crews handle excavation, grading, base preparation, installation, and cleanup — with a dedicated project lead." },
+        { title: "Professional Installation", description: "Our crews handle excavation, grading, base preparation, installation, and cleanup - with a dedicated project lead." },
         { title: "Final Walkthrough & Warranty", description: `Inspect the finished project with us and receive your ${BUSINESS.paverWarrantyYears}-year warranty documentation.` },
       ]} />
 
       <FAQAccordion faqs={[
-        { question: "How close are you to Campbell?", answer: "Our office is on Almaden Expressway in San Jose — just a few minutes from most Campbell neighborhoods." },
+        { question: "How close are you to Campbell?", answer: "Our office is on Almaden Expressway in San Jose - just a few minutes from most Campbell neighborhoods." },
         { question: "What's the most popular project in Campbell?", answer: "Paver patio installations are our most-requested service in Campbell. Homeowners are replacing old concrete slabs with interlocking pavers that look better, last longer, and add significant value." },
         { question: "How much does a typical Campbell outdoor project cost?", answer: "Campbell projects vary based on scope and materials. We provide detailed, transparent estimates for every project." },
         { question: "Do you handle Campbell city permits?", answer: "Yes. We manage permit applications for projects that require them and ensure all work meets City of Campbell building codes." },
         { question: "What warranty do you provide?", answer: `Paver installations are backed by our ${BUSINESS.paverWarrantyYears}-year warranty covering materials and workmanship. Landscape installations include a ${BUSINESS.landscapeWarrantyDays}-day plant establishment warranty.` },
       ]} />
 
-      <CTABanner title="Get a Free Estimate in Campbell" subtitle="Schedule a consultation — we're right around the corner and ready to transform your outdoor space." />
+      <CTABanner title="Get a Free Estimate in Campbell" subtitle="Schedule a consultation - we're right around the corner and ready to transform your outdoor space." />
     </Layout>
   );
 };
