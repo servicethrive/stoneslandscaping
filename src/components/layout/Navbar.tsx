@@ -31,10 +31,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 lg:h-20">
-        <Link to="/" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
-          <span className={`text-lg lg:text-xl font-bold tracking-wide ${scrolled ? "text-foreground" : "text-white"}`}>
-            STONES <span className="text-primary">LANDSCAPING</span>
-          </span>
+        <Link to="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
+          <img src={logo} alt="Stones Landscaping Inc." className="h-12 lg:h-14 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
