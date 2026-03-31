@@ -6,6 +6,7 @@ import TrustBar from "@/components/sections/TrustBar";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
+import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS, SERVICES } from "@/lib/constants";
 import { CheckCircle, ArrowRight } from "lucide-react";
 
@@ -23,33 +24,38 @@ const Saratoga = () => {
       />
       <TrustBar />
 
-      {/* Main Content */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Serving Saratoga's Most Distinguished Properties</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
-            Saratoga's combination of spacious lots, mature heritage trees, and beautiful residential properties makes it one of the most rewarding communities in the Bay Area for outdoor living investment. Homeowners here don't just want a new patio — they want an outdoor environment that matches the quality and character of their home. They want natural stone that feels intentional, plantings that look established from day one, and construction that's built to last decades, not years.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            {BUSINESS.name} has completed paver installations, landscape renovations, retaining wall projects, outdoor kitchen builds, and complete backyard transformations across Saratoga. From the quiet cul-de-sacs near Saratoga Village to the larger foothill properties along Mt. Eden Road and Saratoga-Sunnyvale Road, each project reflects the character of the neighborhood and the specific preferences of the homeowner. There's no template approach — every design is built around your property's unique topography, architecture, and how you envision using the space.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            Here's what most homeowners don't realize about outdoor renovation in Saratoga: the terrain varies significantly from one street to the next. Properties closer to the foothills often require retaining walls, terraced layouts, and sophisticated drainage engineering, while lots in the flatland neighborhoods present different opportunities for expansive entertainment patios, outdoor dining rooms, and resort-style pool surrounds. Our experience across both terrain types means we know exactly how to approach your property — whether it's a level half-acre lot or a sloped hillside with complex grading needs.
+            Saratoga's combination of spacious lots, mature heritage trees, and beautiful residential properties makes it one of the most rewarding communities in the Bay Area for outdoor living investment. Homeowners here don't just want a new patio — they want an outdoor environment that matches the quality and character of their home.
           </p>
           <p className="text-muted-foreground leading-relaxed font-light">
-            We've built sunken conversation pits around custom gas fireplaces, grand front walkways with natural bluestone and landscape lighting, complete outdoor kitchen pavilions with countertops, built-in grills, and bar seating, and multi-zone backyards that transition seamlessly from entertaining space to quiet garden retreats. Every project is licensed (#{BUSINESS.license}), fully insured, and backed by our {BUSINESS.paverWarrantyYears}-year paver warranty.
+            {BUSINESS.name} has completed paver installations, landscape renovations, retaining wall projects, outdoor kitchen builds, and complete backyard transformations across Saratoga. From the quiet cul-de-sacs near Saratoga Village to the larger foothill properties along Mt. Eden Road and Saratoga-Sunnyvale Road, each project reflects the character of the neighborhood.
           </p>
         </div>
       </section>
 
-      {/* Popular Projects */}
+      <ZigZagSection items={[
+        {
+          title: "Terrain-Specific Design",
+          text: "Here's what most homeowners don't realize about outdoor renovation in Saratoga: the terrain varies significantly from one street to the next. Properties closer to the foothills often require retaining walls, terraced layouts, and sophisticated drainage engineering, while lots in the flatland neighborhoods present different opportunities for expansive entertainment patios and resort-style pool surrounds.",
+          image: IMAGES.zigzag2,
+        },
+        {
+          title: "Refined Craftsmanship",
+          text: `We've built sunken conversation pits around custom gas fireplaces, grand front walkways with natural bluestone and landscape lighting, complete outdoor kitchen pavilions with countertops, built-in grills, and bar seating, and multi-zone backyards that transition seamlessly from entertaining space to quiet garden retreats. Every project is licensed (#${BUSINESS.license}), fully insured, and backed by our ${BUSINESS.paverWarrantyYears}-year paver warranty.`,
+          image: IMAGES.zigzag4,
+        },
+      ]} />
+
       <section className="py-20 lg:py-28 bg-brand-cream">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">What Saratoga Homeowners Are Building</h2>
           <p className="text-muted-foreground mb-8 font-light leading-relaxed">
-            Saratoga outdoor projects tend to be larger in scope and higher in material quality than most Bay Area communities. Here's what we deliver most often:
+            Saratoga outdoor projects tend to be larger in scope and higher in material quality than most Bay Area communities.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
@@ -73,7 +79,6 @@ const Saratoga = () => {
         </div>
       </section>
 
-      {/* Services */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
@@ -99,11 +104,11 @@ const Saratoga = () => {
       ]} />
 
       <FAQAccordion faqs={[
-        { question: "What makes Saratoga outdoor projects different?", answer: "Saratoga properties tend to have larger lots, more mature landscaping, and higher material expectations than surrounding cities. Many also involve terrain variations that require retaining walls, drainage engineering, and multi-level design. We have extensive experience with both the flat-lot and foothill properties throughout Saratoga." },
-        { question: "Which materials do you recommend for Saratoga homes?", answer: "For Saratoga's upscale aesthetic, we most often recommend natural travertine, Techo-Bloc's premium series, limestone, and large-format porcelain pavers. Material selection is always tailored to your home's architecture and personal style." },
-        { question: "Do you work on properties near the Saratoga foothills?", answer: "Absolutely. Foothill properties often require specialized approach — retaining walls, terraced layouts, enhanced drainage, and structural engineering. We have the experience and equipment to build safely and beautifully on sloped terrain." },
-        { question: "How much does a typical Saratoga backyard renovation cost?", answer: "Saratoga projects vary widely based on scope, materials, and site conditions. A premium paver patio might start around $25,000-$40,000, while a comprehensive backyard transformation — patio, outdoor kitchen, fire feature, landscaping, lighting — can range from $75,000 to $200,000+. We provide detailed, transparent estimates for every project." },
-        { question: "What warranty do you offer?", answer: `Our paver installations are backed by a ${BUSINESS.paverWarrantyYears}-year warranty covering materials and workmanship. Landscape installations include a ${BUSINESS.landscapeWarrantyDays}-day plant establishment warranty. We stand behind every project we build.` },
+        { question: "What makes Saratoga outdoor projects different?", answer: "Saratoga properties tend to have larger lots, more mature landscaping, and higher material expectations. Many also involve terrain variations that require retaining walls, drainage engineering, and multi-level design." },
+        { question: "Which materials do you recommend for Saratoga homes?", answer: "For Saratoga's upscale aesthetic, we most often recommend natural travertine, Techo-Bloc's premium series, limestone, and large-format porcelain pavers." },
+        { question: "Do you work on properties near the Saratoga foothills?", answer: "Absolutely. Foothill properties often require specialized approach — retaining walls, terraced layouts, enhanced drainage, and structural engineering." },
+        { question: "How much does a typical Saratoga backyard renovation cost?", answer: "Saratoga projects vary widely based on scope, materials, and site conditions. We provide detailed, transparent estimates for every project." },
+        { question: "What warranty do you offer?", answer: `Our paver installations are backed by a ${BUSINESS.paverWarrantyYears}-year warranty covering materials and workmanship. Landscape installations include a ${BUSINESS.landscapeWarrantyDays}-day plant establishment warranty.` },
       ]} />
 
       <CTABanner title="Start Your Saratoga Outdoor Project" subtitle="Request a complimentary consultation — we'll visit your property and deliver a custom proposal tailored to your home." />

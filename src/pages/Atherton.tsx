@@ -6,6 +6,7 @@ import TrustBar from "@/components/sections/TrustBar";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
+import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS, SERVICES } from "@/lib/constants";
 import { CheckCircle, ArrowRight } from "lucide-react";
 
@@ -31,17 +32,29 @@ const Atherton = () => {
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             Atherton is consistently ranked among the wealthiest communities in the United States, and the outdoor spaces here reflect that distinction. Properties routinely span one to three acres, with mature oak canopies, expansive lawns, and architecture that demands an outdoor environment of equal caliber. This isn't a market for template landscaping — it's a market that requires a contractor who understands estate-scale design, premium material sourcing, and the exacting standards of discerning homeowners.
           </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            {BUSINESS.name} serves Atherton homeowners with the same precision and craftsmanship we bring to every project — but with the capacity, crew depth, and design experience to handle the larger scopes and elevated material selections that Atherton properties demand. We've built expansive paver motor courts with heated radiant systems, multi-zone outdoor kitchens with custom tile backsplashes and built-in BBQ islands, sunken seating areas surrounding natural stone fireplaces, and complete landscape installations that transform raw acreage into curated outdoor living environments.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            What sets our Atherton work apart is the level of coordination involved. Many projects here require close collaboration with architects, general contractors, and property managers. We're comfortable working within larger build schedules, adhering to town permitting requirements, and delivering results that integrate seamlessly with existing architecture. Our 2D and 3D design renderings — available for qualifying projects — give Atherton clients the ability to visualize complex layouts before a single paver is placed.
-          </p>
           <p className="text-muted-foreground leading-relaxed font-light">
-            Whether you're reimagining the entire rear grounds of your estate, adding a resort-style pool deck with natural travertine, or building a grand front entry approach with an interlocking paver driveway and custom lighting, our team brings the experience, equipment, and attention to detail that Atherton homeowners expect. Licensed (#{BUSINESS.license}), fully insured, and backed by our {BUSINESS.paverWarrantyYears}-year paver warranty — we stand behind every square foot.
+            {BUSINESS.name} serves Atherton homeowners with the same precision and craftsmanship we bring to every project — but with the capacity, crew depth, and design experience to handle the larger scopes and elevated material selections that Atherton properties demand.
           </p>
         </div>
       </section>
+
+      <ZigZagSection items={[
+        {
+          title: "Estate-Scale Outdoor Living",
+          text: "We've built expansive paver motor courts with heated radiant systems, multi-zone outdoor kitchens with custom tile backsplashes and built-in BBQ islands, sunken seating areas surrounding natural stone fireplaces, and complete landscape installations that transform raw acreage into curated outdoor living environments.",
+          image: IMAGES.zigzag1,
+        },
+        {
+          title: "Seamless Coordination",
+          text: "What sets our Atherton work apart is the level of coordination involved. Many projects here require close collaboration with architects, general contractors, and property managers. We're comfortable working within larger build schedules, adhering to town permitting requirements, and delivering results that integrate seamlessly with existing architecture.",
+          image: IMAGES.zigzag4,
+        },
+        {
+          title: "Licensed & Warranty-Backed",
+          text: `Whether you're reimagining the entire rear grounds of your estate, adding a resort-style pool deck with natural travertine, or building a grand front entry approach with an interlocking paver driveway and custom lighting, our team brings the experience and attention to detail that Atherton homeowners expect. Licensed (#${BUSINESS.license}), fully insured, and backed by our ${BUSINESS.paverWarrantyYears}-year paver warranty.`,
+          image: IMAGES.zigzag5,
+        },
+      ]} />
 
       {/* What We Build in Atherton */}
       <section className="py-20 lg:py-28 bg-brand-cream">
