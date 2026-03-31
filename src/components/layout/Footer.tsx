@@ -46,7 +46,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-6 text-white/40">Services</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-6 text-primary">Services</h4>
             <ul className="space-y-3">
               {SERVICES.map((s) => (
                 <li key={s.path}>
@@ -70,7 +70,7 @@ const Footer = () => {
 
           {/* Service Areas */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-6 text-white/40">Service Areas</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-6 text-primary">Service Areas</h4>
             <ul className="space-y-3">
               {SERVICE_AREAS.map((area) => (
                 <li key={area.name}>
@@ -84,7 +84,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-6 text-white/40">Quick Links</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-6 text-primary">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.path}>
