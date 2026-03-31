@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
 import TrustBar from "@/components/sections/TrustBar";
+import ProcessSteps from "@/components/sections/ProcessSteps";
 import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import { IMAGES, BUSINESS } from "@/lib/constants";
@@ -9,72 +10,97 @@ import { CheckCircle } from "lucide-react";
 
 const ArtificialTurf = () => {
   useEffect(() => {
-    document.title = "Artificial Turf Installation San Jose | Low-Maintenance Lawns | Stones Landscaping";
+    document.title = "Artificial Turf Installation San Jose | Premium Synthetic Lawns | Stones Landscaping";
   }, []);
 
   return (
     <Layout>
       <HeroSection
         title="Artificial Turf Installation for Bay Area Homes"
-        subtitle="A green, maintenance-free yard year-round — no mowing, no watering, no brown patches. Professionally installed artificial turf that looks and feels natural."
+        subtitle="A lush, maintenance-free yard year-round — no mowing, no watering, no brown patches. Professionally installed premium synthetic turf that looks and feels natural."
         backgroundImage={IMAGES.turf}
       />
       <TrustBar />
 
-      <section className="py-16 bg-background">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold text-foreground mb-6">Why Bay Area Homeowners Are Switching to Turf</h2>
-          <p className="text-muted-foreground mb-4 leading-relaxed">
-            Water restrictions, drought cycles, and the constant upkeep of natural grass have pushed more Bay Area homeowners toward artificial turf — and the results speak for themselves. Modern synthetic turf looks realistic, drains properly, stays green year-round, and eliminates mowing, fertilizing, aerating, and overseeding from your routine.
+          <div className="w-12 h-0.5 bg-primary mb-6" />
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Why Bay Area Homeowners Are Making the Switch</h2>
+          <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
+            Water restrictions, recurring drought cycles, and the constant upkeep demands of natural grass have pushed more Bay Area homeowners toward artificial turf than ever before — and the results speak for themselves. Modern premium synthetic turf looks remarkably realistic, drains properly, stays green year-round, and eliminates mowing, fertilizing, aerating, and overseeding from your weekly routine permanently.
           </p>
-          <p className="text-muted-foreground mb-4 leading-relaxed">
-            At {BUSINESS.name}, we install premium artificial turf systems designed for residential use. Every installation includes proper site grading, a compacted base layer, weed barrier fabric, and turf secured with infill for a natural look and feel. We don't cut corners on base prep — it's what separates turf that performs for 15+ years from turf that wrinkles, bunches, or drains poorly.
+          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
+            At {BUSINESS.name}, we install premium artificial turf systems designed specifically for residential use. Every installation includes proper site grading, a compacted decomposed granite base layer, commercial-grade weed barrier fabric, and turf secured with appropriate infill for a natural look and feel. We don't cut corners on base preparation — it's what separates turf that performs beautifully for 15+ years from turf that wrinkles, bunches, develops drainage problems, or looks obviously fake.
           </p>
-          <p className="text-muted-foreground leading-relaxed">
-            Whether you're replacing a full lawn, converting a side yard, adding a pet area, or integrating turf into a larger landscape design, we handle the installation from start to finish.
+          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
+            Here's what most homeowners don't realize about artificial turf: the installation is everything. The turf product itself matters, but even premium turf will fail if the base isn't graded correctly, the seams aren't properly glued, or the infill ratio is wrong. We've replaced turf installed by other companies that was only two years old — not because the turf was bad, but because the installation was sloppy. Proper base work, precise seaming, and correct infill application are what make the difference between a yard that looks like a putting green and one that looks like a tarp draped over dirt.
+          </p>
+          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
+            We recently converted a 2,500-square-foot backyard in the Willow Glen area of San Jose from patchy, water-hungry natural grass to premium artificial turf with integrated paver borders. The homeowner estimated they were spending over $200 per month on water and lawn maintenance. Within the first year, the turf installation paid for itself in water savings alone — and their yard looked better on day 365 than their natural lawn ever did on its best day.
+          </p>
+          <p className="text-muted-foreground leading-relaxed font-light">
+            Whether you're replacing a full lawn, converting a side yard, creating a dedicated pet area, or integrating turf into a larger landscape and hardscape design, we handle the entire installation from demolition and grading through final infill and brushing.
           </p>
         </div>
       </section>
 
-      <section className="py-16 bg-brand-cream">
+      <section className="py-20 lg:py-28 bg-brand-cream">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold text-foreground mb-6">Where Artificial Turf Works Best</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="w-12 h-0.5 bg-primary mb-6" />
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Where Artificial Turf Works Best</h2>
+          <p className="text-muted-foreground mb-8 font-light leading-relaxed">
+            Artificial turf is versatile enough for nearly any residential application. Here's where Bay Area homeowners use it most.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
-              "Full front or backyard lawns", "Side yards and narrow spaces", "Pet-friendly play areas",
-              "Around pools and spas", "Play areas for children", "Rooftops and patios",
-              "Shaded areas where grass won't grow", "Around pavers and hardscape features",
+              "Full front or backyard lawn replacement",
+              "Side yards and narrow utility corridors",
+              "Pet-friendly play and exercise areas",
+              "Pool and spa surrounds",
+              "Children's play areas and play sets",
+              "Rooftop decks and balconies",
+              "Shaded areas where natural grass won't grow",
+              "Integrated borders around pavers and hardscape",
             ].map((item) => (
-              <div key={item} className="flex items-center gap-2">
+              <div key={item} className="flex items-center gap-3 py-2">
                 <CheckCircle className="h-4 w-4 text-primary shrink-0" />
-                <span className="text-sm text-foreground">{item}</span>
+                <span className="text-sm text-foreground font-light">{item}</span>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-background">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold text-foreground mb-6">Benefits of Professional Turf Installation</h2>
-          <div className="space-y-4 text-muted-foreground leading-relaxed">
-            <p><strong className="text-foreground">Eliminates water costs:</strong> No irrigation needed. In drought-prone areas like the Bay Area, this adds up fast.</p>
-            <p><strong className="text-foreground">Zero mowing or fertilizing:</strong> Reclaim your weekends. No lawn equipment, no chemicals, no seasonal maintenance.</p>
-            <p><strong className="text-foreground">Looks great year-round:</strong> No brown patches in summer, no mud in winter. Consistent appearance regardless of season.</p>
-            <p><strong className="text-foreground">Pet and kid-friendly:</strong> Modern turf drains quickly, resists odor, and holds up to heavy use.</p>
-            <p><strong className="text-foreground">Long lifespan:</strong> Quality turf with proper installation lasts 15–20 years before needing replacement.</p>
+          <div className="w-12 h-0.5 bg-primary mb-6" />
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Benefits of Professional Turf Installation</h2>
+          <div className="space-y-5 text-muted-foreground leading-relaxed font-light">
+            <p><strong className="text-foreground font-medium">Eliminates water costs:</strong> No irrigation system needed. In drought-prone areas like the Bay Area, where water rates continue to climb, the savings add up fast. Most homeowners recoup their turf investment within 3–5 years in water savings alone.</p>
+            <p><strong className="text-foreground font-medium">Zero mowing, fertilizing, or chemical treatments:</strong> Reclaim your weekends. No lawn equipment costs, no fertilizer runs, no seasonal aerating or overseeding. Your yard looks perfect without any of the work.</p>
+            <p><strong className="text-foreground font-medium">Looks green year-round:</strong> No brown patches in August heat, no mud in January rain. Consistent, uniform appearance regardless of season, weather, or shade conditions.</p>
+            <p><strong className="text-foreground font-medium">Pet and kid-friendly:</strong> Modern premium turf drains quickly, resists odor with proper infill, and holds up to heavy daily use. Easy to rinse and keep clean — no more muddy paw prints tracked through the house.</p>
+            <p><strong className="text-foreground font-medium">Long lifespan with minimal maintenance:</strong> Quality turf with proper professional installation lasts 15–20 years before needing replacement. Occasional brushing and rinsing is all that's required to keep it looking fresh.</p>
           </div>
         </div>
       </section>
 
-      <FAQAccordion faqs={[
-        { question: "How long does artificial turf last?", answer: "Professionally installed turf typically lasts 15–20 years with minimal maintenance. Quality of base prep and turf product are the biggest factors." },
-        { question: "Does artificial turf get hot?", answer: "Direct sunlight can warm turf surfaces, similar to any outdoor surface. Shaded areas stay cool, and modern turf products with lighter backing and infill help manage heat." },
-        { question: "Is artificial turf safe for pets?", answer: "Yes. Turf drains well, is easy to clean, and doesn't harbor fleas or ticks. Proper infill and drainage keep odor under control." },
-        { question: "How does it compare to real grass?", answer: "Turf eliminates watering, mowing, and fertilizing costs. Initial installation costs more than sod, but lifetime savings on water and maintenance are significant. See our Artificial Turf vs Sod comparison page for details." },
+      <ProcessSteps title="Turf Installation Process" steps={[
+        { title: "Site Assessment", description: "We measure your space, assess drainage patterns, evaluate soil conditions, and discuss your goals — pet area, full lawn replacement, or landscape integration." },
+        { title: "Demolition & Base Prep", description: "Remove existing grass and organic material, grade the site for drainage, compact the sub-base, and install decomposed granite base and weed barrier." },
+        { title: "Turf Installation", description: "Cut, fit, and seam premium turf to your space. Secure edges, apply infill for natural weight and feel, and brush fibers upright for a realistic finish." },
+        { title: "Final Inspection", description: "Walk the completed installation, check seams, drainage, and edge details. Provide care instructions for long-term turf maintenance." },
       ]} />
 
-      <CTABanner title="Get a Free Turf Installation Estimate" subtitle="Tell us about your space and we'll provide a detailed proposal for your artificial turf project." />
+      <FAQAccordion faqs={[
+        { question: "How long does artificial turf last?", answer: "Professionally installed premium turf typically lasts 15–20 years with minimal maintenance. The quality of the base preparation and the turf product itself are the two biggest factors in lifespan. We use commercial-grade products and proper base construction to maximize longevity." },
+        { question: "Does artificial turf get hot in the sun?", answer: "Direct sunlight can warm turf surfaces, similar to any outdoor surface including concrete, pavers, and natural stone. Shaded areas stay cool. Modern turf products with lighter-colored backing and specialized infill help manage heat. If heat is a concern, we can discuss turf products with enhanced cooling technology." },
+        { question: "Is artificial turf safe for dogs and pets?", answer: "Yes. Premium turf drains well, is easy to clean with a simple hose rinse, and doesn't harbor fleas or ticks like natural grass. Proper antimicrobial infill keeps odor under control even with regular pet use. We install many turf projects specifically as dedicated pet areas." },
+        { question: "How does artificial turf compare to natural grass on cost?", answer: "Artificial turf costs more upfront than sod installation, but the lifetime savings on water, maintenance equipment, fertilizer, and lawn care services are significant. Most Bay Area homeowners break even within 3–5 years and save money every year after that. See our detailed Artificial Turf vs Sod comparison page for a full breakdown." },
+        { question: "Can turf be installed over existing concrete or pavers?", answer: "In some cases, yes — turf can be installed over hard surfaces with proper padding and drainage. However, for the best results and longest lifespan, we recommend a full base installation with proper grading and drainage. We'll assess your specific situation during the consultation." },
+      ]} />
+
+      <CTABanner title="Get a Turf Installation Estimate" subtitle="Request a consultation and we'll provide a detailed proposal for your artificial turf project — no obligation." />
     </Layout>
   );
 };
