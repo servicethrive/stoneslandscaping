@@ -1,37 +1,21 @@
 
 
-## Revert to Playfair Display + Unify CTA Button Styles
+## Remove Display Font from All CTA Buttons — Use Body Font (DM Sans)
 
-### 1. Revert Display Font to Playfair Display
+The issue: Playfair Display (serif) doesn't look good as uppercase button text. The previous hero buttons used the default body font (DM Sans) which was cleaner and more readable. All CTAs should match that style.
 
-The previous font (Playfair Display) was preferred over Rokkitt. Changes:
+### Changes
 
-- **`index.html`** — Replace `Rokkitt` with `Playfair+Display` in the Google Fonts link
-- **`tailwind.config.ts`** — Change `fontFamily.display` from `"Rokkitt"` to `"Playfair Display"`
+Remove `font-display` from every CTA button across 3 files, replacing with `font-body` (DM Sans):
 
-### 2. Unify All CTA Buttons (Header → Body → Footer)
+- **`src/components/sections/HeroSection.tsx`** — lines 44, 48, 53: change `font-display` → `font-body` on all three buttons
+- **`src/components/sections/CTABanner.tsx`** — lines 32, 39: change `font-display` → `font-body` on both buttons
+- **`src/components/layout/Navbar.tsx`** — line 95: change `font-display` → `font-body` on the Free Estimate button
 
-Standardize every CTA button to use the same font and color treatment:
-
-**Shared CTA style:** `font-display tracking-widest uppercase font-semibold` with primary brown bg (default variant).
-
-Files to update:
-
-- **`src/components/layout/Navbar.tsx`** (line 95) — Already has `font-display`. Confirm `tracking-widest uppercase font-semibold` matches.
-- **`src/components/sections/HeroSection.tsx`** (lines 44, 48, 53) — Add `font-display tracking-widest` to both primary and outline buttons.
-- **`src/components/sections/CTABanner.tsx`** (lines 32, 39) — Add `font-display tracking-widest` to both buttons.
-- **`src/components/layout/Footer.tsx`** — Check for any CTA buttons and add matching classes.
-- **Any page-level inline buttons** — Search for `<Button` across pages and ensure they carry `font-display tracking-widest uppercase font-semibold`.
-
-### 3. Update Memory
-
-Update `mem://design/direction` to reflect Playfair Display (not Rokkitt) as the display font.
+All buttons keep `tracking-widest uppercase font-semibold text-sm` — only the font family changes.
 
 ### Files Changed
-- `index.html`
-- `tailwind.config.ts`
 - `src/components/sections/HeroSection.tsx`
 - `src/components/sections/CTABanner.tsx`
-- `src/components/layout/Navbar.tsx` (minor confirm)
-- `mem://design/direction`
+- `src/components/layout/Navbar.tsx`
 
