@@ -41,7 +41,7 @@ const HeroSection = ({
         {subtitle}
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <Button asChild size="lg" className="px-10 py-6 tracking-widest uppercase text-sm font-semibold font-display">
+        <Button asChild size="lg" className="px-10 py-6 tracking-widest uppercase text-sm font-semibold font-body">
           <Link to={primaryCTA.link}>{primaryCTA.text}</Link>
         </Button>
         {secondaryCTA && (
