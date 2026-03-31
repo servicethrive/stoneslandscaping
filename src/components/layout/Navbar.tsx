@@ -32,7 +32,7 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center gap-1">
           {/* Services Mega Menu */}
           <div
-            className="relative pb-2"
+            className="relative"
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
