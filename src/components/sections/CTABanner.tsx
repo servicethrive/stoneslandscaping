@@ -36,7 +36,7 @@ const CTABanner = ({
           asChild
           variant="outline"
           size="lg"
-          className={`text-sm px-10 py-6 tracking-wide uppercase font-semibold ${dark ? "border-white/25 bg-white/10 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm" : ""}`}
+          className={`text-sm px-10 py-6 tracking-widest uppercase font-semibold font-display ${dark ? "border-white/25 bg-white/10 text-white hover:bg-white/20 hover:text-white backdrop-blur-sm" : ""}`}
         >
           <a href={`tel:${BUSINESS.phoneTel}`}>
             <Phone className="h-4 w-4 mr-2" /> {BUSINESS.phone}
