@@ -1,14 +1,11 @@
 
 
-## Replace "Why Silicon Valley Homeowners Choose Us" Image
+## Replace "See Your Project Before It's Built" Image
 
-Replace the current Unsplash image in the "Why Choose Us" section on the homepage with the uploaded 3D landscape design render.
+Update `src/components/sections/DesignProcessBlock.tsx` to use `/images/3d-landscape-design.jpg` (already in `public/images/`) instead of the current Unsplash URL.
 
-### Steps
-1. Copy `user-uploads://3d_landscape_design.jpg` to `public/images/3d-landscape-design.jpg`
-2. Update `src/pages/Index.tsx` - change the `img src` in the "Why Choose Us" section from `{IMAGES.pavers}` to `/images/3d-landscape-design.jpg` and update the alt text to reference the 3D design rendering
-
-### Files Changed
-- `public/images/3d-landscape-design.jpg` (new)
-- `src/pages/Index.tsx`
+### Change
+- **File**: `src/components/sections/DesignProcessBlock.tsx`
+- **Line ~25**: Change `src` from the Unsplash URL to `/images/3d-landscape-design.jpg`
+- Update `alt` text to "3D landscape design rendering by Stones Landscaping"
 
