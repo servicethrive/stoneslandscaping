@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BUSINESS, SERVICES } from "@/lib/constants";
-import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -27,16 +26,14 @@ const Navbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-brand-dark backdrop-blur-sm"
+        scrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-brand-dark/90 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between h-16 lg:h-20">
-        <Link to="/" className="flex items-center shrink-0" onClick={() => setMobileOpen(false)}>
-          <img
-            src={logo}
-            alt="Stones Landscaping Inc."
-            className={`h-14 lg:h-16 w-auto transition-all duration-300 ${scrolled ? "" : "brightness-0 invert"}`}
-          />
+        <Link to="/" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
+          <span className={`text-lg lg:text-xl font-bold tracking-wide ${scrolled ? "text-foreground" : "text-white"}`}>
+            STONES <span className="text-primary">LANDSCAPING</span>
+          </span>
         </Link>
 
         {/* Desktop Nav */}
