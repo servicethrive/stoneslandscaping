@@ -1,25 +1,20 @@
 
 
-## Fix Logo — Premium Visibility on Dark Backgrounds
+## Update Site Accent Color to Logo Brown (#9a5e37)
 
-**Problem:** The logo has dark/colored artwork on a transparent background. It's invisible against the dark navbar and dark footer.
-
-**Approach — clean, luxury-grade:**
-
-Rather than hacky filters or background pills, we'll use a **CSS `filter: brightness(0) invert(1)` only on dark backgrounds**, combined with a smooth transition when the navbar scrolls to its light state. This is the standard technique used by premium brands (Apple, Tesla, Porsche) to show a single logo asset on both dark and light backgrounds. It renders the logo as clean white — no containers, no glow, no cheap effects.
+Replace the current gold-yellow primary/accent with the logo's warm brown `#9a5e37` (`hsl(24, 47%, 41%)`) across the entire site. Since all components use CSS custom properties, this is a single-file change.
 
 ### Changes
 
-**1. Navbar.tsx**
-- Increase navbar height: `h-20 lg:h-24`
-- Increase logo size: `h-12 lg:h-16`
-- When `!scrolled` (dark bg): apply `filter brightness-0 invert` to make logo white
-- When `scrolled` (light bg): remove filter, show logo in original colors
-- Add `transition-all duration-300` to the img for smooth crossfade
+**`src/index.css`** — Update these CSS custom properties:
 
-**2. Footer.tsx**
-- Increase logo size: `h-12`
-- Apply `brightness-0 invert` permanently (footer is always dark)
+| Variable | Current (gold-yellow) | New (logo brown) |
+|---|---|---|
+| `--primary` | `43 75% 31%` | `24 47% 41%` |
+| `--accent` | `43 60% 40%` | `24 40% 48%` |
+| `--ring` | `43 75% 31%` | `24 47% 41%` |
+| `--brand-brown` | `43 75% 31%` | `24 47% 41%` |
+| `--brand-brown-light` | `43 55% 45%` | `24 40% 55%` |
 
-This gives a crisp white logo on dark sections and the full-color brand logo on light sections — exactly how high-end sites handle single-asset logos.
+This single update propagates to every CTA button, icon, link, trust bar icon, and accent element site-wide since they all reference these variables.
 
