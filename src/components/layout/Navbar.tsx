@@ -145,7 +145,7 @@ const Navbar = () => {
               <Phone className="h-4 w-4" /> {BUSINESS.phone}
             </a>
             <Button asChild className="w-full mt-3 text-xs tracking-widest uppercase font-semibold py-5">
-              <Link to="/contact" onClick={() => setMobileOpen(false)}>Get Free Estimate</Link>
+              <Link to="/contact" onClick={() => setMobileOpen(false)}>Get A Free Estimate</Link>
             </Button>
           </div>
         </div>
