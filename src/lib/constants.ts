@@ -37,7 +37,7 @@ export const SERVICES = [
     title: "Concrete Driveways",
     path: "/concrete-driveways",
     description: "Professional driveway replacement and installation with stamped, colored, and standard concrete options.",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
+    image: "/images/concrete-driveways-service.jpg",
   },
   {
     title: "Outdoor Kitchens",
