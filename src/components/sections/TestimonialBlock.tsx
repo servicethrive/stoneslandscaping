@@ -1,4 +1,4 @@
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 interface Testimonial {
   name: string;
@@ -33,21 +33,27 @@ const TestimonialBlock = ({
   testimonials = defaultTestimonials,
   title = "What Our Clients Say",
 }: TestimonialBlockProps) => (
-  <section className="py-16 bg-brand-cream">
-    <div className="container mx-auto px-4">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-foreground">{title}</h2>
+  <section className="py-20 lg:py-28 bg-brand-dark relative overflow-hidden">
+    <div className="absolute inset-0 warm-texture opacity-20" />
+    <div className="relative container mx-auto px-4">
+      <div className="text-center mb-14">
+        <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">{title}</h2>
+        <p className="text-white/50 font-light">Trusted by homeowners across the Bay Area</p>
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {testimonials.map((t, i) => (
-          <div key={i} className="bg-background rounded-lg p-6 shadow-sm border">
-            <div className="flex gap-0.5 mb-3">
+          <div key={i} className="bg-white/5 backdrop-blur-sm rounded-sm p-8 border border-white/10 relative">
+            <Quote className="h-8 w-8 text-primary/30 absolute top-6 right-6" />
+            <div className="flex gap-0.5 mb-4">
               {[...Array(5)].map((_, j) => (
                 <Star key={j} className="h-4 w-4 fill-primary text-primary" />
               ))}
             </div>
-            <p className="text-sm text-foreground mb-4 leading-relaxed italic">"{t.text}"</p>
-            <div>
-              <p className="text-sm font-bold text-foreground">{t.name}</p>
-              <p className="text-xs text-muted-foreground">{t.service}</p>
+            <p className="text-sm text-white/80 mb-6 leading-relaxed font-light">"{t.text}"</p>
+            <div className="border-t border-white/10 pt-4">
+              <p className="text-sm font-semibold text-white">{t.name}</p>
+              <p className="text-xs text-primary/80 tracking-wide uppercase">{t.service}</p>
             </div>
           </div>
         ))}

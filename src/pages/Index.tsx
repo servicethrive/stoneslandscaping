@@ -15,28 +15,29 @@ import { CheckCircle } from "lucide-react";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Stones Landscaping Inc. | Premium Landscaping & Hardscape in San Jose, CA";
+    document.title = "Stones Landscaping Inc. | Premium Hardscape & Outdoor Living | San Jose, CA";
   }, []);
 
   return (
     <Layout>
       <HeroSection
-        title="Transform Your Outdoor Space"
-        subtitle="Premium landscaping, hardscape, and outdoor living construction for Bay Area homeowners. From custom paver patios to complete backyard renovations — built with precision and backed by industry-leading warranties."
+        title="Luxury Outdoor Living, Built to Last"
+        subtitle="Custom paver patios, outdoor kitchens, pergolas, and complete backyard transformations for Silicon Valley's finest homes. Designed with precision, built with integrity."
         backgroundImage={IMAGES.hero}
-        primaryCTA={{ text: "Get a Free Estimate", link: "/contact" }}
-        secondaryCTA={{ text: "View Our Work", link: "/gallery" }}
+        primaryCTA={{ text: "Request a Consultation", link: "/contact" }}
+        secondaryCTA={{ text: "View Our Portfolio", link: "/gallery" }}
       />
 
       <TrustBar />
 
       {/* Services Section */}
-      <section className="py-16 bg-background">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">Our Services</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              From design concept to finished build, we handle every phase of your outdoor renovation project.
+          <div className="text-center mb-16">
+            <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Our Expertise</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto font-light text-lg">
+              From concept to completion, we deliver premium outdoor spaces for discerning Bay Area homeowners.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
@@ -54,30 +55,32 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 bg-brand-dark">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+      <section className="py-20 lg:py-28 bg-brand-dark relative overflow-hidden">
+        <div className="absolute inset-0 warm-texture opacity-20" />
+        <div className="relative container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">Why Homeowners Choose Stones Landscaping</h2>
-              <div className="space-y-4">
+              <div className="w-12 h-0.5 bg-primary mb-6" />
+              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">Why Silicon Valley Homeowners Choose Us</h2>
+              <div className="space-y-5">
                 {[
-                  { title: "Clear Communication", desc: "You'll always know where your project stands. We explain every phase, respond promptly, and keep you informed throughout construction." },
+                  { title: "Uncompromising Quality", desc: "Every project is built with premium materials and meticulous attention to detail — from foundation to finish." },
                   { title: "Transparent Process", desc: "Detailed proposals with clear scope, pricing, and timelines. No hidden costs, no scope creep, no surprises." },
                   { title: "Industry-Leading Warranties", desc: `${BUSINESS.paverWarrantyYears}-year paver warranty and ${BUSINESS.landscapeWarrantyDays}-day landscape warranty. We stand behind our work.` },
-                  { title: "2D/3D Design Capability", desc: "Visualize your project before construction starts with professional renderings available for qualifying projects." },
-                  { title: "Large Crew Capacity", desc: "We run experienced crews capable of handling complex residential projects efficiently and on schedule." },
+                  { title: "2D/3D Design Visualization", desc: "See your project before construction begins with professional renderings for qualifying projects." },
+                  { title: "Large Crew Capacity", desc: "Experienced crews capable of handling complex, high-end residential projects efficiently and on schedule." },
                 ].map((item) => (
-                  <div key={item.title} className="flex gap-3">
+                  <div key={item.title} className="flex gap-4">
                     <CheckCircle className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                     <div>
-                      <h3 className="text-white font-semibold text-sm">{item.title}</h3>
-                      <p className="text-white/65 text-sm">{item.desc}</p>
+                      <h3 className="text-white font-semibold text-sm tracking-wide">{item.title}</h3>
+                      <p className="text-white/55 text-sm font-light leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="aspect-[4/3] rounded-lg overflow-hidden">
+            <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
               <img
                 src={IMAGES.pavers}
                 alt="Professional paver patio installation by Stones Landscaping in San Jose"
@@ -100,8 +103,8 @@ const Index = () => {
       <ServiceAreaGrid />
 
       <CTABanner
-        title="Ready to Start Your Outdoor Project?"
-        subtitle="Request a free estimate and let's discuss how to bring your vision to life."
+        title="Ready to Elevate Your Outdoor Space?"
+        subtitle="Request a complimentary consultation and discover how we can transform your vision into reality."
       />
     </Layout>
   );
