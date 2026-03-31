@@ -55,7 +55,13 @@ export const SERVICES = [
     title: "Artificial Turf",
     path: "/artificial-turf",
     description: "Low-maintenance artificial turf installation for lush, green yards without the water bill or upkeep.",
-    image: "https://images.unsplash.com/photo-1558635924-b60e7d521548?auto=format&fit=crop&w=800&q=80",
+    image: "/images/artificial-turf-service.jpg",
+  },
+  {
+    title: "Patio & Walkways",
+    path: "/patio-walkways",
+    description: "Custom patio and walkway designs that enhance your outdoor living space with premium materials and craftsmanship.",
+    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
   },
 ] as const;
 
