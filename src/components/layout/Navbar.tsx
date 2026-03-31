@@ -30,9 +30,15 @@ const Navbar = () => {
         scrolled ? "bg-background/95 backdrop-blur-md shadow-md" : "bg-brand-dark/90 backdrop-blur-sm"
       }`}
     >
-      <div className="container mx-auto px-4 flex items-center justify-between h-16 lg:h-20">
+      <div className="container mx-auto px-4 flex items-center justify-between h-20 lg:h-24">
         <Link to="/" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
-          <img src={logo} alt="Stones Landscaping" className="h-8 lg:h-10 w-auto" />
+          <img
+            src={logo}
+            alt="Stones Landscaping"
+            className={`h-12 lg:h-16 w-auto transition-all duration-300 ${
+              scrolled ? "" : "brightness-0 invert"
+            }`}
+          />
         </Link>
 
         {/* Desktop Nav */}
