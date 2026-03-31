@@ -23,8 +23,8 @@ const DesignProcessBlock = () => (
         </div>
         <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
           <img
-            src="https://images.unsplash.com/photo-1600210492493-0946911123ea?auto=format&fit=crop&w=800&q=80"
-            alt="Landscape design rendering example"
+            src="/images/3d-landscape-design.jpg"
+            alt="3D landscape design rendering by Stones Landscaping"
             className="w-full h-full object-cover"
             loading="lazy"
           />
