@@ -32,7 +32,7 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center gap-1">
           {/* Services Mega Menu */}
           <div
-            className="relative"
+            className="relative pb-2"
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
@@ -42,7 +42,7 @@ const Navbar = () => {
               Services <ChevronDown className={`h-3.5 w-3.5 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
             </button>
             {servicesOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[520px] bg-white rounded-sm shadow-2xl border border-border/60 p-6">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[520px] bg-white rounded-sm shadow-2xl border border-border/60 pt-2 px-6 pb-6">
                 <div className="grid grid-cols-2 gap-x-6 gap-y-1">
                   {SERVICES.map((s) => (
                     <Link
