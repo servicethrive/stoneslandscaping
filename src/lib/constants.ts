@@ -61,7 +61,7 @@ export const SERVICES = [
     title: "Patio & Walkways",
     path: "/patio-walkways",
     description: "Custom patio and walkway designs that enhance your outdoor living space with premium materials and craftsmanship.",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+    image: "/images/patio-walkways-service.jpg",
   },
 ] as const;
 
