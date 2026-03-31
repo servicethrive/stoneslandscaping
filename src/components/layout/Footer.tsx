@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Shield } from "lucide-react";
 import { BUSINESS, SERVICES, SERVICE_AREAS } from "@/lib/constants";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const quickLinks = [
