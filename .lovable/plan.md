@@ -1,21 +1,23 @@
 
 
-## Remove Display Font from All CTA Buttons — Use Body Font (DM Sans)
+## Navbar CTA Text + Fix Services Dropdown
 
-The issue: Playfair Display (serif) doesn't look good as uppercase button text. The previous hero buttons used the default body font (DM Sans) which was cleaner and more readable. All CTAs should match that style.
+### 1. Update Navbar CTA Text
+Change "Free Estimate" → "Get A Free Estimate" in both desktop (line 96) and mobile (line 148) buttons.
 
-### Changes
+### 2. Fix Services Dropdown Collapsing
+The dropdown has `mt-1` (a gap between the trigger button and the panel). When the mouse crosses that gap, `onMouseLeave` fires and the menu closes. Fix:
 
-Remove `font-display` from every CTA button across 3 files, replacing with `font-body` (DM Sans):
+- Remove `mt-1` from the dropdown panel
+- Add a generous padding-bottom to the trigger button area so the hover zone connects seamlessly to the dropdown
+- Add `pt-2` padding-top to the dropdown panel to preserve visual spacing without creating a dead zone
 
-- **`src/components/sections/HeroSection.tsx`** — lines 44, 48, 53: change `font-display` → `font-body` on all three buttons
-- **`src/components/sections/CTABanner.tsx`** — lines 32, 39: change `font-display` → `font-body` on both buttons
-- **`src/components/layout/Navbar.tsx`** — line 95: change `font-display` → `font-body` on the Free Estimate button
-
-All buttons keep `tracking-widest uppercase font-semibold text-sm` — only the font family changes.
+**`src/components/layout/Navbar.tsx`** changes:
+- Line 34-37: Wrap the trigger `<div>` with extra bottom padding so hover zone extends into dropdown area
+- Line 45: Change `mt-1` → `pt-2` (padding inside the dropdown instead of margin outside)
+- Line 96: "Free Estimate" → "Get A Free Estimate"
+- Line 148: "Get Free Estimate" → "Get A Free Estimate"
 
 ### Files Changed
-- `src/components/sections/HeroSection.tsx`
-- `src/components/sections/CTABanner.tsx`
 - `src/components/layout/Navbar.tsx`
 
