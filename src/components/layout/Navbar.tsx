@@ -93,7 +93,7 @@ const Navbar = () => {
             {BUSINESS.phone}
           </a>
           <Button asChild className="text-xs px-6 py-5 tracking-widest uppercase font-semibold font-body">
-            <Link to="/contact">Free Estimate</Link>
+            <Link to="/contact">Get A Free Estimate</Link>
           </Button>
         </div>
 
