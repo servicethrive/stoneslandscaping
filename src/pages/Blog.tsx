@@ -16,14 +16,11 @@ const articles = [
 
 const Blog = () => {
   return (
-    <Layout
-      title="Resources & Guides | Stones Landscaping"
-      description="Expert articles and comparison guides on hardscaping, landscaping, and outdoor living for Silicon Valley homeowners."
-    >
+    <Layout>
       <section className="pt-32 pb-20">
         <div className="container mx-auto px-4">
           <h1 className="font-heading text-4xl md:text-5xl text-foreground mb-4">
-            Resources & Guides
+            Resources &amp; Guides
           </h1>
           <p className="text-muted-foreground font-light max-w-2xl mb-12">
             In-depth comparisons and expert advice to help you make informed decisions about your outdoor living spaces.
