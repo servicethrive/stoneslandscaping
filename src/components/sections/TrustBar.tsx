@@ -10,15 +10,17 @@ const TrustBar = () => {
   ];
 
   return (
-    <section className="bg-brand-dark py-6">
+    <section className="bg-brand-dark border-t border-white/5 py-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
           {items.map((item) => (
-            <div key={item.label} className="flex items-center gap-3 justify-center">
-              <item.icon className="h-8 w-8 text-primary shrink-0" />
+            <div key={item.label} className="flex items-center gap-4 justify-center">
+              <div className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center">
+                <item.icon className="h-5 w-5 text-primary" />
+              </div>
               <div>
-                <p className="text-white font-bold text-sm">{item.value}</p>
-                <p className="text-white/60 text-xs">{item.label}</p>
+                <p className="text-white font-semibold text-sm tracking-wide">{item.value}</p>
+                <p className="text-white/50 text-xs font-light tracking-wider uppercase">{item.label}</p>
               </div>
             </div>
           ))}
