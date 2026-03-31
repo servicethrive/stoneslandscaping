@@ -14,6 +14,7 @@ const Navbar = () => {
     { label: "Gallery", path: "/gallery" },
     { label: "Reviews", path: "/reviews" },
     { label: "Service Areas", path: "/service-areas" },
+    { label: "Blog", path: "/blog" },
     { label: "Contact", path: "/contact" },
   ];
 
@@ -59,15 +60,6 @@ const Navbar = () => {
                       </span>
                     </Link>
                   ))}
-                </div>
-                <div className="border-t border-border/40 mt-4 pt-4">
-                  <Link
-                    to="/pavers-vs-concrete"
-                    className="text-xs text-primary hover:underline font-medium tracking-wide"
-                    onClick={() => setServicesOpen(false)}
-                  >
-                    Compare: Pavers vs Concrete →
-                  </Link>
                 </div>
               </div>
             )}
