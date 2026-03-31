@@ -45,7 +45,7 @@ const HeroSection = ({
           <Link to={primaryCTA.link}>{primaryCTA.text}</Link>
         </Button>
         {secondaryCTA && (
-          <Button asChild variant="outline" size="lg" className="px-10 py-6 border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white backdrop-blur-sm tracking-widest uppercase text-sm font-semibold font-display">
+          <Button asChild variant="outline" size="lg" className="px-10 py-6 border-white/25 bg-white/5 text-white hover:bg-white/10 hover:text-white backdrop-blur-sm tracking-widest uppercase text-sm font-semibold font-body">
             <Link to={secondaryCTA.link}>{secondaryCTA.text}</Link>
           </Button>
         )}
