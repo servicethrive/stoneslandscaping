@@ -15,7 +15,7 @@ const Warranties = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Warranty Commitment</h1>
           <p className="text-lg text-white/75 max-w-2xl mx-auto">
-            We back our work with clear, meaningful warranties because quality construction should last — and you should have confidence that it will.
+            We back our work with clear, meaningful warranties because quality construction should last - and you should have confidence that it will.
           </p>
         </div>
       </section>
@@ -29,7 +29,7 @@ const Warranties = () => {
             <div>
               <h3 className="text-xl font-bold text-foreground mb-3">{BUSINESS.paverWarrantyYears}-Year Paver Warranty</h3>
               <p className="text-muted-foreground mb-3 leading-relaxed">
-                Our paver warranty covers defects in materials and workmanship for {BUSINESS.paverWarrantyYears} years from the date of project completion. This includes issues like shifting, settling beyond normal tolerances, and joint failure — provided the installation was not damaged by unauthorized modifications, heavy equipment, or natural events outside normal conditions.
+                Our paver warranty covers defects in materials and workmanship for {BUSINESS.paverWarrantyYears} years from the date of project completion. This includes issues like shifting, settling beyond normal tolerances, and joint failure - provided the installation was not damaged by unauthorized modifications, heavy equipment, or natural events outside normal conditions.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 If a covered issue occurs, we assess the situation, determine the cause, and make repairs at no cost. This warranty reflects our confidence in the base preparation, materials, and installation methods we use on every paver project.
@@ -41,7 +41,7 @@ const Warranties = () => {
                 Our landscape warranty covers plants, sod, and installed materials for {BUSINESS.landscapeWarrantyDays} days from project completion. If plants fail to establish, sod doesn't take, or installed components show defects within the warranty window, we replace them.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                This warranty is contingent on following the watering schedule and care instructions we provide at project handoff. We set you up for success with clear guidance on irrigation timing, seasonal adjustments, and plant care — so your new landscape thrives long after the warranty period ends.
+                This warranty is contingent on following the watering schedule and care instructions we provide at project handoff. We set you up for success with clear guidance on irrigation timing, seasonal adjustments, and plant care - so your new landscape thrives long after the warranty period ends.
               </p>
             </div>
           </div>
@@ -52,7 +52,7 @@ const Warranties = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl font-bold text-foreground mb-6">Why We Offer Strong Warranties</h2>
           <p className="text-muted-foreground leading-relaxed">
-            Warranties aren't marketing tools — they're a signal of how a contractor builds. A {BUSINESS.paverWarrantyYears}-year paver warranty only makes business sense if the installation is done properly in the first place. That means correct excavation depth, quality aggregate base, proper compaction, edge restraint, and the right sand and jointing material. When those steps are followed, warranty claims are rare — which is exactly the point.
+            Warranties aren't marketing tools - they're a signal of how a contractor builds. A {BUSINESS.paverWarrantyYears}-year paver warranty only makes business sense if the installation is done properly in the first place. That means correct excavation depth, quality aggregate base, proper compaction, edge restraint, and the right sand and jointing material. When those steps are followed, warranty claims are rare - which is exactly the point.
           </p>
         </div>
       </section>

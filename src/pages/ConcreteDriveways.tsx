@@ -15,8 +15,8 @@ const ConcreteDriveways = () => {
   }, []);
 
   const concreteTypes = [
-    { name: "Standard Brushed Concrete", desc: "Clean, durable, and cost-effective. A brushed finish with proper reinforcement and control joints delivers the reliable, professional look that most Bay Area homes need — and it performs beautifully for decades." },
-    { name: "Stamped Concrete", desc: "Textured patterns that replicate the look of natural stone, brick, slate, or flagstone. Stamped concrete adds distinctive visual character to your driveway at a fraction of the cost of natural materials — a popular upgrade for homeowners seeking visual impact." },
+    { name: "Standard Brushed Concrete", desc: "Clean, durable, and cost-effective. A brushed finish with proper reinforcement and control joints delivers the reliable, professional look that most Bay Area homes need - and it performs beautifully for decades." },
+    { name: "Stamped Concrete", desc: "Textured patterns that replicate the look of natural stone, brick, slate, or flagstone. Stamped concrete adds distinctive visual character to your driveway at a fraction of the cost of natural materials - a popular upgrade for homeowners seeking visual impact." },
     { name: "Colored & Stained Concrete", desc: "Integral color mixed throughout the concrete for a consistent, fade-resistant tone, or acid stains applied after curing for rich, variegated earth tones. Available in a range of colors to complement your home's exterior palette." },
   ];
 
@@ -24,7 +24,7 @@ const ConcreteDriveways = () => {
     <Layout>
       <HeroSection
         title="Concrete Driveway Installation & Replacement"
-        subtitle="Professional concrete driveways built for Bay Area homes — standard, stamped, and decorative finishes. Proper grading, reinforcement, and lasting results backed by our craftsmanship guarantee."
+        subtitle="Professional concrete driveways built for Bay Area homes - standard, stamped, and decorative finishes. Proper grading, reinforcement, and lasting results backed by our craftsmanship guarantee."
         backgroundImage={IMAGES.concrete}
       />
       <TrustBar />
@@ -34,7 +34,7 @@ const ConcreteDriveways = () => {
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">New Driveways and Complete Replacements</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
-            Your driveway is the first surface people see when they approach your home — and one of the most heavily used areas on your entire property. A new concrete driveway transforms your curb appeal, improves daily functionality, and adds measurable value.
+            Your driveway is the first surface people see when they approach your home - and one of the most heavily used areas on your entire property. A new concrete driveway transforms your curb appeal, improves daily functionality, and adds measurable value.
           </p>
           <p className="text-muted-foreground leading-relaxed font-light">
             At {BUSINESS.name}, we handle complete driveway projects from demolition to final seal coat. Every driveway we build is properly reinforced with rebar, sloped for positive drainage, and designed to handle the Bay Area's expansive clay soils.
@@ -50,7 +50,7 @@ const ConcreteDriveways = () => {
         },
         {
           title: "Licensed Concrete Specialists",
-          text: `We're licensed for concrete-related services under classification C-61/D06 (License #${BUSINESS.license}), and our work reflects that specialization. Concrete isn't a side service for us — it's one of the core trades we've built our reputation on. We've poured driveways for properties across San Jose, Campbell, Santa Clara, and throughout the South Bay.`,
+          text: `We're licensed for concrete-related services under classification C-61/D06 (License #${BUSINESS.license}), and our work reflects that specialization. Concrete isn't a side service for us - it's one of the core trades we've built our reputation on. We've poured driveways for properties across San Jose, Campbell, Santa Clara, and throughout the South Bay.`,
           image: IMAGES.zigzag2,
         },
       ]} />
@@ -103,16 +103,16 @@ const ConcreteDriveways = () => {
       <ProcessSteps title="Driveway Project Process" steps={[
         { title: "Assessment & Planning", description: "We inspect your current driveway, evaluate sub-base conditions, check drainage patterns, and discuss your finish preferences and budget." },
         { title: "Demo & Base Prep", description: "Remove the old surface, excavate to proper depth, grade the sub-base for drainage, compact the soil, and install gravel base and rebar reinforcement." },
-        { title: "Pour & Finish", description: "Fresh concrete is poured, leveled, and finished with your chosen texture — brushed, stamped, or smooth. Control joints are cut and sealant is applied." },
+        { title: "Pour & Finish", description: "Fresh concrete is poured, leveled, and finished with your chosen texture - brushed, stamped, or smooth. Control joints are cut and sealant is applied." },
         { title: "Curing & Handoff", description: "We outline proper curing timelines, provide care instructions, and schedule a follow-up check to ensure everything is performing as expected." },
       ]} />
 
       <FAQAccordion faqs={[
         { question: "How long does a driveway replacement take?", answer: "Most single-family driveway replacements take 3–5 days, including demolition, base preparation, forming, pouring, and initial curing. Larger driveways or stamped/colored finishes may add 1–2 additional days." },
         { question: "How long before I can drive on my new driveway?", answer: "We recommend waiting 5–7 days before driving on new concrete. Walking is typically safe after 24–48 hours. We provide detailed curing instructions and mark the timeline clearly so you know exactly when your driveway is ready for full use." },
-        { question: "Is stamped concrete more expensive than standard?", answer: "Yes — stamped concrete costs more due to the additional labor, stamping tools, release agents, and often integral color that's involved. However, it's significantly less expensive than installing natural stone or pavers for a similar aesthetic result, making it an excellent value for homeowners who want visual impact without the premium material cost." },
+        { question: "Is stamped concrete more expensive than standard?", answer: "Yes - stamped concrete costs more due to the additional labor, stamping tools, release agents, and often integral color that's involved. However, it's significantly less expensive than installing natural stone or pavers for a similar aesthetic result, making it an excellent value for homeowners who want visual impact without the premium material cost." },
         { question: "How thick should a residential concrete driveway be?", answer: "We pour residential driveways at a minimum of 4 inches thick, with 5-6 inches at transitions and areas that bear heavier loads. Every driveway includes steel rebar reinforcement and properly spaced control joints to manage cracking. The exact specifications depend on your soil conditions and expected use." },
-        { question: "Do you also pour concrete patios and walkways?", answer: "Yes. In addition to driveways, we handle concrete patios, walkways, pool decks, and utility slabs as part of larger outdoor renovation projects. Many of our clients combine a driveway replacement with a new concrete or paver patio in the backyard — and building them together saves on mobilization costs." },
+        { question: "Do you also pour concrete patios and walkways?", answer: "Yes. In addition to driveways, we handle concrete patios, walkways, pool decks, and utility slabs as part of larger outdoor renovation projects. Many of our clients combine a driveway replacement with a new concrete or paver patio in the backyard - and building them together saves on mobilization costs." },
       ]} />
 
       <CTABanner title="Get a Quote for Your Driveway Project" subtitle="Schedule a free assessment and receive a detailed, transparent proposal for your concrete driveway installation or replacement." />

@@ -18,7 +18,7 @@ const TeamBlock = () => (
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             {BUSINESS.name} was founded in {BUSINESS.founded} by Manuel Corona Escobar, who spent years working in the
             landscaping and hardscape industry before launching his own company. That hands-on experience is the
-            foundation of how we operate — organized, detail-focused, and committed to quality.
+            foundation of how we operate - organized, detail-focused, and committed to quality.
           </p>
           <p className="text-muted-foreground mb-6 leading-relaxed font-light">
             We run large crews capable of handling complex residential projects across the Bay Area.
@@ -28,7 +28,7 @@ const TeamBlock = () => (
           <ul className="space-y-3 text-sm text-foreground">
             <li className="flex items-center gap-3">
               <span className="w-1.5 h-1.5 bg-primary rounded-full shrink-0" />
-              Licensed: #{BUSINESS.license} — {BUSINESS.licenseClassifications}
+              Licensed: #{BUSINESS.license} - {BUSINESS.licenseClassifications}
             </li>
             <li className="flex items-center gap-3">
               <span className="w-1.5 h-1.5 bg-primary rounded-full shrink-0" />

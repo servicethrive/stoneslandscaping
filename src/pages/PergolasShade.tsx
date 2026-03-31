@@ -16,7 +16,7 @@ const PergolasShade = () => {
 
   const pergolaTypes = [
     { name: "Freestanding Pergolas", desc: "Independent structures that define outdoor rooms anywhere on your property. Ideal for creating a dining area, lounge space, or focal point in the middle of a backyard without connecting to your home's structure." },
-    { name: "Attached Patio Covers", desc: "Connected directly to your home, extending your indoor living space seamlessly outdoors. Perfect for shading a patio adjacent to your kitchen or living room — the most popular choice among our Bay Area clients." },
+    { name: "Attached Patio Covers", desc: "Connected directly to your home, extending your indoor living space seamlessly outdoors. Perfect for shading a patio adjacent to your kitchen or living room - the most popular choice among our Bay Area clients." },
     { name: "Modern Aluminum Structures", desc: "Sleek, low-maintenance aluminum pergolas with clean lines and contemporary styling. Available with motorized louvered roof systems that let you control sun and rain exposure with the touch of a button." },
     { name: "Cedar & Redwood Pergolas", desc: "Classic wood pergolas built with premium, naturally rot-resistant lumber. Cedar and redwood develop a beautiful patina over time and complement both traditional and transitional architectural styles." },
   ];
@@ -46,7 +46,7 @@ const PergolasShade = () => {
       <ZigZagSection items={[
         {
           title: "Integrated Design, Not Afterthoughts",
-          text: `At ${BUSINESS.name}, we build custom pergolas and shade structures as part of larger outdoor renovation projects. Our pergola builds are designed and integrated with the surrounding hardscape, landscape, and outdoor features — not bolted on as afterthoughts. We recently built a cedar pergola over a complete outdoor kitchen for a homeowner in Los Gatos with recessed LED lighting, a ceiling fan, and electrical outlets.`,
+          text: `At ${BUSINESS.name}, we build custom pergolas and shade structures as part of larger outdoor renovation projects. Our pergola builds are designed and integrated with the surrounding hardscape, landscape, and outdoor features - not bolted on as afterthoughts. We recently built a cedar pergola over a complete outdoor kitchen for a homeowner in Los Gatos with recessed LED lighting, a ceiling fan, and electrical outlets.`,
           image: IMAGES.zigzag3,
         },
         {
@@ -111,8 +111,8 @@ const PergolasShade = () => {
       <FAQAccordion faqs={[
         { question: "Do I need a permit for a pergola in San Jose?", answer: "It depends on the size and whether the structure is attached to your home. Many freestanding pergolas under a certain square footage may not require permits, but attached structures and larger builds typically do. We assess permit requirements during the consultation and handle the process if needed." },
         { question: "What's the best pergola material for the Bay Area climate?", answer: "Western red cedar and aluminum are the two most popular choices. Cedar offers a warm, natural aesthetic and is naturally rot-resistant, though it requires periodic sealing. Aluminum is virtually maintenance-free and works well for modern or contemporary homes. We help you choose based on your style, maintenance tolerance, and budget." },
-        { question: "How much shade does a pergola provide?", answer: "That depends on rafter spacing and orientation. A traditional open-rafter pergola provides filtered, dappled shade — roughly 50-70% coverage depending on the time of day. For full shade, we offer louvered roof systems or solid patio covers that provide complete coverage while still feeling open." },
-        { question: "Can you add a pergola to an existing patio?", answer: "Yes — we regularly add pergolas to existing paver patios, concrete slabs, and deck surfaces. We install post footings adjacent to or through the existing surface, depending on the situation. Adding a pergola is one of the most impactful upgrades you can make to an existing outdoor space." },
+        { question: "How much shade does a pergola provide?", answer: "That depends on rafter spacing and orientation. A traditional open-rafter pergola provides filtered, dappled shade - roughly 50-70% coverage depending on the time of day. For full shade, we offer louvered roof systems or solid patio covers that provide complete coverage while still feeling open." },
+        { question: "Can you add a pergola to an existing patio?", answer: "Yes - we regularly add pergolas to existing paver patios, concrete slabs, and deck surfaces. We install post footings adjacent to or through the existing surface, depending on the situation. Adding a pergola is one of the most impactful upgrades you can make to an existing outdoor space." },
         { question: "How long does a pergola last?", answer: "Cedar and redwood pergolas, when properly maintained with periodic sealing, last 20-30+ years. Aluminum pergolas can last a lifetime with virtually no maintenance. The structural connections and post footings we use are rated for decades of performance in Bay Area conditions." },
       ]} />
 

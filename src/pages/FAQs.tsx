@@ -15,7 +15,7 @@ const faqs = [
   { question: "Can I see examples of your work?", answer: "Visit our Gallery page to see project examples. We'll also share relevant project photos during your consultation." },
   { question: "Do you offer financing?", answer: "Financing options are available for qualifying projects and applicants. Ask about current availability during your consultation." },
   { question: "What happens if I'm not satisfied with the work?", answer: "We schedule a final walkthrough at the end of every project. If anything doesn't meet your expectations, we address it before considering the job complete. Our warranties provide additional protection after project completion." },
-  { question: "Do you do maintenance or lawn care?", answer: "We focus on design-build projects — installations, renovations, and construction. We don't offer ongoing maintenance or lawn care services." },
+  { question: "Do you do maintenance or lawn care?", answer: "We focus on design-build projects - installations, renovations, and construction. We don't offer ongoing maintenance or lawn care services." },
 ];
 
 const FAQs = () => {
@@ -29,7 +29,7 @@ const FAQs = () => {
         </div>
       </section>
       <FAQAccordion faqs={faqs} title="Common Questions" />
-      <CTABanner title="Still Have Questions?" subtitle="Contact us directly — we're happy to answer anything about your specific project." />
+      <CTABanner title="Still Have Questions?" subtitle="Contact us directly - we're happy to answer anything about your specific project." />
     </Layout>
   );
 };

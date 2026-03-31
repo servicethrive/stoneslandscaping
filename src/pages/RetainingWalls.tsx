@@ -25,7 +25,7 @@ const RetainingWalls = () => {
     <Layout>
       <HeroSection
         title="Retaining Wall Construction for Bay Area Properties"
-        subtitle="Structural and decorative retaining walls that solve complex grading challenges, prevent erosion, and add architectural impact — engineered for Silicon Valley's unique terrain."
+        subtitle="Structural and decorative retaining walls that solve complex grading challenges, prevent erosion, and add architectural impact - engineered for Silicon Valley's unique terrain."
         backgroundImage={IMAGES.retainingWall}
       />
       <TrustBar />
@@ -33,7 +33,7 @@ const RetainingWalls = () => {
       <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Retaining Walls That Solve Real Problems — and Look Exceptional Doing It</h2>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Retaining Walls That Solve Real Problems - and Look Exceptional Doing It</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             Retaining walls are among the most critical hardscape elements on any Bay Area property. They hold back soil on sloped lots, manage seasonal water runoff, create level terraces for usable outdoor living space, and protect structures and landscaping from erosion.
           </p>
@@ -51,7 +51,7 @@ const RetainingWalls = () => {
         },
         {
           title: "Real-World Problem Solving",
-          text: "We recently completed a multi-tiered natural stone wall system for a property in the Saratoga foothills that had been dealing with erosion for years. The previous homeowner had tried landscape timbers — they rotted within four seasons. Our solution used three stepped wall segments with integrated drainage that redirects water away from the foundation while creating beautiful terraced planting areas.",
+          text: "We recently completed a multi-tiered natural stone wall system for a property in the Saratoga foothills that had been dealing with erosion for years. The previous homeowner had tried landscape timbers - they rotted within four seasons. Our solution used three stepped wall segments with integrated drainage that redirects water away from the foundation while creating beautiful terraced planting areas.",
           image: IMAGES.zigzag3,
         },
       ]} />
@@ -109,11 +109,11 @@ const RetainingWalls = () => {
         { question: "Do retaining walls need permits in San Jose?", answer: "Walls over four feet in height typically require permits and may need structural engineering in most Bay Area jurisdictions. We handle the entire process." },
         { question: "How long do retaining walls last?", answer: "A properly engineered and constructed retaining wall lasts 50 years or more. Longevity depends on adequate footing depth, correct drainage, and properly compacted backfill." },
         { question: "What's the most cost-effective retaining wall type?", answer: "Segmental block walls typically offer the best balance of cost, structural performance, and visual appeal for most residential projects." },
-        { question: "Can you integrate landscaping with retaining walls?", answer: "Absolutely — and we recommend it. We regularly integrate retaining walls with terraced planting beds, drip irrigation, landscape lighting, and other hardscape features." },
+        { question: "Can you integrate landscaping with retaining walls?", answer: "Absolutely - and we recommend it. We regularly integrate retaining walls with terraced planting beds, drip irrigation, landscape lighting, and other hardscape features." },
         { question: "What causes retaining walls to fail?", answer: "The most common causes are inadequate drainage behind the wall, insufficient footing depth, and poor backfill compaction." },
       ]} />
 
-      <CTABanner title="Schedule a Retaining Wall Assessment" subtitle="We'll evaluate your slope, soil, and drainage conditions and recommend the right wall solution — no obligation, no pressure." />
+      <CTABanner title="Schedule a Retaining Wall Assessment" subtitle="We'll evaluate your slope, soil, and drainage conditions and recommend the right wall solution - no obligation, no pressure." />
     </Layout>
   );
 };

@@ -19,7 +19,7 @@ const LosGatos = () => {
     <Layout>
       <HeroSection
         title="Luxury Landscaping & Hardscape in Los Gatos"
-        subtitle="Custom outdoor renovations for Los Gatos homeowners. Paver patios, retaining walls, outdoor kitchens, and complete landscape design-build — engineered for the hillside and valley properties that make Los Gatos extraordinary."
+        subtitle="Custom outdoor renovations for Los Gatos homeowners. Paver patios, retaining walls, outdoor kitchens, and complete landscape design-build - engineered for the hillside and valley properties that make Los Gatos extraordinary."
         backgroundImage={IMAGES.landscaping}
       />
       <TrustBar />
@@ -32,7 +32,7 @@ const LosGatos = () => {
             Los Gatos sits at the base of the Santa Cruz Mountains, and that geography defines what outdoor renovation looks like here. Properties range from charming downtown lots to sprawling hillside estates with dramatic elevation changes, mature redwoods, and terrain that demands a contractor who understands both structural engineering and refined design.
           </p>
           <p className="text-muted-foreground leading-relaxed font-light">
-            {BUSINESS.name} has completed projects across Los Gatos — from the neighborhoods surrounding downtown to larger properties along Kennedy Road, Shannon Road, and the mountain corridors. We handle the grading, drainage engineering, retaining wall construction, and terraced patio design needed to transform challenging terrain into stunning, functional outdoor living space.
+            {BUSINESS.name} has completed projects across Los Gatos - from the neighborhoods surrounding downtown to larger properties along Kennedy Road, Shannon Road, and the mountain corridors. We handle the grading, drainage engineering, retaining wall construction, and terraced patio design needed to transform challenging terrain into stunning, functional outdoor living space.
           </p>
         </div>
       </section>
@@ -97,21 +97,21 @@ const LosGatos = () => {
       </section>
 
       <ProcessSteps title="Our Los Gatos Project Process" steps={[
-        { title: "Site Evaluation", description: "We assess your property's terrain, grade, drainage patterns, and access points — critical for hillside and sloped-lot projects." },
+        { title: "Site Evaluation", description: "We assess your property's terrain, grade, drainage patterns, and access points - critical for hillside and sloped-lot projects." },
         { title: "Custom Design", description: "Receive a tailored design plan with material recommendations, layout options, and 2D/3D renderings for qualifying scopes." },
-        { title: "Expert Construction", description: "Our crews handle excavation, structural work, paver installation, planting, and finish details — managed by a dedicated project lead." },
+        { title: "Expert Construction", description: "Our crews handle excavation, structural work, paver installation, planting, and finish details - managed by a dedicated project lead." },
         { title: "Final Inspection & Warranty", description: `Walk the completed project with us, verify every detail, and receive your ${BUSINESS.paverWarrantyYears}-year warranty documentation.` },
       ]} />
 
       <FAQAccordion faqs={[
         { question: "Can you build on hillside properties in Los Gatos?", answer: "Absolutely. Hillside construction is one of our specialties. We engineer retaining walls, terraced patios, and proper drainage systems for sloped properties throughout the Los Gatos hills." },
-        { question: "What materials work best for Los Gatos properties?", answer: "Natural stone — travertine, bluestone, and limestone — complements the organic feel of Los Gatos landscapes. We also recommend Techo-Bloc interlocking pavers for patios and driveways." },
+        { question: "What materials work best for Los Gatos properties?", answer: "Natural stone - travertine, bluestone, and limestone - complements the organic feel of Los Gatos landscapes. We also recommend Techo-Bloc interlocking pavers for patios and driveways." },
         { question: "How do you handle drainage on sloped lots?", answer: "Every hillside project includes a drainage assessment. We design and install French drains, channel drains, graded swales, and permeable surfaces to manage water flow." },
         { question: "Do you handle Los Gatos permitting?", answer: "Yes. We're familiar with the Town of Los Gatos permitting requirements for hardscape, retaining walls, and landscape construction." },
         { question: "What's the typical timeline for a Los Gatos backyard renovation?", answer: "A standard patio and landscape renovation takes 2-4 weeks. More complex hillside projects with retaining walls and multiple terraces can run 4-8 weeks." },
       ]} />
 
-      <CTABanner title="Get a Free Estimate in Los Gatos" subtitle="Schedule a complimentary on-site consultation at your Los Gatos property — we'll assess the terrain and deliver a custom proposal." />
+      <CTABanner title="Get a Free Estimate in Los Gatos" subtitle="Schedule a complimentary on-site consultation at your Los Gatos property - we'll assess the terrain and deliver a custom proposal." />
     </Layout>
   );
 };

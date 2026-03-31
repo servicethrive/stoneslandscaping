@@ -45,7 +45,7 @@ const DesignProcess = () => {
           { title: "On-Site Consultation", description: "We visit your property, take detailed measurements, photograph the space, and discuss your goals, preferences, and budget range." },
           { title: "Concept Development", description: "Our team creates initial layout concepts based on the site evaluation, your input, and best practices for your specific property conditions." },
           { title: "2D/3D Renderings", description: "You receive visual renderings showing the proposed design from multiple angles. We review together, gather feedback, and make revisions." },
-          { title: "Final Approval", description: "Once you're satisfied with the design, we finalize the scope, materials, and timeline — and transition into the build phase." },
+          { title: "Final Approval", description: "Once you're satisfied with the design, we finalize the scope, materials, and timeline - and transition into the build phase." },
         ]}
       />
 
@@ -53,10 +53,10 @@ const DesignProcess = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-3xl font-bold text-foreground mb-6">Why Design Matters</h2>
           <p className="text-muted-foreground mb-4 leading-relaxed">
-            Skipping the design phase is the most common mistake homeowners make when hiring a contractor. Without a clear visual plan, you're relying on verbal descriptions and assumptions — which is how projects end up looking different from what you imagined.
+            Skipping the design phase is the most common mistake homeowners make when hiring a contractor. Without a clear visual plan, you're relying on verbal descriptions and assumptions - which is how projects end up looking different from what you imagined.
           </p>
           <p className="text-muted-foreground leading-relaxed">
-            Our design process eliminates that risk. You see the materials, the proportions, the flow, and the finished look before we pour a single bag of base material. Changes are easy on paper — they're expensive on the job site.
+            Our design process eliminates that risk. You see the materials, the proportions, the flow, and the finished look before we pour a single bag of base material. Changes are easy on paper - they're expensive on the job site.
           </p>
         </div>
       </section>
