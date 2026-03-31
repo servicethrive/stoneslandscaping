@@ -35,22 +35,26 @@ const PatioWalkways = () => {
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Patios & Walkways That Connect and Define Your Outdoor Space</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
-            Patios and walkways are the backbone of any well-designed outdoor living space. A properly built patio gives you a defined area for dining, lounging, cooking, or entertaining — it's the foundation that every other outdoor feature builds upon. Walkways connect the different zones of your yard and create flow between your home's interior and the outdoor spaces you use most.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            At {BUSINESS.name}, we build patios and walkways using pavers, natural stone, and concrete — selected based on your aesthetic preferences, property conditions, and budget. Every installation includes proper excavation to the correct depth, compacted aggregate base preparation, precise grading for drainage, and finishing details that make the difference between a surface that settles and one that stays flat for decades.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            Here's what we've learned after building hundreds of patios across the Bay Area: the biggest factor in long-term performance isn't the surface material — it's what's underneath. We've pulled up patios that were only three years old where the pavers were perfectly fine, but the base had compacted unevenly because it wasn't prepared correctly. The surface follows the base. That's why we invest the time to get the foundation right on every project, even when it means an extra day of base work that nobody will ever see.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            We recently completed a 1,200-square-foot paver patio for a homeowner in San Jose's Willow Glen neighborhood. The project included a built-in seating wall, integrated fire pit, and a walkway connecting the patio to a new outdoor kitchen area. The homeowner told us it completely changed how their family uses the backyard — they went from never going outside to eating dinner on the patio five nights a week. That's the kind of transformation a well-designed patio delivers.
+            Patios and walkways are the backbone of any well-designed outdoor living space. A properly built patio gives you a defined area for dining, lounging, cooking, or entertaining — it's the foundation that every other outdoor feature builds upon.
           </p>
           <p className="text-muted-foreground leading-relaxed font-light">
-            Whether you're adding a small side-yard path, replacing an old concrete slab with elegant pavers, or building a large backyard patio with integrated seating walls, fire features, and kitchen access — we handle the full scope from design through installation and final cleanup.
+            At {BUSINESS.name}, we build patios and walkways using pavers, natural stone, and concrete — selected based on your aesthetic preferences, property conditions, and budget.
           </p>
         </div>
       </section>
+
+      <ZigZagSection items={[
+        {
+          title: "What's Underneath Matters Most",
+          text: "Here's what we've learned after building hundreds of patios across the Bay Area: the biggest factor in long-term performance isn't the surface material — it's what's underneath. We've pulled up patios that were only three years old where the pavers were perfectly fine, but the base had compacted unevenly. The surface follows the base. That's why we invest the time to get the foundation right on every project.",
+          image: IMAGES.zigzag2,
+        },
+        {
+          title: "Transformative Results",
+          text: "We recently completed a 1,200-square-foot paver patio for a homeowner in San Jose's Willow Glen neighborhood. The project included a built-in seating wall, integrated fire pit, and a walkway connecting the patio to a new outdoor kitchen area. The homeowner told us it completely changed how their family uses the backyard — they went from never going outside to eating dinner on the patio five nights a week.",
+          image: IMAGES.zigzag4,
+        },
+      ]} />
 
       <section className="py-20 lg:py-28 bg-brand-cream">
         <div className="container mx-auto px-4 max-w-5xl">

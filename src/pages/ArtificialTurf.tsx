@@ -28,22 +28,26 @@ const ArtificialTurf = () => {
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Why Bay Area Homeowners Are Making the Switch</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
-            Water restrictions, recurring drought cycles, and the constant upkeep demands of natural grass have pushed more Bay Area homeowners toward artificial turf than ever before — and the results speak for themselves. Modern premium synthetic turf looks remarkably realistic, drains properly, stays green year-round, and eliminates mowing, fertilizing, aerating, and overseeding from your weekly routine permanently.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            At {BUSINESS.name}, we install premium artificial turf systems designed specifically for residential use. Every installation includes proper site grading, a compacted decomposed granite base layer, commercial-grade weed barrier fabric, and turf secured with appropriate infill for a natural look and feel. We don't cut corners on base preparation — it's what separates turf that performs beautifully for 15+ years from turf that wrinkles, bunches, develops drainage problems, or looks obviously fake.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            Here's what most homeowners don't realize about artificial turf: the installation is everything. The turf product itself matters, but even premium turf will fail if the base isn't graded correctly, the seams aren't properly glued, or the infill ratio is wrong. We've replaced turf installed by other companies that was only two years old — not because the turf was bad, but because the installation was sloppy. Proper base work, precise seaming, and correct infill application are what make the difference between a yard that looks like a putting green and one that looks like a tarp draped over dirt.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            We recently converted a 2,500-square-foot backyard in the Willow Glen area of San Jose from patchy, water-hungry natural grass to premium artificial turf with integrated paver borders. The homeowner estimated they were spending over $200 per month on water and lawn maintenance. Within the first year, the turf installation paid for itself in water savings alone — and their yard looked better on day 365 than their natural lawn ever did on its best day.
+            Water restrictions, recurring drought cycles, and the constant upkeep demands of natural grass have pushed more Bay Area homeowners toward artificial turf than ever before — and the results speak for themselves.
           </p>
           <p className="text-muted-foreground leading-relaxed font-light">
-            Whether you're replacing a full lawn, converting a side yard, creating a dedicated pet area, or integrating turf into a larger landscape and hardscape design, we handle the entire installation from demolition and grading through final infill and brushing.
+            At {BUSINESS.name}, we install premium artificial turf systems designed specifically for residential use. Every installation includes proper site grading, a compacted decomposed granite base layer, commercial-grade weed barrier fabric, and turf secured with appropriate infill for a natural look and feel.
           </p>
         </div>
       </section>
+
+      <ZigZagSection items={[
+        {
+          title: "Installation Is Everything",
+          text: "Here's what most homeowners don't realize about artificial turf: the installation is everything. The turf product itself matters, but even premium turf will fail if the base isn't graded correctly, the seams aren't properly glued, or the infill ratio is wrong. Proper base work, precise seaming, and correct infill application are what make the difference.",
+          image: IMAGES.zigzag6,
+        },
+        {
+          title: "Real Savings, Real Results",
+          text: "We recently converted a 2,500-square-foot backyard in the Willow Glen area of San Jose from patchy, water-hungry natural grass to premium artificial turf with integrated paver borders. Within the first year, the turf installation paid for itself in water savings alone — and the yard looked better on day 365 than their natural lawn ever did.",
+          image: IMAGES.zigzag8,
+        },
+      ]} />
 
       <section className="py-20 lg:py-28 bg-brand-cream">
         <div className="container mx-auto px-4 max-w-4xl">
