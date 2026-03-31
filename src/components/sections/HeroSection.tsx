@@ -38,12 +38,12 @@ const HeroSection = ({
           <Link to={primaryCTA.link}>{primaryCTA.text}</Link>
         </Button>
         {secondaryCTA && (
-          <Button asChild variant="outline" size="lg" className="text-base px-8 border-white/30 text-white hover:bg-white/10 hover:text-white">
+          <Button asChild variant="outline" size="lg" className="text-base px-8 border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white">
             <Link to={secondaryCTA.link}>{secondaryCTA.text}</Link>
           </Button>
         )}
         {showPhone && !secondaryCTA && (
-          <Button asChild variant="outline" size="lg" className="text-base px-8 border-white/30 text-white hover:bg-white/10 hover:text-white">
+          <Button asChild variant="outline" size="lg" className="text-base px-8 border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white">
             <a href={`tel:${BUSINESS.phoneTel}`}>
               <Phone className="h-4 w-4 mr-2" /> Call {BUSINESS.phone}
             </a>
