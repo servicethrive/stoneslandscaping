@@ -102,8 +102,8 @@ const Footer = () => {
             © {new Date().getFullYear()} {BUSINESS.name} All rights reserved. License #{BUSINESS.license} — {BUSINESS.licenseClassifications}
           </p>
           <div className="flex gap-6 text-xs text-white/40">
-            <Link to="/pavers-vs-concrete" className="hover:text-primary transition-colors font-light">Pavers vs Concrete</Link>
-            <Link to="/artificial-turf-vs-sod" className="hover:text-primary transition-colors font-light">Turf vs Sod</Link>
+            <Link to="/blog/pavers-vs-concrete" className="hover:text-primary transition-colors font-light">Pavers vs Concrete</Link>
+            <Link to="/blog/artificial-turf-vs-sod" className="hover:text-primary transition-colors font-light">Turf vs Sod</Link>
           </div>
         </div>
       </div>

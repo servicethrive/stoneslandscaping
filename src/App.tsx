@@ -69,8 +69,9 @@ const App = () => (
           <Route path="/faqs" element={<FAQs />} />
           <Route path="/patio-walkway-installations" element={<PatioWalkways />} />
           <Route path="/pergolas-shade-structures" element={<PergolasShade />} />
-          <Route path="/pavers-vs-concrete" element={<PaversVsConcrete />} />
-          <Route path="/artificial-turf-vs-sod" element={<ArtificialTurfVsSod />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/pavers-vs-concrete" element={<PaversVsConcrete />} />
+          <Route path="/blog/artificial-turf-vs-sod" element={<ArtificialTurfVsSod />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
