@@ -10,79 +10,110 @@ import { CheckCircle } from "lucide-react";
 
 const OutdoorKitchens = () => {
   useEffect(() => {
-    document.title = "Outdoor Kitchen Construction San Jose | Custom Design & Build | Stones Landscaping";
+    document.title = "Outdoor Kitchen Contractor San Jose | Custom BBQ Islands & Kitchens | Stones Landscaping";
   }, []);
+
+  const kitchenStyles = [
+    { name: "Custom BBQ Islands", desc: "Stone-veneer islands with built-in grills, side burners, and prep space. The foundation of most outdoor kitchens — designed to fit your cooking style and patio layout." },
+    { name: "Full Outdoor Kitchens", desc: "Complete cooking and entertaining stations with countertops, sinks, refrigeration, storage, and multiple cooking zones. Built for homeowners who take outdoor entertaining seriously." },
+    { name: "Pizza Oven Installations", desc: "Wood-fired or gas pizza ovens integrated into your outdoor kitchen or installed as standalone features. A crowd favorite that elevates any backyard gathering." },
+    { name: "Bar & Entertainment Areas", desc: "Dedicated bar seating, beverage centers, and serving counters designed for hosting. Perfect for Silicon Valley professionals who entertain regularly." },
+  ];
 
   return (
     <Layout>
       <HeroSection
         title="Custom Outdoor Kitchens for Bay Area Living"
-        subtitle="Design and build a fully functional outdoor kitchen — grills, countertops, storage, and entertainment features tailored to your space and lifestyle."
+        subtitle="Design and build a fully functional outdoor kitchen — custom BBQ islands, stone countertops, pizza ovens, and complete entertainment areas tailored to your space and lifestyle."
         backgroundImage={IMAGES.outdoorKitchen}
       />
       <TrustBar />
 
-      <section className="py-16 bg-background">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold text-foreground mb-6">Outdoor Kitchens Built for Year-Round Use</h2>
-          <p className="text-muted-foreground mb-4 leading-relaxed">
-            The Bay Area's mild climate makes outdoor kitchens one of the best investments for homeowners who enjoy cooking, entertaining, or simply spending more time outside. A well-designed outdoor kitchen extends your living space, creates a natural gathering point, and adds significant value to your home.
+          <div className="w-12 h-0.5 bg-primary mb-6" />
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Outdoor Kitchens Built for How You Actually Live</h2>
+          <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
+            The Bay Area's mild climate gives you something most of the country can only dream of — the ability to cook and entertain outdoors nearly year-round. A custom outdoor kitchen transforms your backyard from unused green space into the most popular room in your home. It's where weeknight dinners happen, where weekend gatherings center, and where your home's indoor-outdoor lifestyle truly comes to life.
           </p>
-          <p className="text-muted-foreground mb-4 leading-relaxed">
-            At {BUSINESS.name}, we design and build custom outdoor kitchens from the ground up. Every kitchen we construct is tailored to your property, cooking habits, and entertainment needs — not pulled from a catalog. We handle the structural build, countertops, utility connections, and finishing details so the result is a space you'll actually use, not just look at.
+          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
+            At {BUSINESS.name}, we design and build custom outdoor kitchens from the ground up. Every kitchen we construct is tailored to your property, your cooking habits, and how you actually entertain — not pulled from a catalog. We've built outdoor kitchens for families in San Jose who grill three nights a week, for Saratoga homeowners who host formal outdoor dinner parties, and for tech executives in Atherton who wanted a full chef's kitchen with commercial-grade appliances under a custom pergola.
           </p>
-          <p className="text-muted-foreground leading-relaxed">
-            From compact grilling stations to full outdoor kitchen islands with built-in refrigeration and bar seating, we build kitchens that match both your budget and your vision.
+          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
+            Here's what separates a great outdoor kitchen from a mediocre one: it's not the appliances — it's the layout, the workflow, and the integration with the rest of your outdoor space. We think about where the cook stands relative to guests, how smoke and heat travel, where utilities connect, and how the kitchen relates to your patio, seating areas, and landscape. That planning is what makes the difference between an outdoor kitchen you use every week and one that collects dust.
+          </p>
+          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
+            We handle every aspect of the build: structural foundation, steel or block framing, stone veneer or tile finishing, granite or quartzite countertops, gas and electrical connections, plumbing for sinks, and integrated lighting. Our outdoor kitchens are built with the same attention to detail and material quality you'd expect from an interior kitchen remodel — because that's exactly what they are, just outdoors.
+          </p>
+          <p className="text-muted-foreground leading-relaxed font-light">
+            Whether you're envisioning a compact grilling station with bar seating or a grand outdoor kitchen with dual grills, a pizza oven, refrigeration, a sink, and a full wet bar — we build kitchens that match both your vision and the way you live.
           </p>
         </div>
       </section>
 
-      <section className="py-16 bg-brand-cream">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold text-foreground mb-6">Features & Components</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {[
-              "Built-in gas or charcoal grills", "Stone or granite countertops", "Outdoor refrigerators and ice makers",
-              "Bar seating and serving areas", "Pizza ovens", "Storage cabinets and drawers",
-              "Sinks with plumbing connections", "Lighting and electrical", "Pergola or shade cover integration",
-              "Gas line and utility hookups",
-            ].map((item) => (
-              <div key={item} className="flex items-center gap-2">
-                <CheckCircle className="h-4 w-4 text-primary shrink-0" />
-                <span className="text-sm text-foreground">{item}</span>
+      <section className="py-20 lg:py-28 bg-brand-cream">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-14">
+            <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Outdoor Kitchen Styles</h2>
+            <p className="text-muted-foreground mt-3 font-light">From compact grilling stations to full chef's kitchens</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {kitchenStyles.map((s) => (
+              <div key={s.name} className="bg-background p-8 rounded-sm border border-border/60 hover:border-primary/30 transition-colors duration-300">
+                <h3 className="font-display text-lg font-bold text-foreground mb-3">{s.name}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed font-light">{s.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-background">
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl font-bold text-foreground mb-6">Planning Your Outdoor Kitchen</h2>
-          <p className="text-muted-foreground mb-4 leading-relaxed">
-            Outdoor kitchen projects require more planning than a standard patio or landscape install. Layout, utility access, material selection, traffic flow, and weather exposure all need to be considered before construction begins. That's why we start every outdoor kitchen project with a thorough on-site consultation.
+          <div className="w-12 h-0.5 bg-primary mb-6" />
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Features & Components</h2>
+          <p className="text-muted-foreground mb-8 font-light leading-relaxed">
+            Every outdoor kitchen is custom-configured. Here are the most popular features our Bay Area clients choose.
           </p>
-          <p className="text-muted-foreground leading-relaxed">
-            During the consultation, we evaluate your space, discuss how you cook and entertain, review utility access points, and outline a scope that fits your budget. For qualifying projects, we can provide 2D or 3D design renderings so you can see exactly what your kitchen will look like before we break ground.
-          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              "Built-in gas or charcoal grills",
+              "Stone, granite, or quartzite countertops",
+              "Outdoor refrigerators and ice makers",
+              "Bar seating and serving counters",
+              "Wood-fired or gas pizza ovens",
+              "Weatherproof storage cabinets and drawers",
+              "Sinks with hot and cold water plumbing",
+              "Integrated landscape lighting and electrical",
+              "Pergola or shade cover integration",
+              "Gas line and utility hookups",
+            ].map((item) => (
+              <div key={item} className="flex items-center gap-3 py-2">
+                <CheckCircle className="h-4 w-4 text-primary shrink-0" />
+                <span className="text-sm text-foreground font-light">{item}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <ProcessSteps title="Outdoor Kitchen Build Process" steps={[
-        { title: "Consultation & Layout", description: "We assess your space, review utility access, and discuss your cooking and entertainment needs." },
-        { title: "Design & Materials", description: "Finalize the layout, countertop material, appliance placement, and overall design. Renderings available." },
-        { title: "Construction", description: "Foundation, framing, stone/veneer work, countertop installation, utility connections, and finishing details." },
-        { title: "Final Walkthrough", description: "We walk the completed kitchen with you, test all connections, and confirm everything meets your expectations." },
+        { title: "Consultation & Layout", description: "We assess your space, review utility access points, discuss your cooking style and entertainment needs, and outline the scope." },
+        { title: "Design & Materials", description: "Finalize the layout, countertop material, appliance selection, and veneer style. For qualifying projects, receive 2D or 3D design renderings." },
+        { title: "Construction", description: "Foundation, structural framing, stone or tile finishing, countertop installation, utility connections, and all finishing details." },
+        { title: "Final Walkthrough", description: "We test every connection, walk the completed kitchen with you, and confirm every detail meets your expectations before handoff." },
       ]} />
 
       <FAQAccordion faqs={[
-        { question: "How much does an outdoor kitchen cost?", answer: "Outdoor kitchen costs vary widely based on size, materials, and features. We provide detailed proposals after on-site consultations so you know exactly what to expect." },
-        { question: "Do I need a permit for an outdoor kitchen?", answer: "In most cases, yes — especially for gas, electrical, and plumbing connections. We assess permit requirements during the consultation and handle the process." },
-        { question: "How long does construction take?", answer: "Most outdoor kitchens take 2–4 weeks to build, depending on complexity and material lead times." },
-        { question: "What's the difference between an outdoor kitchen and a built-in BBQ?", answer: "A built-in BBQ is typically a grill set into a simple island. An outdoor kitchen includes countertops, storage, plumbing, and multiple cooking or prep features — it's a complete outdoor cooking and entertaining space." },
+        { question: "How much does an outdoor kitchen cost in the Bay Area?", answer: "Outdoor kitchen costs vary widely based on size, materials, appliance selection, and utility requirements. A compact BBQ island might start in the low five figures, while a full outdoor kitchen with premium stone, multiple cooking zones, and plumbing can be a significant investment. We provide detailed, transparent proposals after every on-site consultation — no surprises." },
+        { question: "Do I need a permit for an outdoor kitchen in San Jose?", answer: "In most cases, yes — especially for gas, electrical, and plumbing connections. Some jurisdictions also require permits for structures over a certain size. We assess permit requirements during the consultation and handle the entire permitting process so you don't have to." },
+        { question: "How long does outdoor kitchen construction take?", answer: "Most outdoor kitchens take 2–4 weeks to build, depending on complexity, material lead times, and utility work. Larger projects with custom stone, pergola integration, or multiple zones may extend to 4–6 weeks. We provide a detailed timeline before construction begins." },
+        { question: "What countertop materials work best outdoors?", answer: "Granite, quartzite, and certain porcelain slabs are the most popular choices for Bay Area outdoor kitchens. They handle temperature swings, UV exposure, and moisture without staining or cracking. We help you select the right material based on your aesthetic preferences, usage patterns, and budget." },
+        { question: "Can you build an outdoor kitchen as part of a larger backyard remodel?", answer: "Absolutely — and that's how most of our outdoor kitchen projects happen. We frequently integrate kitchens with paver patios, pergolas, fire pits, retaining walls, and landscape plantings as part of a comprehensive backyard transformation. Building everything together ensures a cohesive design and more efficient construction." },
       ]} />
 
-      <CTABanner title="Design Your Outdoor Kitchen" subtitle="Schedule a free consultation and get a custom plan for your outdoor kitchen project." />
+      <CTABanner title="Design Your Dream Outdoor Kitchen" subtitle="Request a complimentary consultation and let's design an outdoor kitchen that matches how you live and entertain." />
     </Layout>
   );
 };
