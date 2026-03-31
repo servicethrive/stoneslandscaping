@@ -5,6 +5,7 @@ import TrustBar from "@/components/sections/TrustBar";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
+import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS } from "@/lib/constants";
 import { CheckCircle } from "lucide-react";
 
