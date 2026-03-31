@@ -46,7 +46,7 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-6 text-white/40">Services</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-6 text-primary">Services</h4>
             <ul className="space-y-3">
               {SERVICES.map((s) => (
                 <li key={s.path}>
