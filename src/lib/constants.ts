@@ -19,37 +19,37 @@ export const SERVICES = [
     title: "Pavers",
     path: "/pavers",
     description: "Custom paver patios, walkways, and driveways built with premium materials and backed by a 20-year warranty.",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+    image: "/images/pavers-service.jpg",
   },
   {
     title: "Hardscape",
     path: "/hardscape",
     description: "Complete hardscape construction including retaining walls, outdoor structures, and stone installations.",
-    image: "https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=800&q=80",
+    image: "/images/hardscape-service.jpg",
   },
   {
     title: "Landscaping",
     path: "/landscaping",
     description: "Full-service design-build landscaping for front yards, backyards, and complete outdoor transformations.",
-    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80",
+    image: "/images/landscaping-service.jpg",
   },
   {
     title: "Concrete Driveways",
     path: "/concrete-driveways",
     description: "Professional driveway replacement and installation with stamped, colored, and standard concrete options.",
-    image: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80",
+    image: "/images/concrete-driveways-service.jpg",
   },
   {
     title: "Outdoor Kitchens",
     path: "/outdoor-kitchens",
     description: "Custom outdoor kitchen design and construction for year-round entertaining in the Bay Area.",
-    image: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80",
+    image: "/images/outdoor-kitchens-service.jpg",
   },
   {
     title: "Retaining Walls",
     path: "/retaining-walls",
     description: "Structural and decorative retaining walls that solve grading challenges and add visual impact.",
-    image: "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=800&q=80",
+    image: "/images/retaining-walls-service.jpg",
   },
   {
     title: "Artificial Turf",
@@ -61,7 +61,7 @@ export const SERVICES = [
     title: "Patio & Walkways",
     path: "/patio-walkways",
     description: "Custom patio and walkway designs that enhance your outdoor living space with premium materials and craftsmanship.",
-    image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80",
+    image: "/images/patio-walkways-service.jpg",
   },
 ] as const;
 
