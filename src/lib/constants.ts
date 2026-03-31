@@ -31,7 +31,7 @@ export const SERVICES = [
     title: "Landscaping",
     path: "/landscaping",
     description: "Full-service design-build landscaping for front yards, backyards, and complete outdoor transformations.",
-    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80",
+    image: "/images/landscaping-service.jpg",
   },
   {
     title: "Concrete Driveways",
