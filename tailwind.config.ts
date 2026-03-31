@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Rokkitt"', 'Georgia', '"Times New Roman"', 'serif'],
+        display: ['"Playfair Display"', 'Georgia', '"Times New Roman"', 'serif'],
         body: ['"DM Sans"', 'system-ui', '-apple-system', 'sans-serif'],
       },
       colors: {
