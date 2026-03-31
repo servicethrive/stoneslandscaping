@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Shield } from "lucide-react";
-import { BUSINESS, SERVICES, SERVICE_AREAS } from "@/lib/constants";
+import { BUSINESS, SERVICES } from "@/lib/constants";
 import logo from "@/assets/stones-landscaping-logo.png";
 
 const Footer = () => {
