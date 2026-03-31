@@ -70,7 +70,7 @@ const Footer = () => {
 
           {/* Service Areas */}
           <div>
-            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-6 text-white/40">Service Areas</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-6 text-primary">Service Areas</h4>
             <ul className="space-y-3">
               {SERVICE_AREAS.map((area) => (
                 <li key={area.name}>
