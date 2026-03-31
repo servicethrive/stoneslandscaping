@@ -5,6 +5,7 @@ import TrustBar from "@/components/sections/TrustBar";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
+import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS } from "@/lib/constants";
 import { CheckCircle } from "lucide-react";
 
@@ -14,10 +15,10 @@ const RetainingWalls = () => {
   }, []);
 
   const wallTypes = [
-    { name: "Segmental Block Walls", desc: "Interlocking concrete blocks engineered for structural strength with a clean, modern finish. Available in multiple textures, colors, and sizes to complement any architectural style — from contemporary Los Gatos homes to traditional San Jose properties." },
-    { name: "Natural Stone Walls", desc: "Stacked or mortared natural stone walls that bring an organic, timeless quality to your landscape. We source premium fieldstone, flagstone, and quarried stone that blends seamlessly with the surrounding terrain — a favorite among Atherton and Saratoga homeowners." },
-    { name: "Poured Concrete Walls", desc: "Steel-reinforced concrete walls for maximum structural capacity. Ideal for tall walls exceeding six feet, basement-level retaining, heavy load-bearing applications, and properties with significant elevation changes common in the Bay Area foothills." },
-    { name: "Decorative Garden Walls", desc: "Shorter accent walls used to define planting beds, create raised gardens, frame outdoor living spaces, or add visual depth to flat properties. These walls combine aesthetic appeal with subtle grade management." },
+    { name: "Segmental Block Walls", desc: "Interlocking concrete blocks engineered for structural strength with a clean, modern finish. Available in multiple textures, colors, and sizes." },
+    { name: "Natural Stone Walls", desc: "Stacked or mortared natural stone walls that bring an organic, timeless quality to your landscape. Premium fieldstone, flagstone, and quarried stone." },
+    { name: "Poured Concrete Walls", desc: "Steel-reinforced concrete walls for maximum structural capacity. Ideal for tall walls exceeding six feet and heavy load-bearing applications." },
+    { name: "Decorative Garden Walls", desc: "Shorter accent walls used to define planting beds, create raised gardens, frame outdoor living spaces, or add visual depth to flat properties." },
   ];
 
   return (
@@ -34,22 +35,26 @@ const RetainingWalls = () => {
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Retaining Walls That Solve Real Problems — and Look Exceptional Doing It</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
-            Retaining walls are among the most critical hardscape elements on any Bay Area property. They hold back soil on sloped lots, manage seasonal water runoff, create level terraces for usable outdoor living space, and protect structures and landscaping from erosion. Across San Jose, Saratoga, Los Gatos, and the hillside communities of Santa Clara County, retaining walls aren't just a design feature — they're often a structural necessity.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            Here's what most homeowners don't realize: a retaining wall is only as good as what you can't see. The footing depth, drainage system, backfill material, and compaction behind the wall determine whether it performs for five years or fifty. We've seen walls built by other contractors that looked fine on the surface but failed within a few seasons because the drainage was an afterthought or the base wasn't sized correctly for the soil load.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            At {BUSINESS.name}, we build retaining walls that are engineered for the specific soil conditions, slope grades, and drainage patterns of your property. We don't guess — we assess. Every wall we construct includes proper footings sized to the height and soil type, compacted gravel backfill, perforated drain pipe with filter fabric, and appropriate batter for long-term stability. Our work is backed by our contractor's license #{BUSINESS.license} and reflects years of hands-on experience across hundreds of Bay Area residential projects.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            We recently completed a multi-tiered natural stone wall system for a property in the Saratoga foothills that had been dealing with erosion for years. The previous homeowner had tried landscape timbers — they rotted within four seasons. Our solution used three stepped wall segments with integrated drainage that redirects water away from the foundation while creating beautiful terraced planting areas. That's the kind of problem-solving we bring to every retaining wall project.
+            Retaining walls are among the most critical hardscape elements on any Bay Area property. They hold back soil on sloped lots, manage seasonal water runoff, create level terraces for usable outdoor living space, and protect structures and landscaping from erosion.
           </p>
           <p className="text-muted-foreground leading-relaxed font-light">
-            Whether your property needs a short garden wall to define a planting bed, a multi-tiered terrace system to reclaim a hillside, or a tall engineered wall with permits and structural calculations, we handle the full scope — from initial site assessment and design through construction, backfill, drainage, and final grading.
+            Here's what most homeowners don't realize: a retaining wall is only as good as what you can't see. The footing depth, drainage system, backfill material, and compaction behind the wall determine whether it performs for five years or fifty.
           </p>
         </div>
       </section>
+
+      <ZigZagSection items={[
+        {
+          title: "Engineered for Your Property",
+          text: `At ${BUSINESS.name}, we build retaining walls that are engineered for the specific soil conditions, slope grades, and drainage patterns of your property. Every wall we construct includes proper footings sized to the height and soil type, compacted gravel backfill, perforated drain pipe with filter fabric, and appropriate batter for long-term stability. Our work is backed by our contractor's license #${BUSINESS.license}.`,
+          image: IMAGES.zigzag5,
+        },
+        {
+          title: "Real-World Problem Solving",
+          text: "We recently completed a multi-tiered natural stone wall system for a property in the Saratoga foothills that had been dealing with erosion for years. The previous homeowner had tried landscape timbers — they rotted within four seasons. Our solution used three stepped wall segments with integrated drainage that redirects water away from the foundation while creating beautiful terraced planting areas.",
+          image: IMAGES.zigzag3,
+        },
+      ]} />
 
       <section className="py-20 lg:py-28 bg-brand-cream">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -73,9 +78,6 @@ const RetainingWalls = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">When You Need a Retaining Wall</h2>
-          <p className="text-muted-foreground mb-8 font-light leading-relaxed">
-            If any of these sound familiar, a professionally engineered retaining wall is likely the right solution for your property.
-          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               "Sloped yard that's difficult or impossible to use",
@@ -104,11 +106,11 @@ const RetainingWalls = () => {
       ]} />
 
       <FAQAccordion faqs={[
-        { question: "Do retaining walls need permits in San Jose?", answer: "Walls over four feet in height (measured from the bottom of the footing to the top of the wall) typically require permits and may need structural engineering in most Bay Area jurisdictions. We assess permit requirements during the consultation and handle the entire process, including engineering if needed." },
-        { question: "How long do retaining walls last?", answer: "A properly engineered and constructed retaining wall lasts 50 years or more. Longevity depends on three things most contractors cut corners on: adequate footing depth, correct drainage behind the wall, and properly compacted backfill. We don't cut corners on any of them." },
-        { question: "What's the most cost-effective retaining wall type?", answer: "Segmental block walls typically offer the best balance of cost, structural performance, and visual appeal for most residential projects. Natural stone costs more but delivers a distinctive look that many Bay Area homeowners prefer for their premium properties." },
-        { question: "Can you integrate landscaping with retaining walls?", answer: "Absolutely — and we recommend it. We regularly integrate retaining walls with terraced planting beds, drip irrigation, landscape lighting, and other hardscape features as part of a unified outdoor design. The best retaining wall projects feel like a natural part of the landscape, not an afterthought." },
-        { question: "What causes retaining walls to fail?", answer: "The most common causes are inadequate drainage behind the wall, insufficient footing depth, and poor backfill compaction. When water builds up behind a wall with no drainage, the hydrostatic pressure can push the wall forward or cause it to lean. That's why proper drainage design is the single most important element of any retaining wall project." },
+        { question: "Do retaining walls need permits in San Jose?", answer: "Walls over four feet in height typically require permits and may need structural engineering in most Bay Area jurisdictions. We handle the entire process." },
+        { question: "How long do retaining walls last?", answer: "A properly engineered and constructed retaining wall lasts 50 years or more. Longevity depends on adequate footing depth, correct drainage, and properly compacted backfill." },
+        { question: "What's the most cost-effective retaining wall type?", answer: "Segmental block walls typically offer the best balance of cost, structural performance, and visual appeal for most residential projects." },
+        { question: "Can you integrate landscaping with retaining walls?", answer: "Absolutely — and we recommend it. We regularly integrate retaining walls with terraced planting beds, drip irrigation, landscape lighting, and other hardscape features." },
+        { question: "What causes retaining walls to fail?", answer: "The most common causes are inadequate drainage behind the wall, insufficient footing depth, and poor backfill compaction." },
       ]} />
 
       <CTABanner title="Schedule a Retaining Wall Assessment" subtitle="We'll evaluate your slope, soil, and drainage conditions and recommend the right wall solution — no obligation, no pressure." />

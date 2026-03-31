@@ -5,6 +5,7 @@ import TrustBar from "@/components/sections/TrustBar";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
+import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS } from "@/lib/constants";
 import { CheckCircle } from "lucide-react";
 
@@ -14,10 +15,10 @@ const OutdoorKitchens = () => {
   }, []);
 
   const kitchenStyles = [
-    { name: "Custom BBQ Islands", desc: "Stone-veneer islands with built-in grills, side burners, and prep space. The foundation of most outdoor kitchens — designed to fit your cooking style and patio layout." },
-    { name: "Full Outdoor Kitchens", desc: "Complete cooking and entertaining stations with countertops, sinks, refrigeration, storage, and multiple cooking zones. Built for homeowners who take outdoor entertaining seriously." },
-    { name: "Pizza Oven Installations", desc: "Wood-fired or gas pizza ovens integrated into your outdoor kitchen or installed as standalone features. A crowd favorite that elevates any backyard gathering." },
-    { name: "Bar & Entertainment Areas", desc: "Dedicated bar seating, beverage centers, and serving counters designed for hosting. Perfect for Silicon Valley professionals who entertain regularly." },
+    { name: "Custom BBQ Islands", desc: "Stone-veneer islands with built-in grills, side burners, and prep space. The foundation of most outdoor kitchens." },
+    { name: "Full Outdoor Kitchens", desc: "Complete cooking and entertaining stations with countertops, sinks, refrigeration, storage, and multiple cooking zones." },
+    { name: "Pizza Oven Installations", desc: "Wood-fired or gas pizza ovens integrated into your outdoor kitchen or installed as standalone features." },
+    { name: "Bar & Entertainment Areas", desc: "Dedicated bar seating, beverage centers, and serving counters designed for hosting." },
   ];
 
   return (
@@ -34,22 +35,26 @@ const OutdoorKitchens = () => {
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Outdoor Kitchens Built for How You Actually Live</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
-            The Bay Area's mild climate gives you something most of the country can only dream of — the ability to cook and entertain outdoors nearly year-round. A custom outdoor kitchen transforms your backyard from unused green space into the most popular room in your home. It's where weeknight dinners happen, where weekend gatherings center, and where your home's indoor-outdoor lifestyle truly comes to life.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            At {BUSINESS.name}, we design and build custom outdoor kitchens from the ground up. Every kitchen we construct is tailored to your property, your cooking habits, and how you actually entertain — not pulled from a catalog. We've built outdoor kitchens for families in San Jose who grill three nights a week, for Saratoga homeowners who host formal outdoor dinner parties, and for tech executives in Atherton who wanted a full chef's kitchen with commercial-grade appliances under a custom pergola.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            Here's what separates a great outdoor kitchen from a mediocre one: it's not the appliances — it's the layout, the workflow, and the integration with the rest of your outdoor space. We think about where the cook stands relative to guests, how smoke and heat travel, where utilities connect, and how the kitchen relates to your patio, seating areas, and landscape. That planning is what makes the difference between an outdoor kitchen you use every week and one that collects dust.
-          </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
-            We handle every aspect of the build: structural foundation, steel or block framing, stone veneer or tile finishing, granite or quartzite countertops, gas and electrical connections, plumbing for sinks, and integrated lighting. Our outdoor kitchens are built with the same attention to detail and material quality you'd expect from an interior kitchen remodel — because that's exactly what they are, just outdoors.
+            The Bay Area's mild climate gives you something most of the country can only dream of — the ability to cook and entertain outdoors nearly year-round. A custom outdoor kitchen transforms your backyard from unused green space into the most popular room in your home.
           </p>
           <p className="text-muted-foreground leading-relaxed font-light">
-            Whether you're envisioning a compact grilling station with bar seating or a grand outdoor kitchen with dual grills, a pizza oven, refrigeration, a sink, and a full wet bar — we build kitchens that match both your vision and the way you live.
+            At {BUSINESS.name}, we design and build custom outdoor kitchens from the ground up. Every kitchen we construct is tailored to your property, your cooking habits, and how you actually entertain — not pulled from a catalog.
           </p>
         </div>
       </section>
+
+      <ZigZagSection items={[
+        {
+          title: "Layout, Workflow & Integration",
+          text: "Here's what separates a great outdoor kitchen from a mediocre one: it's not the appliances — it's the layout, the workflow, and the integration with the rest of your outdoor space. We think about where the cook stands relative to guests, how smoke and heat travel, where utilities connect, and how the kitchen relates to your patio, seating areas, and landscape.",
+          image: IMAGES.zigzag4,
+        },
+        {
+          title: "Complete Build, Every Detail",
+          text: "We handle every aspect of the build: structural foundation, steel or block framing, stone veneer or tile finishing, granite or quartzite countertops, gas and electrical connections, plumbing for sinks, and integrated lighting. Our outdoor kitchens are built with the same attention to detail you'd expect from an interior kitchen remodel.",
+          image: IMAGES.zigzag1,
+        },
+      ]} />
 
       <section className="py-20 lg:py-28 bg-brand-cream">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -73,9 +78,6 @@ const OutdoorKitchens = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Features & Components</h2>
-          <p className="text-muted-foreground mb-8 font-light leading-relaxed">
-            Every outdoor kitchen is custom-configured. Here are the most popular features our Bay Area clients choose.
-          </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {[
               "Built-in gas or charcoal grills",
@@ -99,18 +101,18 @@ const OutdoorKitchens = () => {
       </section>
 
       <ProcessSteps title="Outdoor Kitchen Build Process" steps={[
-        { title: "Consultation & Layout", description: "We assess your space, review utility access points, discuss your cooking style and entertainment needs, and outline the scope." },
-        { title: "Design & Materials", description: "Finalize the layout, countertop material, appliance selection, and veneer style. For qualifying projects, receive 2D or 3D design renderings." },
+        { title: "Consultation & Layout", description: "We assess your space, review utility access points, discuss your cooking style and entertainment needs." },
+        { title: "Design & Materials", description: "Finalize the layout, countertop material, appliance selection, and veneer style." },
         { title: "Construction", description: "Foundation, structural framing, stone or tile finishing, countertop installation, utility connections, and all finishing details." },
-        { title: "Final Walkthrough", description: "We test every connection, walk the completed kitchen with you, and confirm every detail meets your expectations before handoff." },
+        { title: "Final Walkthrough", description: "We test every connection, walk the completed kitchen with you, and confirm every detail meets your expectations." },
       ]} />
 
       <FAQAccordion faqs={[
-        { question: "How much does an outdoor kitchen cost in the Bay Area?", answer: "Outdoor kitchen costs vary widely based on size, materials, appliance selection, and utility requirements. A compact BBQ island might start in the low five figures, while a full outdoor kitchen with premium stone, multiple cooking zones, and plumbing can be a significant investment. We provide detailed, transparent proposals after every on-site consultation — no surprises." },
-        { question: "Do I need a permit for an outdoor kitchen in San Jose?", answer: "In most cases, yes — especially for gas, electrical, and plumbing connections. Some jurisdictions also require permits for structures over a certain size. We assess permit requirements during the consultation and handle the entire permitting process so you don't have to." },
-        { question: "How long does outdoor kitchen construction take?", answer: "Most outdoor kitchens take 2–4 weeks to build, depending on complexity, material lead times, and utility work. Larger projects with custom stone, pergola integration, or multiple zones may extend to 4–6 weeks. We provide a detailed timeline before construction begins." },
-        { question: "What countertop materials work best outdoors?", answer: "Granite, quartzite, and certain porcelain slabs are the most popular choices for Bay Area outdoor kitchens. They handle temperature swings, UV exposure, and moisture without staining or cracking. We help you select the right material based on your aesthetic preferences, usage patterns, and budget." },
-        { question: "Can you build an outdoor kitchen as part of a larger backyard remodel?", answer: "Absolutely — and that's how most of our outdoor kitchen projects happen. We frequently integrate kitchens with paver patios, pergolas, fire pits, retaining walls, and landscape plantings as part of a comprehensive backyard transformation. Building everything together ensures a cohesive design and more efficient construction." },
+        { question: "How much does an outdoor kitchen cost in the Bay Area?", answer: "Costs vary widely based on size, materials, appliance selection, and utility requirements. We provide detailed, transparent proposals after every on-site consultation." },
+        { question: "Do I need a permit for an outdoor kitchen in San Jose?", answer: "In most cases, yes — especially for gas, electrical, and plumbing connections. We handle the entire permitting process." },
+        { question: "How long does outdoor kitchen construction take?", answer: "Most outdoor kitchens take 2–4 weeks to build, depending on complexity. Larger projects may extend to 4–6 weeks." },
+        { question: "What countertop materials work best outdoors?", answer: "Granite, quartzite, and certain porcelain slabs are the most popular choices for Bay Area outdoor kitchens." },
+        { question: "Can you build an outdoor kitchen as part of a larger backyard remodel?", answer: "Absolutely — and that's how most of our outdoor kitchen projects happen. We frequently integrate kitchens with paver patios, pergolas, fire pits, and landscape plantings." },
       ]} />
 
       <CTABanner title="Design Your Dream Outdoor Kitchen" subtitle="Request a complimentary consultation and let's design an outdoor kitchen that matches how you live and entertain." />
