@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Shield } from "lucide-react";
-import { BUSINESS, SERVICES, SERVICE_AREAS } from "@/lib/constants";
+import { BUSINESS, SERVICES } from "@/lib/constants";
 import logo from "@/assets/stones-landscaping-logo.png";
 
 const Footer = () => {
@@ -72,7 +72,13 @@ const Footer = () => {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-6 text-primary">Service Areas</h4>
             <ul className="space-y-3">
-              {SERVICE_AREAS.map((area) => (
+              {[
+                { name: "Atherton", path: "/service-areas/atherton" },
+                { name: "Los Gatos", path: "/service-areas/los-gatos" },
+                { name: "Saratoga", path: "/service-areas/saratoga" },
+                { name: "Campbell", path: "/service-areas/campbell" },
+                { name: "Santa Clara", path: "/service-areas/santa-clara" },
+              ].map((area) => (
                 <li key={area.name}>
                   <Link to={area.path} className="text-sm text-white/60 hover:text-primary transition-colors font-light">
                     {area.name}
