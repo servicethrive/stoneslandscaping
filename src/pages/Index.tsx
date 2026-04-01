@@ -82,8 +82,8 @@ const Index = () => {
             </div>
             <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
               <img
-                src="/images/3d-landscape-design.jpg"
-                alt="3D landscape design rendering by Stones Landscaping showing a custom backyard transformation"
+                src="/images/2d-landscape-design.jpg"
+                alt="2D aerial landscape design rendering by Stones Landscaping showing a custom backyard layout"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
