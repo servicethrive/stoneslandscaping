@@ -6,7 +6,7 @@ import { BUSINESS } from "@/lib/constants";
 
 const Warranties = () => {
   useEffect(() => {
-    document.title = "Warranties | Stones Landscaping Inc. | 20-Year Paver & 90-Day Landscape";
+    document.title = "Warranties | Stones Landscaping Inc. | 21-Year Paver & 90-Day Landscape";
   }, []);
 
   return (
