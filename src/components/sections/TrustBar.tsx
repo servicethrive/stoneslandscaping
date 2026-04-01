@@ -3,10 +3,10 @@ import { BUSINESS } from "@/lib/constants";
 
 const TrustBar = () => {
   const items = [
+    { icon: Clock, label: "Paver Warranty", value: `${BUSINESS.paverWarrantyYears}-Year` },
     { icon: Shield, label: "Licensed & Insured", value: `Lic #${BUSINESS.license}` },
     { icon: Star, label: "Google Reviews", value: `${BUSINESS.googleReviews} Five-Star` },
     { icon: Award, label: "Yelp Reviews", value: `${BUSINESS.yelpReviews} Five-Star` },
-    { icon: Clock, label: "Paver Warranty", value: `${BUSINESS.paverWarrantyYears}-Year` },
   ];
 
   return (
