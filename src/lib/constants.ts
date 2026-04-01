@@ -10,7 +10,7 @@ export const BUSINESS = {
   founded: 2017,
   googleReviews: 56,
   yelpReviews: 123,
-  paverWarrantyYears: 20,
+  paverWarrantyYears: 21,
   landscapeWarrantyDays: 90,
 } as const;
 
