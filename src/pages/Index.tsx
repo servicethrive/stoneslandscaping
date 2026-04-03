@@ -12,7 +12,7 @@ import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import DesignProcessBlock from "@/components/sections/DesignProcessBlock";
 import { Button } from "@/components/ui/button";
 import { SERVICES, IMAGES, BUSINESS } from "@/lib/constants";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 
 const Index = () => {
   useEffect(() => {
@@ -50,6 +50,17 @@ const Index = () => {
                 link={service.path}
               />
             ))}
+            <Link
+              to="/service-areas"
+              className="group relative aspect-[3/4] rounded-sm overflow-hidden bg-brand-charcoal flex flex-col items-center justify-center text-center p-8 hover:bg-brand-charcoal/90 transition-colors"
+            >
+              <div className="w-12 h-0.5 bg-primary mb-6" />
+              <h3 className="font-display text-2xl font-bold text-white mb-3">See All Services</h3>
+              <p className="text-white/60 text-sm font-light mb-6">Explore our full range of landscaping and hardscape solutions</p>
+              <span className="inline-flex items-center gap-2 text-primary text-sm font-semibold tracking-widest uppercase group-hover:gap-3 transition-all">
+                View All <ArrowRight className="h-4 w-4" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>
@@ -60,6 +71,7 @@ const Index = () => {
       <CTABanner
         title="Transform Your Backyard Into an Outdoor Oasis"
         subtitle="From custom paver patios to full outdoor living spaces — let's bring your vision to life."
+        backgroundImage={IMAGES.ctaHardscape}
       />
 
       {/* Why Choose Us */}
@@ -88,13 +100,16 @@ const Index = () => {
                 ))}
               </div>
             </div>
-            <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
-              <img
-                src="/images/2d-landscape-design.jpg"
-                alt="2D aerial landscape design rendering by Stones Landscaping showing a custom backyard layout"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
+            <div className="relative">
+              <div className="absolute -inset-3 bg-primary/10 rounded-sm rotate-3" />
+              <div className="relative overflow-hidden rounded-sm shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+                <img
+                  src="/images/2d-landscape-design.jpg"
+                  alt="2D aerial landscape design rendering by Stones Landscaping showing a custom backyard layout"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -110,6 +125,7 @@ const Index = () => {
       <CTABanner
         title="See What's Possible — Schedule a Design Consultation"
         subtitle="We'll walk your property, discuss your vision, and provide a detailed proposal — all complimentary."
+        backgroundImage={IMAGES.ctaTurf}
       />
 
       <TestimonialBlock />

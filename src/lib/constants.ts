@@ -129,6 +129,8 @@ export const SERVICE_AREAS = SERVICE_AREA_COUNTIES.flatMap((county) =>
 
 export const IMAGES = {
   hero: "/images/hero-banner.jpg",
+  ctaHardscape: "/images/cta-hardscape.jpg",
+  ctaTurf: "/images/cta-turf.jpg",
   heroAbout: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80",
   pavers: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80",
   landscaping: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=1200&q=80",

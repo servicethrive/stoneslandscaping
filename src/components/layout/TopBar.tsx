@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Shield } from "lucide-react";
+import { Phone, MapPin, Shield } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 
 const TopBar = () => (
@@ -8,9 +8,9 @@ const TopBar = () => (
         <MapPin className="h-3 w-3" />
         <span>Serving the San Jose &amp; Bay Area</span>
       </div>
-      <a href={`mailto:${BUSINESS.email}`} className="flex items-center gap-1.5 text-white/80 hover:text-white transition-colors">
-        <Mail className="h-3 w-3" />
-        <span>{BUSINESS.email}</span>
+      <a href="https://maps.app.goo.gl/7yK6MFsXNHYJw1AB9" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-white/80 hover:text-white transition-colors">
+        <MapPin className="h-3 w-3" />
+        <span>3150 Almaden Expy Suite 130, San Jose, CA 95118</span>
       </a>
       <div className="flex items-center gap-6">
         <span className="flex items-center gap-1.5 text-white/80">

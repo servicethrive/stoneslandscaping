@@ -7,12 +7,14 @@ interface CTABannerProps {
   title: string;
   subtitle?: string;
   dark?: boolean;
+  backgroundImage?: string;
 }
 
 const CTABanner = ({
   title,
   subtitle,
   dark = true,
+  backgroundImage,
 }: CTABannerProps) => (
   <section className={`py-20 lg:py-28 relative overflow-hidden ${dark ? "bg-brand-charcoal" : "bg-brand-light-grey"}`}>
     {/* Background image with heavy overlay for dark variant */}
@@ -20,7 +22,7 @@ const CTABanner = ({
       <>
         <div
           className="absolute inset-0 bg-cover bg-center opacity-40"
-          style={{ backgroundImage: `url(${IMAGES.hero})` }}
+          style={{ backgroundImage: `url(${backgroundImage || IMAGES.hero})` }}
         />
         <div className="absolute inset-0 bg-brand-charcoal/50" />
       </>

@@ -21,13 +21,16 @@ const DesignProcessBlock = () => (
             <Link to="/design-process">Learn About Our Design Process</Link>
           </Button>
         </div>
-        <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl ring-1 ring-primary/20">
-          <img
-            src="/images/3d-landscape-design.jpg"
-            alt="3D landscape design rendering by Stones Landscaping"
-            className="w-full h-full object-cover"
-            loading="lazy"
-          />
+        <div className="relative">
+          <div className="absolute -inset-3 bg-primary/10 rounded-sm -rotate-3" />
+          <div className="relative overflow-hidden rounded-sm shadow-2xl ring-1 ring-primary/20 -rotate-2 hover:rotate-0 transition-transform duration-500">
+            <img
+              src="/images/3d-landscape-design.jpg"
+              alt="3D landscape design rendering by Stones Landscaping"
+              className="w-full h-auto object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </div>
     </div>
