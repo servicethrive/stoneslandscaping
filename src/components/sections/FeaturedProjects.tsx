@@ -43,6 +43,21 @@ const projects = [
     location: "San Jose, CA",
     image: woodFinishWalkway,
   },
+  {
+    title: "Lava Rock Hardscape",
+    location: "San Jose, CA",
+    image: lavaRockHardscape,
+  },
+  {
+    title: "Prefabricated Pergola & Pavers",
+    location: "San Jose, CA",
+    image: prefabPergola,
+  },
+  {
+    title: "Stamped Concrete Driveway",
+    location: "San Jose, CA",
+    image: stampedConcrete,
+  },
 ];
 
 const FeaturedProjects = () => (
