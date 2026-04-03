@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown, Phone } from "lucide-react";
+import { Menu, X, ChevronDown, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BUSINESS, SERVICES } from "@/lib/constants";
 import logo from "@/assets/stones-landscaping-logo.png";
@@ -38,7 +38,7 @@ const Navbar = () => {
           <img
             src={logo}
             alt="Stones Landscaping"
-            className={`h-12 lg:h-16 w-auto transition-all duration-500 ${
+            className={`h-16 lg:h-20 w-auto transition-all duration-500 ${
               scrolled ? "" : "brightness-0 invert"
             }`}
           />
@@ -95,32 +95,40 @@ const Navbar = () => {
         </div>
 
         <div className="hidden lg:flex items-center gap-4">
-          <a
-            href={`tel:${BUSINESS.phoneTel}`}
-            className={`flex items-center gap-1.5 text-sm font-medium tracking-wide transition-colors ${
-              scrolled ? "text-foreground" : "text-white"
-            }`}
-          >
-            <Phone className="h-4 w-4" />
-            {BUSINESS.phone}
-          </a>
           <Button asChild className="text-xs px-6 py-5 tracking-widest uppercase font-semibold font-body">
-            <Link to="/contact">Get A Free Estimate</Link>
+            <Link to="/contact">Request a Consultation</Link>
           </Button>
         </div>
 
-        {/* Mobile hamburger */}
-        <button
-          className="lg:hidden p-2"
-          onClick={() => setMobileOpen(!mobileOpen)}
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? (
-            <X className={`h-6 w-6 ${scrolled ? "text-foreground" : "text-white"}`} />
-          ) : (
-            <Menu className={`h-6 w-6 ${scrolled ? "text-foreground" : "text-white"}`} />
-          )}
-        </button>
+        {/* Mobile icons + hamburger */}
+        <div className="lg:hidden flex items-center gap-3">
+          <a
+            href={`tel:${BUSINESS.phoneTel}`}
+            aria-label="Call us"
+            className={`p-2 transition-colors ${scrolled ? "text-foreground" : "text-white"}`}
+          >
+            <Phone className="h-5 w-5" />
+          </a>
+          <Link
+            to="/contact"
+            aria-label="Email us"
+            className={`p-2 transition-colors ${scrolled ? "text-foreground" : "text-white"}`}
+            onClick={() => setMobileOpen(false)}
+          >
+            <Mail className="h-5 w-5" />
+          </Link>
+          <button
+            className="p-2"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? (
+              <X className={`h-6 w-6 ${scrolled ? "text-foreground" : "text-white"}`} />
+            ) : (
+              <Menu className={`h-6 w-6 ${scrolled ? "text-foreground" : "text-white"}`} />
+            )}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -157,7 +165,7 @@ const Navbar = () => {
               <Phone className="h-4 w-4" /> {BUSINESS.phone}
             </a>
             <Button asChild className="w-full mt-3 text-xs tracking-widest uppercase font-semibold py-5">
-              <Link to="/contact" onClick={() => setMobileOpen(false)}>Get A Free Estimate</Link>
+              <Link to="/contact" onClick={() => setMobileOpen(false)}>Request a Consultation</Link>
             </Button>
           </div>
         </div>
