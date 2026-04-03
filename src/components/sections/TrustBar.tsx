@@ -39,7 +39,7 @@ const TrustBar = () => {
       href: BUSINESS.yelpProfileUrl,
     },
     {
-      icon: <div className="w-20 h-20 bg-white rounded-lg p-1 flex items-center justify-center"><img src={bestOf2026} alt="Best of 2026 Landscaper in Willow Glen" className="w-full h-full object-contain" /></div>,
+      icon: <img src={bestOf2026} alt="Best of 2026 Landscaper in Willow Glen" className="w-20 h-20 object-contain" />,
       topLine: "Award Winner",
       bottomLine: "Landscaper in Willow Glen",
       stars: false,
