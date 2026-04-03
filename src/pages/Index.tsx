@@ -12,7 +12,7 @@ import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import DesignProcessBlock from "@/components/sections/DesignProcessBlock";
 import { Button } from "@/components/ui/button";
 import { SERVICES, IMAGES, BUSINESS } from "@/lib/constants";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, ArrowRight } from "lucide-react";
 
 const Index = () => {
   useEffect(() => {
