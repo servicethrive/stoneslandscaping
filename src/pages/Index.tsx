@@ -122,6 +122,7 @@ const Index = () => {
       <CTABanner
         title="See What's Possible — Schedule a Design Consultation"
         subtitle="We'll walk your property, discuss your vision, and provide a detailed proposal — all complimentary."
+        backgroundImage={IMAGES.ctaTurf}
       />
 
       <TestimonialBlock />
