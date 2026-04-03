@@ -4,23 +4,23 @@
 
 @layer base {
   :root {
-    --background: 30 15% 97%;
-    --foreground: 25 20% 12%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
 
-    --card: 30 12% 95%;
-    --card-foreground: 25 20% 12%;
+    --card: 0 0% 98%;
+    --card-foreground: 0 0% 10%;
 
-    --popover: 30 15% 97%;
-    --popover-foreground: 25 20% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 10%;
 
     --primary: 24 47% 41%;
     --primary-foreground: 40 30% 96%;
 
-    --secondary: 30 15% 92%;
-    --secondary-foreground: 25 20% 15%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 15%;
 
-    --muted: 30 10% 93%;
-    --muted-foreground: 25 10% 40%;
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 40%;
 
     --accent: 24 40% 48%;
     --accent-foreground: 40 30% 96%;
@@ -28,21 +28,24 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 12% 88%;
-    --input: 30 12% 88%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
     --ring: 24 47% 41%;
 
     --radius: 0.375rem;
 
-    /* Brand tokens — warm & rich luxury palette */
-    --brand-dark: 25 25% 8%;
-    --brand-dark-lighter: 25 18% 14%;
+    /* Brand tokens — grey/white/black/brown */
+    --brand-dark: 0 0% 10%;
+    --brand-dark-lighter: 0 0% 18%;
+    --brand-charcoal: 0 0% 18%;
+    --brand-grey: 0 0% 29%;
+    --brand-light-grey: 0 0% 96%;
     --brand-brown: 24 47% 41%;
     --brand-brown-light: 24 38% 55%;
-    --brand-cream: 35 30% 95%;
-    --brand-warm-gray: 25 8% 22%;
+    --brand-cream: 0 0% 97%;
+    --brand-warm-gray: 0 0% 22%;
     --brand-gold: 38 55% 52%;
-    --brand-stone: 30 10% 78%;
+    --brand-stone: 0 0% 78%;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -81,9 +84,14 @@
     @apply w-16 h-0.5 bg-primary mx-auto;
   }
 
-  /* Subtle warm texture overlay */
-  .warm-texture {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C8B7A' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  /* Dark section utility */
+  .section-dark {
+    @apply bg-brand-charcoal text-white;
+  }
+
+  /* Light grey section utility */
+  .section-light {
+    @apply bg-brand-light-grey;
   }
 }
 

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -8,6 +8,13 @@ import logo from "@/assets/stones-landscaping-logo.png";
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 80);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const navLinks = [
     { label: "About", path: "/about" },
@@ -19,26 +26,35 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-border/40 shadow-sm">
+    <nav
+      className={`fixed left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "top-0 bg-white shadow-md border-b border-border/40"
+          : "top-0 lg:top-9 bg-transparent"
+      }`}
+    >
       <div className="container mx-auto px-4 flex items-center justify-between h-20 lg:h-24">
         <Link to="/" className="flex items-center gap-2" onClick={() => setMobileOpen(false)}>
           <img
             src={logo}
             alt="Stones Landscaping"
-            className="h-12 lg:h-16 w-auto"
+            className={`h-12 lg:h-16 w-auto transition-all duration-500 ${
+              scrolled ? "" : "brightness-0 invert"
+            }`}
           />
         </Link>
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-1">
-          {/* Services Mega Menu */}
           <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
             <button
-              className="flex items-center gap-1.5 px-4 py-2 text-sm font-medium tracking-wide text-foreground hover:text-primary transition-colors"
+              className={`flex items-center gap-1.5 px-4 py-2 text-sm font-medium tracking-wide transition-colors ${
+                scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-primary"
+              }`}
             >
               Services <ChevronDown className={`h-3.5 w-3.5 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
             </button>
@@ -49,7 +65,7 @@ const Navbar = () => {
                     <Link
                       key={s.path}
                       to={s.path}
-                      className="group flex flex-col px-4 py-3 rounded-sm hover:bg-brand-cream transition-colors"
+                      className="group flex flex-col px-4 py-3 rounded-sm hover:bg-brand-light-grey transition-colors"
                       onClick={() => setServicesOpen(false)}
                     >
                       <span className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">
@@ -69,7 +85,9 @@ const Navbar = () => {
             <Link
               key={link.path}
               to={link.path}
-              className="px-4 py-2 text-sm font-body font-medium tracking-wide text-foreground hover:text-primary transition-colors"
+              className={`px-4 py-2 text-sm font-body font-medium tracking-wide transition-colors ${
+                scrolled ? "text-foreground hover:text-primary" : "text-white hover:text-primary"
+              }`}
             >
               {link.label}
             </Link>
@@ -79,7 +97,9 @@ const Navbar = () => {
         <div className="hidden lg:flex items-center gap-4">
           <a
             href={`tel:${BUSINESS.phoneTel}`}
-            className="flex items-center gap-1.5 text-sm font-medium tracking-wide text-foreground"
+            className={`flex items-center gap-1.5 text-sm font-medium tracking-wide transition-colors ${
+              scrolled ? "text-foreground" : "text-white"
+            }`}
           >
             <Phone className="h-4 w-4" />
             {BUSINESS.phone}
@@ -96,9 +116,9 @@ const Navbar = () => {
           aria-label="Toggle menu"
         >
           {mobileOpen ? (
-            <X className="h-6 w-6 text-foreground" />
+            <X className={`h-6 w-6 ${scrolled ? "text-foreground" : "text-white"}`} />
           ) : (
-            <Menu className="h-6 w-6 text-foreground" />
+            <Menu className={`h-6 w-6 ${scrolled ? "text-foreground" : "text-white"}`} />
           )}
         </button>
       </div>
@@ -112,7 +132,7 @@ const Navbar = () => {
               <Link
                 key={s.path}
                 to={s.path}
-                className="block px-3 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-brand-cream rounded-sm transition-colors"
+                className="block px-3 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-brand-light-grey rounded-sm transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 {s.title}
@@ -123,7 +143,7 @@ const Navbar = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className="block px-3 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-brand-cream rounded-sm transition-colors"
+                className="block px-3 py-3 text-sm font-medium text-foreground hover:text-primary hover:bg-brand-light-grey rounded-sm transition-colors"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}

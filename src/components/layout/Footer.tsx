@@ -17,8 +17,9 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-brand-dark text-white relative overflow-hidden">
-      <div className="absolute inset-0 warm-texture opacity-20" />
+    <footer className="bg-brand-charcoal text-white relative overflow-hidden">
+      {/* Brown accent line at top */}
+      <div className="h-1 bg-primary w-full" />
 
       <div className="relative container mx-auto px-4 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">

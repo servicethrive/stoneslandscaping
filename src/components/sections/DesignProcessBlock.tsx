@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const DesignProcessBlock = () => (
-  <section className="py-20 lg:py-28 bg-background">
+  <section className="py-20 lg:py-28 bg-brand-light-grey">
     <div className="container mx-auto px-4">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
         <div>
@@ -17,11 +17,11 @@ const DesignProcessBlock = () => (
             Our design process includes an on-site consultation, detailed measurements, material selection
             guidance, and rendered visuals that show exactly how your outdoor space will look.
           </p>
-          <Button asChild className="text-sm px-8 py-5 tracking-wide uppercase font-semibold">
+          <Button asChild className="text-sm px-8 py-5 tracking-wide uppercase font-semibold shadow-lg">
             <Link to="/design-process">Learn About Our Design Process</Link>
           </Button>
         </div>
-        <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
+        <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl ring-1 ring-primary/20">
           <img
             src="/images/3d-landscape-design.jpg"
             alt="3D landscape design rendering by Stones Landscaping"
