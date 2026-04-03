@@ -71,6 +71,7 @@ const Index = () => {
       <CTABanner
         title="Transform Your Backyard Into an Outdoor Oasis"
         subtitle="From custom paver patios to full outdoor living spaces — let's bring your vision to life."
+        backgroundImage={IMAGES.ctaHardscape}
       />
 
       {/* Why Choose Us */}
