@@ -92,7 +92,7 @@ const ServiceAreaGrid = ({
     <div className="container mx-auto px-4">
       <div className="text-center mb-14">
         <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3">{title}</h2>
+        <h2 className="font-display text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-3">{title}</h2>
         <p className="text-white/60 max-w-2xl mx-auto font-light">{subtitle}</p>
       </div>
 

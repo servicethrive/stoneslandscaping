@@ -7,7 +7,7 @@ const DesignProcessBlock = () => (
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
         <div>
           <div className="w-12 h-0.5 bg-primary mb-6" />
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-5 leading-tight">See Your Project Before It's Built</h2>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-4xl font-bold text-foreground mb-5 leading-tight">See Your Project Before It's Built</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             For qualifying projects, we offer 2D and 3D design renderings so you can visualize the finished
             result before any construction begins. This process eliminates guesswork, aligns expectations,

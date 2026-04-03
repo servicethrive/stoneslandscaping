@@ -8,6 +8,7 @@ import ProcessSteps from "@/components/sections/ProcessSteps";
 import TestimonialBlock from "@/components/sections/TestimonialBlock";
 import ServiceAreaGrid from "@/components/sections/ServiceAreaGrid";
 import CTABanner from "@/components/sections/CTABanner";
+import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import DesignProcessBlock from "@/components/sections/DesignProcessBlock";
 import { Button } from "@/components/ui/button";
 import { SERVICES, IMAGES, BUSINESS } from "@/lib/constants";
@@ -34,7 +35,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">Our Expertise</h2>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-4xl font-bold text-foreground mb-4">Our Expertise</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto font-light text-lg">
               From concept to completion, we deliver premium outdoor spaces for discerning Bay Area homeowners.
             </p>
@@ -53,6 +54,8 @@ const Index = () => {
         </div>
       </section>
 
+      <FeaturedProjects />
+
       {/* Mid-page CTA */}
       <CTABanner
         title="Transform Your Backyard Into an Outdoor Oasis"
@@ -66,7 +69,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             <div>
               <div className="w-12 h-0.5 bg-primary mb-6" />
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">Why Silicon Valley Homeowners Choose Us</h2>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-8 leading-tight">Why Silicon Valley Homeowners Choose Us</h2>
               <div className="space-y-5">
                 {[
                   { title: "Uncompromising Quality", desc: "Every project is built with premium materials and meticulous attention to detail - from foundation to finish." },
