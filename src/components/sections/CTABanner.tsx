@@ -7,6 +7,7 @@ interface CTABannerProps {
   title: string;
   subtitle?: string;
   dark?: boolean;
+  backgroundImage?: string;
 }
 
 const CTABanner = ({
