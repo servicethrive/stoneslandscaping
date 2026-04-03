@@ -1,131 +1,71 @@
 
 
-## Premium Design Overhaul — High-End Landscape Firm Look & Feel
+## Homepage Premium Overhaul — More Branding, Larger CTAs, Service Area Map
 
-The client's current site has a clean but generic template feel. Their existing site (stoneslandscapinginc.com) uses a grey top utility bar, transparent-to-white navbar, and a more branded color scheme. We need to elevate beyond both — a premium, high-end design that feels like a luxury design firm, not a basic contractor site.
+This plan addresses all requests: navbar tweaks, hero changes, larger service cards, a Bay Area map overlay, and additional CTA sections throughout the homepage (inspired by eliaslandscapinginc.com's approach of interspersing bold CTA banners between content sections).
 
-### Color Scheme Update
-
-Align with the logo colors: **grey, white, black, brown (accent)**
-
-```text
-Current               →  New
---background (cream)  →  Pure white (#FFFFFF)
---brand-dark (brown)  →  Charcoal black (#1A1A1A)
---primary (brown)     →  Keep brown as accent (#9a5e37)
-New additions:
-  --brand-charcoal: #2D2D2D (dark sections)
-  --brand-grey: #4A4A4A (text, utility bar)
-  --brand-light-grey: #F5F5F5 (section alternation)
-```
-
-### Files Changed (13 files)
+### Files Changed (5 files)
 
 ---
 
-### 1. Top Utility Bar (new component)
-**File: `src/components/layout/TopBar.tsx`** (new)
-
-A slim grey bar above the navbar matching stoneslandscapinginc.com style but cleaner:
-- Dark grey background (`#4A4A4A`)
-- Left: "Serving the Bay Area" with map pin icon
-- Center: Email address
-- Right: License number + phone number with click-to-call
-- Hidden on mobile (shown in mobile menu instead)
-
-### 2. Transparent → White Navbar on Scroll
+### 1. Navbar Updates
 **File: `src/components/layout/Navbar.tsx`**
 
-- Default state: `bg-transparent`, white text/logo, no border
-- On scroll (past ~80px): `bg-white`, dark text, subtle shadow, smooth transition
-- Use `useEffect` with scroll listener + state toggle
-- Logo: use white version at top, dark version on scroll (or use CSS filters)
-- Services dropdown: always white background
-- Mobile menu: always white background
+- **Remove phone number** from desktop nav (lines 97–106)
+- **Change CTA button** text from "Get A Free Estimate" → "Request a Consultation"
+- **Logo 30% larger**: change `h-12 lg:h-16` → `h-16 lg:h-20`
+- **Mobile: add Phone icon + Mail icon** next to hamburger, linked to `tel:` and `/contact` respectively
+- Update mobile menu CTA text to match
 
-### 3. Layout Adjustments
-**File: `src/components/layout/Layout.tsx`**
+### 2. Hero Banner Updates
+**File: `src/pages/Index.tsx`**
 
-- Add `<TopBar />` above `<Navbar />`
-- Adjust `pt-` to account for TopBar + Navbar combined height
+- Change hero `title` to `"Landscape & Hardscape Design in San Jose, CA"`
+- Change `primaryCTA` text to `"Request a Free Consultation"`
+- **Remove `secondaryCTA`** (no "View Our Portfolio")
+- **Add 2 mid-page CTA banners** between sections for more branding presence:
+  - After Services section: CTA banner — "Transform Your Backyard Into an Outdoor Oasis" with consultation CTA
+  - After Why Choose Us / before Process Steps: CTA banner — "See What's Possible — Schedule a Design Consultation"
+- This mirrors the eliaslandscapinginc.com pattern of CTA sections interspersed throughout
 
-### 4. Updated CSS Variables
-**File: `src/index.css`**
-
-- `--background`: pure white `0 0% 100%`
-- `--card`: very light grey `0 0% 98%`
-- Add new brand tokens for charcoal, medium grey, light grey
-- Add new utility classes: `.section-dark` (charcoal bg), `.section-light` (light grey bg)
-
-### 5. Hero Section Upgrade
-**File: `src/components/sections/HeroSection.tsx`**
-
-- Taller hero: `min-h-screen` instead of `min-h-[85vh]`
-- Add subtle parallax-like effect with CSS
-- More dramatic gradient overlay
-- Larger, bolder typography with text shadow
-- Add a subtle animated scroll indicator arrow at bottom
-- Left-aligned text layout option for more editorial feel
-
-### 6. Trust Bar Refinement
-**File: `src/components/sections/TrustBar.tsx`**
-
-- Change from dark background to charcoal black
-- Add a subtle gold/brown separator line between items on desktop
-- Slightly larger icons with refined styling
-
-### 7. Service Cards Premium Upgrade
+### 3. Larger Service Cards
 **File: `src/components/sections/ServiceCard.tsx`**
 
-- Darker overlay on images by default (not just on hover)
-- Title overlaid on image at bottom with gradient
-- Subtle border-bottom accent line in brand brown on hover
-- Remove the separate text area below — make it a full image card with overlay text (like the reference site's service cards)
+- Change aspect ratio from `aspect-[4/3]` → `aspect-[3/4]` (taller cards, more photo visible)
+- Increase text padding
 
-### 8. Process Steps Visual Upgrade
-**File: `src/components/sections/ProcessSteps.tsx`**
+**File: `src/pages/Index.tsx`** (services grid)
 
-- Change from cream background to light grey
-- Add connecting lines between step circles on desktop
-- Step numbers: filled brown circles instead of outlined
+- Change grid from `lg:grid-cols-3 xl:grid-cols-4` → `lg:grid-cols-3 xl:grid-cols-3` with larger gap
+- This gives each card more room to breathe and show the photos
 
-### 9. Testimonial Block Upgrade
-**File: `src/components/sections/TestimonialBlock.tsx`**
+### 4. Service Area Section — Bay Area Map Overlay
+**File: `src/components/sections/ServiceAreaGrid.tsx`**
 
-- Change from brand-dark to charcoal black
-- Add subtle left border accent (brown) on each card
-- Larger quote marks as decorative element
+- Add a two-column layout: left side = Bay Area map visual (SVG map outline of the Bay Area with service counties highlighted in brand brown), right side = city list
+- Use an inline SVG of the Bay Area silhouette with highlighted counties (Santa Clara, San Mateo, Alameda, Santa Cruz) filled with the brand brown color
+- Add a pin/marker on San Jose as home base
+- Dark charcoal background section for contrast
+- White text, brown accent highlights on the map
+- CTA button at bottom: "View All Service Areas"
 
-### 10. CTA Banner Polish
-**File: `src/components/sections/CTABanner.tsx`**
+### 5. Additional Mid-Page CTA Component
+**File: `src/pages/Index.tsx`**
 
-- Use charcoal black background
-- Add a background image with heavy dark overlay for depth
+Reuse existing `CTABanner` component with different copy at two insertion points:
+1. After services grid, before "Why Choose Us"
+2. After DesignProcessBlock, before TestimonialBlock
 
-### 11. Design Process Block Polish
-**File: `src/components/sections/DesignProcessBlock.tsx`**
-
-- Add subtle light grey background
-- Image: add a thin brown border/frame effect
-
-### 12. Footer Upgrade
-**File: `src/components/layout/Footer.tsx`**
-
-- Use true black/charcoal instead of warm brown-dark
-- Add a brown accent line at the very top of footer
-- Cleaner grid spacing
-
-### 13. Tailwind Config
-**File: `tailwind.config.ts`**
-
-- Add new color tokens for charcoal, grey, light-grey
+This creates the rhythm: Hero → Trust → Services → **CTA** → Why Choose Us → Process → Design → **CTA** → Testimonials → Service Areas → Final CTA
 
 ---
 
-### Design Principles Applied
-- **White space**: More generous padding, cleaner sections
-- **Color discipline**: Grey/white/black foundations, brown only as accent
-- **Typography contrast**: Bigger headings, lighter body text weight
-- **Depth**: Subtle shadows, overlays, and layering instead of flat cards
-- **Professional**: Transparent header creates an immersive hero, utility bar adds credibility
+### Summary of All Text Changes
+| Location | Old | New |
+|---|---|---|
+| Navbar CTA | Get A Free Estimate | Request a Consultation |
+| Hero H1 | Outdoor Living, Built to Last | Landscape & Hardscape Design in San Jose, CA |
+| Hero primary CTA | Request a Consultation | Request a Free Consultation |
+| Hero secondary CTA | View Our Portfolio | (removed) |
+| Navbar phone | Visible | Removed from desktop nav |
 
