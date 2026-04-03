@@ -14,7 +14,7 @@ const StarRow = () => (
 );
 
 const GoogleIcon = () => (
-  <svg viewBox="0 0 48 48" className="w-16 h-16">
+  <svg viewBox="0 0 48 48" className="w-20 h-20">
     <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
     <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
     <path fill="#FBBC05" d="M10.53 28.59a14.5 14.5 0 010-9.18l-7.98-6.19a24.003 24.003 0 000 21.56l7.98-6.19z"/>
@@ -32,21 +32,21 @@ const TrustBar = () => {
       href: BUSINESS.googleProfileUrl,
     },
     {
-      icon: <img src={yelpIcon} alt="Yelp" className="w-16 h-16 object-contain rounded" />,
+      icon: <div className="w-20 h-20 bg-white rounded-lg p-1 flex items-center justify-center"><img src={yelpIcon} alt="Yelp" className="w-full h-full object-contain rounded" /></div>,
       topLine: "4.9 Stars on Yelp",
       bottomLine: "123+ Reviews",
       stars: true,
       href: BUSINESS.yelpProfileUrl,
     },
     {
-      icon: <img src={bestOf2026} alt="Best of 2026 Landscaper in Willow Glen" className="w-16 h-16 object-contain" />,
+      icon: <div className="w-20 h-20 bg-white rounded-lg p-1 flex items-center justify-center"><img src={bestOf2026} alt="Best of 2026 Landscaper in Willow Glen" className="w-full h-full object-contain" /></div>,
       topLine: "Award Winner",
       bottomLine: "Landscaper in Willow Glen",
       stars: false,
       href: undefined,
     },
     {
-      icon: <img src={bestOf2025} alt="Best of 2025 Landscaper in San Jose" className="w-16 h-16 object-contain" />,
+      icon: <div className="w-20 h-20 bg-white rounded-lg p-1 flex items-center justify-center"><img src={bestOf2025} alt="Best of 2025 Landscaper in San Jose" className="w-full h-full object-contain" /></div>,
       topLine: "Best of 2025",
       bottomLine: "Landscaper in San Jose",
       stars: false,
