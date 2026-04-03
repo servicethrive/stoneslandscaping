@@ -18,7 +18,7 @@ const About = () => {
         title="About Stones Landscaping"
         subtitle={`A Bay Area hardscape and outdoor living contractor built on hands-on experience, honest communication, and craftsmanship that lasts. Serving San Jose and Silicon Valley since ${BUSINESS.founded}.`}
         backgroundImage={IMAGES.heroAbout}
-        primaryCTA={{ text: "Request a Consultation", link: "/contact" }}
+        primaryCTA={{ text: "Request a Free Quote", link: "/contact" }}
       />
 
       <TeamBlock />

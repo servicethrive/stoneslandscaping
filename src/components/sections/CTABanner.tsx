@@ -39,7 +39,7 @@ const CTABanner = ({
       )}
       <div className="flex flex-col items-center">
         <Button asChild size="lg" className="text-sm px-10 py-6 tracking-widest uppercase font-semibold font-body shadow-lg">
-          <Link to="/contact">Request a Free Consultation</Link>
+          <Link to="/contact">Request a Free Quote</Link>
         </Button>
         <a
           href={`tel:${BUSINESS.phoneTel}`}

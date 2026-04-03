@@ -16,7 +16,7 @@ const HeroSection = ({
   title,
   subtitle,
   backgroundImage,
-  primaryCTA = { text: "Get a Free Estimate", link: "/contact" },
+  primaryCTA = { text: "Request a Free Quote", link: "/contact" },
   secondaryCTA,
   showPhone = true,
 }: HeroSectionProps) => (

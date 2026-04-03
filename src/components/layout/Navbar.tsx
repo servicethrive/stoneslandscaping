@@ -96,7 +96,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-4">
           <Button asChild className="text-xs px-6 py-5 tracking-widest uppercase font-semibold font-body">
-            <Link to="/contact">Request a Consultation</Link>
+            <Link to="/contact">Request a Free Quote</Link>
           </Button>
         </div>
 
@@ -165,7 +165,7 @@ const Navbar = () => {
               <Phone className="h-4 w-4" /> {BUSINESS.phone}
             </a>
             <Button asChild className="w-full mt-3 text-xs tracking-widest uppercase font-semibold py-5">
-              <Link to="/contact" onClick={() => setMobileOpen(false)}>Request a Consultation</Link>
+              <Link to="/contact" onClick={() => setMobileOpen(false)}>Request a Free Quote</Link>
             </Button>
           </div>
         </div>

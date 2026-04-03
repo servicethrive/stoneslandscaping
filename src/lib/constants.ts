@@ -12,6 +12,8 @@ export const BUSINESS = {
   yelpReviews: 123,
   paverWarrantyYears: 21,
   landscapeWarrantyDays: 90,
+  googleProfileUrl: "https://maps.app.goo.gl/stoneslandscaping",
+  yelpProfileUrl: "https://www.yelp.com/biz/stones-landscaping-san-jose",
 } as const;
 
 export const SERVICES = [
