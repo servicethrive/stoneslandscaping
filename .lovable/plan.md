@@ -1,58 +1,68 @@
 
 
-## Homepage Refinements + Featured Projects Section
+## Homepage Enhancements — TopBar, Service Card, CTA Images, Image Styling
 
-### Files Changed (4 files)
+### Files Changed (6 files)
 
 ---
 
-### 1. Smaller H1s Site-Wide
-**File: `src/components/sections/HeroSection.tsx`**
+### 1. TopBar — Replace Email with Address
+**File: `src/components/layout/TopBar.tsx`**
 
-Current H1: `text-4xl md:text-6xl lg:text-7xl xl:text-8xl`
-New H1: `text-4xl md:text-5xl lg:text-5xl xl:text-6xl` — desktop gets the current tablet size, tablet/phone stay the same.
+- Replace the email `mailto:` link (line 11-14) with the business address linking to their GBP: `https://maps.app.goo.gl/7yK6MFsXNHYJw1AB9`
+- Use `MapPin` icon + "3150 Almaden Expy Suite 130, San Jose, CA 95118"
+- Link opens in new tab (`target="_blank" rel="noopener noreferrer"`)
 
-H2s across sections currently use `text-3xl md:text-4xl lg:text-5xl`. Change to `text-3xl md:text-4xl lg:text-4xl` in all section components (CTABanner, ProcessSteps, TestimonialBlock, ServiceAreaGrid, FAQAccordion, ComparisonTable, WarrantyBlock, TeamBlock, DesignProcessBlock, Index.tsx inline h2s).
-
-### 2. Hero Phone Number — Text Only, Below CTA
-**File: `src/components/sections/HeroSection.tsx`**
-
-- Remove the phone button CTA entirely (the `showPhone` button block)
-- Remove the `secondaryCTA` button block
-- Below the primary CTA button, add a simple text line with phone icon:
-  ```
-  <a href="tel:..." className="inline-flex items-center gap-2 text-white/70 hover:text-white text-sm mt-6">
-    <Phone className="h-4 w-4" /> (408) 204-8418
-  </a>
-  ```
-- Clean up the `showPhone` and `secondaryCTA` props (can keep for backward compat but remove the button rendering)
-
-### 3. CTABanner — Lighter Overlays, Remove Phone Button
-**File: `src/components/sections/CTABanner.tsx`**
-
-- Change background image opacity from `opacity-20` to `opacity-40` and reduce the overlay from `bg-brand-charcoal/80` to `bg-brand-charcoal/50` so more photo detail shows through
-- Remove the phone number button entirely
-- Below the main CTA button, add the same phone text treatment: icon + number as plain text link (not a button)
-
-### 4. Featured Projects Section + Index Layout
+### 2. "See All Services" Card
 **File: `src/pages/Index.tsx`**
 
-Add a new "Featured Projects" section after the services grid and before the first CTABanner. Layout:
+- After the `SERVICES.map()` loop, add one more grid item — a styled card linking to `/service-areas` or a services overview
+- Dark charcoal background with brown accent, "See All Services →" text, matching the `aspect-[3/4]` of other service cards
+- This fills the last slot on the 3-column grid
 
-- Section heading: "Featured Projects" with brand accent line
-- Subtitle: "Recent transformations by Stones Landscaping"
-- A visually rich grid layout:
-  - 1 large hero image (spanning 2 columns, taller) + 2 stacked smaller images on the right
-  - Below: 3 equal-width images
-- Each image card has a subtle overlay on hover with project title and location (e.g., "Custom Paver Patio — Los Gatos, CA")
-- Bottom CTA: "View Full Portfolio" linking to `/gallery`
-- Use charcoal background section for contrast, white text
-- Uses existing gallery images from IMAGES constants for now
+### 3. Generate 2 AI Images for CTA Backgrounds
+**Using AI image generation**, create:
 
-The section will be a new component: **`src/components/sections/FeaturedProjects.tsx`**
+1. **Pavers/hardscape image** for "Transform Your Backyard" CTA — eye-catching, luxury paver patio with dramatic composition
+2. **Artificial turf image** for "See What's Possible" CTA — lush artificial turf backyard, modern Silicon Valley home
+
+Save to `public/images/cta-hardscape.jpg` and `public/images/cta-turf.jpg`
+
+### 4. CTABanner — Use Per-Section Background Images
+**File: `src/components/sections/CTABanner.tsx`**
+
+- Add optional `backgroundImage` prop to CTABanner
+- Use it instead of the default `IMAGES.hero` when provided
+
+**File: `src/pages/Index.tsx`**
+
+- Pass `backgroundImage="/images/cta-hardscape.jpg"` to the first CTA
+- Pass `backgroundImage="/images/cta-turf.jpg"` to the second CTA
+
+### 5. Larger + Styled Images for "Why Choose Us" and "Design Process"
+**File: `src/pages/Index.tsx`** (Why Choose Us section, lines 91-98)
+
+- Remove `aspect-[4/3]`, make the image container larger (no fixed aspect, let it fill more space)
+- Add rotation styling: `transform rotate-2 hover:rotate-0 transition-transform duration-500`
+- Add a decorative shadow and a subtle brown border offset effect (like a polaroid/editorial tilt)
+
+**File: `src/components/sections/DesignProcessBlock.tsx`** (line 24-31)
+
+- Same treatment: remove `aspect-[4/3]`, make larger
+- Add `-rotate-2 hover:rotate-0` with shadow and border accent
+- Both images get ~30% more visual real estate by removing the constrained aspect ratio and letting them be taller
+
+### 6. Constants Update
+**File: `src/lib/constants.ts`**
+
+- Add `ctaHardscape` and `ctaTurf` to IMAGES object
 
 ---
 
-### Section Order (updated)
-Hero → Trust → Services → **Featured Projects** → CTA → Why Choose Us → Process → Design → CTA → Testimonials → Service Areas → Final CTA
+### Summary
+- TopBar: address replaces email, links to Google Maps
+- Services grid gets a "See All Services" card at the end
+- Two new AI-generated CTA background images (hardscape + turf)
+- CTABanner accepts custom background images
+- "Why Choose Us" and "Design Process" images are 30% larger with editorial rotation styling
 
