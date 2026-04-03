@@ -50,6 +50,17 @@ const Index = () => {
                 link={service.path}
               />
             ))}
+            <Link
+              to="/service-areas"
+              className="group relative aspect-[3/4] rounded-sm overflow-hidden bg-brand-charcoal flex flex-col items-center justify-center text-center p-8 hover:bg-brand-charcoal/90 transition-colors"
+            >
+              <div className="w-12 h-0.5 bg-primary mb-6" />
+              <h3 className="font-display text-2xl font-bold text-white mb-3">See All Services</h3>
+              <p className="text-white/60 text-sm font-light mb-6">Explore our full range of landscaping and hardscape solutions</p>
+              <span className="inline-flex items-center gap-2 text-primary text-sm font-semibold tracking-widest uppercase group-hover:gap-3 transition-all">
+                View All <ArrowRight className="h-4 w-4" />
+              </span>
+            </Link>
           </div>
         </div>
       </section>
