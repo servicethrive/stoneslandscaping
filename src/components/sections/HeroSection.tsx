@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Phone } from "lucide-react";
+import { Phone, ChevronDown } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 
 interface HeroSectionProps {
@@ -20,28 +20,28 @@ const HeroSection = ({
   secondaryCTA,
   showPhone = true,
 }: HeroSectionProps) => (
-  <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+  <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
     <div
       className="absolute inset-0 bg-cover bg-center scale-105"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     />
     {/* Rich dark gradient overlay */}
-    <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
-    {/* Warm brown bottom accent */}
-    <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(25,25%,8%)] to-transparent" />
+    <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80" />
+    {/* Bottom fade to charcoal */}
+    <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/90 to-transparent" />
 
     <div className="relative container mx-auto px-4 py-24 text-center max-w-5xl">
       {/* Decorative accent line */}
-      <div className="w-12 h-0.5 bg-primary mx-auto mb-8 opacity-80" />
+      <div className="w-16 h-[2px] bg-primary mx-auto mb-8 opacity-90" />
 
-      <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-white mb-6 leading-[1.1] tracking-tight">
+      <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-6 leading-[1.05] tracking-tight drop-shadow-lg">
         {title}
       </h1>
-      <p className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto leading-relaxed font-light">
+      <p className="text-lg md:text-xl lg:text-2xl text-white/80 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
         {subtitle}
       </p>
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-        <Button asChild size="lg" className="px-10 py-6 tracking-widest uppercase text-sm font-semibold font-body">
+        <Button asChild size="lg" className="px-10 py-6 tracking-widest uppercase text-sm font-semibold font-body shadow-lg">
           <Link to={primaryCTA.link}>{primaryCTA.text}</Link>
         </Button>
         {secondaryCTA && (
@@ -57,6 +57,11 @@ const HeroSection = ({
           </Button>
         )}
       </div>
+    </div>
+
+    {/* Scroll indicator */}
+    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-scroll-hint">
+      <ChevronDown className="h-6 w-6 text-white/50" />
     </div>
   </section>
 );

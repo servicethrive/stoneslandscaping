@@ -33,8 +33,7 @@ const TestimonialBlock = ({
   testimonials = defaultTestimonials,
   title = "What Our Clients Say",
 }: TestimonialBlockProps) => (
-  <section className="py-20 lg:py-28 bg-brand-dark relative overflow-hidden">
-    <div className="absolute inset-0 warm-texture opacity-20" />
+  <section className="py-20 lg:py-28 bg-brand-charcoal relative overflow-hidden">
     <div className="relative container mx-auto px-4">
       <div className="text-center mb-14">
         <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
@@ -43,8 +42,8 @@ const TestimonialBlock = ({
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
         {testimonials.map((t, i) => (
-          <div key={i} className="bg-white/5 backdrop-blur-sm rounded-sm p-8 border border-white/10 relative">
-            <Quote className="h-8 w-8 text-primary/30 absolute top-6 right-6" />
+          <div key={i} className="bg-white/5 backdrop-blur-sm rounded-sm p-8 border border-white/10 relative border-l-2 border-l-primary">
+            <Quote className="h-10 w-10 text-primary/20 absolute top-6 right-6" />
             <div className="flex gap-0.5 mb-4">
               {[...Array(5)].map((_, j) => (
                 <Star key={j} className="h-4 w-4 fill-primary text-primary" />

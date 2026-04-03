@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import TopBar from "./TopBar";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
@@ -10,8 +11,9 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => (
   <>
     <ScrollToTop />
+    <TopBar />
     <Navbar />
-    <main className="pt-16 lg:pt-20">{children}</main>
+    <main>{children}</main>
     <Footer />
   </>
 );

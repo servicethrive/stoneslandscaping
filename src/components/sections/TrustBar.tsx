@@ -10,12 +10,16 @@ const TrustBar = () => {
   ];
 
   return (
-    <section className="bg-brand-dark border-t border-white/5 py-8">
+    <section className="bg-brand-charcoal border-t border-white/5 py-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {items.map((item) => (
-            <div key={item.label} className="flex items-center gap-4 justify-center">
-              <div className="w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center">
+          {items.map((item, i) => (
+            <div key={item.label} className="flex items-center gap-4 justify-center relative">
+              {/* Brown separator line between items on desktop */}
+              {i > 0 && (
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 w-px h-8 bg-primary/30 hidden lg:block" />
+              )}
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
                 <item.icon className="h-5 w-5 text-primary" />
               </div>
               <div>
