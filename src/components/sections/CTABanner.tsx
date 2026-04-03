@@ -19,10 +19,10 @@ const CTABanner = ({
     {dark && (
       <>
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-20"
+          className="absolute inset-0 bg-cover bg-center opacity-40"
           style={{ backgroundImage: `url(${IMAGES.hero})` }}
         />
-        <div className="absolute inset-0 bg-brand-charcoal/80" />
+        <div className="absolute inset-0 bg-brand-charcoal/50" />
       </>
     )}
 
