@@ -25,7 +25,7 @@ const Index = () => {
         title="Landscape & Hardscape Design in San Jose, CA"
         subtitle="Custom paver patios, outdoor kitchens, pergolas, and complete backyard transformations for Silicon Valley's finest homes. Designed with precision, built with integrity."
         backgroundImage={IMAGES.hero}
-        primaryCTA={{ text: "Request a Free Consultation", link: "/contact" }}
+        primaryCTA={{ text: "Request a Free Quote", link: "/contact" }}
       />
 
       <TrustBar />
