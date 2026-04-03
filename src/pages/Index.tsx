@@ -8,6 +8,7 @@ import ProcessSteps from "@/components/sections/ProcessSteps";
 import TestimonialBlock from "@/components/sections/TestimonialBlock";
 import ServiceAreaGrid from "@/components/sections/ServiceAreaGrid";
 import CTABanner from "@/components/sections/CTABanner";
+import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import DesignProcessBlock from "@/components/sections/DesignProcessBlock";
 import { Button } from "@/components/ui/button";
 import { SERVICES, IMAGES, BUSINESS } from "@/lib/constants";
