@@ -14,6 +14,7 @@ const CTABanner = ({
   title,
   subtitle,
   dark = true,
+  backgroundImage,
 }: CTABannerProps) => (
   <section className={`py-20 lg:py-28 relative overflow-hidden ${dark ? "bg-brand-charcoal" : "bg-brand-light-grey"}`}>
     {/* Background image with heavy overlay for dark variant */}
