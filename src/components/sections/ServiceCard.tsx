@@ -17,7 +17,7 @@ const ServiceCard = ({ title, description, image, link }: ServiceCardProps) => (
       src={image}
       alt={title}
       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-      loading="lazy"
+      loading="eager"
     />
     {/* Permanent dark overlay with gradient */}
     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
