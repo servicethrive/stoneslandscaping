@@ -46,7 +46,7 @@ const TrustBar = () => {
       href: undefined,
     },
     {
-      icon: <img src={bestOf2025} alt="Best of 2025 Landscaper in San Jose" className="w-16 h-16 object-contain" />,
+      icon: <div className="w-20 h-20 bg-white rounded-lg p-1 flex items-center justify-center"><img src={bestOf2025} alt="Best of 2025 Landscaper in San Jose" className="w-full h-full object-contain" /></div>,
       topLine: "Best of 2025",
       bottomLine: "Landscaper in San Jose",
       stars: false,
