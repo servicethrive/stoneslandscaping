@@ -1,35 +1,53 @@
 
 
-## Restart Trust Bar — Mixed Treatment with Blend Fix
+## Restart Trust Bar — Fresh Layout with New Images
 
-### Root cause
-The Yelp file is a **JPEG** (no transparency possible). The 2025 PNG likely also has a white background baked in. Previous attempts either wrapped them in white boxes (ugly) or displayed them raw (white rectangles on dark). The fix is CSS `mix-blend-mode: multiply`, which makes white pixels transparent against the dark background — no image editing needed.
+### Problems with current implementation
+1. Old image files (JPEG for Yelp, PNG for 2025) are causing pixelation and white background issues
+2. Layout order is wrong — user wants awards centered/prominent, not tacked on at the end
+3. `mix-blend-multiply` hack isn't working reliably
+4. Mobile layout needs awards on top, reviews below
 
-### What's changing
+### New image assets
+The user uploaded fresh WebP files with transparent backgrounds. These replace the old problematic files:
+- `yelp_icon.webp` — circular red Yelp icon, transparent background
+- `best_of_2025_landscaper_in_San_Jose.webp` — gold badge, transparent background
+- `best_of_2026_landscaper_in_Willow_Glen.webp` — award badge, transparent background
 
-**`src/components/sections/TrustBar.tsx`** — full rework of icon sizing and styling:
-
-1. **Google icon** — keep as SVG, size `w-14 h-14` (compact review icon)
-2. **Yelp icon** — `w-14 h-14 object-contain rounded mix-blend-multiply` plus a subtle light background circle/pill so multiply mode has something to blend against cleanly. Actually simpler: **invert approach** — give Yelp a small `bg-white/90 rounded-lg p-0.5` container at `w-14 h-14` so it looks like a deliberate badge chip (not a raw image). This is different from before because it's compact and intentional, matching Google's footprint.
-3. **Best of 2026 badge** — increase to `w-28 h-28` so the award text inside the artwork is legible. Add `mix-blend-multiply` if it has white background, or display raw if truly transparent.
-4. **Best of 2025 badge** — same `w-28 h-28 mix-blend-multiply` treatment.
-5. **Layout shift** — change from uniform `grid-cols-4` to a flex layout where Google and Yelp are compact (icon + text), and the two award badges are larger visual elements. Use `flex items-center justify-around` so spacing adapts.
-
-### Revised layout structure
+### Layout (desktop)
 ```text
-┌──────────────────────────────────────────────────────────┐
-│  [G] 5.0 Stars  │  [Y] 4.9 Stars  │  [🏆 2026]  │  [🏆 2025]  │
-│  (w-14)          │  (w-14)          │  (w-28)      │  (w-28)      │
-│  + text right    │  + text right    │  + text below │  + text below │
-└──────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────┐
+│  [G] 5.0 Stars  │  [🏆 2026]    [🏆 2025]  │  [Y] 4.9 Stars │
+│  Google (left)   │  Awards (center, large)   │  Yelp (right)   │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-- Award items switch to a **stacked layout** (image on top, text below) so the bigger badge has room
-- Review items keep the **side-by-side layout** (icon left, text right) as they are now
+### Layout (mobile)
+```text
+┌─────────────────────┐
+│  [🏆 2026]  [🏆 2025] │  ← awards row on top
+│  [G] Google  [Y] Yelp │  ← reviews row below
+└─────────────────────┘
+```
 
-### Key CSS trick
-`mix-blend-multiply` on the award images makes any white background disappear against the dark charcoal bar. This works because multiply blending treats white as transparent. No image editing required.
+### Changes
 
-### Files changed (1)
-**`src/components/sections/TrustBar.tsx`**
+**Step 1: Replace image assets**
+- Copy `user-uploads://yelp_icon.webp` → `src/assets/yelp-icon.webp`
+- Copy `user-uploads://best_of_2025_landscaper_in_San_Jose.webp` → `src/assets/best-of-2025.webp`
+- Copy `user-uploads://best_of_2026_landscaper_in_Willow_Glen.webp` → `src/assets/best-of-2026-new.webp`
+- Delete old files (jpeg, png) or simply update imports
+
+**Step 2: Rewrite `src/components/sections/TrustBar.tsx`**
+- Update imports to new `.webp` files
+- Remove `mix-blend-multiply` and all `bg-white` wrappers — the new WebP files have real transparency
+- Award badges: `w-24 h-24` (large, prominent) with text below
+- Google SVG: `w-12 h-12`, Yelp icon: `w-12 h-12` — compact review items with text beside
+- Desktop: `flex items-center justify-center gap-12` with order: Google | divider | 2026 Award | 2025 Award | divider | Yelp
+- Mobile: two rows using `flex-col` — awards row on top (`flex justify-center gap-8`), reviews row below (`flex justify-center gap-8`)
+- No background wrappers, no blend modes, no filters — just clean `<img>` tags with `object-contain`
+
+### Files changed
+1. **3 asset files** — copy new WebPs into `src/assets/`
+2. **`src/components/sections/TrustBar.tsx`** — full rewrite with new layout, imports, and sizing
 
