@@ -100,13 +100,16 @@ const Index = () => {
                 ))}
               </div>
             </div>
-            <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
-              <img
-                src="/images/2d-landscape-design.jpg"
-                alt="2D aerial landscape design rendering by Stones Landscaping showing a custom backyard layout"
-                className="w-full h-full object-cover"
-                loading="lazy"
-              />
+            <div className="relative">
+              <div className="absolute -inset-3 bg-primary/10 rounded-sm rotate-3" />
+              <div className="relative overflow-hidden rounded-sm shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-500">
+                <img
+                  src="/images/2d-landscape-design.jpg"
+                  alt="2D aerial landscape design rendering by Stones Landscaping showing a custom backyard layout"
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </div>

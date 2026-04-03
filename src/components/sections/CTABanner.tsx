@@ -22,7 +22,7 @@ const CTABanner = ({
       <>
         <div
           className="absolute inset-0 bg-cover bg-center opacity-40"
-          style={{ backgroundImage: `url(${IMAGES.hero})` }}
+          style={{ backgroundImage: `url(${backgroundImage || IMAGES.hero})` }}
         />
         <div className="absolute inset-0 bg-brand-charcoal/50" />
       </>

@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Shield } from "lucide-react";
+import { Phone, MapPin, Shield } from "lucide-react";
 import { BUSINESS } from "@/lib/constants";
 
 const TopBar = () => (
