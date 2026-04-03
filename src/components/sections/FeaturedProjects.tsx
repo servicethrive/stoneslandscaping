@@ -8,6 +8,9 @@ import outdoorKitchenPergola from "@/assets/projects/outdoor_kitchen_with_a_perg
 import landscapingSanJose from "@/assets/projects/landscaping-san-jose-ca.jpg";
 import lavaRockLandscaping from "@/assets/projects/lava-rock-landscaping-san-jose.jpg";
 import woodFinishWalkway from "@/assets/projects/Wood_finish_Porcelain_walkway.jpg";
+import lavaRockHardscape from "@/assets/projects/lava-rock-hardscape-san-jose.jpg";
+import prefabPergola from "@/assets/projects/Prefabricated_placebo-2.jpg";
+import stampedConcrete from "@/assets/projects/Stamped_concrete.jpg";
 
 const projects = [
   {
