@@ -1,25 +1,35 @@
 
 
-## Replace Bay Area Map with Accurate Coastal SVG
+## Trust Bar Redesign + CTA Text Updates
 
-### What's changing
-Replace the current crude polygon SVG map with a geographically accurate SVG showing the California coastline from Santa Cruz County up through San Mateo County, including the San Francisco Bay shoreline. The four service counties (Santa Clara, San Mateo, Alameda, Santa Cruz) will be clearly delineated with proper shapes, the Bay water rendered in a subtle blue, and the Pacific coastline visible on the west side.
+### Changes
 
-### Approach
-Use real GeoJSON-derived SVG path data for the four counties. The current paths are random polygons that don't resemble actual county shapes — that's why it looks unclear. I'll replace the `BayAreaMap` component with accurate outlines that show:
+**1. Trust Bar — Platform badges with real logos (`src/components/sections/TrustBar.tsx`)**
+- Replace all 4 generic Lucide icons with custom inline SVGs:
+  - **Google**: Google "G" logo SVG + 5 gold stars + "5.0 Stars" + "56+ Reviews" → links to GBP
+  - **Yelp**: Yelp burst logo SVG + 5 gold stars + "4.9 Stars" + "123+ Reviews" → links to Yelp page
+  - **Verified License**: Shield/checkmark SVG + "Yelp Verified" + "Licensed Contractor" → links to Yelp
+  - **Licensed & Insured**: Shield/lock SVG + "Licensed & Insured" + "CA Lic #1032828" → no link
+- Icons increase to `w-14 h-14`, star rows in gold (#FBBF24)
+- Google and Yelp items are `<a>` tags with `target="_blank"`
 
-- **Pacific coastline** on the west (Santa Cruz → San Mateo) — recognizable California coast
-- **San Francisco Bay** water body between counties
-- **County fills** with varying opacity (Santa Clara highlighted as primary)
-- **San Jose HQ pin** in the correct geographic position
-- **County labels** placed at centroids
-- Subtle water fill for the Bay and ocean for geographic context
+**2. Constants (`src/lib/constants.ts`)**
+- Add `googleProfileUrl` and `yelpProfileUrl` to BUSINESS
+- Fix Google rating: already 56 reviews, rating is 5.0 (not 4.9)
 
-### File Changed (1 file)
+**3. CTA text → "Request a Free Quote" across all files:**
+- `src/components/sections/CTABanner.tsx` line 42: "Request a Free Consultation" → "Request a Free Quote"
+- `src/components/sections/HeroSection.tsx` line 19: default `"Get a Free Estimate"` → `"Request a Free Quote"`
+- `src/components/layout/Navbar.tsx` lines 99, 168: "Request a Consultation" → "Request a Free Quote"
+- `src/pages/Index.tsx` line 28: "Request a Free Consultation" → "Request a Free Quote"
+- `src/pages/About.tsx` line 21: "Request a Consultation" → "Request a Free Quote"
 
-**`src/components/sections/ServiceAreaGrid.tsx`**
-- Replace the entire `BayAreaMap` component with geographically accurate SVG paths
-- Add Pacific Ocean and Bay water shapes for context
-- Keep the same color scheme (primary brown tones) but with proper geography
-- Add a subtle glow/pulse animation on the San Jose HQ pin
+### Files changed (7)
+- `src/components/sections/TrustBar.tsx` — full rewrite
+- `src/lib/constants.ts` — add profile URLs
+- `src/components/sections/CTABanner.tsx` — CTA text
+- `src/components/sections/HeroSection.tsx` — default CTA text
+- `src/components/layout/Navbar.tsx` — CTA text (2 locations)
+- `src/pages/Index.tsx` — CTA text
+- `src/pages/About.tsx` — CTA text
 
