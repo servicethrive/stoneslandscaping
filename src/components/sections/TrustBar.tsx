@@ -14,7 +14,7 @@ const StarRow = () => (
 );
 
 const GoogleIcon = () => (
-  <svg viewBox="0 0 48 48" className="w-20 h-20">
+  <svg viewBox="0 0 48 48" className="w-14 h-14">
     <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
     <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/>
     <path fill="#FBBC05" d="M10.53 28.59a14.5 14.5 0 010-9.18l-7.98-6.19a24.003 24.003 0 000 21.56l7.98-6.19z"/>
@@ -22,75 +22,103 @@ const GoogleIcon = () => (
   </svg>
 );
 
-const TrustBar = () => {
-  const items = [
-    {
-      icon: <GoogleIcon />,
-      topLine: "5.0 Stars on Google",
-      bottomLine: "56+ Reviews",
-      stars: true,
-      href: BUSINESS.googleProfileUrl,
-    },
-    {
-      icon: <img src={yelpIcon} alt="Yelp" className="w-20 h-20 object-contain rounded" />,
-      topLine: "4.9 Stars on Yelp",
-      bottomLine: "123+ Reviews",
-      stars: true,
-      href: BUSINESS.yelpProfileUrl,
-    },
-    {
-      icon: <img src={bestOf2026} alt="Best of 2026 Landscaper in Willow Glen" className="w-20 h-20 object-contain" />,
-      topLine: "Award Winner",
-      bottomLine: "Landscaper in Willow Glen",
-      stars: false,
-      href: undefined,
-    },
-    {
-      icon: <img src={bestOf2025} alt="Best of 2025 Landscaper in San Jose" className="w-20 h-20 object-contain" />,
-      topLine: "Best of 2025",
-      bottomLine: "Landscaper in San Jose",
-      stars: false,
-      href: undefined,
-    },
-  ];
+const ReviewItem = ({
+  icon,
+  topLine,
+  bottomLine,
+  href,
+}: {
+  icon: React.ReactNode;
+  topLine: string;
+  bottomLine: string;
+  href: string;
+}) => {
+  const content = (
+    <div className="flex items-center gap-3">
+      <div className="shrink-0">{icon}</div>
+      <div>
+        <StarRow />
+        <p className="text-white font-semibold text-sm tracking-wide mt-0.5">{topLine}</p>
+        <p className="text-white/50 text-xs font-light tracking-wider">{bottomLine}</p>
+      </div>
+    </div>
+  );
 
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+      {content}
+    </a>
+  );
+};
+
+const AwardItem = ({
+  src,
+  alt,
+  topLine,
+  bottomLine,
+}: {
+  src: string;
+  alt: string;
+  topLine: string;
+  bottomLine: string;
+}) => (
+  <div className="flex flex-col items-center gap-1.5 text-center">
+    <img
+      src={src}
+      alt={alt}
+      className="w-28 h-28 object-contain mix-blend-multiply"
+      style={{ filter: "brightness(1.05)" }}
+    />
+    <div>
+      <p className="text-white font-semibold text-sm tracking-wide">{topLine}</p>
+      <p className="text-white/50 text-xs font-light tracking-wider">{bottomLine}</p>
+    </div>
+  </div>
+);
+
+const TrustBar = () => {
   return (
     <section className="bg-brand-charcoal border-t border-white/5 py-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-          {items.map((item, i) => {
-            const content = (
-              <div className="flex items-center gap-4 justify-center relative">
-                {i > 0 && (
-                  <div className="absolute left-0 top-1/2 -translate-y-1/2 w-px h-8 bg-primary/30 hidden lg:block" />
-                )}
-                <div className="shrink-0">
-                  {item.icon}
-                </div>
-                <div>
-                  {item.stars && <StarRow />}
-                  <p className="text-white font-semibold text-sm tracking-wide mt-0.5">{item.topLine}</p>
-                  <p className="text-white/50 text-xs font-light tracking-wider">{item.bottomLine}</p>
-                </div>
+        <div className="flex flex-wrap items-center justify-around gap-8">
+          {/* Google Reviews */}
+          <ReviewItem
+            icon={<GoogleIcon />}
+            topLine="5.0 Stars on Google"
+            bottomLine="56+ Reviews"
+            href={BUSINESS.googleProfileUrl}
+          />
+
+          {/* Yelp Reviews */}
+          <ReviewItem
+            icon={
+              <div className="w-14 h-14 bg-white/90 rounded-lg p-0.5 flex items-center justify-center">
+                <img src={yelpIcon} alt="Yelp" className="w-full h-full object-contain rounded" />
               </div>
-            );
-
-            if (item.href) {
-              return (
-                <a
-                  key={item.topLine}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:opacity-80 transition-opacity"
-                >
-                  {content}
-                </a>
-              );
             }
+            topLine="4.9 Stars on Yelp"
+            bottomLine="123+ Reviews"
+            href={BUSINESS.yelpProfileUrl}
+          />
 
-            return <div key={item.topLine}>{content}</div>;
-          })}
+          {/* Divider - hidden on mobile */}
+          <div className="hidden lg:block w-px h-12 bg-white/10" />
+
+          {/* Best of 2026 */}
+          <AwardItem
+            src={bestOf2026}
+            alt="Best of 2026 Landscaper in Willow Glen"
+            topLine="Award Winner"
+            bottomLine="Landscaper in Willow Glen"
+          />
+
+          {/* Best of 2025 */}
+          <AwardItem
+            src={bestOf2025}
+            alt="Best of 2025 Landscaper in San Jose"
+            topLine="Best of 2025"
+            bottomLine="Landscaper in San Jose"
+          />
         </div>
       </div>
     </section>
