@@ -21,11 +21,10 @@ const Index = () => {
   return (
     <Layout>
       <HeroSection
-        title="Outdoor Living, Built to Last"
+        title="Landscape & Hardscape Design in San Jose, CA"
         subtitle="Custom paver patios, outdoor kitchens, pergolas, and complete backyard transformations for Silicon Valley's finest homes. Designed with precision, built with integrity."
         backgroundImage={IMAGES.hero}
-        primaryCTA={{ text: "Request a Consultation", link: "/contact" }}
-        secondaryCTA={{ text: "View Our Portfolio", link: "/gallery" }}
+        primaryCTA={{ text: "Request a Free Consultation", link: "/contact" }}
       />
 
       <TrustBar />
@@ -40,7 +39,7 @@ const Index = () => {
               From concept to completion, we deliver premium outdoor spaces for discerning Bay Area homeowners.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {SERVICES.map((service) => (
               <ServiceCard
                 key={service.path}
@@ -54,8 +53,14 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Mid-page CTA */}
+      <CTABanner
+        title="Transform Your Backyard Into an Outdoor Oasis"
+        subtitle="From custom paver patios to full outdoor living spaces — let's bring your vision to life."
+      />
+
       {/* Why Choose Us */}
-      <section className="py-20 lg:py-28 bg-brand-dark relative overflow-hidden">
+      <section className="py-20 lg:py-28 bg-brand-charcoal relative overflow-hidden">
         <div className="absolute inset-0 warm-texture opacity-20" />
         <div className="relative container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
@@ -97,6 +102,12 @@ const Index = () => {
       />
 
       <DesignProcessBlock />
+
+      {/* Mid-page CTA */}
+      <CTABanner
+        title="See What's Possible — Schedule a Design Consultation"
+        subtitle="We'll walk your property, discuss your vision, and provide a detailed proposal — all complimentary."
+      />
 
       <TestimonialBlock />
 

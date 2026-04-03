@@ -11,7 +11,7 @@ interface ServiceCardProps {
 const ServiceCard = ({ title, description, image, link }: ServiceCardProps) => (
   <Link
     to={link}
-    className="group block rounded-sm overflow-hidden relative aspect-[4/3] shadow-lg hover:shadow-2xl transition-all duration-500"
+    className="group block rounded-sm overflow-hidden relative aspect-[3/4] shadow-lg hover:shadow-2xl transition-all duration-500"
   >
     <img
       src={image}
@@ -24,7 +24,7 @@ const ServiceCard = ({ title, description, image, link }: ServiceCardProps) => (
     {/* Brown accent line at bottom on hover */}
     <div className="absolute bottom-0 left-0 right-0 h-[3px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-10" />
     {/* Text overlay */}
-    <div className="absolute bottom-0 left-0 right-0 p-6">
+    <div className="absolute bottom-0 left-0 right-0 p-6 lg:p-8">
       <h3 className="font-display text-xl lg:text-2xl font-bold text-white mb-1 group-hover:text-primary-foreground transition-colors duration-300">
         {title}
       </h3>
