@@ -1,44 +1,44 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { IMAGES } from "@/lib/constants";
+
+import catalinaPavers from "@/assets/projects/Catalina_Grana_pavers.jpg";
+import outdoorKitchenFirepit from "@/assets/projects/outdoor_kitchen_and_firepit.jpg";
+import outdoorKitchenPergola from "@/assets/projects/outdoor_kitchen_with_a_pergola.jpg";
+import landscapingSanJose from "@/assets/projects/landscaping-san-jose-ca.jpg";
+import lavaRockLandscaping from "@/assets/projects/lava-rock-landscaping-san-jose.jpg";
+import woodFinishWalkway from "@/assets/projects/Wood_finish_Porcelain_walkway.jpg";
 
 const projects = [
   {
-    title: "Custom Paver Patio & Fire Pit",
-    location: "Los Gatos, CA",
-    image: IMAGES.gallery1,
-    span: "col-span-2 row-span-2",
+    title: "Catalina Grana Pavers & Gazebo",
+    location: "San Jose, CA",
+    image: catalinaPavers,
   },
   {
-    title: "Modern Hardscape Transformation",
-    location: "Saratoga, CA",
-    image: IMAGES.gallery2,
-    span: "",
+    title: "Outdoor Kitchen & Fire Pit",
+    location: "San Jose, CA",
+    image: outdoorKitchenFirepit,
   },
   {
     title: "Outdoor Kitchen & Pergola",
-    location: "Campbell, CA",
-    image: IMAGES.gallery3,
-    span: "",
-  },
-  {
-    title: "Front Yard Renovation",
     location: "San Jose, CA",
-    image: IMAGES.gallery4,
-    span: "",
+    image: outdoorKitchenPergola,
   },
   {
-    title: "Retaining Wall & Landscape Design",
-    location: "Santa Clara, CA",
-    image: IMAGES.gallery5,
-    span: "",
+    title: "Modern Landscaping Design",
+    location: "San Jose, CA",
+    image: landscapingSanJose,
   },
   {
-    title: "Driveway & Walkway Pavers",
-    location: "Atherton, CA",
-    image: IMAGES.gallery6,
-    span: "",
+    title: "Lava Rock Landscaping",
+    location: "San Jose, CA",
+    image: lavaRockLandscaping,
+  },
+  {
+    title: "Wood Finish Porcelain Walkway",
+    location: "San Jose, CA",
+    image: woodFinishWalkway,
   },
 ];
 
