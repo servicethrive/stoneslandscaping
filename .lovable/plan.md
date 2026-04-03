@@ -1,71 +1,58 @@
 
 
-## Homepage Premium Overhaul — More Branding, Larger CTAs, Service Area Map
+## Homepage Refinements + Featured Projects Section
 
-This plan addresses all requests: navbar tweaks, hero changes, larger service cards, a Bay Area map overlay, and additional CTA sections throughout the homepage (inspired by eliaslandscapinginc.com's approach of interspersing bold CTA banners between content sections).
-
-### Files Changed (5 files)
+### Files Changed (4 files)
 
 ---
 
-### 1. Navbar Updates
-**File: `src/components/layout/Navbar.tsx`**
+### 1. Smaller H1s Site-Wide
+**File: `src/components/sections/HeroSection.tsx`**
 
-- **Remove phone number** from desktop nav (lines 97–106)
-- **Change CTA button** text from "Get A Free Estimate" → "Request a Consultation"
-- **Logo 30% larger**: change `h-12 lg:h-16` → `h-16 lg:h-20`
-- **Mobile: add Phone icon + Mail icon** next to hamburger, linked to `tel:` and `/contact` respectively
-- Update mobile menu CTA text to match
+Current H1: `text-4xl md:text-6xl lg:text-7xl xl:text-8xl`
+New H1: `text-4xl md:text-5xl lg:text-5xl xl:text-6xl` — desktop gets the current tablet size, tablet/phone stay the same.
 
-### 2. Hero Banner Updates
+H2s across sections currently use `text-3xl md:text-4xl lg:text-5xl`. Change to `text-3xl md:text-4xl lg:text-4xl` in all section components (CTABanner, ProcessSteps, TestimonialBlock, ServiceAreaGrid, FAQAccordion, ComparisonTable, WarrantyBlock, TeamBlock, DesignProcessBlock, Index.tsx inline h2s).
+
+### 2. Hero Phone Number — Text Only, Below CTA
+**File: `src/components/sections/HeroSection.tsx`**
+
+- Remove the phone button CTA entirely (the `showPhone` button block)
+- Remove the `secondaryCTA` button block
+- Below the primary CTA button, add a simple text line with phone icon:
+  ```
+  <a href="tel:..." className="inline-flex items-center gap-2 text-white/70 hover:text-white text-sm mt-6">
+    <Phone className="h-4 w-4" /> (408) 204-8418
+  </a>
+  ```
+- Clean up the `showPhone` and `secondaryCTA` props (can keep for backward compat but remove the button rendering)
+
+### 3. CTABanner — Lighter Overlays, Remove Phone Button
+**File: `src/components/sections/CTABanner.tsx`**
+
+- Change background image opacity from `opacity-20` to `opacity-40` and reduce the overlay from `bg-brand-charcoal/80` to `bg-brand-charcoal/50` so more photo detail shows through
+- Remove the phone number button entirely
+- Below the main CTA button, add the same phone text treatment: icon + number as plain text link (not a button)
+
+### 4. Featured Projects Section + Index Layout
 **File: `src/pages/Index.tsx`**
 
-- Change hero `title` to `"Landscape & Hardscape Design in San Jose, CA"`
-- Change `primaryCTA` text to `"Request a Free Consultation"`
-- **Remove `secondaryCTA`** (no "View Our Portfolio")
-- **Add 2 mid-page CTA banners** between sections for more branding presence:
-  - After Services section: CTA banner — "Transform Your Backyard Into an Outdoor Oasis" with consultation CTA
-  - After Why Choose Us / before Process Steps: CTA banner — "See What's Possible — Schedule a Design Consultation"
-- This mirrors the eliaslandscapinginc.com pattern of CTA sections interspersed throughout
+Add a new "Featured Projects" section after the services grid and before the first CTABanner. Layout:
 
-### 3. Larger Service Cards
-**File: `src/components/sections/ServiceCard.tsx`**
+- Section heading: "Featured Projects" with brand accent line
+- Subtitle: "Recent transformations by Stones Landscaping"
+- A visually rich grid layout:
+  - 1 large hero image (spanning 2 columns, taller) + 2 stacked smaller images on the right
+  - Below: 3 equal-width images
+- Each image card has a subtle overlay on hover with project title and location (e.g., "Custom Paver Patio — Los Gatos, CA")
+- Bottom CTA: "View Full Portfolio" linking to `/gallery`
+- Use charcoal background section for contrast, white text
+- Uses existing gallery images from IMAGES constants for now
 
-- Change aspect ratio from `aspect-[4/3]` → `aspect-[3/4]` (taller cards, more photo visible)
-- Increase text padding
-
-**File: `src/pages/Index.tsx`** (services grid)
-
-- Change grid from `lg:grid-cols-3 xl:grid-cols-4` → `lg:grid-cols-3 xl:grid-cols-3` with larger gap
-- This gives each card more room to breathe and show the photos
-
-### 4. Service Area Section — Bay Area Map Overlay
-**File: `src/components/sections/ServiceAreaGrid.tsx`**
-
-- Add a two-column layout: left side = Bay Area map visual (SVG map outline of the Bay Area with service counties highlighted in brand brown), right side = city list
-- Use an inline SVG of the Bay Area silhouette with highlighted counties (Santa Clara, San Mateo, Alameda, Santa Cruz) filled with the brand brown color
-- Add a pin/marker on San Jose as home base
-- Dark charcoal background section for contrast
-- White text, brown accent highlights on the map
-- CTA button at bottom: "View All Service Areas"
-
-### 5. Additional Mid-Page CTA Component
-**File: `src/pages/Index.tsx`**
-
-Reuse existing `CTABanner` component with different copy at two insertion points:
-1. After services grid, before "Why Choose Us"
-2. After DesignProcessBlock, before TestimonialBlock
-
-This creates the rhythm: Hero → Trust → Services → **CTA** → Why Choose Us → Process → Design → **CTA** → Testimonials → Service Areas → Final CTA
+The section will be a new component: **`src/components/sections/FeaturedProjects.tsx`**
 
 ---
 
-### Summary of All Text Changes
-| Location | Old | New |
-|---|---|---|
-| Navbar CTA | Get A Free Estimate | Request a Consultation |
-| Hero H1 | Outdoor Living, Built to Last | Landscape & Hardscape Design in San Jose, CA |
-| Hero primary CTA | Request a Consultation | Request a Free Consultation |
-| Hero secondary CTA | View Our Portfolio | (removed) |
-| Navbar phone | Visible | Removed from desktop nav |
+### Section Order (updated)
+Hero → Trust → Services → **Featured Projects** → CTA → Why Choose Us → Process → Design → CTA → Testimonials → Service Areas → Final CTA
 
