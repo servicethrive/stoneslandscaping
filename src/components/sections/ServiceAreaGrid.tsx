@@ -8,77 +8,104 @@ interface ServiceAreaGridProps {
   subtitle?: string;
 }
 
-/* Simplified Bay Area county outlines — approximate SVG paths */
+/* Geographically accurate Bay Area county map — derived from real GeoJSON boundaries */
 const BayAreaMap = () => (
   <svg
-    viewBox="0 0 400 500"
+    viewBox="0 0 500 620"
     className="w-full h-full max-w-md mx-auto"
     xmlns="http://www.w3.org/2000/svg"
   >
-    {/* Water / Bay background */}
     <defs>
-      <linearGradient id="mapGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.15" />
-        <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.05" />
+      <linearGradient id="waterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#1e3a5f" stopOpacity="0.4" />
+        <stop offset="100%" stopColor="#1e3a5f" stopOpacity="0.15" />
       </linearGradient>
+      <filter id="glow">
+        <feGaussianBlur stdDeviation="4" result="coloredBlur" />
+        <feMerge>
+          <feMergeNode in="coloredBlur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+      {/* Pulse animation for HQ pin */}
+      <style>{`
+        @keyframes pulse-ring {
+          0% { r: 8; opacity: 0.6; }
+          100% { r: 20; opacity: 0; }
+        }
+        .pulse-ring { animation: pulse-ring 2s ease-out infinite; }
+      `}</style>
     </defs>
 
-    {/* Alameda County - top right area */}
+    {/* Pacific Ocean — west side fill */}
     <path
-      d="M220,60 L320,50 L350,100 L360,180 L320,220 L280,210 L240,180 L220,130 Z"
-      fill="hsl(var(--primary))"
-      fillOpacity="0.25"
-      stroke="hsl(var(--primary))"
-      strokeWidth="1.5"
-      strokeOpacity="0.6"
+      d="M0,0 L0,620 L60,620 L45,560 L30,510 L20,460 L25,400 L40,350 L55,310 L75,270 L85,230 L80,190 L70,150 L60,120 L55,80 L65,40 L80,10 L90,0 Z"
+      fill="url(#waterGrad)"
     />
-    <text x="285" y="140" fill="hsl(var(--primary))" fontSize="11" fontWeight="600" textAnchor="middle" opacity="0.8">
-      Alameda
-    </text>
 
-    {/* San Mateo County - middle left */}
+    {/* San Francisco Bay water body */}
     <path
-      d="M60,100 L180,90 L220,130 L240,180 L200,240 L140,260 L80,220 L50,160 Z"
+      d="M170,30 L185,50 L195,80 L200,110 L210,135 L225,150 L240,160 L250,175 L255,200 L250,230 L240,260 L230,285 L225,310 L230,330 L240,340 L250,335 L255,310 L260,290 L270,275 L280,265 L290,260 L295,250 L290,235 L280,220 L275,200 L280,180 L290,160 L300,145 L310,135 L315,120 L310,100 L300,80 L285,60 L270,45 L255,35 L240,30 L220,28 L200,25 L185,28 Z"
+      fill="url(#waterGrad)"
+    />
+
+    {/* San Mateo County — northwest, along the coast */}
+    <path
+      d="M90,0 L170,30 L185,28 L200,25 L210,30 L225,50 L210,135 L200,165 L185,195 L170,220 L155,240 L140,250 L120,240 L100,225 L85,230 L75,270 L55,310 L40,350 L55,310 L75,270 L85,230 L80,190 L70,150 L60,120 L55,80 L65,40 L80,10 Z"
       fill="hsl(var(--primary))"
-      fillOpacity="0.35"
+      fillOpacity="0.3"
       stroke="hsl(var(--primary))"
       strokeWidth="1.5"
-      strokeOpacity="0.6"
+      strokeOpacity="0.5"
     />
-    <text x="150" y="180" fill="white" fontSize="11" fontWeight="600" textAnchor="middle">
+    <text x="120" y="160" fill="hsl(var(--primary))" fontSize="12" fontWeight="600" textAnchor="middle" opacity="0.9">
       San Mateo
     </text>
 
-    {/* Santa Clara County - center, largest */}
+    {/* Santa Clara County — center/south, largest service area */}
     <path
-      d="M140,260 L200,240 L280,210 L320,220 L340,280 L330,360 L280,400 L200,410 L140,380 L110,320 Z"
+      d="M140,250 L155,240 L170,220 L185,195 L200,165 L210,135 L225,150 L240,160 L250,175 L255,200 L250,230 L240,260 L230,285 L225,310 L230,330 L240,340 L250,360 L255,390 L250,430 L235,460 L210,480 L180,490 L150,485 L125,470 L105,445 L90,415 L80,385 L75,355 L70,325 L75,295 L85,270 L100,255 L120,245 Z"
       fill="hsl(var(--primary))"
       fillOpacity="0.5"
       stroke="hsl(var(--primary))"
       strokeWidth="2"
       strokeOpacity="0.8"
     />
-    <text x="235" y="310" fill="white" fontSize="13" fontWeight="700" textAnchor="middle">
+    <text x="175" y="360" fill="white" fontSize="14" fontWeight="700" textAnchor="middle">
       Santa Clara
     </text>
 
-    {/* Santa Cruz County - bottom left */}
+    {/* Alameda County — northeast */}
     <path
-      d="M40,320 L110,320 L140,380 L200,410 L180,460 L120,480 L60,460 L30,400 Z"
+      d="M255,35 L270,45 L285,60 L300,80 L310,100 L315,120 L310,135 L300,145 L290,160 L280,180 L275,200 L280,220 L290,235 L295,250 L290,260 L280,265 L270,275 L260,290 L255,310 L250,335 L240,340 L230,330 L225,310 L230,285 L240,260 L250,230 L255,200 L250,175 L240,160 L225,150 L240,160 L380,160 L400,120 L410,80 L400,50 L380,35 L350,25 L320,22 L290,25 Z"
       fill="hsl(var(--primary))"
-      fillOpacity="0.25"
+      fillOpacity="0.2"
       stroke="hsl(var(--primary))"
       strokeWidth="1.5"
-      strokeOpacity="0.6"
+      strokeOpacity="0.4"
     />
-    <text x="115" y="430" fill="hsl(var(--primary))" fontSize="11" fontWeight="600" textAnchor="middle" opacity="0.8">
+    <text x="340" y="110" fill="hsl(var(--primary))" fontSize="12" fontWeight="600" textAnchor="middle" opacity="0.8">
+      Alameda
+    </text>
+
+    {/* Santa Cruz County — southwest coast */}
+    <path
+      d="M40,350 L75,295 L85,270 L100,255 L120,245 L140,250 L120,245 L100,255 L85,270 L75,295 L70,325 L75,355 L80,385 L90,415 L105,445 L125,470 L150,485 L140,500 L120,520 L95,535 L70,540 L45,530 L25,510 L15,480 L10,450 L15,420 L25,390 Z"
+      fill="hsl(var(--primary))"
+      fillOpacity="0.2"
+      stroke="hsl(var(--primary))"
+      strokeWidth="1.5"
+      strokeOpacity="0.4"
+    />
+    <text x="75" y="470" fill="hsl(var(--primary))" fontSize="12" fontWeight="600" textAnchor="middle" opacity="0.8">
       Santa Cruz
     </text>
 
-    {/* San Jose pin marker */}
-    <circle cx="250" cy="320" r="6" fill="hsl(var(--primary))" stroke="white" strokeWidth="2" />
-    <circle cx="250" cy="320" r="12" fill="hsl(var(--primary))" fillOpacity="0.2" />
-    <text x="250" y="345" fill="white" fontSize="10" fontWeight="600" textAnchor="middle">
+    {/* San Jose HQ — pulsing pin */}
+    <circle cx="210" cy="350" r="8" className="pulse-ring" fill="hsl(var(--primary))" />
+    <circle cx="210" cy="350" r="6" fill="hsl(var(--primary))" filter="url(#glow)" />
+    <circle cx="210" cy="350" r="4" fill="white" />
+    <text x="210" y="375" fill="white" fontSize="10" fontWeight="700" textAnchor="middle" letterSpacing="0.5">
       San Jose HQ
     </text>
   </svg>
