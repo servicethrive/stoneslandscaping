@@ -54,6 +54,8 @@ const Index = () => {
         </div>
       </section>
 
+      <FeaturedProjects />
+
       {/* Mid-page CTA */}
       <CTABanner
         title="Transform Your Backyard Into an Outdoor Oasis"
