@@ -66,7 +66,7 @@ const Index = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             <div>
               <div className="w-12 h-0.5 bg-primary mb-6" />
-              <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">Why Silicon Valley Homeowners Choose Us</h2>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-8 leading-tight">Why Silicon Valley Homeowners Choose Us</h2>
               <div className="space-y-5">
                 {[
                   { title: "Uncompromising Quality", desc: "Every project is built with premium materials and meticulous attention to detail - from foundation to finish." },

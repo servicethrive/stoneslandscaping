@@ -14,7 +14,7 @@ const TeamBlock = () => (
         </div>
         <div>
           <div className="w-12 h-0.5 bg-primary mb-6" />
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-5 leading-tight">Built on Experience, Driven by Results</h2>
+          <h2 className="font-display text-3xl md:text-4xl lg:text-4xl font-bold text-foreground mb-5 leading-tight">Built on Experience, Driven by Results</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             {BUSINESS.name} was founded in {BUSINESS.founded} by Manuel Corona Escobar, who spent years working in the
             landscaping and hardscape industry before launching his own company. That hands-on experience is the

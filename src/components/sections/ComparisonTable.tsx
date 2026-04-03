@@ -27,7 +27,7 @@ const ComparisonTable = ({ title, optionALabel, optionBLabel, rows }: Comparison
     <div className="container mx-auto px-4 max-w-4xl">
       <div className="text-center mb-12">
         <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">{title}</h2>
+        <h2 className="font-display text-3xl md:text-4xl lg:text-4xl font-bold text-foreground">{title}</h2>
       </div>
       <div className="overflow-x-auto border border-border/60 rounded-sm">
         <table className="w-full text-sm">

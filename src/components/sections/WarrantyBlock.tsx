@@ -6,7 +6,7 @@ const WarrantyBlock = () => (
     <div className="container mx-auto px-4 max-w-5xl">
       <div className="text-center mb-14">
         <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground">Our Warranty Promise</h2>
+        <h2 className="font-display text-3xl md:text-4xl lg:text-4xl font-bold text-foreground">Our Warranty Promise</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="border border-border/60 rounded-sm p-10 text-center hover:border-primary/30 transition-colors duration-300">
