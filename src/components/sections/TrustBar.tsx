@@ -32,7 +32,7 @@ const TrustBar = () => {
       href: BUSINESS.googleProfileUrl,
     },
     {
-      icon: <div className="w-20 h-20 bg-white rounded-lg p-1 flex items-center justify-center"><img src={yelpIcon} alt="Yelp" className="w-full h-full object-contain rounded" /></div>,
+      icon: <img src={yelpIcon} alt="Yelp" className="w-20 h-20 object-contain rounded" />,
       topLine: "4.9 Stars on Yelp",
       bottomLine: "123+ Reviews",
       stars: true,
