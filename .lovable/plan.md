@@ -1,30 +1,22 @@
 
 
-## Fix Trust Bar Icon Quality and Sizing
+## Fix Trust Bar — Remove White Backgrounds, Unify Sizes
 
-### Problems identified
-1. **Yelp icon** — white/light background clashing with the dark charcoal bar
-2. **Best of 2026 badge** — too small at `w-16 h-16`, text unreadable
-3. **Best of 2025 badge** — white background visible, also too small
-4. All badge images look cramped and unprofessional next to the crisp Google SVG
+### Problems visible in screenshot
+1. Yelp icon has a white rectangular background clashing with the dark bar
+2. Best of 2026 and Best of 2025 badges both show white rounded containers behind them
+3. The user stated these are transparent-background files — the `bg-white rounded-lg p-1` wrappers we added are causing the problem
+4. Icon sizes are visually inconsistent — Google "G" looks bigger than the badges
 
 ### What's changing
 
-**`src/components/sections/TrustBar.tsx`** — styling overhaul for all 4 items:
+**`src/components/sections/TrustBar.tsx`** — one file, targeted fixes:
 
-- **Increase badge sizes**: Award badges go from `w-16 h-16` to `w-20 h-20` (or larger) so the text on them is legible
-- **Yelp icon**: Add `rounded-lg` and a subtle dark background wrapper (`bg-white rounded-lg p-1`) so the icon looks intentional rather than clashing — OR crop/style it to blend. Since the JPEG has a white background baked in, the cleanest fix is to give it a small white rounded container so it looks like a polished badge rather than a raw image on dark
-- **Award badges (2025 & 2026)**: Same treatment — wrap in a subtle rounded container with white/light background so the badge artwork pops cleanly. Increase to `w-20 h-20` minimum
-- **Google icon**: Keep as SVG, bump to `w-20 h-20` to match the new badge sizes
-- **Consistent layout**: All icons same size, uniform spacing
+1. **Remove all `bg-white rounded-lg p-1` wrapper divs** from the Yelp, 2026, and 2025 items — render the `<img>` tags directly without any background container
+2. **Standardize all image/icon sizes to `w-20 h-20`** — the Google SVG and all three `<img>` tags get the same dimensions so they're visually equal
+3. **Keep `object-contain`** on all images so they scale proportionally within the box
+4. The Google SVG already renders at `w-20 h-20` — no change needed there
 
-### Files changed (1)
-
-**`src/components/sections/TrustBar.tsx`**
-- All icons/images: `w-20 h-20` (up from `w-16 h-16`)
-- Google SVG viewBox stays the same, outer container `w-20 h-20`
-- Yelp image: wrap in `bg-white rounded-lg p-1` container, image stays `object-contain`
-- Best of 2026 image: wrap in `bg-white rounded-lg p-1` container at `w-20 h-20`
-- Best of 2025 image: same white rounded container treatment
-- This gives all badges a clean, sharp card-like appearance on the dark bar — consistent and professional
+### Result
+All four trust items will show their icons/badges at the same size directly on the dark charcoal background with no wrapper, no white box, no background interference. The transparent PNGs/WebPs will blend cleanly.
 
