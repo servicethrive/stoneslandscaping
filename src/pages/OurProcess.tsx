@@ -57,7 +57,7 @@ const OurProcess = () => {
           <h2 className="text-3xl font-bold text-foreground mb-6">What to Expect During Construction</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed font-light">
             <p>
-              Once construction begins, you'll have a clear point of contact for updates and questions. We believe that good communication is as important as good construction — you should never have to chase your contractor for a status update.
+              Once construction begins, you'll have a clear point of contact for updates and questions. We believe that good communication is as important as good construction. You should never have to chase your contractor for a status update.
             </p>
             <p>
               Our crews arrive on time, keep the job site organized, and protect your property throughout the build. If anything comes up that requires a change to the plan, we discuss it with you before proceeding — no surprises, no unilateral decisions.
