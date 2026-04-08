@@ -137,6 +137,9 @@ const Contact = () => {
                   <li>Schedule a free on-site consultation</li>
                   <li>Deliver a detailed proposal within 48 hours of the visit</li>
                 </ol>
+                <p className="text-xs text-muted-foreground mt-3 italic">
+                  Flexible financing options are available for qualifying projects — ask during your consultation.
+                </p>
               </div>
             </div>
           </div>
