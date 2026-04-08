@@ -59,12 +59,6 @@ export const SERVICES = [
     description: "Low-maintenance artificial turf installation for lush, green yards without the water bill or upkeep.",
     image: "/images/artificial-turf-service.jpg",
   },
-  {
-    title: "Patio & Walkways",
-    path: "/patio-walkways",
-    description: "Custom patio and walkway designs that enhance your outdoor living space with premium materials and craftsmanship.",
-    image: "/images/patio-walkways-service.jpg",
-  },
 ] as const;
 
 export interface ServiceAreaCounty {
