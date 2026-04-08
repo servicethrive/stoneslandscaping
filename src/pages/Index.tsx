@@ -123,8 +123,8 @@ const Index = () => {
 
       {/* Mid-page CTA */}
       <CTABanner
-        title="See What's Possible — Schedule a Design Consultation"
-        subtitle="We'll walk your property, discuss your vision, and provide a detailed proposal — all complimentary."
+        title="See What's Possible. Schedule a Design Consultation"
+        subtitle="We'll walk your property, discuss your vision, and provide a detailed proposal. All complimentary."
         backgroundImage={IMAGES.ctaTurf}
       />
 

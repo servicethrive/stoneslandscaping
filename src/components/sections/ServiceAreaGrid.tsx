@@ -113,7 +113,7 @@ const BayAreaMap = () => (
 
 const ServiceAreaGrid = ({
   title = "Serving the Bay Area",
-  subtitle = "We provide premium landscaping and hardscape services across four Bay Area counties — Santa Clara, San Mateo, Alameda, and Santa Cruz.",
+  subtitle = "We provide premium landscaping and hardscape services across four Bay Area counties: Santa Clara, San Mateo, Alameda, and Santa Cruz.",
 }: ServiceAreaGridProps) => (
   <section className="py-20 lg:py-28 bg-brand-charcoal">
     <div className="container mx-auto px-4">

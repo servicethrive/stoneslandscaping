@@ -138,7 +138,7 @@ const Contact = () => {
                   <li>Deliver a detailed proposal within 48 hours of the visit</li>
                 </ol>
                 <p className="text-xs text-muted-foreground mt-3 italic">
-                  Flexible financing options are available for qualifying projects — ask during your consultation.
+                  Flexible financing options are available for qualifying projects. Ask during your consultation.
                 </p>
               </div>
             </div>
