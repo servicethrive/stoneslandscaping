@@ -8,7 +8,7 @@ interface ServiceAreaGridProps {
   subtitle?: string;
 }
 
-/* Geographically accurate Bay Area county map — derived from real GeoJSON boundaries */
+/* Geographically accurate Bay Area county map, derived from real GeoJSON boundaries */
 const BayAreaMap = () => (
   <svg
     viewBox="0 0 500 620"
