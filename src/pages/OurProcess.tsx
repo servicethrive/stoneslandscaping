@@ -15,7 +15,7 @@ const OurProcess = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">How We Work</h1>
           <p className="text-lg text-white/75 max-w-2xl mx-auto">
-            From the first phone call to the final walkthrough, every Stones Landscaping project follows a clear, proven process — including 2D/3D design for qualifying projects.
+            From the first phone call to the final walkthrough, every Stones Landscaping project follows a clear, proven process, including 2D/3D design for qualifying projects.
           </p>
         </div>
       </section>
@@ -57,10 +57,10 @@ const OurProcess = () => {
           <h2 className="text-3xl font-bold text-foreground mb-6">What to Expect During Construction</h2>
           <div className="space-y-4 text-muted-foreground leading-relaxed font-light">
             <p>
-              Once construction begins, you'll have a clear point of contact for updates and questions. We believe that good communication is as important as good construction — you should never have to chase your contractor for a status update.
+              Once construction begins, you'll have a clear point of contact for updates and questions. We believe that good communication is as important as good construction. You should never have to chase your contractor for a status update.
             </p>
             <p>
-              Our crews arrive on time, keep the job site organized, and protect your property throughout the build. If anything comes up that requires a change to the plan, we discuss it with you before proceeding — no surprises, no unilateral decisions.
+              Our crews arrive on time, keep the job site organized, and protect your property throughout the build. If anything comes up that requires a change to the plan, we discuss it with you before proceeding. No surprises, no unilateral decisions.
             </p>
           </div>
         </div>

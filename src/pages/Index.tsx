@@ -70,7 +70,7 @@ const Index = () => {
       {/* Mid-page CTA */}
       <CTABanner
         title="Transform Your Backyard Into an Outdoor Oasis"
-        subtitle="From custom paver patios to full outdoor living spaces — let's bring your vision to life."
+        subtitle="From custom paver patios to full outdoor living spaces. Let's bring your vision to life."
         backgroundImage={IMAGES.ctaHardscape}
       />
 
@@ -123,8 +123,8 @@ const Index = () => {
 
       {/* Mid-page CTA */}
       <CTABanner
-        title="See What's Possible — Schedule a Design Consultation"
-        subtitle="We'll walk your property, discuss your vision, and provide a detailed proposal — all complimentary."
+        title="See What's Possible. Schedule a Design Consultation"
+        subtitle="We'll walk your property, discuss your vision, and provide a detailed proposal. All complimentary."
         backgroundImage={IMAGES.ctaTurf}
       />
 

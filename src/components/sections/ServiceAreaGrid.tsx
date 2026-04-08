@@ -8,7 +8,7 @@ interface ServiceAreaGridProps {
   subtitle?: string;
 }
 
-/* Geographically accurate Bay Area county map — derived from real GeoJSON boundaries */
+/* Geographically accurate Bay Area county map, derived from real GeoJSON boundaries */
 const BayAreaMap = () => (
   <svg
     viewBox="0 0 500 620"
@@ -37,7 +37,7 @@ const BayAreaMap = () => (
       `}</style>
     </defs>
 
-    {/* Pacific Ocean — west side fill */}
+    {/* Pacific Ocean, west side fill */}
     <path
       d="M0,0 L0,620 L60,620 L45,560 L30,510 L20,460 L25,400 L40,350 L55,310 L75,270 L85,230 L80,190 L70,150 L60,120 L55,80 L65,40 L80,10 L90,0 Z"
       fill="url(#waterGrad)"
@@ -49,7 +49,7 @@ const BayAreaMap = () => (
       fill="url(#waterGrad)"
     />
 
-    {/* San Mateo County — northwest, along the coast */}
+    {/* San Mateo County, northwest, along the coast */}
     <path
       d="M90,0 L170,30 L185,28 L200,25 L210,30 L225,50 L210,135 L200,165 L185,195 L170,220 L155,240 L140,250 L120,240 L100,225 L85,230 L75,270 L55,310 L40,350 L55,310 L75,270 L85,230 L80,190 L70,150 L60,120 L55,80 L65,40 L80,10 Z"
       fill="hsl(var(--primary))"
@@ -62,7 +62,7 @@ const BayAreaMap = () => (
       San Mateo
     </text>
 
-    {/* Santa Clara County — center/south, largest service area */}
+    {/* Santa Clara County, center/south, largest service area */}
     <path
       d="M140,250 L155,240 L170,220 L185,195 L200,165 L210,135 L225,150 L240,160 L250,175 L255,200 L250,230 L240,260 L230,285 L225,310 L230,330 L240,340 L250,360 L255,390 L250,430 L235,460 L210,480 L180,490 L150,485 L125,470 L105,445 L90,415 L80,385 L75,355 L70,325 L75,295 L85,270 L100,255 L120,245 Z"
       fill="hsl(var(--primary))"
@@ -75,7 +75,7 @@ const BayAreaMap = () => (
       Santa Clara
     </text>
 
-    {/* Alameda County — northeast */}
+    {/* Alameda County, northeast */}
     <path
       d="M255,35 L270,45 L285,60 L300,80 L310,100 L315,120 L310,135 L300,145 L290,160 L280,180 L275,200 L280,220 L290,235 L295,250 L290,260 L280,265 L270,275 L260,290 L255,310 L250,335 L240,340 L230,330 L225,310 L230,285 L240,260 L250,230 L255,200 L250,175 L240,160 L225,150 L240,160 L380,160 L400,120 L410,80 L400,50 L380,35 L350,25 L320,22 L290,25 Z"
       fill="hsl(var(--primary))"
@@ -88,7 +88,7 @@ const BayAreaMap = () => (
       Alameda
     </text>
 
-    {/* Santa Cruz County — southwest coast */}
+    {/* Santa Cruz County, southwest coast */}
     <path
       d="M40,350 L75,295 L85,270 L100,255 L120,245 L140,250 L120,245 L100,255 L85,270 L75,295 L70,325 L75,355 L80,385 L90,415 L105,445 L125,470 L150,485 L140,500 L120,520 L95,535 L70,540 L45,530 L25,510 L15,480 L10,450 L15,420 L25,390 Z"
       fill="hsl(var(--primary))"
@@ -101,7 +101,7 @@ const BayAreaMap = () => (
       Santa Cruz
     </text>
 
-    {/* San Jose HQ — pulsing pin */}
+    {/* San Jose HQ, pulsing pin */}
     <circle cx="210" cy="350" r="8" className="pulse-ring" fill="hsl(var(--primary))" />
     <circle cx="210" cy="350" r="6" fill="hsl(var(--primary))" filter="url(#glow)" />
     <circle cx="210" cy="350" r="4" fill="white" />
@@ -113,7 +113,7 @@ const BayAreaMap = () => (
 
 const ServiceAreaGrid = ({
   title = "Serving the Bay Area",
-  subtitle = "We provide premium landscaping and hardscape services across four Bay Area counties — Santa Clara, San Mateo, Alameda, and Santa Cruz.",
+  subtitle = "We provide premium landscaping and hardscape services across four Bay Area counties: Santa Clara, San Mateo, Alameda, and Santa Cruz.",
 }: ServiceAreaGridProps) => (
   <section className="py-20 lg:py-28 bg-brand-charcoal">
     <div className="container mx-auto px-4">
