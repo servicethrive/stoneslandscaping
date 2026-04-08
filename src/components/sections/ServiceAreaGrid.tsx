@@ -37,7 +37,7 @@ const BayAreaMap = () => (
       `}</style>
     </defs>
 
-    {/* Pacific Ocean — west side fill */}
+    {/* Pacific Ocean, west side fill */}
     <path
       d="M0,0 L0,620 L60,620 L45,560 L30,510 L20,460 L25,400 L40,350 L55,310 L75,270 L85,230 L80,190 L70,150 L60,120 L55,80 L65,40 L80,10 L90,0 Z"
       fill="url(#waterGrad)"
