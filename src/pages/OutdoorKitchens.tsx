@@ -11,7 +11,7 @@ import { CheckCircle } from "lucide-react";
 
 const OutdoorKitchens = () => {
   useEffect(() => {
-    document.title = "Outdoor Kitchen Contractor San Jose | Custom BBQ Islands & Kitchens | Stones Landscaping";
+    document.title = "Outdoor Kitchens & Living Structures San Jose | Custom BBQ Islands, Pergolas & Shade | Stones Landscaping";
   }, []);
 
   const kitchenStyles = [
@@ -21,11 +21,18 @@ const OutdoorKitchens = () => {
     { name: "Bar & Entertainment Areas", desc: "Dedicated bar seating, beverage centers, and serving counters designed for hosting." },
   ];
 
+  const pergolaTypes = [
+    { name: "Freestanding Pergolas", desc: "Independent structures that define outdoor rooms anywhere on your property. Ideal for creating a dining area, lounge space, or focal point without connecting to your home's structure." },
+    { name: "Attached Patio Covers", desc: "Connected directly to your home, extending your indoor living space seamlessly outdoors. The most popular choice among our Bay Area clients." },
+    { name: "Modern Aluminum Structures", desc: "Sleek, low-maintenance aluminum pergolas with clean lines. Available with motorized louvered roof systems for adjustable sun and rain control." },
+    { name: "Cedar & Redwood Pergolas", desc: "Classic wood pergolas built with premium, naturally rot-resistant lumber. Develop a beautiful patina over time and complement both traditional and transitional styles." },
+  ];
+
   return (
     <Layout>
       <HeroSection
-        title="Custom Outdoor Kitchens for Bay Area Living"
-        subtitle="Design and build a fully functional outdoor kitchen - custom BBQ islands, stone countertops, pizza ovens, and complete entertainment areas tailored to your space and lifestyle."
+        title="Outdoor Kitchens & Living Structures"
+        subtitle="Design and build fully functional outdoor kitchens, custom pergolas, and shade structures - tailored to your space and how you actually live and entertain."
         backgroundImage={IMAGES.outdoorKitchen}
       />
       <TrustBar />
@@ -100,11 +107,53 @@ const OutdoorKitchens = () => {
         </div>
       </section>
 
-      <ProcessSteps title="Outdoor Kitchen Build Process" steps={[
-        { title: "Consultation & Layout", description: "We assess your space, review utility access points, discuss your cooking style and entertainment needs." },
-        { title: "Design & Materials", description: "Finalize the layout, countertop material, appliance selection, and veneer style." },
-        { title: "Construction", description: "Foundation, structural framing, stone or tile finishing, countertop installation, utility connections, and all finishing details." },
-        { title: "Final Walkthrough", description: "We test every connection, walk the completed kitchen with you, and confirm every detail meets your expectations." },
+      {/* Pergolas & Shade Structures Section (merged) */}
+      <section className="py-20 lg:py-28 bg-brand-cream">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-14">
+            <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Pergolas & Shade Structures</h2>
+            <p className="text-muted-foreground mt-3 font-light">Architectural structures that extend your outdoor living season year-round</p>
+          </div>
+          <p className="text-muted-foreground mb-8 leading-relaxed font-light text-center max-w-3xl mx-auto">
+            A pergola transforms an open patio into a defined outdoor room - providing filtered shade, vertical architectural interest, and a focal point that anchors your outdoor living space. We build custom pergolas as part of larger outdoor renovations, designed and integrated with the surrounding hardscape.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {pergolaTypes.map((p) => (
+              <div key={p.name} className="bg-background p-8 rounded-sm border border-border/60 hover:border-primary/30 transition-colors duration-300">
+                <h3 className="font-display text-lg font-bold text-foreground mb-3">{p.name}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed font-light">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 max-w-4xl mx-auto">
+            <h3 className="font-display text-xl font-bold text-foreground mb-4">Popular Pergola Applications</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                "Patio covers for outdoor dining",
+                "Shade over outdoor kitchen areas",
+                "Pool-side cabana structures",
+                "Garden walkway arbors",
+                "Hot tub and spa enclosures",
+                "Louvered roof systems for adjustable shade",
+                "Pergolas with integrated string or LED lighting",
+                "Fire pit seating area covers",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-3 py-2">
+                  <CheckCircle className="h-4 w-4 text-primary shrink-0" />
+                  <span className="text-sm text-foreground font-light">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <ProcessSteps title="Outdoor Kitchen & Pergola Build Process" steps={[
+        { title: "Consultation & Layout", description: "We assess your space, review utility access points, discuss your cooking style, shade needs, and entertainment preferences." },
+        { title: "Design & Materials", description: "Finalize the layout, countertop material, appliance selection, pergola style, and veneer choices." },
+        { title: "Construction", description: "Foundation, structural framing, stone or tile finishing, countertop installation, pergola construction, utility connections, and all finishing details." },
+        { title: "Final Walkthrough", description: "We test every connection, walk the completed project with you, and confirm every detail meets your expectations." },
       ]} />
 
       <FAQAccordion faqs={[
@@ -112,10 +161,12 @@ const OutdoorKitchens = () => {
         { question: "Do I need a permit for an outdoor kitchen in San Jose?", answer: "In most cases, yes - especially for gas, electrical, and plumbing connections. We handle the entire permitting process." },
         { question: "How long does outdoor kitchen construction take?", answer: "Most outdoor kitchens take 2–4 weeks to build, depending on complexity. Larger projects may extend to 4–6 weeks." },
         { question: "What countertop materials work best outdoors?", answer: "Granite, quartzite, and certain porcelain slabs are the most popular choices for Bay Area outdoor kitchens." },
+        { question: "Do I need a permit for a pergola?", answer: "It depends on the size and whether it's attached to your home. Attached structures and larger builds typically require permits. We assess requirements during consultation and handle the process." },
+        { question: "What's the best pergola material for the Bay Area?", answer: "Western red cedar and aluminum are the most popular. Cedar offers a warm, natural aesthetic. Aluminum is virtually maintenance-free and works well for modern homes." },
         { question: "Can you build an outdoor kitchen as part of a larger backyard remodel?", answer: "Absolutely - and that's how most of our outdoor kitchen projects happen. We frequently integrate kitchens with paver patios, pergolas, fire pits, and landscape plantings." },
       ]} />
 
-      <CTABanner title="Design Your Dream Outdoor Kitchen" subtitle="Request a complimentary consultation and let's design an outdoor kitchen that matches how you live and entertain." />
+      <CTABanner title="Design Your Outdoor Living Space" subtitle="Request a complimentary consultation and let's design an outdoor kitchen, pergola, or complete living area that matches how you live and entertain." />
     </Layout>
   );
 };

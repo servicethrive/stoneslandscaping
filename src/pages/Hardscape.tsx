@@ -12,9 +12,14 @@ import { ArrowRight, CheckCircle } from "lucide-react";
 const hardscapeServices = [
   { title: "Pavers", path: "/pavers", desc: "Custom paver patios, walkways, driveways, and pool decks using premium materials like Techo-Bloc, travertine, and porcelain." },
   { title: "Retaining Walls", path: "/retaining-walls", desc: "Structural and decorative retaining walls that manage slopes, prevent erosion, and add architectural interest." },
-  { title: "Patio & Walkway Installations", path: "/patio-walkway-installations", desc: "Complete patio and walkway construction designed for durability, drainage, and visual impact." },
-  { title: "Outdoor Kitchens", path: "/outdoor-kitchens", desc: "Custom-built outdoor kitchens with stone countertops, grill stations, and full entertainment features." },
-  { title: "Pergolas & Shade Structures", path: "/pergolas-shade-structures", desc: "Architectural pergolas, patio covers, and louvered roof systems that extend your outdoor living season." },
+  { title: "Outdoor Kitchens & Living Structures", path: "/outdoor-kitchens", desc: "Custom-built outdoor kitchens, pergolas, and shade structures for year-round entertaining." },
+];
+
+const patioTypes = [
+  { name: "Paver Patios", desc: "Interlocking paver patios built with premium materials like Techo-Bloc, travertine, and porcelain. The most popular choice among Bay Area homeowners for durability, design flexibility, and long-term value." },
+  { name: "Concrete Patios", desc: "Poured concrete patios in standard, stamped, or colored finishes. A cost-effective option that delivers clean lines and solid performance." },
+  { name: "Natural Stone Patios", desc: "Flagstone, bluestone, and limestone patios that bring organic texture and timeless elegance. Preferred by homeowners in Atherton, Saratoga, and Los Gatos." },
+  { name: "Mixed-Material Designs", desc: "Patios that combine pavers, stone, and concrete in a single cohesive design - creating visual interest, defining different zones, and making your outdoor space feel intentional." },
 ];
 
 const Hardscape = () => {
@@ -39,7 +44,7 @@ const Hardscape = () => {
             Hardscape refers to the non-living structural elements of your outdoor space - patios, walkways, retaining walls, driveways, fire features, outdoor kitchens, and pergolas. These are the permanent features that define how your yard functions, flows, and feels.
           </p>
           <p className="text-muted-foreground leading-relaxed font-light">
-            At {BUSINESS.name}, hardscape construction is our primary specialty. We've built hundreds of hardscape projects across San Jose, Atherton, Los Gatos, Saratoga, Campbell, Santa Clara, and throughout the South Bay.
+            At {BUSINESS.name}, hardscape construction is our primary specialty. We've built hundreds of hardscape projects across San Jose, Atherton, Los Gatos, Saratoga, and throughout the South Bay.
           </p>
         </div>
       </section>
@@ -62,14 +67,57 @@ const Hardscape = () => {
         },
       ]} />
 
+      {/* Patios & Walkways Section (merged) */}
       <section className="py-20 lg:py-28 bg-brand-cream">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-14">
+            <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Patios & Walkways</h2>
+            <p className="text-muted-foreground mt-3 font-light">The backbone of any well-designed outdoor living space</p>
+          </div>
+          <p className="text-muted-foreground mb-8 leading-relaxed font-light text-center max-w-3xl mx-auto">
+            Patios and walkways define how you move through and use your outdoor space. A properly built patio gives you a defined area for dining, lounging, cooking, or entertaining. We build them using pavers, natural stone, and concrete - selected based on your aesthetic preferences, property conditions, and budget.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {patioTypes.map((p) => (
+              <div key={p.name} className="bg-background p-8 rounded-sm border border-border/60 hover:border-primary/30 transition-colors duration-300">
+                <h3 className="font-display text-lg font-bold text-foreground mb-3">{p.name}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed font-light">{p.desc}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10 max-w-4xl mx-auto">
+            <h3 className="font-display text-xl font-bold text-foreground mb-4">Common Patio & Walkway Applications</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {[
+                "Backyard entertainment patios",
+                "Grand front entry walkways",
+                "Side yard paths and utility corridors",
+                "Garden walkways through planted areas",
+                "Pool deck patios and surrounds",
+                "Fire pit and seating area patios",
+                "Stepping stone paths through landscape",
+                "Connected patio-to-kitchen transitions",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-3 py-2">
+                  <CheckCircle className="h-4 w-4 text-primary shrink-0" />
+                  <span className="text-sm text-foreground font-light">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Hardscape Services */}
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
             <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Our Hardscape Services</h2>
             <p className="text-muted-foreground mt-3 font-light">Each service is a dedicated specialty - not a side offering</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {hardscapeServices.map((s) => (
               <Link key={s.path} to={s.path} className="group bg-background rounded-sm border border-border/60 p-8 hover:border-primary/30 transition-colors duration-300">
                 <h3 className="font-display text-lg font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{s.title}</h3>
@@ -83,7 +131,7 @@ const Hardscape = () => {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="py-20 lg:py-28 bg-brand-cream">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Why Invest in Professional Hardscape</h2>
@@ -114,6 +162,7 @@ const Hardscape = () => {
         { question: "Do you handle permits, engineering, and grading?", answer: "Yes. We manage the entire permitting process, coordinate structural engineering when needed, and handle all grading and drainage work." },
         { question: "What materials do you work with?", answer: "We use premium materials: Techo-Bloc and Belgard pavers, natural travertine and bluestone, porcelain pavers, segmental retaining wall block, natural stone, granite and quartzite countertops, and western red cedar and aluminum for pergolas." },
         { question: "How does your warranty work?", answer: `Our paver installations carry a ${BUSINESS.paverWarrantyYears}-year warranty on materials and workmanship. If anything related to our installation fails within the warranty period, we address it.` },
+        { question: "What's the best patio material for the Bay Area?", answer: "Interlocking pavers are the most popular choice because they handle ground movement without cracking, offer excellent drainage, and provide unlimited design options. Natural stone is preferred for a premium, estate-quality look. Concrete works well for budget-conscious projects." },
       ]} />
 
       <CTABanner title="Plan Your Hardscape Project" subtitle="Request a complimentary consultation and receive a detailed, transparent proposal for your outdoor project." />

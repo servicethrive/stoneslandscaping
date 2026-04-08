@@ -10,9 +10,6 @@ const Footer = () => {
     { label: "Reviews", path: "/reviews" },
     { label: "Warranties", path: "/warranties" },
     { label: "Our Process", path: "/our-process" },
-    
-    { label: "Financing", path: "/financing" },
-    { label: "FAQs", path: "/faqs" },
     { label: "Contact", path: "/contact" },
   ];
 
@@ -56,16 +53,6 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link to="/patio-walkway-installations" className="text-sm text-white/60 hover:text-primary transition-colors font-light">
-                  Patio & Walkways
-                </Link>
-              </li>
-              <li>
-                <Link to="/pergolas-shade-structures" className="text-sm text-white/60 hover:text-primary transition-colors font-light">
-                  Pergolas & Shade
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -74,11 +61,10 @@ const Footer = () => {
             <h4 className="text-xs font-semibold uppercase tracking-[0.2em] mb-6 text-primary">Service Areas</h4>
             <ul className="space-y-3">
               {[
+                { name: "San Jose", path: "/" },
                 { name: "Atherton", path: "/service-areas/atherton" },
                 { name: "Los Gatos", path: "/service-areas/los-gatos" },
                 { name: "Saratoga", path: "/service-areas/saratoga" },
-                { name: "Campbell", path: "/service-areas/campbell" },
-                { name: "Santa Clara", path: "/service-areas/santa-clara" },
               ].map((area) => (
                 <li key={area.name}>
                   <Link to={area.path} className="text-sm text-white/60 hover:text-primary transition-colors font-light">
@@ -86,6 +72,11 @@ const Footer = () => {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link to="/service-areas" className="text-sm text-white/60 hover:text-primary transition-colors font-light">
+                  All Service Areas →
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -108,10 +99,6 @@ const Footer = () => {
           <p className="text-xs text-white/40 font-light">
             © {new Date().getFullYear()} {BUSINESS.name} All rights reserved. License #{BUSINESS.license} - {BUSINESS.licenseClassifications}
           </p>
-          <div className="flex gap-6 text-xs text-white/40">
-            <Link to="/blog/pavers-vs-concrete" className="hover:text-primary transition-colors font-light">Pavers vs Concrete</Link>
-            <Link to="/blog/artificial-turf-vs-sod" className="hover:text-primary transition-colors font-light">Turf vs Sod</Link>
-          </div>
         </div>
       </div>
     </footer>

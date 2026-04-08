@@ -59,12 +59,6 @@ export const SERVICES = [
     description: "Low-maintenance artificial turf installation for lush, green yards without the water bill or upkeep.",
     image: "/images/artificial-turf-service.jpg",
   },
-  {
-    title: "Patio & Walkways",
-    path: "/patio-walkways",
-    description: "Custom patio and walkway designs that enhance your outdoor living space with premium materials and craftsmanship.",
-    image: "/images/patio-walkways-service.jpg",
-  },
 ] as const;
 
 export interface ServiceAreaCounty {
@@ -80,8 +74,8 @@ export const SERVICE_AREA_COUNTIES: ServiceAreaCounty[] = [
       { name: "Atherton", path: "/service-areas/atherton", hasDedicatedPage: true },
       { name: "Los Gatos", path: "/service-areas/los-gatos", hasDedicatedPage: true },
       { name: "Saratoga", path: "/service-areas/saratoga", hasDedicatedPage: true },
-      { name: "Campbell", path: "/service-areas/campbell", hasDedicatedPage: true },
-      { name: "Santa Clara", path: "/service-areas/santa-clara", hasDedicatedPage: true },
+      { name: "Campbell", path: "/service-areas", hasDedicatedPage: false },
+      { name: "Santa Clara", path: "/service-areas", hasDedicatedPage: false },
       { name: "Palo Alto", path: "/service-areas", hasDedicatedPage: false },
       { name: "Cupertino", path: "/service-areas", hasDedicatedPage: false },
       { name: "Mountain View", path: "/service-areas", hasDedicatedPage: false },
