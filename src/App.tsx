@@ -16,7 +16,7 @@ import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Reviews from "./pages/Reviews";
 import Warranties from "./pages/Warranties";
-import DesignProcess from "./pages/DesignProcess";
+
 import OurProcess from "./pages/OurProcess";
 import Contact from "./pages/Contact";
 import ServiceAreas from "./pages/ServiceAreas";
