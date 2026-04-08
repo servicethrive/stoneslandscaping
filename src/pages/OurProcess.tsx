@@ -15,7 +15,7 @@ const OurProcess = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">How We Work</h1>
           <p className="text-lg text-white/75 max-w-2xl mx-auto">
-            From the first phone call to the final walkthrough, every Stones Landscaping project follows a clear, proven process — including 2D/3D design for qualifying projects.
+            From the first phone call to the final walkthrough, every Stones Landscaping project follows a clear, proven process, including 2D/3D design for qualifying projects.
           </p>
         </div>
       </section>
