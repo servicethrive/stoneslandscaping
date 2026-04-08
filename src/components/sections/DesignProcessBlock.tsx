@@ -18,7 +18,7 @@ const DesignProcessBlock = () => (
             guidance, and rendered visuals that show exactly how your outdoor space will look.
           </p>
           <Button asChild className="text-sm px-8 py-5 tracking-wide uppercase font-semibold shadow-lg">
-            <Link to="/design-process">Learn About Our Design Process</Link>
+            <Link to="/our-process">Learn About Our Design Process</Link>
           </Button>
         </div>
         <div className="relative">

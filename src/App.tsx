@@ -16,7 +16,7 @@ import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Reviews from "./pages/Reviews";
 import Warranties from "./pages/Warranties";
-import DesignProcess from "./pages/DesignProcess";
+
 import OurProcess from "./pages/OurProcess";
 import Contact from "./pages/Contact";
 import ServiceAreas from "./pages/ServiceAreas";
@@ -55,7 +55,7 @@ const App = () => (
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/warranties" element={<Warranties />} />
-          <Route path="/design-process" element={<DesignProcess />} />
+          
           <Route path="/our-process" element={<OurProcess />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/service-areas" element={<ServiceAreas />} />
