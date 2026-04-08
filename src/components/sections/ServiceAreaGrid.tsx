@@ -49,7 +49,7 @@ const BayAreaMap = () => (
       fill="url(#waterGrad)"
     />
 
-    {/* San Mateo County — northwest, along the coast */}
+    {/* San Mateo County, northwest, along the coast */}
     <path
       d="M90,0 L170,30 L185,28 L200,25 L210,30 L225,50 L210,135 L200,165 L185,195 L170,220 L155,240 L140,250 L120,240 L100,225 L85,230 L75,270 L55,310 L40,350 L55,310 L75,270 L85,230 L80,190 L70,150 L60,120 L55,80 L65,40 L80,10 Z"
       fill="hsl(var(--primary))"
