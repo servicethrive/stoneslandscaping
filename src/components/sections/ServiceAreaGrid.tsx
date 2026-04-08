@@ -101,7 +101,7 @@ const BayAreaMap = () => (
       Santa Cruz
     </text>
 
-    {/* San Jose HQ — pulsing pin */}
+    {/* San Jose HQ, pulsing pin */}
     <circle cx="210" cy="350" r="8" className="pulse-ring" fill="hsl(var(--primary))" />
     <circle cx="210" cy="350" r="6" fill="hsl(var(--primary))" filter="url(#glow)" />
     <circle cx="210" cy="350" r="4" fill="white" />
