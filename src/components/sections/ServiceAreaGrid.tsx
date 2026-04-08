@@ -62,7 +62,7 @@ const BayAreaMap = () => (
       San Mateo
     </text>
 
-    {/* Santa Clara County — center/south, largest service area */}
+    {/* Santa Clara County, center/south, largest service area */}
     <path
       d="M140,250 L155,240 L170,220 L185,195 L200,165 L210,135 L225,150 L240,160 L250,175 L255,200 L250,230 L240,260 L230,285 L225,310 L230,330 L240,340 L250,360 L255,390 L250,430 L235,460 L210,480 L180,490 L150,485 L125,470 L105,445 L90,415 L80,385 L75,355 L70,325 L75,295 L85,270 L100,255 L120,245 Z"
       fill="hsl(var(--primary))"
