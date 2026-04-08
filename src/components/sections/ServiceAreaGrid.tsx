@@ -88,7 +88,7 @@ const BayAreaMap = () => (
       Alameda
     </text>
 
-    {/* Santa Cruz County — southwest coast */}
+    {/* Santa Cruz County, southwest coast */}
     <path
       d="M40,350 L75,295 L85,270 L100,255 L120,245 L140,250 L120,245 L100,255 L85,270 L75,295 L70,325 L75,355 L80,385 L90,415 L105,445 L125,470 L150,485 L140,500 L120,520 L95,535 L70,540 L45,530 L25,510 L15,480 L10,450 L15,420 L25,390 Z"
       fill="hsl(var(--primary))"
