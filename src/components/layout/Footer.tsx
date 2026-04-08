@@ -10,7 +10,7 @@ const Footer = () => {
     { label: "Reviews", path: "/reviews" },
     { label: "Warranties", path: "/warranties" },
     { label: "Our Process", path: "/our-process" },
-    { label: "Design Process", path: "/design-process" },
+    
     { label: "Financing", path: "/financing" },
     { label: "FAQs", path: "/faqs" },
     { label: "Contact", path: "/contact" },
