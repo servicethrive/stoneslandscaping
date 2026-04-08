@@ -16,23 +16,12 @@ import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Reviews from "./pages/Reviews";
 import Warranties from "./pages/Warranties";
-
 import OurProcess from "./pages/OurProcess";
 import Contact from "./pages/Contact";
 import ServiceAreas from "./pages/ServiceAreas";
-
 import Atherton from "./pages/Atherton";
 import LosGatos from "./pages/LosGatos";
 import Saratoga from "./pages/Saratoga";
-import Campbell from "./pages/Campbell";
-import SantaClara from "./pages/SantaClara";
-import Financing from "./pages/Financing";
-import FAQs from "./pages/FAQs";
-import PatioWalkways from "./pages/PatioWalkways";
-import PergolasShade from "./pages/PergolasShade";
-import PaversVsConcrete from "./pages/PaversVsConcrete";
-import ArtificialTurfVsSod from "./pages/ArtificialTurfVsSod";
-import Blog from "./pages/Blog";
 
 const queryClient = new QueryClient();
 
@@ -55,23 +44,12 @@ const App = () => (
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/warranties" element={<Warranties />} />
-          
           <Route path="/our-process" element={<OurProcess />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/service-areas" element={<ServiceAreas />} />
-          
           <Route path="/service-areas/atherton" element={<Atherton />} />
           <Route path="/service-areas/los-gatos" element={<LosGatos />} />
           <Route path="/service-areas/saratoga" element={<Saratoga />} />
-          <Route path="/service-areas/campbell" element={<Campbell />} />
-          <Route path="/service-areas/santa-clara" element={<SantaClara />} />
-          <Route path="/financing" element={<Financing />} />
-          <Route path="/faqs" element={<FAQs />} />
-          <Route path="/patio-walkway-installations" element={<PatioWalkways />} />
-          <Route path="/pergolas-shade-structures" element={<PergolasShade />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/pavers-vs-concrete" element={<PaversVsConcrete />} />
-          <Route path="/blog/artificial-turf-vs-sod" element={<ArtificialTurfVsSod />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
