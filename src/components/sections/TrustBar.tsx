@@ -1,7 +1,8 @@
 import { BUSINESS } from "@/lib/constants";
 import yelpIcon from "@/assets/yelp-icon.webp";
-import bestOf2026 from "/images/best-of-2026-business-rate.webp";
-import bestOf2025 from "/images/best-of-2025-business-rate.webp";
+
+const bestOf2026 = "/images/best-of-2026-business-rate.webp";
+const bestOf2025 = "/images/best-of-2025-business-rate.webp";
 
 const StarRow = () => (
   <div className="flex gap-0.5">
