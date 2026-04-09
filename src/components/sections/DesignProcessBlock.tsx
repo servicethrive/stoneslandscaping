@@ -13,7 +13,7 @@ const DesignProcessBlock = () => (
             result before any construction begins. This process eliminates guesswork, aligns expectations,
             and ensures every detail is planned with precision.
           </p>
-          <p className="text-muted-foreground mb-8 leading-relaxed font-light">
+          <p className="text-muted-foreground mb-8 leading-relaxed font-light text-lg">
             Our design process includes an on-site consultation, detailed measurements, material selection
             guidance, and rendered visuals that show exactly how your outdoor space will look.
           </p>

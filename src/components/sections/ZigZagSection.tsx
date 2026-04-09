@@ -27,7 +27,7 @@ const ZigZagSection = ({ items }: ZigZagSectionProps) => (
               <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
                 {item.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed font-light">
+              <p className="text-muted-foreground leading-relaxed font-light text-lg">
                 {item.text}
               </p>
             </div>
