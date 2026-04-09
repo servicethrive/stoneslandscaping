@@ -80,7 +80,7 @@ const ArtificialTurf = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Benefits of Professional Turf Installation</h2>
-          <div className="space-y-5 text-muted-foreground leading-relaxed font-light">
+          <div className="space-y-5 text-muted-foreground leading-relaxed font-light text-lg">
             <p><strong className="text-foreground font-medium">Eliminates water costs:</strong> No irrigation system needed. In drought-prone areas like the Bay Area, where water rates continue to climb, the savings add up fast. Most homeowners recoup their turf investment within 3–5 years in water savings alone.</p>
             <p><strong className="text-foreground font-medium">Zero mowing, fertilizing, or chemical treatments:</strong> Reclaim your weekends. No lawn equipment costs, no fertilizer runs, no seasonal aerating or overseeding. Your yard looks perfect without any of the work.</p>
             <p><strong className="text-foreground font-medium">Looks green year-round:</strong> No brown patches in August heat, no mud in January rain. Consistent, uniform appearance regardless of season, weather, or shade conditions.</p>

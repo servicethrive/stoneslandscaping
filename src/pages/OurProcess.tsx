@@ -37,7 +37,7 @@ const OurProcess = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="text-3xl font-bold text-foreground mb-6">What You Receive</h2>
-          <div className="space-y-4 text-muted-foreground leading-relaxed font-light">
+          <div className="space-y-4 text-muted-foreground leading-relaxed font-light text-lg">
             <p>
               For qualifying projects, our design phase includes a complete visual package that shows you exactly what your finished outdoor space will look like. This typically includes a 2D site plan with dimensions, material callouts, and layout details, plus 3D renderings that give you a realistic perspective of the finished project.
             </p>
@@ -55,7 +55,7 @@ const OurProcess = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="text-3xl font-bold text-foreground mb-6">What to Expect During Construction</h2>
-          <div className="space-y-4 text-muted-foreground leading-relaxed font-light">
+          <div className="space-y-4 text-muted-foreground leading-relaxed font-light text-lg">
             <p>
               Once construction begins, you'll have a clear point of contact for updates and questions. We believe that good communication is as important as good construction. You should never have to chase your contractor for a status update.
             </p>
@@ -70,7 +70,7 @@ const OurProcess = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="text-3xl font-bold text-foreground mb-6">After Your Project</h2>
-          <div className="space-y-4 text-muted-foreground leading-relaxed font-light">
+          <div className="space-y-4 text-muted-foreground leading-relaxed font-light text-lg">
             <p>
               Our relationship doesn't end when the crew leaves. You'll receive warranty documentation, care instructions for any landscaping or hardscape, and our contact information for any future questions or needs.
             </p>

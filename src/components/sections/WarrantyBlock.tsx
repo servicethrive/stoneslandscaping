@@ -14,7 +14,7 @@ const WarrantyBlock = () => (
             <Shield className="h-7 w-7 text-primary" />
           </div>
           <h3 className="font-display text-2xl font-bold text-foreground mb-3">{BUSINESS.paverWarrantyYears}-Year Paver Warranty</h3>
-          <p className="text-muted-foreground leading-relaxed font-light">
+          <p className="text-muted-foreground leading-relaxed font-light text-lg">
             Every paver installation we complete is backed by a {BUSINESS.paverWarrantyYears}-year warranty covering materials
             and workmanship. We stand behind the durability and quality of our hardscape work.
           </p>
@@ -24,7 +24,7 @@ const WarrantyBlock = () => (
             <Shield className="h-7 w-7 text-primary" />
           </div>
           <h3 className="font-display text-2xl font-bold text-foreground mb-3">{BUSINESS.landscapeWarrantyDays}-Day Landscape Warranty</h3>
-          <p className="text-muted-foreground leading-relaxed font-light">
+          <p className="text-muted-foreground leading-relaxed font-light text-lg">
             Our landscaping projects include a {BUSINESS.landscapeWarrantyDays}-day plant and material warranty.
             If anything we installed doesn't perform as expected within that window, we make it right.
           </p>
