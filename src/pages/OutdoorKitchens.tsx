@@ -44,7 +44,7 @@ const OutdoorKitchens = () => {
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             The Bay Area's mild climate gives you something most of the country can only dream of - the ability to cook and entertain outdoors nearly year-round. A custom outdoor kitchen transforms your backyard from unused green space into the most popular room in your home.
           </p>
-          <p className="text-muted-foreground leading-relaxed font-light">
+          <p className="text-muted-foreground leading-relaxed font-light text-lg">
             At {BUSINESS.name}, we design and build custom outdoor kitchens from the ground up. Every kitchen we construct is tailored to your property, your cooking habits, and how you actually entertain - not pulled from a catalog.
           </p>
         </div>

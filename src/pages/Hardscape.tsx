@@ -43,7 +43,7 @@ const Hardscape = () => {
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             Hardscape refers to the non-living structural elements of your outdoor space - patios, walkways, retaining walls, driveways, fire features, outdoor kitchens, and pergolas. These are the permanent features that define how your yard functions, flows, and feels.
           </p>
-          <p className="text-muted-foreground leading-relaxed font-light">
+          <p className="text-muted-foreground leading-relaxed font-light text-lg">
             At {BUSINESS.name}, hardscape construction is our primary specialty. We've built hundreds of hardscape projects across San Jose, Atherton, Los Gatos, Saratoga, and throughout the South Bay.
           </p>
         </div>
@@ -135,7 +135,7 @@ const Hardscape = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Why Invest in Professional Hardscape</h2>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
+          <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             A well-built hardscape project changes how you use your property. It gives you defined spaces for cooking, dining, relaxing, and entertaining - without the limitations of a basic lawn or deteriorating concrete slab.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">

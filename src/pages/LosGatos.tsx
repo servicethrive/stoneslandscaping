@@ -31,7 +31,7 @@ const LosGatos = () => {
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             Los Gatos sits at the base of the Santa Cruz Mountains, and that geography defines what outdoor renovation looks like here. Properties range from charming downtown lots to sprawling hillside estates with dramatic elevation changes, mature redwoods, and terrain that demands a contractor who understands both structural engineering and refined design.
           </p>
-          <p className="text-muted-foreground leading-relaxed font-light">
+          <p className="text-muted-foreground leading-relaxed font-light text-lg">
             {BUSINESS.name} has completed projects across Los Gatos - from the neighborhoods surrounding downtown to larger properties along Kennedy Road, Shannon Road, and the mountain corridors. We handle the grading, drainage engineering, retaining wall construction, and terraced patio design needed to transform challenging terrain into stunning, functional outdoor living space.
           </p>
         </div>

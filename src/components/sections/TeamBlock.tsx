@@ -20,7 +20,7 @@ const TeamBlock = () => (
             landscaping and hardscape industry before launching his own company. That hands-on experience is the
             foundation of how we operate - organized, detail-focused, and committed to quality.
           </p>
-          <p className="text-muted-foreground mb-6 leading-relaxed font-light">
+          <p className="text-muted-foreground mb-6 leading-relaxed font-light text-lg">
             We run large crews capable of handling complex residential projects across the Bay Area.
             From initial design consultation through final walkthrough, every project gets the same level
             of attention, communication, and craftsmanship.

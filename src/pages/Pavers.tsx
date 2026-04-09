@@ -40,7 +40,7 @@ const Pavers = () => {
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             Pavers are one of the most versatile and durable materials for outdoor surfaces. Whether you're building a sprawling backyard entertainment patio, replacing a front walkway to enhance curb appeal, or upgrading your driveway with an estate-quality finish, pavers offer a level of design flexibility and longevity that standard concrete simply cannot match.
           </p>
-          <p className="text-muted-foreground leading-relaxed font-light">
+          <p className="text-muted-foreground leading-relaxed font-light text-lg">
             At {BUSINESS.name}, paver installation is one of our core specialties. Every project starts with proper excavation and grading, followed by a compacted aggregate base, leveling sand, and precision-placed pavers with edge restraint and polymeric sand joints. The result is a surface that stays flat, drains correctly, and holds up for decades - not years.
           </p>
         </div>

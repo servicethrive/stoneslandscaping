@@ -32,7 +32,7 @@ const Atherton = () => {
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             Atherton is consistently ranked among the wealthiest communities in the United States, and the outdoor spaces here reflect that distinction. Properties routinely span one to three acres, with mature oak canopies, expansive lawns, and architecture that demands an outdoor environment of equal caliber. This isn't a market for template landscaping - it's a market that requires a contractor who understands estate-scale design, premium material sourcing, and the exacting standards of discerning homeowners.
           </p>
-          <p className="text-muted-foreground leading-relaxed font-light">
+          <p className="text-muted-foreground leading-relaxed font-light text-lg">
             {BUSINESS.name} serves Atherton homeowners with the same precision and craftsmanship we bring to every project - but with the capacity, crew depth, and design experience to handle the larger scopes and elevated material selections that Atherton properties demand.
           </p>
         </div>

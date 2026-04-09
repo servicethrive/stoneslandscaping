@@ -36,7 +36,7 @@ const Landscaping = () => {
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             Landscaping is far more than planting a few shrubs and laying sod. A thoughtfully designed landscape changes how you experience your home every single day - it creates functional outdoor rooms, improves curb appeal, reduces long-term maintenance, and adds real, measurable value to your property.
           </p>
-          <p className="text-muted-foreground leading-relaxed font-light">
+          <p className="text-muted-foreground leading-relaxed font-light text-lg">
             At {BUSINESS.name}, we take a design-build approach to every landscaping project. That means we handle the entire process in-house: site evaluation, design concepts, material selection, irrigation planning, grading, drainage, and full installation.
           </p>
         </div>
@@ -105,7 +105,7 @@ const Landscaping = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Our Landscape Warranty</h2>
-          <p className="text-muted-foreground leading-relaxed font-light">
+          <p className="text-muted-foreground leading-relaxed font-light text-lg">
             Every landscaping project we complete includes a {BUSINESS.landscapeWarrantyDays}-day warranty on plants and materials. If anything we installed doesn't perform as expected within that period, we'll address it - no runaround, no excuses. We also provide detailed care instructions, watering schedules, and seasonal maintenance guidance.
           </p>
         </div>

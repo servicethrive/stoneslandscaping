@@ -37,7 +37,7 @@ const RetainingWalls = () => {
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             Retaining walls are among the most critical hardscape elements on any Bay Area property. They hold back soil on sloped lots, manage seasonal water runoff, create level terraces for usable outdoor living space, and protect structures and landscaping from erosion.
           </p>
-          <p className="text-muted-foreground leading-relaxed font-light">
+          <p className="text-muted-foreground leading-relaxed font-light text-lg">
             Here's what most homeowners don't realize: a retaining wall is only as good as what you can't see. The footing depth, drainage system, backfill material, and compaction behind the wall determine whether it performs for five years or fifty.
           </p>
         </div>
