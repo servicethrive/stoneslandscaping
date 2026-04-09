@@ -5,7 +5,7 @@ import TeamBlock from "@/components/sections/TeamBlock";
 import WarrantyBlock from "@/components/sections/WarrantyBlock";
 import CTABanner from "@/components/sections/CTABanner";
 import { IMAGES, BUSINESS } from "@/lib/constants";
-import { CheckCircle } from "lucide-react";
+import { Award, Star, Shield, Truck, CheckCircle } from "lucide-react";
 
 const About = () => {
   useEffect(() => {
@@ -21,9 +21,76 @@ const About = () => {
         primaryCTA={{ text: "Request a Free Quote", link: "/contact" }}
       />
 
+      {/* Awards Banner */}
+      <section className="py-16 lg:py-20 bg-brand-cream">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-12">
+            <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Award-Winning Craftsmanship</h2>
+            <p className="text-muted-foreground font-light text-lg max-w-2xl mx-auto">
+              Recognized by Business Rate as the Best Landscaper in Willow Glen, San Jose — two years running.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            {[
+              { year: "2025", title: "Best Landscaper", location: "Willow Glen, San Jose", body: "Business Rate" },
+              { year: "2026", title: "Best Landscaper", location: "Willow Glen, San Jose", body: "Business Rate" },
+            ].map((award) => (
+              <div key={award.year} className="bg-background border border-border/60 rounded-sm p-8 text-center">
+                <Award className="h-8 w-8 text-primary mx-auto mb-4" />
+                <p className="text-sm font-semibold tracking-widest uppercase text-primary mb-2">{award.year}</p>
+                <h3 className="font-display text-xl font-bold text-foreground mb-1">{award.title}</h3>
+                <p className="text-sm text-muted-foreground font-light">{award.location}</p>
+                <p className="text-xs text-muted-foreground mt-2">Awarded by {award.body}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <TeamBlock />
 
-      <section className="py-20 lg:py-28 bg-background">
+      {/* Social Proof — Reviews */}
+      <section className="py-16 lg:py-20 bg-background">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-12">
+            <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Trusted by Bay Area Homeowners</h2>
+            <p className="text-muted-foreground font-light max-w-2xl mx-auto">
+              Our reputation is built on verified reviews from real clients across Silicon Valley.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <a
+              href={BUSINESS.googleProfileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-cream border border-border/60 rounded-sm p-8 text-center hover:shadow-md transition-shadow"
+            >
+              <div className="flex gap-1 justify-center mb-3">
+                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-primary text-primary" />)}
+              </div>
+              <p className="font-display text-4xl font-bold text-foreground mb-1">{BUSINESS.googleReviews}</p>
+              <p className="text-sm text-muted-foreground font-light">Five-Star Google Reviews</p>
+            </a>
+            <a
+              href={BUSINESS.yelpProfileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-brand-cream border border-border/60 rounded-sm p-8 text-center hover:shadow-md transition-shadow"
+            >
+              <div className="flex gap-1 justify-center mb-3">
+                {[...Array(5)].map((_, i) => <Star key={i} className="h-5 w-5 fill-primary text-primary" />)}
+              </div>
+              <p className="font-display text-4xl font-bold text-foreground mb-1">{BUSINESS.yelpReviews}</p>
+              <p className="text-sm text-muted-foreground font-light">Five-Star Yelp Reviews</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Got Here */}
+      <section className="py-20 lg:py-28 bg-brand-cream">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">How We Got Here</h2>
@@ -42,7 +109,8 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-brand-cream">
+      {/* What Sets Us Apart */}
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">What Sets Us Apart</h2>
@@ -56,7 +124,7 @@ const About = () => {
               { title: "Design Capability", desc: "For qualifying projects, we offer professional 2D and 3D design renderings so you can visualize the finished result before construction starts. Design decisions made on paper cost nothing to change; decisions made on-site cost time and money." },
               { title: "Experienced, Full-Time Crews", desc: "We run trained, full-time crews - not day laborers hired per project. Our team members have years of experience with the specific materials, techniques, and conditions of Bay Area residential construction." },
             ].map((item) => (
-              <div key={item.title} className="bg-background p-8 rounded-sm border border-border/60">
+              <div key={item.title} className="bg-brand-cream p-8 rounded-sm border border-border/60">
                 <h3 className="font-display text-lg font-bold text-foreground mb-3">{item.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed font-light">{item.desc}</p>
               </div>
@@ -65,28 +133,61 @@ const About = () => {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-background">
-        <div className="container mx-auto px-4 max-w-4xl">
+      {/* Licensing & Credentials */}
+      <section className="py-20 lg:py-28 bg-brand-cream">
+        <div className="container mx-auto px-4 max-w-5xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Licensing & Credentials</h2>
-          <p className="text-muted-foreground mb-8 leading-relaxed font-light">
+          <p className="text-muted-foreground mb-10 leading-relaxed font-light">
             We're fully licensed, insured, and credentialed for the work we do. When you hire {BUSINESS.name}, you're working with a legitimate, established contractor - not someone operating out of a pickup truck with a Craigslist ad.
           </p>
-          <div className="space-y-4">
-            {[
-              `California Contractor License #${BUSINESS.license} - Active and in good standing`,
-              `License Classifications: ${BUSINESS.licenseClassifications}`,
-              `${BUSINESS.googleReviews}+ Five-Star Google Reviews from verified Bay Area homeowners`,
-              `${BUSINESS.yelpReviews}+ Five-Star Yelp Reviews`,
-              "Fully Licensed, Bonded, and Insured",
-              `Serving the Bay Area since ${BUSINESS.founded}`,
-              `${BUSINESS.paverWarrantyYears}-Year Paver Installation Warranty`,
-            ].map((item) => (
-              <div key={item} className="flex items-center gap-3">
-                <CheckCircle className="h-4 w-4 text-primary shrink-0" />
-                <span className="text-sm text-foreground font-light">{item}</span>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-background border border-border/60 rounded-sm p-8">
+              <Shield className="h-6 w-6 text-primary mb-4" />
+              <h3 className="font-display text-lg font-bold text-foreground mb-2">California License</h3>
+              <p className="text-sm text-muted-foreground font-light mb-1">License #{BUSINESS.license}</p>
+              <p className="text-sm text-muted-foreground font-light">Active and in good standing</p>
+            </div>
+            <div className="bg-background border border-border/60 rounded-sm p-8">
+              <CheckCircle className="h-6 w-6 text-primary mb-4" />
+              <h3 className="font-display text-lg font-bold text-foreground mb-2">Classifications</h3>
+              <p className="text-sm text-muted-foreground font-light">C27 — Landscaping</p>
+              <p className="text-sm text-muted-foreground font-light">C-61/D06 — Concrete</p>
+            </div>
+            <div className="bg-background border border-border/60 rounded-sm p-8">
+              <Shield className="h-6 w-6 text-primary mb-4" />
+              <h3 className="font-display text-lg font-bold text-foreground mb-2">Bonded & Insured</h3>
+              <p className="text-sm text-muted-foreground font-light">Fully licensed, bonded, and insured for residential construction</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Fleet & Equipment */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <div className="w-12 h-0.5 bg-primary mb-6" />
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Professional Fleet & Equipment</h2>
+          <p className="text-muted-foreground mb-10 leading-relaxed font-light max-w-3xl">
+            We invest in professional-grade equipment and maintain a fleet of branded vehicles because how a contractor shows up tells you how they'll build. Our storage yard houses everything we need to execute projects efficiently - from CAT skid steers to full trailer rigs.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-lg">
+              <img
+                src="/images/stones-landscaping-truck-trailer.jpg"
+                alt="Stones Landscaping Inc. truck and trailer at job site"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-lg">
+              <img
+                src="/images/stones-landscaping-company-vehicle.jpg"
+                alt="Stones Landscaping Inc. branded company vehicle"
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
           </div>
         </div>
       </section>

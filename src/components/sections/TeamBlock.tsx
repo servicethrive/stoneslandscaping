@@ -6,8 +6,8 @@ const TeamBlock = () => (
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
         <div className="aspect-[4/3] rounded-sm overflow-hidden shadow-2xl">
           <img
-            src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80"
-            alt="Stones Landscaping team at work"
+            src="/images/stones-landscaping-storage-yard.jpg"
+            alt="Stones Landscaping storage yard with fleet and equipment"
             className="w-full h-full object-cover"
             loading="lazy"
           />
