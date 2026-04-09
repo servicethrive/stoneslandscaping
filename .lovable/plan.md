@@ -1,29 +1,25 @@
 
 
-## Update About Page Images
+## Add 2018 Fleet Photo + Replace Award Icons with Real Badge Images
 
 ### Changes
 
-**1. Copy 3 new uploaded images to `public/images/`**
-- `stones_landscaping_dump_truck.jpg` → `public/images/stones-landscaping-dump-truck.jpg`
-- `stones_landscaping_dump_trailer.jpg` → `public/images/stones-landscaping-dump-trailer.jpg`
-- `stone_landscaping_trailer_and_skid-steer.jpg` → `public/images/stones-landscaping-trailer-skid-steer.jpg`
+**1. Copy 3 new images to `public/images/`**
+- `stones_landscaping_in_2018.jpg` → `public/images/stones-landscaping-2018.jpg`
+- `best_of_2025_landscaper_in_San_Jose-2.webp` → `public/images/best-of-2025-business-rate.webp`
+- `best_of_2026_landscaper_in_willow_glenn-2.webp` → `public/images/best-of-2026-business-rate.webp`
 
-**2. Update TeamBlock image** (`src/components/sections/TeamBlock.tsx`)
-- Replace `stones-landscaping-storage-yard.jpg` with `stones-landscaping-dump-truck.jpg` (the dump truck is a cleaner, more professional hero-level image for this prominent section)
+**2. Add 2018 photo to Fleet & Equipment grid** (`src/pages/About.tsx` line ~189)
+- Add `{ src: "/images/stones-landscaping-2018.jpg", alt: "Stones Landscaping fleet vehicles on job site in 2018" }` to the fleet images array
+- Grid will now have 6 images (perfect 2×3 / 3×2 layout)
 
-**3. Expand Fleet & Equipment section** (`src/pages/About.tsx` lines 166-193)
-- Move the existing storage yard image here (it fits better as fleet/equipment context)
-- Add all 3 new uploaded images plus the existing company vehicle and truck/trailer images
-- Result: 6 images in a 2x3 or 3x2 grid showing the full fleet: storage yard, dump truck (duplicate avoided since it's in TeamBlock), dump trailer, skid steer + trailer, truck & trailer, company vehicle
-- Actually, since the dump truck is now in TeamBlock, the Fleet grid will have 5 images: storage yard, dump trailer, trailer + skid steer, truck & trailer, company vehicle
-
-**4. Add an image between "How We Got Here" and "What Sets Us Apart"** (`src/pages/About.tsx`)
-- Insert a full-width image break using the storage yard photo between these two text-heavy sections to break up the wall of text
+**3. Replace Awards Banner icons with real badge images** (`src/pages/About.tsx` lines 34-47)
+- Remove the `Award` lucide icon from each award card
+- Replace with `<img>` tags showing the actual Business Rate badge images
+- 2026 badge goes first (far left), 2025 badge second
+- Both images rendered at the same fixed size (e.g., `w-32 h-32 object-contain mx-auto`) so they appear equal regardless of source image dimensions
+- Remove the `Award` import from lucide-react if no longer used elsewhere
 
 ### Files changed
-- `src/components/sections/TeamBlock.tsx` — swap image src + alt
-- `src/pages/About.tsx` — add image break section, expand Fleet grid to 5 images
-
-### No design system changes. Uses existing patterns (aspect-ratio, rounded-sm, shadow-lg, grid layouts).
+- `src/pages/About.tsx` — reorder awards array (2026 first), replace icon with `<img>`, add fleet image, clean up unused import
 
