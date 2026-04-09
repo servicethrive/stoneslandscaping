@@ -127,7 +127,7 @@ export const IMAGES = {
   hero: "/images/hero-banner.jpg",
   ctaHardscape: "/images/cta-hardscape.jpg",
   ctaTurf: "/images/cta-turf.jpg",
-  heroAbout: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=1920&q=80",
+  heroAbout: "/images/california-gold-tile-walkway.jpg",
   pavers: "/images/pavers-service.jpg",
   landscaping: "/images/landscaping-service.jpg",
   outdoorKitchen: "/images/outdoor-kitchens-service.jpg",
