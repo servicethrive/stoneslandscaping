@@ -5,7 +5,7 @@ import TeamBlock from "@/components/sections/TeamBlock";
 import WarrantyBlock from "@/components/sections/WarrantyBlock";
 import CTABanner from "@/components/sections/CTABanner";
 import { IMAGES, BUSINESS } from "@/lib/constants";
-import { Award, Star, Shield, Truck, CheckCircle } from "lucide-react";
+import { Star, Shield, Truck, CheckCircle } from "lucide-react";
 
 const About = () => {
   useEffect(() => {
@@ -33,11 +33,11 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {[
-              { year: "2025", title: "Best Landscaper", location: "Willow Glen, San Jose", body: "Business Rate" },
-              { year: "2026", title: "Best Landscaper", location: "Willow Glen, San Jose", body: "Business Rate" },
+              { year: "2026", title: "Best Landscaper", location: "Willow Glen, San Jose", body: "Business Rate", badge: "/images/best-of-2026-business-rate.webp" },
+              { year: "2025", title: "Best Landscaper", location: "San Jose", body: "Business Rate", badge: "/images/best-of-2025-business-rate.webp" },
             ].map((award) => (
               <div key={award.year} className="bg-background border border-border/60 rounded-sm p-8 text-center">
-                <Award className="h-8 w-8 text-primary mx-auto mb-4" />
+                <img src={award.badge} alt={`Best of ${award.year} Landscaper award`} className="w-32 h-32 object-contain mx-auto mb-4" />
                 <p className="text-sm font-semibold tracking-widest uppercase text-primary mb-2">{award.year}</p>
                 <h3 className="font-display text-xl font-bold text-foreground mb-1">{award.title}</h3>
                 <p className="text-sm text-muted-foreground font-light">{award.location}</p>
@@ -192,6 +192,7 @@ const About = () => {
               { src: "/images/stones-landscaping-trailer-skid-steer.jpg", alt: "Stones Landscaping trailer with CAT skid steer" },
               { src: "/images/stones-landscaping-truck-trailer.jpg", alt: "Stones Landscaping Inc. truck and trailer at job site" },
               { src: "/images/stones-landscaping-company-vehicle.jpg", alt: "Stones Landscaping Inc. branded company vehicle" },
+              { src: "/images/stones-landscaping-2018.jpg", alt: "Stones Landscaping fleet vehicles on job site in 2018" },
             ].map((img) => (
               <div key={img.src} className="aspect-[4/3] rounded-sm overflow-hidden shadow-lg">
                 <img
