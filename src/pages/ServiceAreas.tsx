@@ -30,7 +30,7 @@ const ServiceAreas = () => {
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             {BUSINESS.name} is headquartered on Almaden Expressway in San Jose, and our service area spans four Bay Area counties: Santa Clara, San Mateo, Alameda, and Santa Cruz. Our central location gives us efficient access to every community we serve - most jobsites are within 30 minutes of our office.
           </p>
-          <p className="text-muted-foreground leading-relaxed font-light">
+          <p className="text-muted-foreground leading-relaxed font-light text-lg">
             The Bay Area's unique combination of Mediterranean climate, diverse terrain, and high property values makes outdoor renovation projects especially valuable for homeowners. Whether you're working with a flat suburban lot in Campbell, a hillside property in Los Gatos, or a multi-acre estate in Atherton, our team has the experience to handle the specific conditions of your property.
           </p>
         </div>
@@ -59,13 +59,13 @@ const ServiceAreas = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Why a Local Contractor Matters</h2>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
+          <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             Outdoor construction isn't like ordering a product online - it's deeply tied to your specific location. Soil composition, drainage patterns, climate conditions, local building codes, and even neighborhood aesthetics all influence how a project should be designed and built.
           </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
+          <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             The expansive clay soils common throughout Santa Clara County require deeper base preparation and specific compaction techniques to prevent paver settling and concrete cracking. The Mediterranean climate - dry summers and wet winters - demands drainage engineering that accounts for seasonal water flow. And the seismic activity in our region means retaining walls need to meet structural standards that go beyond what's required in most parts of the country.
           </p>
-          <p className="text-muted-foreground leading-relaxed font-light">
+          <p className="text-muted-foreground leading-relaxed font-light text-lg">
             We've been building in this region since {BUSINESS.founded}, and that experience translates into better outcomes for our clients. We know which materials perform best in Bay Area conditions, which base systems prevent long-term problems, and how to navigate permitting in every city we serve. That local knowledge - combined with our {BUSINESS.googleReviews} five-star Google reviews and {BUSINESS.yelpReviews} five-star Yelp reviews - is why Bay Area homeowners trust us with their most important outdoor projects.
           </p>
         </div>

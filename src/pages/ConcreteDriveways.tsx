@@ -36,7 +36,7 @@ const ConcreteDriveways = () => {
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             Your driveway is the first surface people see when they approach your home - and one of the most heavily used areas on your entire property. A new concrete driveway transforms your curb appeal, improves daily functionality, and adds measurable value.
           </p>
-          <p className="text-muted-foreground leading-relaxed font-light">
+          <p className="text-muted-foreground leading-relaxed font-light text-lg">
             At {BUSINESS.name}, we handle complete driveway projects from demolition to final seal coat. Every driveway we build is properly reinforced with rebar, sloped for positive drainage, and designed to handle the Bay Area's expansive clay soils.
           </p>
         </div>

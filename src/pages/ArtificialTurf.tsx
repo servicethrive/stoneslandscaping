@@ -30,7 +30,7 @@ const ArtificialTurf = () => {
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             Water restrictions, recurring drought cycles, and the constant upkeep demands of natural grass have pushed more Bay Area homeowners toward artificial turf than ever before - and the results speak for themselves.
           </p>
-          <p className="text-muted-foreground leading-relaxed font-light">
+          <p className="text-muted-foreground leading-relaxed font-light text-lg">
             At {BUSINESS.name}, we install premium artificial turf systems designed specifically for residential use. Every installation includes proper site grading, a compacted decomposed granite base layer, commercial-grade weed barrier fabric, and turf secured with appropriate infill for a natural look and feel.
           </p>
         </div>

@@ -97,13 +97,13 @@ const About = () => {
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             {BUSINESS.name} was founded in {BUSINESS.founded} with a simple idea: build outdoor spaces the way they should be built - with proper engineering, premium materials, honest pricing, and craftsmanship that holds up for decades, not just long enough to collect a check. That's still how we operate today.
           </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
+          <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             We started as a small crew building paver patios and retaining walls in San Jose neighborhoods. Over the years, our scope expanded naturally because homeowners kept asking us to do more - outdoor kitchens, pergolas, complete backyard transformations, driveway replacements. We grew by doing good work and earning referrals, not by running ads promising the lowest price. Today, we serve homeowners across the Bay Area - from cozy suburban homes in Campbell to expansive estates in Atherton, Hillsborough, Los Gatos, and Saratoga.
           </p>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light">
+          <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             Our clients are successful people who value quality, transparency, and professionalism. They're tech executives, business owners, physicians, and professionals who expect the same standard of excellence from their outdoor contractor that they demand in every other area of their lives. We appreciate that trust, and we work hard to earn it on every project.
           </p>
-          <p className="text-muted-foreground leading-relaxed font-light">
+          <p className="text-muted-foreground leading-relaxed font-light text-lg">
             We're not the cheapest option in the Bay Area - and we don't try to be. What we offer is work that's done right the first time, by experienced crews who take pride in their craft, backed by warranties that mean something. When your paver patio still looks perfect in 15 years and your retaining wall is still straight in 20, you'll understand why the investment mattered.
           </p>
         </div>
@@ -128,7 +128,7 @@ const About = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">What Sets Us Apart</h2>
-          <p className="text-muted-foreground mb-8 leading-relaxed font-light">
+          <p className="text-muted-foreground mb-8 leading-relaxed font-light text-lg">
             There are hundreds of landscaping contractors in the Bay Area. Here's why homeowners in San Jose, Atherton, Los Gatos, and Saratoga choose {BUSINESS.name} - and keep referring us to their neighbors.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -152,7 +152,7 @@ const About = () => {
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Licensing & Credentials</h2>
-          <p className="text-muted-foreground mb-10 leading-relaxed font-light">
+          <p className="text-muted-foreground mb-10 leading-relaxed font-light text-lg">
             We're fully licensed, insured, and credentialed for the work we do. When you hire {BUSINESS.name}, you're working with a legitimate, established contractor - not someone operating out of a pickup truck with a Craigslist ad.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

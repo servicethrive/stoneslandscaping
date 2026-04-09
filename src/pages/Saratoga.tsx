@@ -31,7 +31,7 @@ const Saratoga = () => {
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             Saratoga's combination of spacious lots, mature heritage trees, and beautiful residential properties makes it one of the most rewarding communities in the Bay Area for outdoor living investment. Homeowners here don't just want a new patio - they want an outdoor environment that matches the quality and character of their home.
           </p>
-          <p className="text-muted-foreground leading-relaxed font-light">
+          <p className="text-muted-foreground leading-relaxed font-light text-lg">
             {BUSINESS.name} has completed paver installations, landscape renovations, retaining wall projects, outdoor kitchen builds, and complete backyard transformations across Saratoga. From the quiet cul-de-sacs near Saratoga Village to the larger foothill properties along Mt. Eden Road and Saratoga-Sunnyvale Road, each project reflects the character of the neighborhood.
           </p>
         </div>
