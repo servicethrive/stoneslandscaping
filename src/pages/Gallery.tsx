@@ -70,6 +70,10 @@ const galleryImages = [
 
   // Retaining Walls
   { src: seatedRetainingWalls, alt: "Seated retaining wall installation", category: "Retaining Walls" },
+
+  // Additional Pavers
+  { src: sealedWetLook, alt: "Sealed wet look paver walkway", category: "Pavers" },
+  { src: "/images/california-gold-tile-walkway.jpg", alt: "California gold tile walkway", category: "Pavers" },
 ];
 
 const Gallery = () => {
