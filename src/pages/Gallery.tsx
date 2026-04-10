@@ -35,6 +35,7 @@ import lavaRockHardscape from "@/assets/projects/lava-rock-hardscape-san-jose.jp
 
 // Retaining Walls
 import seatedRetainingWalls from "@/assets/projects/seated_retaining_walls.jpg";
+import sealedWetLook from "@/assets/projects/sealed_wet_look_pavers.jpg";
 
 const galleryImages = [
   // Pavers
