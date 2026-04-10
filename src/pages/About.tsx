@@ -33,7 +33,7 @@ const About = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {[
-              { year: "2026", title: "Best Landscaper", location: "Willow Glen, San Jose", body: "Business Rate", badge: "/images/best-of-2026-business-rate.webp" },
+              { year: "2026", title: "Best Landscaper", location: "Willow Glen, San Jose", body: "Business Rate", badge: "/images/best-of-2026-about.webp" },
               { year: "2025", title: "Best Landscaper", location: "San Jose", body: "Business Rate", badge: "/images/best-of-2025-business-rate.webp" },
             ].map((award) => (
               <div key={award.year} className="bg-background border border-border/60 rounded-sm p-8 text-center">
