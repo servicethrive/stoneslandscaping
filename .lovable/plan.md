@@ -1,20 +1,18 @@
 
 
-## Replace 2026 Award Image on About Page Only
+## Add 2 More Photos to Gallery Page
 
-**Problem**: Both the About page and home page TrustBar reference the same file (`/images/best-of-2026-business-rate.webp`). Replacing that file would change both. We need a separate file for the About page.
+### Changes to `src/pages/Gallery.tsx`
 
-### Changes
+**1. Copy uploaded image** to `src/assets/projects/sealed_wet_look_pavers.jpg`
 
-**1. Copy new image to project**
-- `user-uploads://best_of_2026_landscaper_in_willow_glenn-3.webp` → `public/images/best-of-2026-about.webp`
+**2. Add About hero image** — it's at `public/images/california-gold-tile-walkway.jpg` (referenced via URL, not import). Since it's in `public/`, we'll reference it directly as a string path rather than an ES module import.
 
-**2. Update `src/pages/About.tsx`** (line 36)
-- Change badge path from `/images/best-of-2026-business-rate.webp` to `/images/best-of-2026-about.webp`
-
-Home page `TrustBar.tsx` remains untouched — it keeps using the original file.
+**3. Add 2 new entries to `galleryImages` array:**
+- `sealed_wet_look_pavers.jpg` → category **Pavers**, alt "Sealed wet look paver walkway"
+- `/images/california-gold-tile-walkway.jpg` → category **Pavers**, alt "California gold tile walkway"
 
 ### Files changed
-- `public/images/best-of-2026-about.webp` — new file
-- `src/pages/About.tsx` — updated badge path
+- `src/assets/projects/sealed_wet_look_pavers.jpg` — new file (copied from upload)
+- `src/pages/Gallery.tsx` — add 1 new import + 2 new gallery entries
 
