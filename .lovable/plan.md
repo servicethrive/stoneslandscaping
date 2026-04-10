@@ -1,26 +1,16 @@
 
 
-## Fix Remaining Body Font Size Inconsistencies
+## Fix Hero Banner Overlap on Gallery & Contact Pages
 
-The previous pass missed several files. Here are all the body paragraphs still missing `text-lg`:
+**Problem**: Gallery and Contact pages use `py-20` on their hero sections, so the content loads behind the fixed navbar. Reviews, Warranties, and OurProcess were already fixed to `pt-40 pb-20` but these two were missed.
 
-### Files to fix
+### Changes
 
-**1. `src/components/sections/DesignProcessBlock.tsx`** (line 16)
-- Second paragraph missing `text-lg` — add it to match the first paragraph on line 11
+**1. `src/pages/Gallery.tsx`** (line 29)
+- Change `className="bg-brand-dark py-20"` → `className="bg-brand-dark pt-40 pb-20"`
 
-**2. `src/components/sections/ZigZagSection.tsx`** (line 30)
-- Body text `<p>` missing `text-lg` — used across multiple service pages
+**2. `src/pages/Contact.tsx`** (line 30)
+- Change `className="bg-brand-dark py-20"` → `className="bg-brand-dark pt-40 pb-20"`
 
-**3. `src/components/sections/WarrantyBlock.tsx`** (lines 17, 27)
-- Both warranty description paragraphs missing `text-lg`
-
-**4. `src/pages/OurProcess.tsx`** (lines 40, 58, 73)
-- Three `<div>` wrappers with `text-muted-foreground leading-relaxed font-light` missing `text-lg` — these wrap multiple `<p>` tags, so adding `text-lg` to the wrapper fixes all children
-
-**5. `src/pages/ArtificialTurf.tsx`** (line 83)
-- Same pattern as OurProcess — wrapper `<div>` missing `text-lg`
-
-### Not changed (intentionally smaller)
-- `text-sm` items in cards, process steps, list descriptions, testimonials — these are distinct content types that should stay small
+These are the only two remaining pages with this issue. All other pages either use `pt-40 pb-20` or have a full-height `HeroSection` component that handles its own spacing.
 
