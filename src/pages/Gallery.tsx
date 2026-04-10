@@ -35,6 +35,7 @@ import lavaRockHardscape from "@/assets/projects/lava-rock-hardscape-san-jose.jp
 
 // Retaining Walls
 import seatedRetainingWalls from "@/assets/projects/seated_retaining_walls.jpg";
+import sealedWetLook from "@/assets/projects/sealed_wet_look_pavers.jpg";
 
 const galleryImages = [
   // Pavers
@@ -69,6 +70,10 @@ const galleryImages = [
 
   // Retaining Walls
   { src: seatedRetainingWalls, alt: "Seated retaining wall installation", category: "Retaining Walls" },
+
+  // Additional Pavers
+  { src: sealedWetLook, alt: "Sealed wet look paver walkway", category: "Pavers" },
+  { src: "/images/california-gold-tile-walkway.jpg", alt: "California gold tile walkway", category: "Pavers" },
 ];
 
 const Gallery = () => {
