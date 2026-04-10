@@ -26,7 +26,7 @@ const Gallery = () => {
 
   return (
     <Layout>
-      <section <section className="bg-brand-dark pt-40 pb-20">>
+      <section className="bg-brand-dark pt-40 pb-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Work</h1>
           <p className="text-lg text-white/75 max-w-2xl mx-auto">
