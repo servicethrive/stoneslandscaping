@@ -1,111 +1,74 @@
 
 
-## Replace All Placeholder Images Across Service, Service Area & About Pages
+## SEO-Optimize Service Page Headlines + About Page Zig-Zag Fix
 
-### Scope
-Three tasks:
-1. **About page**: Move the "stones landscaping storage yard" image into the "How We Got Here" section as a zig-zag layout (left text / right image), and remove the standalone image break section below it.
-2. **8 Service pages**: Replace all `IMAGES.zigzag*` placeholder Unsplash images in ZigZag sections with real gallery photos, matched by category.
-3. **Service Area hub + 3 city pages**: Replace all `IMAGES.zigzag*` placeholder images with real gallery photos, using unique images per city page (no duplicates across cities).
+### Problem 1: SEO — H1s say "Bay Area" instead of "San Jose"
+The `<title>` tags correctly target San Jose, but the visible H1 hero headlines use "Bay Area" — diluting the primary geo-target. For these 7 primary service pages, "San Jose" should appear in the H1 and subtitle. "Bay Area" can stay in body copy naturally.
 
-### Available real images (21 total)
+### Problem 2: About page layout
+The "How We Got Here" section has 4 long paragraphs paired with one image in a side-by-side grid, making the image look small. Convert this to a ZigZag layout that splits the content into 2 items, each pairing 2 paragraphs with an image.
 
-| # | Import var | Category | File |
-|---|---|---|---|
-| 1 | catalinaPavers | Pavers | Catalina_Grana_pavers.jpg |
-| 2 | woodFinishWalkway | Pavers | Wood_finish_Porcelain_walkway.jpg |
-| 3 | prefabPergola | Pavers | Prefabricated_placebo-2.jpg |
-| 4 | frontYardPavers | Pavers | front_yard_pavers.jpg |
-| 5 | paverWalkways | Pavers | paver_walkways.jpg |
-| 6 | hollandstoneDriveway | Pavers | Hollandstone_driveway_paver.jpg |
-| 7 | sealedWetLook | Pavers | sealed_wet_look_pavers.jpg |
-| 8 | landscapingSanJose | Landscaping | landscaping-san-jose-ca.jpg |
-| 9 | lavaRockLandscaping | Landscaping | lava-rock-landscaping-san-jose.jpg |
-| 10 | sodLandscape | Landscaping | sod_landscape_with_circle_accent.jpg |
-| 11 | lowMaintenanceLandscape | Landscaping | Low_maintenance_Landscape.jpg |
-| 12 | pebbleStonesLandscape | Landscaping | pebble-stones-landscape-2.jpg |
-| 13 | outdoorKitchenFirepit | Outdoor Kitchens | outdoor_kitchen_and_firepit.jpg |
-| 14 | outdoorKitchenPergola | Outdoor Kitchens | outdoor_kitchen_with_a_pergola.jpg |
-| 15 | turfLargeYard | Artificial Turf | articifical_turf_in_large_yard.jpg |
-| 16 | turfFrontYard | Artificial Turf | artifical_turf_in_front_yard.jpg |
-| 17 | stampedConcrete | Concrete | Stamped_concrete.jpg |
-| 18 | concreteWork | Concrete | concrete_work_in_san_jose.jpg |
-| 19 | lavaRockHardscape | Hardscape | lava-rock-hardscape-san-jose.jpg |
-| 20 | seatedRetainingWalls | Retaining Walls | seated_retaining_walls.jpg |
-| 21 | (public path) | Pavers | /images/california-gold-tile-walkway.jpg |
+---
 
-### Image Assignment Plan
+### H1 and Subtitle Changes (7 service pages)
 
-**About page** — "How We Got Here" zig-zag:
-- Convert the text-only section + standalone image break into a zig-zag with text on left, storage yard image on right. Remove the separate `<section>` image break (lines 112-124).
+**Pavers.tsx**
+- H1: "Custom Paver Installations for Bay Area Homes" → "Custom Paver Installations in San Jose"
+- Subtitle: "...for Bay Area homes of every size..." → "...for San Jose homes of every size..."
 
-**Pavers.tsx** (3 zigzag images):
-- zigzag1 → catalinaPavers
-- zigzag2 → sealedWetLook
-- zigzag3 → frontYardPavers
+**Landscaping.tsx**
+- H1: "Design-Build Landscaping for Bay Area Homes" → "Design-Build Landscaping in San Jose"
+- Subtitle: "...for the Bay Area climate..." → "...for the San Jose climate..."
 
-**Landscaping.tsx** (2 zigzag images):
-- zigzag8 → sodLandscape
-- zigzag6 → lowMaintenanceLandscape
+**OutdoorKitchens.tsx**
+- H1: "Outdoor Kitchens & Living Structures" → "Outdoor Kitchens & Living Structures in San Jose"
+- Subtitle: remains as-is (no geo currently)
 
-**OutdoorKitchens.tsx** (2 zigzag images):
-- zigzag4 → outdoorKitchenFirepit
-- zigzag1 → outdoorKitchenPergola
+**ArtificialTurf.tsx**
+- H1: "Artificial Turf Installation for Bay Area Homes" → "Artificial Turf Installation in San Jose"
+- Body H2: "Why Bay Area Homeowners..." → "Why San Jose Homeowners..."
 
-**ArtificialTurf.tsx** (2 zigzag images):
-- zigzag6 → turfLargeYard
-- zigzag8 → turfFrontYard
+**ConcreteDriveways.tsx**
+- H1: "Concrete Driveway Installation & Replacement" → "Concrete Driveway Contractor in San Jose"
+- Subtitle: "...built for Bay Area homes..." → "...built for San Jose homes..."
 
-**ConcreteDriveways.tsx** (2 zigzag images):
-- zigzag7 → stampedConcrete
-- zigzag2 → concreteWork
+**Hardscape.tsx**
+- H1: "Hardscape Construction Built to Last" → "Hardscape Contractor in San Jose"
+- Subtitle: "...designed for Bay Area living..." → "...designed for San Jose living..."
 
-**Hardscape.tsx** (3 zigzag images):
-- zigzag2 → lavaRockHardscape
-- zigzag3 → paverWalkways
-- zigzag1 → hollandstoneDriveway
+**RetainingWalls.tsx**
+- H1: "Retaining Wall Construction for Bay Area Properties" → "Retaining Wall Contractor in San Jose"
+- Subtitle: "...Silicon Valley's unique terrain" stays (good secondary keyword)
 
-**RetainingWalls.tsx** (2 zigzag images):
-- zigzag5 → seatedRetainingWalls
-- zigzag3 → woodFinishWalkway
+**Note**: Body copy references to "Bay Area" in paragraphs, FAQ answers, and zigzag text will remain — they're natural and help with broader geo-relevance without hurting the primary San Jose targeting.
 
-**ServiceAreas.tsx** (2 zigzag images):
-- zigzag1 → landscapingSanJose
-- zigzag2 → pebbleStonesLandscape
+---
 
-**Atherton.tsx** (3 zigzag images) — unique set:
-- zigzag1 → prefabPergola
-- zigzag4 → outdoorKitchenPergola
-- zigzag5 → `/images/california-gold-tile-walkway.jpg`
+### About Page — "How We Got Here" Zig-Zag
 
-**LosGatos.tsx** (2 zigzag images) — unique set:
-- zigzag3 → lavaRockLandscaping
-- zigzag5 → catalinaPavers
+Convert the current 2-column grid (lines 92-122) into a `<ZigZagSection>` with 2 items:
 
-**Saratoga.tsx** (2 zigzag images) — unique set:
-- zigzag2 → woodFinishWalkway
-- zigzag4 → outdoorKitchenFirepit
+**Item 1** (text left, image right):
+- Title: "How We Got Here"
+- Text: Paragraphs 1-2 (founding story + growth from San Jose neighborhoods)
+- Image: `/images/stones-landscaping-storage-yard.jpg`
 
-### Technical approach
+**Item 2** (text right, image left — automatic zig-zag):
+- Title: "Who We Work With"
+- Text: Paragraphs 3-4 (client profile + quality commitment)
+- Image: A second real project photo (e.g., `landscapingSanJose` — showing actual work in San Jose)
 
-Each page file will:
-1. Import the needed images from `@/assets/projects/...`
-2. Replace `IMAGES.zigzag*` references with the imported variables (or public path strings)
-3. No changes to hero banners or full-width CTA sections
+This balances text and imagery across two rows instead of cramming everything into one.
 
-For the **About page**, the "How We Got Here" section (lines 92-110) will be restructured into a 2-column grid: text paragraphs on the left, the storage yard image on the right. The standalone image break section (lines 112-124) will be removed.
+---
 
-### Files changed (12 total)
-- `src/pages/About.tsx`
-- `src/pages/Pavers.tsx`
-- `src/pages/Landscaping.tsx`
-- `src/pages/OutdoorKitchens.tsx`
-- `src/pages/ArtificialTurf.tsx`
-- `src/pages/ConcreteDriveways.tsx`
-- `src/pages/Hardscape.tsx`
-- `src/pages/RetainingWalls.tsx`
-- `src/pages/ServiceAreas.tsx`
-- `src/pages/Atherton.tsx`
-- `src/pages/LosGatos.tsx`
-- `src/pages/Saratoga.tsx`
+### Files changed (8 total)
+- `src/pages/Pavers.tsx` — H1 + subtitle
+- `src/pages/Landscaping.tsx` — H1 + subtitle
+- `src/pages/OutdoorKitchens.tsx` — H1
+- `src/pages/ArtificialTurf.tsx` — H1 + body H2
+- `src/pages/ConcreteDriveways.tsx` — H1 + subtitle
+- `src/pages/Hardscape.tsx` — H1 + subtitle
+- `src/pages/RetainingWalls.tsx` — H1
+- `src/pages/About.tsx` — restructure "How We Got Here" into ZigZagSection
 
