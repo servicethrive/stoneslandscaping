@@ -1,35 +1,34 @@
 
 
-## Enhance "What Sets Us Apart" Section with Numbered Items
+## Add Lightbox Popup with Slideshow Navigation
 
-### Current state
-Four cards in a 2×2 grid with `bg-brand-cream` background and border. Clean but all four look identical — nothing draws the eye to prioritize or scan quickly.
+### What we're building
+A reusable lightbox/modal component that opens when clicking any image, showing it full-screen with previous/next navigation and keyboard support. Used in two places: the Gallery page grid and the About page Fleet section.
 
-### Changes to `src/pages/About.tsx` (lines 115-127)
+### New component: `src/components/ui/ImageLightbox.tsx`
+A modal overlay that:
+- Displays the clicked image full-screen with dark backdrop
+- Shows prev/next arrows (ChevronLeft, ChevronRight from lucide-react)
+- Supports keyboard navigation (left/right arrows, Escape to close)
+- Shows image caption (alt text) and position indicator (e.g., "3 / 21")
+- Click outside image or X button to close
+- Prevents body scroll when open
 
-**Add prominent numbers** — Large styled numbers (01–04) in each card as a visual anchor, using the primary brown color at a large display size. This creates a scannable hierarchy.
+Props: `images: {src: string, alt: string}[]`, `currentIndex: number`, `isOpen: boolean`, `onClose: () => void`, `onNavigate: (index: number) => void`
 
-**Additional visual enhancements:**
-- Add a thick left border accent (`border-l-4 border-l-primary`) to each card for a "highlight bar" effect
-- Display the number as a large, semi-transparent element (e.g., `text-4xl font-bold text-primary/20`) in the top-left, with the title and description below it
-- Add the corresponding Lucide icon next to each title for quick recognition:
-  1. `FileText` — Transparent, Detailed Proposals
-  2. `MessageSquare` — Responsive Communication
-  3. `Palette` — Design Capability
-  4. `Users` — Experienced, Full-Time Crews
+### Changes to `src/components/sections/GalleryGrid.tsx`
+- Add state for `lightboxIndex` and `lightboxOpen`
+- Make each image card clickable (`cursor-pointer`, `onClick` handler)
+- Render `<ImageLightbox>` with the filtered images array
+- Clicking a thumbnail opens the lightbox at that index; slideshow navigates through the currently filtered set
 
-**Result per card:**
-```
-┌─────────────────────────────┐
-│▌ 01                        │
-│▌ 📄 Transparent, Detailed  │
-│▌    Proposals               │
-│▌ You'll receive a clear... │
-└─────────────────────────────┘
-```
+### Changes to `src/pages/About.tsx` (Fleet section, lines 173-191)
+- Add state for lightbox
+- Make each fleet image clickable
+- Render `<ImageLightbox>` with the 6 fleet images
 
-The large number provides scanability, the left accent bar adds visual weight, and the icon gives instant context — all while keeping the existing cream background and border styling.
-
-### Files changed
-- `src/pages/About.tsx` — update the "What Sets Us Apart" card rendering (lines 116-126)
+### Files changed (3)
+- `src/components/ui/ImageLightbox.tsx` — new reusable lightbox component
+- `src/components/sections/GalleryGrid.tsx` — add click-to-open + lightbox
+- `src/pages/About.tsx` — add click-to-open + lightbox on fleet grid
 
