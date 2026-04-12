@@ -25,8 +25,8 @@ const Landscaping = () => {
   return (
     <Layout>
       <HeroSection
-        title="Design-Build Landscaping for Bay Area Homes"
-        subtitle="Complete landscape design and installation - front yards, backyards, and full-property transformations. Thoughtfully planned for the Bay Area climate, professionally built to last."
+        title="Design-Build Landscaping in San Jose"
+        subtitle="Complete landscape design and installation - front yards, backyards, and full-property transformations. Thoughtfully planned for the San Jose climate, professionally built to last."
         backgroundImage={IMAGES.landscaping}
       />
       <TrustBar />

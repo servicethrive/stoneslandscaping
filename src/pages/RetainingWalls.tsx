@@ -26,7 +26,7 @@ const RetainingWalls = () => {
   return (
     <Layout>
       <HeroSection
-        title="Retaining Wall Construction for Bay Area Properties"
+        title="Retaining Wall Contractor in San Jose"
         subtitle="Structural and decorative retaining walls that solve complex grading challenges, prevent erosion, and add architectural impact - engineered for Silicon Valley's unique terrain."
         backgroundImage={IMAGES.retainingWall}
       />

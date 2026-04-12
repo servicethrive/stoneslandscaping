@@ -29,8 +29,8 @@ const Pavers = () => {
   return (
     <Layout>
       <HeroSection
-        title="Custom Paver Installations for Bay Area Homes"
-        subtitle={`Premium paver patios, walkways, and driveways crafted with the finest materials and backed by our ${BUSINESS.paverWarrantyYears}-year warranty - for Bay Area homes of every size and style, built with precision.`}
+        title="Custom Paver Installations in San Jose"
+        subtitle={`Premium paver patios, walkways, and driveways crafted with the finest materials and backed by our ${BUSINESS.paverWarrantyYears}-year warranty - for San Jose homes of every size and style, built with precision.`}
         backgroundImage={IMAGES.pavers}
       />
       <TrustBar />

@@ -33,7 +33,7 @@ const OutdoorKitchens = () => {
   return (
     <Layout>
       <HeroSection
-        title="Outdoor Kitchens & Living Structures"
+        title="Outdoor Kitchens & Living Structures in San Jose"
         subtitle="Design and build fully functional outdoor kitchens, custom pergolas, and shade structures - tailored to your space and how you actually live and entertain."
         backgroundImage={IMAGES.outdoorKitchen}
       />

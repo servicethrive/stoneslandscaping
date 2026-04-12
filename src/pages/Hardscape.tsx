@@ -33,8 +33,8 @@ const Hardscape = () => {
   return (
     <Layout>
       <HeroSection
-        title="Hardscape Construction Built to Last"
-        subtitle="From expansive paver patios to engineered retaining walls and custom outdoor kitchens - hardscape projects designed for Bay Area living and built to perform for decades."
+        title="Hardscape Contractor in San Jose"
+        subtitle="From expansive paver patios to engineered retaining walls and custom outdoor kitchens - hardscape projects designed for San Jose living and built to perform for decades."
         backgroundImage={IMAGES.hardscape}
       />
       <TrustBar />
