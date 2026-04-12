@@ -1,6 +1,8 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import ImageLightbox from "@/components/ui/ImageLightbox";
 
 import catalinaPavers from "@/assets/projects/Catalina_Grana_pavers.jpg";
 import outdoorKitchenFirepit from "@/assets/projects/outdoor_kitchen_and_firepit.jpg";
