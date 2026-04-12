@@ -6,7 +6,9 @@ import ProcessSteps from "@/components/sections/ProcessSteps";
 import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
-import { IMAGES, BUSINESS } from "@/lib/constants";
+import { IMAGES, BUSINESS, SERVICES } from "@/lib/constants";
+import { getServiceSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 import seatedRetainingWalls from "@/assets/projects/seated_retaining_walls.jpg";
 import woodFinishWalkway from "@/assets/projects/Wood_finish_Porcelain_walkway.jpg";
 import { CheckCircle } from "lucide-react";
@@ -24,8 +26,20 @@ const RetainingWalls = () => {
     { name: "Decorative Garden Walls", desc: "Shorter accent walls used to define planting beds, create raised gardens, frame outdoor living spaces, or add visual depth to flat properties." },
   ];
 
+  const svc = SERVICES.find(s => s.path === "/retaining-walls")!;
+  const faqs = [
+    { question: "Do retaining walls need permits in San Jose?", answer: "Walls over four feet in height typically require permits and may need structural engineering in most Bay Area jurisdictions. We handle the entire process." },
+    { question: "How long do retaining walls last?", answer: "A properly engineered and constructed retaining wall lasts 50 years or more. Longevity depends on adequate footing depth, correct drainage, and properly compacted backfill." },
+    { question: "What's the most cost-effective retaining wall type?", answer: "Segmental block walls typically offer the best balance of cost, structural performance, and visual appeal for most residential projects." },
+    { question: "Can you integrate landscaping with retaining walls?", answer: "Absolutely - and we recommend it. We regularly integrate retaining walls with terraced planting beds, drip irrigation, landscape lighting, and other hardscape features." },
+    { question: "What causes retaining walls to fail?", answer: "The most common causes are inadequate drainage behind the wall, insufficient footing depth, and poor backfill compaction." },
+  ];
+
   return (
     <Layout>
+      <StructuredData data={getServiceSchema(svc.title, svc.description, svc.image, svc.path)} />
+      <StructuredData data={getBreadcrumbSchema([{ name: "Retaining Walls", path: "/retaining-walls" }])} />
+      <StructuredData data={getFAQSchema(faqs)} />
       <HeroSection
         title="Retaining Wall Contractor in San Jose"
         subtitle="Structural and decorative retaining walls that solve complex grading challenges, prevent erosion, and add architectural impact - engineered for Silicon Valley's unique terrain."
@@ -108,13 +122,7 @@ const RetainingWalls = () => {
         { title: "Grading & Walkthrough", description: "Final grading, landscape restoration, and a detailed walkthrough to confirm the wall meets our standards and yours." },
       ]} />
 
-      <FAQAccordion faqs={[
-        { question: "Do retaining walls need permits in San Jose?", answer: "Walls over four feet in height typically require permits and may need structural engineering in most Bay Area jurisdictions. We handle the entire process." },
-        { question: "How long do retaining walls last?", answer: "A properly engineered and constructed retaining wall lasts 50 years or more. Longevity depends on adequate footing depth, correct drainage, and properly compacted backfill." },
-        { question: "What's the most cost-effective retaining wall type?", answer: "Segmental block walls typically offer the best balance of cost, structural performance, and visual appeal for most residential projects." },
-        { question: "Can you integrate landscaping with retaining walls?", answer: "Absolutely - and we recommend it. We regularly integrate retaining walls with terraced planting beds, drip irrigation, landscape lighting, and other hardscape features." },
-        { question: "What causes retaining walls to fail?", answer: "The most common causes are inadequate drainage behind the wall, insufficient footing depth, and poor backfill compaction." },
-      ]} />
+      <FAQAccordion faqs={faqs} />
 
       <CTABanner title="Schedule a Retaining Wall Assessment" subtitle="We'll evaluate your slope, soil, and drainage conditions and recommend the right wall solution - no obligation, no pressure." />
     </Layout>

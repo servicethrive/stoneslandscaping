@@ -3,6 +3,8 @@ import Layout from "@/components/layout/Layout";
 import TestimonialBlock from "@/components/sections/TestimonialBlock";
 import CTABanner from "@/components/sections/CTABanner";
 import { BUSINESS } from "@/lib/constants";
+import { getReviewSchema, getBreadcrumbSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 import { Star } from "lucide-react";
 
 const reviewHighlights = [
@@ -22,6 +24,8 @@ const Reviews = () => {
 
   return (
     <Layout>
+      <StructuredData data={getReviewSchema(reviewHighlights)} />
+      <StructuredData data={getBreadcrumbSchema([{ name: "Reviews", path: "/reviews" }])} />
       <section className="bg-brand-dark pt-40 pb-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Client Reviews</h1>

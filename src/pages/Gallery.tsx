@@ -2,6 +2,8 @@ import { usePageMeta } from "@/hooks/use-page-meta";
 import Layout from "@/components/layout/Layout";
 import GalleryGrid from "@/components/sections/GalleryGrid";
 import CTABanner from "@/components/sections/CTABanner";
+import { getImageGallerySchema, getBreadcrumbSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 
 // Pavers
 import catalinaPavers from "@/assets/projects/Catalina_Grana_pavers.jpg";
@@ -84,6 +86,8 @@ const Gallery = () => {
 
   return (
     <Layout>
+      <StructuredData data={getImageGallerySchema(galleryImages.map(img => ({ src: typeof img.src === 'string' ? img.src : '', alt: img.alt })))} />
+      <StructuredData data={getBreadcrumbSchema([{ name: "Gallery", path: "/gallery" }])} />
       <section className="bg-brand-dark pt-40 pb-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Our Work</h1>

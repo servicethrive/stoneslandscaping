@@ -8,6 +8,8 @@ import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS, SERVICES } from "@/lib/constants";
+import { getServiceAreaPageSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 import prefabPergola from "@/assets/projects/Prefabricated_placebo-2.jpg";
 import outdoorKitchenPergola from "@/assets/projects/outdoor_kitchen_with_a_pergola.jpg";
 import { CheckCircle, ArrowRight } from "lucide-react";
@@ -20,6 +22,16 @@ const Atherton = () => {
 
   return (
     <Layout>
+      <StructuredData data={getServiceAreaPageSchema("Atherton", "/service-areas/atherton")} />
+      <StructuredData data={getBreadcrumbSchema([{ name: "Service Areas", path: "/service-areas" }, { name: "Atherton", path: "/service-areas/atherton" }])} />
+      <StructuredData data={getFAQSchema([
+        { question: "Do you have experience with large estate properties?", answer: "Yes. We regularly work on Atherton properties ranging from half-acre lots to multi-acre estates." },
+        { question: "Can you coordinate with our architect or general contractor?", answer: "Absolutely. Many of our Atherton projects involve collaboration with architects, designers, and GCs." },
+        { question: "What premium paver materials do you recommend for Atherton estates?", answer: "For estate-level properties, we most often recommend Techo-Bloc's Blu Grande or Borealis series, natural travertine, and large-format porcelain pavers." },
+        { question: "How long do large estate projects typically take?", answer: "Timeline depends on scope. A standalone paver motor court might take 2-3 weeks. A comprehensive outdoor renovation can span 6-12 weeks." },
+        { question: "Do you handle Atherton's permitting requirements?", answer: "Yes. We're familiar with the Town of Atherton's permitting process and setback requirements." },
+        { question: "What warranty do you provide?", answer: `Our paver installations are backed by a ${BUSINESS.paverWarrantyYears}-year warranty. Landscape installations include a ${BUSINESS.landscapeWarrantyDays}-day plant establishment warranty.` },
+      ])} />
       <HeroSection
         title="Estate-Level Landscaping & Hardscape in Atherton"
         subtitle="Premium outdoor renovations for Atherton's most distinguished properties. Custom pavers, outdoor kitchens, fire features, and complete landscape design-build - crafted for estates where only the finest will do."

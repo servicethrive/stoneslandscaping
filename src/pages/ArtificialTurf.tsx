@@ -6,7 +6,9 @@ import ProcessSteps from "@/components/sections/ProcessSteps";
 import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
-import { IMAGES, BUSINESS } from "@/lib/constants";
+import { IMAGES, BUSINESS, SERVICES } from "@/lib/constants";
+import { getServiceSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 import turfLargeYard from "@/assets/projects/articifical_turf_in_large_yard.jpg";
 import turfFrontYard from "@/assets/projects/artifical_turf_in_front_yard.jpg";
 import { CheckCircle } from "lucide-react";
@@ -17,8 +19,20 @@ const ArtificialTurf = () => {
     "Artificial turf installation in San Jose. Premium synthetic lawns for residential & commercial. Low maintenance, year-round green. Free quotes."
   );
 
+  const svc = SERVICES.find(s => s.path === "/artificial-turf")!;
+  const faqs = [
+    { question: "How long does artificial turf last?", answer: "Professionally installed premium turf typically lasts 15–20 years with minimal maintenance. The quality of the base preparation and the turf product itself are the two biggest factors in lifespan. We use commercial-grade products and proper base construction to maximize longevity." },
+    { question: "Does artificial turf get hot in the sun?", answer: "Direct sunlight can warm turf surfaces, similar to any outdoor surface including concrete, pavers, and natural stone. Shaded areas stay cool. Modern turf products with lighter-colored backing and specialized infill help manage heat. If heat is a concern, we can discuss turf products with enhanced cooling technology." },
+    { question: "Is artificial turf safe for dogs and pets?", answer: "Yes. Premium turf drains well, is easy to clean with a simple hose rinse, and doesn't harbor fleas or ticks like natural grass. Proper antimicrobial infill keeps odor under control even with regular pet use. We install many turf projects specifically as dedicated pet areas." },
+    { question: "How does artificial turf compare to natural grass on cost?", answer: "Artificial turf costs more upfront than sod installation, but the lifetime savings on water, maintenance equipment, fertilizer, and lawn care services are significant. Most Bay Area homeowners break even within 3–5 years and save money every year after that. See our detailed Artificial Turf vs Sod comparison page for a full breakdown." },
+    { question: "Can turf be installed over existing concrete or pavers?", answer: "In some cases, yes - turf can be installed over hard surfaces with proper padding and drainage. However, for the best results and longest lifespan, we recommend a full base installation with proper grading and drainage. We'll assess your specific situation during the consultation." },
+  ];
+
   return (
     <Layout>
+      <StructuredData data={getServiceSchema(svc.title, svc.description, svc.image, svc.path)} />
+      <StructuredData data={getBreadcrumbSchema([{ name: "Artificial Turf", path: "/artificial-turf" }])} />
+      <StructuredData data={getFAQSchema(faqs)} />
       <HeroSection
         title="Artificial Turf Installation in San Jose"
         subtitle="A lush, maintenance-free yard year-round - no mowing, no watering, no brown patches. Professionally installed premium synthetic turf that looks and feels natural."
@@ -100,13 +114,7 @@ const ArtificialTurf = () => {
         { title: "Final Inspection", description: "Walk the completed installation, check seams, drainage, and edge details. Provide care instructions for long-term turf maintenance." },
       ]} />
 
-      <FAQAccordion faqs={[
-        { question: "How long does artificial turf last?", answer: "Professionally installed premium turf typically lasts 15–20 years with minimal maintenance. The quality of the base preparation and the turf product itself are the two biggest factors in lifespan. We use commercial-grade products and proper base construction to maximize longevity." },
-        { question: "Does artificial turf get hot in the sun?", answer: "Direct sunlight can warm turf surfaces, similar to any outdoor surface including concrete, pavers, and natural stone. Shaded areas stay cool. Modern turf products with lighter-colored backing and specialized infill help manage heat. If heat is a concern, we can discuss turf products with enhanced cooling technology." },
-        { question: "Is artificial turf safe for dogs and pets?", answer: "Yes. Premium turf drains well, is easy to clean with a simple hose rinse, and doesn't harbor fleas or ticks like natural grass. Proper antimicrobial infill keeps odor under control even with regular pet use. We install many turf projects specifically as dedicated pet areas." },
-        { question: "How does artificial turf compare to natural grass on cost?", answer: "Artificial turf costs more upfront than sod installation, but the lifetime savings on water, maintenance equipment, fertilizer, and lawn care services are significant. Most Bay Area homeowners break even within 3–5 years and save money every year after that. See our detailed Artificial Turf vs Sod comparison page for a full breakdown." },
-        { question: "Can turf be installed over existing concrete or pavers?", answer: "In some cases, yes - turf can be installed over hard surfaces with proper padding and drainage. However, for the best results and longest lifespan, we recommend a full base installation with proper grading and drainage. We'll assess your specific situation during the consultation." },
-      ]} />
+      <FAQAccordion faqs={faqs} />
 
       <CTABanner title="Get a Turf Installation Estimate" subtitle="Request a consultation and we'll provide a detailed proposal for your artificial turf project - no obligation." />
     </Layout>

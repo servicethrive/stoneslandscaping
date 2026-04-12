@@ -7,6 +7,8 @@ import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { BUSINESS, IMAGES } from "@/lib/constants";
+import { getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 import landscapingSanJose from "@/assets/projects/landscaping-san-jose-ca.jpg";
 import pebbleStonesLandscape from "@/assets/projects/pebble-stones-landscape-2.jpg";
 
@@ -18,6 +20,7 @@ const ServiceAreas = () => {
 
   return (
     <Layout>
+      <StructuredData data={getBreadcrumbSchema([{ name: "Service Areas", path: "/service-areas" }])} />
       <HeroSection
         title="Serving San Jose & the Bay Area's Finest Communities"
         subtitle="Premium landscaping, hardscape, and outdoor living construction across Santa Clara, San Mateo, Alameda, and Santa Cruz Counties - from first-time renovations to grand estate transformations. Licensed, insured, and locally based."

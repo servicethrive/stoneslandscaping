@@ -8,6 +8,8 @@ import WarrantyBlock from "@/components/sections/WarrantyBlock";
 import CTABanner from "@/components/sections/CTABanner";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS } from "@/lib/constants";
+import { getAboutPageSchema, getBreadcrumbSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 import landscapingSanJose from "@/assets/projects/landscaping-san-jose-ca.jpg";
 import { Star, Shield, Truck, CheckCircle, FileText, MessageSquare, Palette, Users, User } from "lucide-react";
 
@@ -21,6 +23,8 @@ const About = () => {
 
   return (
     <Layout>
+      <StructuredData data={getAboutPageSchema()} />
+      <StructuredData data={getBreadcrumbSchema([{ name: "About", path: "/about" }])} />
       <HeroSection
         title="About Stones Landscaping"
         subtitle={`A Bay Area hardscape and outdoor living contractor built on hands-on experience, honest communication, and craftsmanship that lasts. Serving San Jose and Silicon Valley since ${BUSINESS.founded}.`}
