@@ -8,6 +8,8 @@ import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS, SERVICES } from "@/lib/constants";
+import lavaRockLandscaping from "@/assets/projects/lava-rock-landscaping-san-jose.jpg";
+import catalinaPavers from "@/assets/projects/Catalina_Grana_pavers.jpg";
 import { CheckCircle, ArrowRight } from "lucide-react";
 
 const LosGatos = () => {
@@ -41,12 +43,12 @@ const LosGatos = () => {
         {
           title: "Year-Round Outdoor Enjoyment",
           text: "Los Gatos homeowners invest in their outdoor spaces because the climate allows year-round enjoyment and the property values justify premium materials and craftsmanship. We've built sunken fire pit lounges overlooking the valley, expansive natural stone patios framed by heritage oaks, and custom outdoor kitchens with granite countertops and built-in grills.",
-          image: IMAGES.zigzag3,
+          image: lavaRockLandscaping,
         },
         {
           title: "Hillside Expertise",
           text: `Whether your Los Gatos home needs a complete backyard transformation, a hillside retaining wall system with terraced planting beds, or an elegant front entry approach with natural stone pavers, our team delivers results that honor the setting. Licensed (#${BUSINESS.license}), fully insured, and backed by our ${BUSINESS.paverWarrantyYears}-year paver warranty.`,
-          image: IMAGES.zigzag5,
+          image: catalinaPavers,
         },
       ]} />
 

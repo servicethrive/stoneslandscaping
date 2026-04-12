@@ -7,6 +7,8 @@ import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS } from "@/lib/constants";
+import stampedConcrete from "@/assets/projects/Stamped_concrete.jpg";
+import concreteWork from "@/assets/projects/concrete_work_in_san_jose.jpg";
 import { CheckCircle } from "lucide-react";
 
 const ConcreteDriveways = () => {
@@ -46,12 +48,12 @@ const ConcreteDriveways = () => {
         {
           title: "The Sub-Base Is Everything",
           text: "Here's something most homeowners don't think about until it's too late: the sub-base is everything. A beautiful concrete surface poured over a poorly prepared base will crack within a few years, guaranteed. We excavate to the proper depth, compact the sub-grade, and install a gravel base layer before any concrete is placed.",
-          image: IMAGES.zigzag7,
+          image: stampedConcrete,
         },
         {
           title: "Licensed Concrete Specialists",
           text: `We're licensed for concrete-related services under classification C-61/D06 (License #${BUSINESS.license}), and our work reflects that specialization. Concrete isn't a side service for us - it's one of the core trades we've built our reputation on. We've poured driveways for properties across San Jose, Campbell, Santa Clara, and throughout the South Bay.`,
-          image: IMAGES.zigzag2,
+          image: concreteWork,
         },
       ]} />
 

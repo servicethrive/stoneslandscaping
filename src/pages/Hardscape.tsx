@@ -7,6 +7,9 @@ import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS } from "@/lib/constants";
+import lavaRockHardscape from "@/assets/projects/lava-rock-hardscape-san-jose.jpg";
+import paverWalkways from "@/assets/projects/paver_walkways.jpg";
+import hollandstoneDriveway from "@/assets/projects/Hollandstone_driveway_paver.jpg";
 import { ArrowRight, CheckCircle } from "lucide-react";
 
 const hardscapeServices = [
@@ -53,17 +56,17 @@ const Hardscape = () => {
         {
           title: "The Details You Don't See",
           text: "Here's what separates professional hardscape from the work you see failing after a few years: it's the parts you don't see. The excavation depth, the base material, the compaction, the grading for drainage, the edge restraint systems, the footing depth on walls - these invisible details determine whether your patio stays flat, your wall stays straight, and your outdoor kitchen stays level.",
-          image: IMAGES.zigzag2,
+          image: lavaRockHardscape,
         },
         {
           title: "Premium Materials, Proven Methods",
           text: `Every hardscape project we take on is built with proper engineering, premium materials selected for the Bay Area climate, and craftsmanship that reflects our ${new Date().getFullYear() - BUSINESS.founded}+ years of residential outdoor construction experience. Our paver installations carry a ${BUSINESS.paverWarrantyYears}-year warranty because we stand behind the way we build.`,
-          image: IMAGES.zigzag3,
+          image: paverWalkways,
         },
         {
           title: "Transform Your Outdoor Living",
           text: "Whether you're replacing an aging concrete patio, adding a retaining wall to reclaim a hillside, building a complete outdoor kitchen and entertainment area, or transforming your entire backyard into a luxury outdoor living space - hardscape is the foundation of a property that works as beautifully as it looks.",
-          image: IMAGES.zigzag1,
+          image: hollandstoneDriveway,
         },
       ]} />
 

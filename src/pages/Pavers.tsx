@@ -8,6 +8,9 @@ import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS } from "@/lib/constants";
+import catalinaPavers from "@/assets/projects/Catalina_Grana_pavers.jpg";
+import sealedWetLook from "@/assets/projects/sealed_wet_look_pavers.jpg";
+import frontYardPavers from "@/assets/projects/front_yard_pavers.jpg";
 import { CheckCircle } from "lucide-react";
 
 const Pavers = () => {
@@ -50,17 +53,17 @@ const Pavers = () => {
         {
           title: "Hundreds of Bay Area Projects Completed",
           text: "We've installed pavers across hundreds of residential properties in San Jose, Atherton, Los Gatos, Saratoga, and throughout Santa Clara County. Each project receives the same meticulous attention to detail: correct base depth, proper slope for drainage, clean cuts, and a finished product that looks precise and intentional. Our clients include homeowners in some of Silicon Valley's most prestigious neighborhoods.",
-          image: IMAGES.zigzag1,
+          image: catalinaPavers,
         },
         {
           title: "Built for Bay Area Conditions",
           text: "The Bay Area's unique climate - warm, dry summers and cool, wet winters - demands a paver installation approach that accounts for temperature shifts, moisture, and soil movement. We design every base system to handle these conditions, ensuring your patio, walkway, or driveway performs beautifully through every season without cracking, shifting, or settling.",
-          image: IMAGES.zigzag2,
+          image: sealedWetLook,
         },
         {
           title: "Every Project, Every Scale",
           text: "Whether your project calls for a grand paver patio surrounding a custom fire pit, an elegant front entry walkway with natural stone borders, or a complete driveway transformation with interlocking pavers, our team brings the experience, equipment, and craftsmanship to deliver results that exceed expectations.",
-          image: IMAGES.zigzag3,
+          image: frontYardPavers,
         },
       ]} />
 
