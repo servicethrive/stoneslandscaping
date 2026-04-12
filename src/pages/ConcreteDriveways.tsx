@@ -25,8 +25,8 @@ const ConcreteDriveways = () => {
   return (
     <Layout>
       <HeroSection
-        title="Concrete Driveway Installation & Replacement"
-        subtitle="Professional concrete driveways built for Bay Area homes - standard, stamped, and decorative finishes. Proper grading, reinforcement, and lasting results backed by our craftsmanship guarantee."
+        title="Concrete Driveway Contractor in San Jose"
+        subtitle="Professional concrete driveways built for San Jose homes - standard, stamped, and decorative finishes. Proper grading, reinforcement, and lasting results backed by our craftsmanship guarantee."
         backgroundImage={IMAGES.concrete}
       />
       <TrustBar />

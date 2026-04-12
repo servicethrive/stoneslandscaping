@@ -19,7 +19,7 @@ const ArtificialTurf = () => {
   return (
     <Layout>
       <HeroSection
-        title="Artificial Turf Installation for Bay Area Homes"
+        title="Artificial Turf Installation in San Jose"
         subtitle="A lush, maintenance-free yard year-round - no mowing, no watering, no brown patches. Professionally installed premium synthetic turf that looks and feels natural."
         backgroundImage={IMAGES.turf}
       />
@@ -28,7 +28,7 @@ const ArtificialTurf = () => {
       <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Why Bay Area Homeowners Are Making the Switch</h2>
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Why San Jose Homeowners Are Making the Switch</h2>
           <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
             Water restrictions, recurring drought cycles, and the constant upkeep demands of natural grass have pushed more Bay Area homeowners toward artificial turf than ever before - and the results speak for themselves.
           </p>
