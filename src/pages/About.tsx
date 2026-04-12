@@ -11,6 +11,8 @@ import landscapingSanJose from "@/assets/projects/landscaping-san-jose-ca.jpg";
 import { Star, Shield, Truck, CheckCircle, FileText, MessageSquare, Palette, Users } from "lucide-react";
 
 const About = () => {
+  const [fleetLightboxOpen, setFleetLightboxOpen] = useState(false);
+  const [fleetLightboxIndex, setFleetLightboxIndex] = useState(0);
   useEffect(() => {
     document.title = "About Stones Landscaping | Licensed Bay Area Hardscape & Outdoor Living Contractor";
   }, []);
