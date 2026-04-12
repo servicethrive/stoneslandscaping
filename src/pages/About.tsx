@@ -9,7 +9,7 @@ import CTABanner from "@/components/sections/CTABanner";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS } from "@/lib/constants";
 import landscapingSanJose from "@/assets/projects/landscaping-san-jose-ca.jpg";
-import { Star, Shield, Truck, CheckCircle, FileText, MessageSquare, Palette, Users } from "lucide-react";
+import { Star, Shield, Truck, CheckCircle, FileText, MessageSquare, Palette, Users, User } from "lucide-react";
 
 const About = () => {
   const [fleetLightboxOpen, setFleetLightboxOpen] = useState(false);
@@ -56,6 +56,44 @@ const About = () => {
       </section>
 
       <TeamBlock />
+
+      {/* Meet the Team */}
+      <section className="py-20 lg:py-28 bg-background">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-12">
+            <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Meet the Team</h2>
+            <p className="text-muted-foreground font-light text-lg max-w-2xl mx-auto">
+              The people behind every project — from planning to the final walkthrough.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { name: "Manuel Corona Escobar", role: "Founder & Owner", bio: "Founded Stones Landscaping in 2015. Oversees every project from design through completion.", photo: "/images/stones-landscaping-dump-truck.jpg" },
+              { name: "Gladys Torres", role: "Office Administrator", bio: "Manages scheduling, client communications, and keeps day-to-day operations running smoothly.", photo: null },
+              { name: "Project Manager", role: "Project Manager", bio: "Coordinates crews, materials, and timelines to keep every build on track.", photo: null },
+              { name: "Crew Lead", role: "Crew Lead", bio: "Leads on-site construction with years of Bay Area hardscape experience.", photo: null },
+              { name: "Crew Lead", role: "Crew Lead", bio: "Specializes in paver installation, grading, and structural builds.", photo: null },
+              { name: "Crew Lead", role: "Crew Lead", bio: "Ensures quality standards are met on every phase of construction.", photo: null },
+            ].map((member, i) => (
+              <div key={i} className="bg-brand-cream border border-border/60 rounded-sm overflow-hidden text-center">
+                <div className="aspect-square bg-muted flex items-center justify-center overflow-hidden">
+                  {member.photo ? (
+                    <img src={member.photo} alt={member.name} className="w-full h-full object-cover" loading="lazy" />
+                  ) : (
+                    <User className="h-16 w-16 text-muted-foreground/30" />
+                  )}
+                </div>
+                <div className="p-6">
+                  <h3 className="font-display text-lg font-bold text-foreground mb-1">{member.name}</h3>
+                  <p className="text-sm text-primary font-medium mb-2">{member.role}</p>
+                  <p className="text-sm text-muted-foreground font-light leading-relaxed">{member.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Social Proof — Reviews */}
       <section className="py-16 lg:py-20 bg-background">
