@@ -1,25 +1,25 @@
 
 
-## Add Business Name & Fix Font Consistency in Contact Info Section
+## Add Team Bio Section to About Page
 
-### Problem
-1. The Contact Information sidebar doesn't show the business name ("Stones Landscaping Inc.")
-2. Font sizes are inconsistent — phone number has no `text-sm` class while email and address do
+### What
+A "Meet the Team" section on the About page, placed after the existing TeamBlock, featuring 6 team member cards in a responsive grid.
 
-### Changes to `src/pages/Contact.tsx`
+### Team members
+1. **Manuel Corona Escobar** — Founder & Owner (use existing truck photo or placeholder)
+2. **Gladys Torres** — Office Administrator
+3. **[Name TBD]** — Project Manager (placeholder)
+4. **[Name TBD]** — Crew Lead (placeholder)
+5. **[Name TBD]** — Crew Lead (placeholder)
+6. **[Name TBD]** — Crew Lead (placeholder)
 
-**Add business name** as the first item in the contact info list (before phone), using a Building2 icon from lucide-react.
-
-**Normalize font sizes** — all primary text lines use `text-sm font-semibold`, all subtitle lines use `text-xs text-muted-foreground`:
-
-| Item | Current primary class | Fixed |
-|---|---|---|
-| Phone | `font-semibold` (no size) | `text-sm font-semibold` |
-| Email | `text-sm font-semibold break-all` | `text-sm font-semibold break-all` ✅ |
-| Address | `text-sm font-semibold` | ✅ already correct |
-| License | `text-sm font-semibold` | ✅ already correct |
-| **Business name (new)** | — | `text-sm font-semibold` |
+### Design
+- Section with `bg-background`, standard `py-20 lg:py-28` padding
+- Heading "Meet the Team" with the brand accent bar
+- 3-column grid (`grid-cols-1 sm:grid-cols-2 lg:grid-cols-3`)
+- Each card: square photo (placeholder silhouette for TBD members), name in Playfair Display, role in muted text, optional 1-2 line bio
+- Cards styled with `bg-brand-cream border border-border/60 rounded-sm` to match existing sections
 
 ### Files changed
-- `src/pages/Contact.tsx` — add Building2 import, add business name block, fix phone font size
+- `src/pages/About.tsx` — add the new team grid section after `<TeamBlock />`
 
