@@ -29,7 +29,6 @@ const Pavers = () => {
     { name: "Permeable Pavers", desc: "Eco-friendly interlocking pavers that allow water drainage, reducing runoff and meeting Bay Area stormwater requirements without sacrificing design quality." },
   ];
 
-  return (
   const svc = SERVICES.find(s => s.path === "/pavers")!;
   const faqs = [
     { question: "How long do pavers last?", answer: "Properly installed pavers last 25–50+ years. With correct base preparation and edge restraint, they significantly outlast poured concrete and maintain their appearance through decades of Bay Area weather." },
