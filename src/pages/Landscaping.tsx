@@ -6,7 +6,9 @@ import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import DesignProcessBlock from "@/components/sections/DesignProcessBlock";
 import ZigZagSection from "@/components/sections/ZigZagSection";
-import { IMAGES, BUSINESS } from "@/lib/constants";
+import { IMAGES, BUSINESS, SERVICES } from "@/lib/constants";
+import { getServiceSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 import sodLandscape from "@/assets/projects/sod_landscape_with_circle_accent.jpg";
 import lowMaintenanceLandscape from "@/assets/projects/Low_maintenance_Landscape.jpg";
 import { CheckCircle } from "lucide-react";
@@ -23,8 +25,20 @@ const Landscaping = () => {
     "Luxury landscaping contractor in San Jose. Full design-build services for Bay Area homeowners. Drought-tolerant, custom plantings & more."
   );
 
+  const svc = SERVICES.find(s => s.path === "/landscaping")!;
+  const faqs = [
+    { question: "Do you offer landscape design services?", answer: "Yes - we're a design-build firm. For qualifying projects, we provide professional 2D and 3D renderings so you can visualize your new landscape before we break ground." },
+    { question: "What plants work best in the Bay Area?", answer: "We select plants suited to our Mediterranean climate - drought-tolerant California natives, ornamental grasses, succulents, flowering perennials, and select non-native species that thrive with efficient irrigation." },
+    { question: "How long does a landscaping project take?", answer: "Most residential landscaping projects take 1–3 weeks. Full-property renovations that include hardscape integration and drainage may take 3–6 weeks." },
+    { question: "Do you handle irrigation systems?", answer: "Yes. We design and install complete irrigation systems, including drip and spray zones, smart WiFi controllers, rain sensors, and zone-specific scheduling." },
+    { question: "Can you coordinate landscaping with hardscape work?", answer: "Absolutely - and we strongly recommend it. Building the hardscape and landscape together ensures proper drainage integration and a cohesive overall design." },
+  ];
+
   return (
     <Layout>
+      <StructuredData data={getServiceSchema(svc.title, svc.description, svc.image, svc.path)} />
+      <StructuredData data={getBreadcrumbSchema([{ name: "Landscaping", path: "/landscaping" }])} />
+      <StructuredData data={getFAQSchema(faqs)} />
       <HeroSection
         title="Design-Build Landscaping in San Jose"
         subtitle="Complete landscape design and installation - front yards, backyards, and full-property transformations. Thoughtfully planned for the San Jose climate, professionally built to last."
@@ -114,13 +128,7 @@ const Landscaping = () => {
         </div>
       </section>
 
-      <FAQAccordion faqs={[
-        { question: "Do you offer landscape design services?", answer: "Yes - we're a design-build firm. For qualifying projects, we provide professional 2D and 3D renderings so you can visualize your new landscape before we break ground." },
-        { question: "What plants work best in the Bay Area?", answer: "We select plants suited to our Mediterranean climate - drought-tolerant California natives, ornamental grasses, succulents, flowering perennials, and select non-native species that thrive with efficient irrigation." },
-        { question: "How long does a landscaping project take?", answer: "Most residential landscaping projects take 1–3 weeks. Full-property renovations that include hardscape integration and drainage may take 3–6 weeks." },
-        { question: "Do you handle irrigation systems?", answer: "Yes. We design and install complete irrigation systems, including drip and spray zones, smart WiFi controllers, rain sensors, and zone-specific scheduling." },
-        { question: "Can you coordinate landscaping with hardscape work?", answer: "Absolutely - and we strongly recommend it. Building the hardscape and landscape together ensures proper drainage integration and a cohesive overall design." },
-      ]} />
+      <FAQAccordion faqs={faqs} />
 
       <CTABanner title="Plan Your Landscape Renovation" subtitle="Request a complimentary consultation and receive a clear, detailed proposal for your landscaping project." />
     </Layout>

@@ -12,6 +12,8 @@ import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import DesignProcessBlock from "@/components/sections/DesignProcessBlock";
 import { Button } from "@/components/ui/button";
 import { SERVICES, IMAGES, BUSINESS } from "@/lib/constants";
+import { getLocalBusinessSchema, getWebSiteSchema, getOrganizationSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 import { CheckCircle, ArrowRight } from "lucide-react";
 
 const Index = () => {
@@ -22,6 +24,9 @@ const Index = () => {
 
   return (
     <Layout>
+      <StructuredData data={getLocalBusinessSchema()} />
+      <StructuredData data={getWebSiteSchema()} />
+      <StructuredData data={getOrganizationSchema()} />
       <HeroSection
         title="Landscape & Hardscape Design in San Jose, CA"
         subtitle="Custom paver patios, outdoor kitchens, pergolas, and complete backyard transformations for Silicon Valley's finest homes. Designed with precision, built with integrity."

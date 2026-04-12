@@ -8,6 +8,8 @@ import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS, SERVICES } from "@/lib/constants";
+import { getServiceAreaPageSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 import lavaRockLandscaping from "@/assets/projects/lava-rock-landscaping-san-jose.jpg";
 import catalinaPavers from "@/assets/projects/Catalina_Grana_pavers.jpg";
 import { CheckCircle, ArrowRight } from "lucide-react";
@@ -20,6 +22,15 @@ const LosGatos = () => {
 
   return (
     <Layout>
+      <StructuredData data={getServiceAreaPageSchema("Los Gatos", "/service-areas/los-gatos")} />
+      <StructuredData data={getBreadcrumbSchema([{ name: "Service Areas", path: "/service-areas" }, { name: "Los Gatos", path: "/service-areas/los-gatos" }])} />
+      <StructuredData data={getFAQSchema([
+        { question: "Can you build on hillside properties in Los Gatos?", answer: "Absolutely. Hillside construction is one of our specialties." },
+        { question: "What materials work best for Los Gatos properties?", answer: "Natural stone - travertine, bluestone, and limestone - complements the organic feel of Los Gatos landscapes." },
+        { question: "How do you handle drainage on sloped lots?", answer: "Every hillside project includes a drainage assessment. We design and install French drains, channel drains, graded swales, and permeable surfaces." },
+        { question: "Do you handle Los Gatos permitting?", answer: "Yes. We're familiar with the Town of Los Gatos permitting requirements." },
+        { question: "What's the typical timeline for a Los Gatos backyard renovation?", answer: "A standard patio and landscape renovation takes 2-4 weeks. More complex hillside projects can run 4-8 weeks." },
+      ])} />
       <HeroSection
         title="Luxury Landscaping & Hardscape in Los Gatos"
         subtitle="Custom outdoor renovations for Los Gatos homeowners. Paver patios, retaining walls, outdoor kitchens, and complete landscape design-build - engineered for the hillside and valley properties that make Los Gatos extraordinary."

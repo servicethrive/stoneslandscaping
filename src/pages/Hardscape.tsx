@@ -6,7 +6,9 @@ import TrustBar from "@/components/sections/TrustBar";
 import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
-import { IMAGES, BUSINESS } from "@/lib/constants";
+import { IMAGES, BUSINESS, SERVICES } from "@/lib/constants";
+import { getServiceSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 import lavaRockHardscape from "@/assets/projects/lava-rock-hardscape-san-jose.jpg";
 import paverWalkways from "@/assets/projects/paver_walkways.jpg";
 import hollandstoneDriveway from "@/assets/projects/Hollandstone_driveway_paver.jpg";
@@ -31,8 +33,21 @@ const Hardscape = () => {
     "Full-service hardscape contractor in San Jose. Patios, retaining walls, fire features & outdoor living. Premium materials, expert craftsmanship."
   );
 
+  const svc = SERVICES.find(s => s.path === "/hardscape")!;
+  const faqs = [
+    { question: "What types of hardscape projects do you handle?", answer: "We build paver patios, driveways, and walkways; structural and decorative retaining walls; custom outdoor kitchens and BBQ islands; pergolas and patio covers; fire pits and fire features; pool decks; and complete backyard remodels." },
+    { question: "How long does a typical hardscape project take?", answer: "Most residential hardscape projects take 1–4 weeks depending on scope and complexity." },
+    { question: "Do you handle permits, engineering, and grading?", answer: "Yes. We manage the entire permitting process, coordinate structural engineering when needed, and handle all grading and drainage work." },
+    { question: "What materials do you work with?", answer: "We use premium materials: Techo-Bloc and Belgard pavers, natural travertine and bluestone, porcelain pavers, segmental retaining wall block, natural stone, granite and quartzite countertops, and western red cedar and aluminum for pergolas." },
+    { question: "How does your warranty work?", answer: `Our paver installations carry a ${BUSINESS.paverWarrantyYears}-year warranty on materials and workmanship. If anything related to our installation fails within the warranty period, we address it.` },
+    { question: "What's the best patio material for the Bay Area?", answer: "Interlocking pavers are the most popular choice because they handle ground movement without cracking, offer excellent drainage, and provide unlimited design options. Natural stone is preferred for a premium, estate-quality look. Concrete works well for budget-conscious projects." },
+  ];
+
   return (
     <Layout>
+      <StructuredData data={getServiceSchema(svc.title, svc.description, svc.image, svc.path)} />
+      <StructuredData data={getBreadcrumbSchema([{ name: "Hardscape", path: "/hardscape" }])} />
+      <StructuredData data={getFAQSchema(faqs)} />
       <HeroSection
         title="Hardscape Contractor in San Jose"
         subtitle="From expansive paver patios to engineered retaining walls and custom outdoor kitchens - hardscape projects designed for San Jose living and built to perform for decades."
@@ -160,14 +175,7 @@ const Hardscape = () => {
         </div>
       </section>
 
-      <FAQAccordion faqs={[
-        { question: "What types of hardscape projects do you handle?", answer: "We build paver patios, driveways, and walkways; structural and decorative retaining walls; custom outdoor kitchens and BBQ islands; pergolas and patio covers; fire pits and fire features; pool decks; and complete backyard remodels." },
-        { question: "How long does a typical hardscape project take?", answer: "Most residential hardscape projects take 1–4 weeks depending on scope and complexity." },
-        { question: "Do you handle permits, engineering, and grading?", answer: "Yes. We manage the entire permitting process, coordinate structural engineering when needed, and handle all grading and drainage work." },
-        { question: "What materials do you work with?", answer: "We use premium materials: Techo-Bloc and Belgard pavers, natural travertine and bluestone, porcelain pavers, segmental retaining wall block, natural stone, granite and quartzite countertops, and western red cedar and aluminum for pergolas." },
-        { question: "How does your warranty work?", answer: `Our paver installations carry a ${BUSINESS.paverWarrantyYears}-year warranty on materials and workmanship. If anything related to our installation fails within the warranty period, we address it.` },
-        { question: "What's the best patio material for the Bay Area?", answer: "Interlocking pavers are the most popular choice because they handle ground movement without cracking, offer excellent drainage, and provide unlimited design options. Natural stone is preferred for a premium, estate-quality look. Concrete works well for budget-conscious projects." },
-      ]} />
+      <FAQAccordion faqs={faqs} />
 
       <CTABanner title="Plan Your Hardscape Project" subtitle="Request a complimentary consultation and receive a detailed, transparent proposal for your outdoor project." />
     </Layout>

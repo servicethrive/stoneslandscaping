@@ -3,6 +3,8 @@ import Layout from "@/components/layout/Layout";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import DesignProcessBlock from "@/components/sections/DesignProcessBlock";
 import CTABanner from "@/components/sections/CTABanner";
+import { getBreadcrumbSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 
 const OurProcess = () => {
   usePageMeta(
@@ -12,6 +14,7 @@ const OurProcess = () => {
 
   return (
     <Layout>
+      <StructuredData data={getBreadcrumbSchema([{ name: "Our Process", path: "/our-process" }])} />
       <section className="bg-brand-dark pt-40 pb-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">How We Work</h1>

@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { BUSINESS } from "@/lib/constants";
+import { getContactPageSchema, getBreadcrumbSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 import { Phone, Mail, MapPin, Shield, Building2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -28,6 +30,8 @@ const Contact = () => {
 
   return (
     <Layout>
+      <StructuredData data={getContactPageSchema()} />
+      <StructuredData data={getBreadcrumbSchema([{ name: "Contact", path: "/contact" }])} />
       <section className="bg-brand-dark pt-40 pb-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Request a Free Estimate</h1>

@@ -6,7 +6,9 @@ import ProcessSteps from "@/components/sections/ProcessSteps";
 import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
-import { IMAGES, BUSINESS } from "@/lib/constants";
+import { IMAGES, BUSINESS, SERVICES } from "@/lib/constants";
+import { getServiceSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 import outdoorKitchenFirepit from "@/assets/projects/outdoor_kitchen_and_firepit.jpg";
 import outdoorKitchenPergola from "@/assets/projects/outdoor_kitchen_with_a_pergola.jpg";
 import { CheckCircle } from "lucide-react";
@@ -31,8 +33,22 @@ const OutdoorKitchens = () => {
     { name: "Cedar & Redwood Pergolas", desc: "Classic wood pergolas built with premium, naturally rot-resistant lumber. Develop a beautiful patina over time and complement both traditional and transitional styles." },
   ];
 
+  const svc = SERVICES.find(s => s.path === "/outdoor-kitchens")!;
+  const faqs = [
+    { question: "How much does an outdoor kitchen cost in the Bay Area?", answer: "Costs vary widely based on size, materials, appliance selection, and utility requirements. We provide detailed, transparent proposals after every on-site consultation." },
+    { question: "Do I need a permit for an outdoor kitchen in San Jose?", answer: "In most cases, yes - especially for gas, electrical, and plumbing connections. We handle the entire permitting process." },
+    { question: "How long does outdoor kitchen construction take?", answer: "Most outdoor kitchens take 2–4 weeks to build, depending on complexity. Larger projects may extend to 4–6 weeks." },
+    { question: "What countertop materials work best outdoors?", answer: "Granite, quartzite, and certain porcelain slabs are the most popular choices for Bay Area outdoor kitchens." },
+    { question: "Do I need a permit for a pergola?", answer: "It depends on the size and whether it's attached to your home. Attached structures and larger builds typically require permits. We assess requirements during consultation and handle the process." },
+    { question: "What's the best pergola material for the Bay Area?", answer: "Western red cedar and aluminum are the most popular. Cedar offers a warm, natural aesthetic. Aluminum is virtually maintenance-free and works well for modern homes." },
+    { question: "Can you build an outdoor kitchen as part of a larger backyard remodel?", answer: "Absolutely - and that's how most of our outdoor kitchen projects happen. We frequently integrate kitchens with paver patios, pergolas, fire pits, and landscape plantings." },
+  ];
+
   return (
     <Layout>
+      <StructuredData data={getServiceSchema(svc.title, svc.description, svc.image, svc.path)} />
+      <StructuredData data={getBreadcrumbSchema([{ name: "Outdoor Kitchens", path: "/outdoor-kitchens" }])} />
+      <StructuredData data={getFAQSchema(faqs)} />
       <HeroSection
         title="Outdoor Kitchens & Living Structures in San Jose"
         subtitle="Design and build fully functional outdoor kitchens, custom pergolas, and shade structures - tailored to your space and how you actually live and entertain."
@@ -159,15 +175,7 @@ const OutdoorKitchens = () => {
         { title: "Final Walkthrough", description: "We test every connection, walk the completed project with you, and confirm every detail meets your expectations." },
       ]} />
 
-      <FAQAccordion faqs={[
-        { question: "How much does an outdoor kitchen cost in the Bay Area?", answer: "Costs vary widely based on size, materials, appliance selection, and utility requirements. We provide detailed, transparent proposals after every on-site consultation." },
-        { question: "Do I need a permit for an outdoor kitchen in San Jose?", answer: "In most cases, yes - especially for gas, electrical, and plumbing connections. We handle the entire permitting process." },
-        { question: "How long does outdoor kitchen construction take?", answer: "Most outdoor kitchens take 2–4 weeks to build, depending on complexity. Larger projects may extend to 4–6 weeks." },
-        { question: "What countertop materials work best outdoors?", answer: "Granite, quartzite, and certain porcelain slabs are the most popular choices for Bay Area outdoor kitchens." },
-        { question: "Do I need a permit for a pergola?", answer: "It depends on the size and whether it's attached to your home. Attached structures and larger builds typically require permits. We assess requirements during consultation and handle the process." },
-        { question: "What's the best pergola material for the Bay Area?", answer: "Western red cedar and aluminum are the most popular. Cedar offers a warm, natural aesthetic. Aluminum is virtually maintenance-free and works well for modern homes." },
-        { question: "Can you build an outdoor kitchen as part of a larger backyard remodel?", answer: "Absolutely - and that's how most of our outdoor kitchen projects happen. We frequently integrate kitchens with paver patios, pergolas, fire pits, and landscape plantings." },
-      ]} />
+      <FAQAccordion faqs={faqs} />
 
       <CTABanner title="Design Your Outdoor Living Space" subtitle="Request a complimentary consultation and let's design an outdoor kitchen, pergola, or complete living area that matches how you live and entertain." />
     </Layout>

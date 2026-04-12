@@ -6,7 +6,9 @@ import ProcessSteps from "@/components/sections/ProcessSteps";
 import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
-import { IMAGES, BUSINESS } from "@/lib/constants";
+import { IMAGES, BUSINESS, SERVICES } from "@/lib/constants";
+import { getServiceSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 import stampedConcrete from "@/assets/projects/Stamped_concrete.jpg";
 import concreteWork from "@/assets/projects/concrete_work_in_san_jose.jpg";
 import { CheckCircle } from "lucide-react";
@@ -23,8 +25,20 @@ const ConcreteDriveways = () => {
     { name: "Colored & Stained Concrete", desc: "Integral color mixed throughout the concrete for a consistent, fade-resistant tone, or acid stains applied after curing for rich, variegated earth tones. Available in a range of colors to complement your home's exterior palette." },
   ];
 
+  const svc = SERVICES.find(s => s.path === "/concrete-driveways")!;
+  const faqs = [
+    { question: "How long does a driveway replacement take?", answer: "Most single-family driveway replacements take 3–5 days, including demolition, base preparation, forming, pouring, and initial curing. Larger driveways or stamped/colored finishes may add 1–2 additional days." },
+    { question: "How long before I can drive on my new driveway?", answer: "We recommend waiting 5–7 days before driving on new concrete. Walking is typically safe after 24–48 hours. We provide detailed curing instructions and mark the timeline clearly so you know exactly when your driveway is ready for full use." },
+    { question: "Is stamped concrete more expensive than standard?", answer: "Yes - stamped concrete costs more due to the additional labor, stamping tools, release agents, and often integral color that's involved. However, it's significantly less expensive than installing natural stone or pavers for a similar aesthetic result, making it an excellent value for homeowners who want visual impact without the premium material cost." },
+    { question: "How thick should a residential concrete driveway be?", answer: "We pour residential driveways at a minimum of 4 inches thick, with 5-6 inches at transitions and areas that bear heavier loads. Every driveway includes steel rebar reinforcement and properly spaced control joints to manage cracking. The exact specifications depend on your soil conditions and expected use." },
+    { question: "Do you also pour concrete patios and walkways?", answer: "Yes. In addition to driveways, we handle concrete patios, walkways, pool decks, and utility slabs as part of larger outdoor renovation projects. Many of our clients combine a driveway replacement with a new concrete or paver patio in the backyard - and building them together saves on mobilization costs." },
+  ];
+
   return (
     <Layout>
+      <StructuredData data={getServiceSchema(svc.title, svc.description, svc.image, svc.path)} />
+      <StructuredData data={getBreadcrumbSchema([{ name: "Concrete Driveways", path: "/concrete-driveways" }])} />
+      <StructuredData data={getFAQSchema(faqs)} />
       <HeroSection
         title="Concrete Driveway Contractor in San Jose"
         subtitle="Professional concrete driveways built for San Jose homes - standard, stamped, and decorative finishes. Proper grading, reinforcement, and lasting results backed by our craftsmanship guarantee."
@@ -110,13 +124,7 @@ const ConcreteDriveways = () => {
         { title: "Curing & Handoff", description: "We outline proper curing timelines, provide care instructions, and schedule a follow-up check to ensure everything is performing as expected." },
       ]} />
 
-      <FAQAccordion faqs={[
-        { question: "How long does a driveway replacement take?", answer: "Most single-family driveway replacements take 3–5 days, including demolition, base preparation, forming, pouring, and initial curing. Larger driveways or stamped/colored finishes may add 1–2 additional days." },
-        { question: "How long before I can drive on my new driveway?", answer: "We recommend waiting 5–7 days before driving on new concrete. Walking is typically safe after 24–48 hours. We provide detailed curing instructions and mark the timeline clearly so you know exactly when your driveway is ready for full use." },
-        { question: "Is stamped concrete more expensive than standard?", answer: "Yes - stamped concrete costs more due to the additional labor, stamping tools, release agents, and often integral color that's involved. However, it's significantly less expensive than installing natural stone or pavers for a similar aesthetic result, making it an excellent value for homeowners who want visual impact without the premium material cost." },
-        { question: "How thick should a residential concrete driveway be?", answer: "We pour residential driveways at a minimum of 4 inches thick, with 5-6 inches at transitions and areas that bear heavier loads. Every driveway includes steel rebar reinforcement and properly spaced control joints to manage cracking. The exact specifications depend on your soil conditions and expected use." },
-        { question: "Do you also pour concrete patios and walkways?", answer: "Yes. In addition to driveways, we handle concrete patios, walkways, pool decks, and utility slabs as part of larger outdoor renovation projects. Many of our clients combine a driveway replacement with a new concrete or paver patio in the backyard - and building them together saves on mobilization costs." },
-      ]} />
+      <FAQAccordion faqs={faqs} />
 
       <CTABanner title="Get a Quote for Your Driveway Project" subtitle="Schedule a free assessment and receive a detailed, transparent proposal for your concrete driveway installation or replacement." />
     </Layout>

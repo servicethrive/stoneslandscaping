@@ -8,6 +8,8 @@ import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS, SERVICES } from "@/lib/constants";
+import { getServiceAreaPageSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 import woodFinishWalkway from "@/assets/projects/Wood_finish_Porcelain_walkway.jpg";
 import outdoorKitchenFirepit from "@/assets/projects/outdoor_kitchen_and_firepit.jpg";
 import { CheckCircle, ArrowRight } from "lucide-react";
@@ -20,6 +22,15 @@ const Saratoga = () => {
 
   return (
     <Layout>
+      <StructuredData data={getServiceAreaPageSchema("Saratoga", "/service-areas/saratoga")} />
+      <StructuredData data={getBreadcrumbSchema([{ name: "Service Areas", path: "/service-areas" }, { name: "Saratoga", path: "/service-areas/saratoga" }])} />
+      <StructuredData data={getFAQSchema([
+        { question: "What makes Saratoga outdoor projects different?", answer: "Saratoga properties tend to have larger lots, more mature landscaping, and higher material expectations." },
+        { question: "Which materials do you recommend for Saratoga homes?", answer: "We most often recommend natural travertine, Techo-Bloc's premium series, limestone, and large-format porcelain pavers." },
+        { question: "Do you work on properties near the Saratoga foothills?", answer: "Absolutely. Foothill properties often require specialized approach - retaining walls, terraced layouts, enhanced drainage." },
+        { question: "How much does a typical Saratoga backyard renovation cost?", answer: "Saratoga projects vary widely based on scope, materials, and site conditions. We provide detailed, transparent estimates." },
+        { question: "What warranty do you offer?", answer: `Our paver installations are backed by a ${BUSINESS.paverWarrantyYears}-year warranty. Landscape installations include a ${BUSINESS.landscapeWarrantyDays}-day plant establishment warranty.` },
+      ])} />
       <HeroSection
         title="Premium Landscaping & Hardscape in Saratoga"
         subtitle="Outdoor transformations for Saratoga's upscale residential properties - custom pavers, outdoor kitchens, fire features, landscape design-build, and hardscape construction crafted for the Bay Area's most refined neighborhood."

@@ -7,7 +7,9 @@ import ProcessSteps from "@/components/sections/ProcessSteps";
 import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
-import { IMAGES, BUSINESS } from "@/lib/constants";
+import { IMAGES, BUSINESS, SERVICES } from "@/lib/constants";
+import { getServiceSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
+import StructuredData from "@/components/StructuredData";
 import catalinaPavers from "@/assets/projects/Catalina_Grana_pavers.jpg";
 import sealedWetLook from "@/assets/projects/sealed_wet_look_pavers.jpg";
 import frontYardPavers from "@/assets/projects/front_yard_pavers.jpg";
@@ -27,8 +29,20 @@ const Pavers = () => {
     { name: "Permeable Pavers", desc: "Eco-friendly interlocking pavers that allow water drainage, reducing runoff and meeting Bay Area stormwater requirements without sacrificing design quality." },
   ];
 
+  const svc = SERVICES.find(s => s.path === "/pavers")!;
+  const faqs = [
+    { question: "How long do pavers last?", answer: "Properly installed pavers last 25–50+ years. With correct base preparation and edge restraint, they significantly outlast poured concrete and maintain their appearance through decades of Bay Area weather." },
+    { question: "Are pavers better than concrete for my home?", answer: "Pavers offer superior flexibility, easier individual repair, better drainage options, and far more design variety. They also handle ground movement without cracking - a critical advantage on Bay Area soils. See our detailed comparison on the Pavers vs Concrete page." },
+    { question: `What does your ${BUSINESS.paverWarrantyYears}-year warranty cover?`, answer: `Our warranty covers materials and workmanship for ${BUSINESS.paverWarrantyYears} years. If anything related to our installation fails within that period, we make it right - no questions asked.` },
+    { question: "How long does a paver patio installation take?", answer: "Most residential paver patios take 3–7 days depending on size and complexity. Larger projects - estate driveways, multi-zone patios with integrated kitchens - may take 1–3 weeks." },
+    { question: "Do you serve high-end communities like Atherton and Los Gatos?", answer: "Absolutely. We regularly work on properties in Atherton, Los Gatos, Saratoga, Hillsborough, and other premium Bay Area neighborhoods. Our team is experienced with HOA requirements, large-lot properties, and the elevated expectations that come with luxury residential projects." },
+  ];
+
   return (
     <Layout>
+      <StructuredData data={getServiceSchema(svc.title, svc.description, svc.image, svc.path)} />
+      <StructuredData data={getBreadcrumbSchema([{ name: "Pavers", path: "/pavers" }])} />
+      <StructuredData data={getFAQSchema(faqs)} />
       <HeroSection
         title="Custom Paver Installations in San Jose"
         subtitle={`Premium paver patios, walkways, and driveways crafted with the finest materials and backed by our ${BUSINESS.paverWarrantyYears}-year warranty - for San Jose homes of every size and style, built with precision.`}
@@ -122,13 +136,7 @@ const Pavers = () => {
         { title: "Final Inspection & Warranty", description: `Walk the finished project with us, confirm every detail, and receive your ${BUSINESS.paverWarrantyYears}-year warranty documentation.` },
       ]} />
 
-      <FAQAccordion faqs={[
-        { question: "How long do pavers last?", answer: "Properly installed pavers last 25–50+ years. With correct base preparation and edge restraint, they significantly outlast poured concrete and maintain their appearance through decades of Bay Area weather." },
-        { question: "Are pavers better than concrete for my home?", answer: "Pavers offer superior flexibility, easier individual repair, better drainage options, and far more design variety. They also handle ground movement without cracking - a critical advantage on Bay Area soils. See our detailed comparison on the Pavers vs Concrete page." },
-        { question: `What does your ${BUSINESS.paverWarrantyYears}-year warranty cover?`, answer: `Our warranty covers materials and workmanship for ${BUSINESS.paverWarrantyYears} years. If anything related to our installation fails within that period, we make it right - no questions asked.` },
-        { question: "How long does a paver patio installation take?", answer: "Most residential paver patios take 3–7 days depending on size and complexity. Larger projects - estate driveways, multi-zone patios with integrated kitchens - may take 1–3 weeks." },
-        { question: "Do you serve high-end communities like Atherton and Los Gatos?", answer: "Absolutely. We regularly work on properties in Atherton, Los Gatos, Saratoga, Hillsborough, and other premium Bay Area neighborhoods. Our team is experienced with HOA requirements, large-lot properties, and the elevated expectations that come with luxury residential projects." },
-      ]} />
+      <FAQAccordion faqs={faqs} />
 
       <CTABanner title="Ready for a Custom Paver Installation?" subtitle="Request a complimentary consultation and see why Bay Area homeowners trust Stones Landscaping for their most important outdoor projects." />
     </Layout>
