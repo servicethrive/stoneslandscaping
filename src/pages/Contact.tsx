@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { BUSINESS } from "@/lib/constants";
-import { Phone, Mail, MapPin, Shield } from "lucide-react";
+import { Phone, Mail, MapPin, Shield, Building2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -101,10 +101,17 @@ const Contact = () => {
             <div>
               <h2 className="text-2xl font-bold text-foreground mb-6">Contact Information</h2>
               <div className="space-y-5">
+                <div className="flex items-start gap-3">
+                  <Building2 className="h-5 w-5 text-primary shrink-0 mt-0.5" />
+                  <div>
+                    <p className="text-sm font-semibold text-foreground">{BUSINESS.name}</p>
+                    <p className="text-xs text-muted-foreground">Licensed Contractor</p>
+                  </div>
+                </div>
                 <a href={`tel:${BUSINESS.phoneTel}`} className="flex items-start gap-3 group">
                   <Phone className="h-5 w-5 text-primary shrink-0 mt-0.5" />
                   <div>
-                    <p className="font-semibold text-foreground group-hover:text-primary transition-colors">{BUSINESS.phone}</p>
+                    <p className="text-sm font-semibold text-foreground group-hover:text-primary transition-colors">{BUSINESS.phone}</p>
                     <p className="text-xs text-muted-foreground">Call us directly</p>
                   </div>
                 </a>
