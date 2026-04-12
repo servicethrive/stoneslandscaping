@@ -9,7 +9,7 @@ import CTABanner from "@/components/sections/CTABanner";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS } from "@/lib/constants";
 import landscapingSanJose from "@/assets/projects/landscaping-san-jose-ca.jpg";
-import { Star, Shield, Truck, CheckCircle, FileText, MessageSquare, Palette, Users } from "lucide-react";
+import { Star, Shield, Truck, CheckCircle, FileText, MessageSquare, Palette, Users, User } from "lucide-react";
 
 const About = () => {
   const [fleetLightboxOpen, setFleetLightboxOpen] = useState(false);
