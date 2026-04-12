@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import ImageLightbox from "@/components/ui/ImageLightbox";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
 import TeamBlock from "@/components/sections/TeamBlock";
@@ -170,25 +171,38 @@ const About = () => {
           <p className="text-muted-foreground mb-10 leading-relaxed font-light max-w-3xl">
             We invest in professional-grade equipment and maintain a fleet of branded vehicles because how a contractor shows up tells you how they'll build. Our storage yard houses everything we need to execute projects efficiently - from CAT skid steers to full trailer rigs.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
+          {(() => {
+            const fleetImages = [
               { src: "/images/stones-landscaping-storage-yard.jpg", alt: "Stones Landscaping storage yard with fleet and materials" },
               { src: "/images/stones-landscaping-dump-trailer.jpg", alt: "Stones Landscaping dump trailer loaded with materials" },
               { src: "/images/stones-landscaping-trailer-skid-steer.jpg", alt: "Stones Landscaping trailer with CAT skid steer" },
               { src: "/images/stones-landscaping-truck-trailer.jpg", alt: "Stones Landscaping Inc. truck and trailer at job site" },
               { src: "/images/stones-landscaping-company-vehicle.jpg", alt: "Stones Landscaping Inc. branded company vehicle" },
               { src: "/images/stones-landscaping-2018.jpg", alt: "Stones Landscaping fleet vehicles on job site in 2018" },
-            ].map((img) => (
-              <div key={img.src} className="aspect-[4/3] rounded-sm overflow-hidden shadow-lg">
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
+            ];
+            return (
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {fleetImages.map((img, i) => (
+                    <div
+                      key={img.src}
+                      className="aspect-[4/3] rounded-sm overflow-hidden shadow-lg cursor-pointer"
+                      onClick={() => { setFleetLightboxIndex(i); setFleetLightboxOpen(true); }}
+                    >
+                      <img src={img.src} alt={img.alt} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+                    </div>
+                  ))}
+                </div>
+                <ImageLightbox
+                  images={fleetImages}
+                  currentIndex={fleetLightboxIndex}
+                  isOpen={fleetLightboxOpen}
+                  onClose={() => setFleetLightboxOpen(false)}
+                  onNavigate={setFleetLightboxIndex}
                 />
-              </div>
-            ))}
-          </div>
+              </>
+            );
+          })()}
         </div>
       </section>
 
