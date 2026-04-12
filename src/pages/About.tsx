@@ -114,13 +114,17 @@ const About = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { title: "Transparent, Detailed Proposals", desc: "You'll receive a clear scope, timeline, material specifications, and price before any work begins. No padded invoices, no surprise charges, no vague line items. You know exactly what you're paying for." },
-              { title: "Responsive Communication", desc: "We answer calls and messages promptly - during and after your project. Your project manager keeps you updated at every phase with photos and progress reports. No chasing for answers." },
-              { title: "Design Capability", desc: "For qualifying projects, we offer professional 2D and 3D design renderings so you can visualize the finished result before construction starts. Design decisions made on paper cost nothing to change; decisions made on-site cost time and money." },
-              { title: "Experienced, Full-Time Crews", desc: "We run trained, full-time crews - not day laborers hired per project. Our team members have years of experience with the specific materials, techniques, and conditions of Bay Area residential construction." },
-            ].map((item) => (
-              <div key={item.title} className="bg-brand-cream p-8 rounded-sm border border-border/60">
-                <h3 className="font-display text-lg font-bold text-foreground mb-3">{item.title}</h3>
+              { title: "Transparent, Detailed Proposals", desc: "You'll receive a clear scope, timeline, material specifications, and price before any work begins. No padded invoices, no surprise charges, no vague line items. You know exactly what you're paying for.", icon: FileText },
+              { title: "Responsive Communication", desc: "We answer calls and messages promptly - during and after your project. Your project manager keeps you updated at every phase with photos and progress reports. No chasing for answers.", icon: MessageSquare },
+              { title: "Design Capability", desc: "For qualifying projects, we offer professional 2D and 3D design renderings so you can visualize the finished result before construction starts. Design decisions made on paper cost nothing to change; decisions made on-site cost time and money.", icon: Palette },
+              { title: "Experienced, Full-Time Crews", desc: "We run trained, full-time crews - not day laborers hired per project. Our team members have years of experience with the specific materials, techniques, and conditions of Bay Area residential construction.", icon: Users },
+            ].map((item, index) => (
+              <div key={item.title} className="bg-brand-cream p-8 rounded-sm border border-border/60 border-l-4 border-l-primary">
+                <span className="text-4xl font-bold text-primary/20 font-display leading-none">{String(index + 1).padStart(2, '0')}</span>
+                <div className="flex items-center gap-2 mt-3 mb-3">
+                  <item.icon className="h-5 w-5 text-primary" />
+                  <h3 className="font-display text-lg font-bold text-foreground">{item.title}</h3>
+                </div>
                 <p className="text-sm text-muted-foreground leading-relaxed font-light">{item.desc}</p>
               </div>
             ))}
