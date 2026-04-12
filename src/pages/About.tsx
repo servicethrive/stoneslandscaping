@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
+import { useState } from "react";
 import ImageLightbox from "@/components/ui/ImageLightbox";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
@@ -13,9 +14,10 @@ import { Star, Shield, Truck, CheckCircle, FileText, MessageSquare, Palette, Use
 const About = () => {
   const [fleetLightboxOpen, setFleetLightboxOpen] = useState(false);
   const [fleetLightboxIndex, setFleetLightboxIndex] = useState(0);
-  useEffect(() => {
-    document.title = "About Stones Landscaping | Licensed Bay Area Hardscape & Outdoor Living Contractor";
-  }, []);
+  usePageMeta(
+    "About Stones Landscaping | Licensed San Jose Hardscape & Outdoor Living Contractor",
+    "Meet Stones Landscaping — licensed San Jose hardscape & outdoor living contractor. Experienced crews, premium materials, proven results."
+  );
 
   return (
     <Layout>

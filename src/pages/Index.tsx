@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
@@ -15,9 +15,10 @@ import { SERVICES, IMAGES, BUSINESS } from "@/lib/constants";
 import { CheckCircle, ArrowRight } from "lucide-react";
 
 const Index = () => {
-  useEffect(() => {
-    document.title = "Stones Landscaping Inc. | Premium Hardscape & Outdoor Living | San Jose, CA";
-  }, []);
+  usePageMeta(
+    "Stones Landscaping Inc. | Premium Hardscape & Outdoor Living | San Jose, CA",
+    "Premium hardscape contractor in San Jose. Custom paver patios, outdoor kitchens, retaining walls & backyard remodels. Free estimates."
+  );
 
   return (
     <Layout>

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
@@ -26,9 +26,10 @@ const patioTypes = [
 ];
 
 const Hardscape = () => {
-  useEffect(() => {
-    document.title = "Hardscape Contractor San Jose | Patios, Walls & Outdoor Living | Stones Landscaping";
-  }, []);
+  usePageMeta(
+    "Hardscape Contractor San Jose | Patios, Walls & Outdoor Living | Stones Landscaping",
+    "Full-service hardscape contractor in San Jose. Patios, retaining walls, fire features & outdoor living. Premium materials, expert craftsmanship."
+  );
 
   return (
     <Layout>

@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
@@ -13,9 +13,10 @@ import outdoorKitchenPergola from "@/assets/projects/outdoor_kitchen_with_a_perg
 import { CheckCircle, ArrowRight } from "lucide-react";
 
 const Atherton = () => {
-  useEffect(() => {
-    document.title = "Luxury Landscaping & Hardscape Atherton, CA | Estate Outdoor Renovation | Stones Landscaping";
-  }, []);
+  usePageMeta(
+    "Luxury Landscaping & Hardscape Atherton, CA | Estate Outdoor Renovation | Stones Landscaping",
+    "Luxury estate landscaping & hardscape in Atherton. Custom outdoor living for prestigious properties."
+  );
 
   return (
     <Layout>

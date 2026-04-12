@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
 import TrustBar from "@/components/sections/TrustBar";
@@ -12,9 +12,10 @@ import woodFinishWalkway from "@/assets/projects/Wood_finish_Porcelain_walkway.j
 import { CheckCircle } from "lucide-react";
 
 const RetainingWalls = () => {
-  useEffect(() => {
-    document.title = "Retaining Wall Contractor San Jose | Structural & Decorative Walls | Stones Landscaping";
-  }, []);
+  usePageMeta(
+    "Retaining Wall Contractor San Jose | Structural & Decorative Walls | Stones Landscaping",
+    "Retaining wall contractor in San Jose. Structural & decorative walls, hillside solutions. Expert engineering, premium materials."
+  );
 
   const wallTypes = [
     { name: "Segmental Block Walls", desc: "Interlocking concrete blocks engineered for structural strength with a clean, modern finish. Available in multiple textures, colors, and sizes." },

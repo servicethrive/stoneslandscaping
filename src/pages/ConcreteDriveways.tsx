@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
 import TrustBar from "@/components/sections/TrustBar";
@@ -12,9 +12,10 @@ import concreteWork from "@/assets/projects/concrete_work_in_san_jose.jpg";
 import { CheckCircle } from "lucide-react";
 
 const ConcreteDriveways = () => {
-  useEffect(() => {
-    document.title = "Concrete Driveway Contractor San Jose | Stamped & Decorative | Stones Landscaping";
-  }, []);
+  usePageMeta(
+    "Concrete Driveway Contractor San Jose | Stamped & Decorative | Stones Landscaping",
+    "Stamped & decorative concrete driveway contractor in San Jose. Custom finishes, expert installation. Licensed & insured. Free estimates."
+  );
 
   const concreteTypes = [
     { name: "Standard Brushed Concrete", desc: "Clean, durable, and cost-effective. A brushed finish with proper reinforcement and control joints delivers the reliable, professional look that most Bay Area homes need - and it performs beautifully for decades." },

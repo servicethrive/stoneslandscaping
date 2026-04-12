@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
 import TrustBar from "@/components/sections/TrustBar";
@@ -18,9 +18,10 @@ const landscapeTypes = [
 ];
 
 const Landscaping = () => {
-  useEffect(() => {
-    document.title = "Luxury Landscaping San Jose | Design-Build Landscape Contractor | Stones Landscaping";
-  }, []);
+  usePageMeta(
+    "Luxury Landscaping San Jose | Design-Build Landscape Contractor | Stones Landscaping",
+    "Luxury landscaping contractor in San Jose. Full design-build services for Bay Area homeowners. Drought-tolerant, custom plantings & more."
+  );
 
   return (
     <Layout>

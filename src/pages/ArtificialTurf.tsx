@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
 import TrustBar from "@/components/sections/TrustBar";
@@ -12,9 +12,10 @@ import turfFrontYard from "@/assets/projects/artifical_turf_in_front_yard.jpg";
 import { CheckCircle } from "lucide-react";
 
 const ArtificialTurf = () => {
-  useEffect(() => {
-    document.title = "Artificial Turf Installation San Jose | Premium Synthetic Lawns | Stones Landscaping";
-  }, []);
+  usePageMeta(
+    "Artificial Turf Installation San Jose | Premium Synthetic Lawns | Stones Landscaping",
+    "Artificial turf installation in San Jose. Premium synthetic lawns for residential & commercial. Low maintenance, year-round green. Free quotes."
+  );
 
   return (
     <Layout>

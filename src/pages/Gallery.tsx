@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import Layout from "@/components/layout/Layout";
 import GalleryGrid from "@/components/sections/GalleryGrid";
 import CTABanner from "@/components/sections/CTABanner";
@@ -77,9 +77,10 @@ const galleryImages = [
 ];
 
 const Gallery = () => {
-  useEffect(() => {
-    document.title = "Project Gallery | Stones Landscaping Inc. | San Jose, CA";
-  }, []);
+  usePageMeta(
+    "Project Gallery | Stones Landscaping Inc. | San Jose, CA",
+    "Browse completed hardscape & landscaping projects in San Jose. Paver patios, outdoor kitchens, retaining walls & more."
+  );
 
   return (
     <Layout>
