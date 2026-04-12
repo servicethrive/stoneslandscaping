@@ -62,59 +62,75 @@ const projects = [
   },
 ];
 
-const FeaturedProjects = () => (
-  <section className="py-20 lg:py-28 bg-brand-charcoal">
-    <div className="container mx-auto px-4">
-      <div className="text-center mb-14">
-        <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
-        <h2 className="font-display text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-3">
-          Featured Projects
-        </h2>
-        <p className="text-white/60 max-w-2xl mx-auto font-light text-lg">
-          Recent transformations by Stones Landscaping
-        </p>
-      </div>
+const FeaturedProjects = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
-      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[200px] md:auto-rows-[240px]">
-        {projects.map((project, i) => (
-          <div
-            key={i}
-            className={`relative overflow-hidden rounded-sm group cursor-pointer ${
-              i === 0 ? "col-span-2 row-span-2" : ""
-            }`}
-          >
-            <img
-              src={project.image}
-              alt={`${project.title}, ${project.location}`}
-              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-              loading="eager"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-              <p className="text-white font-semibold text-sm md:text-base">
-                {project.title}
-              </p>
-              <p className="text-primary text-xs tracking-wide uppercase">
-                {project.location}
-              </p>
+  const lightboxImages = projects.map((p) => ({ src: p.image, alt: `${p.title}, ${p.location}` }));
+
+  return (
+    <section className="py-20 lg:py-28 bg-brand-charcoal">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-14">
+          <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
+          <h2 className="font-display text-3xl md:text-4xl lg:text-4xl font-bold text-white mb-3">
+            Featured Projects
+          </h2>
+          <p className="text-white/60 max-w-2xl mx-auto font-light text-lg">
+            Recent transformations by Stones Landscaping
+          </p>
+        </div>
+
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 auto-rows-[200px] md:auto-rows-[240px]">
+          {projects.map((project, i) => (
+            <div
+              key={i}
+              className={`relative overflow-hidden rounded-sm group cursor-pointer ${
+                i === 0 ? "col-span-2 row-span-2" : ""
+              }`}
+              onClick={() => { setLightboxIndex(i); setLightboxOpen(true); }}
+            >
+              <img
+                src={project.image}
+                alt={`${project.title}, ${project.location}`}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                loading="eager"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 md:p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <p className="text-white font-semibold text-sm md:text-base">
+                  {project.title}
+                </p>
+                <p className="text-primary text-xs tracking-wide uppercase">
+                  {project.location}
+                </p>
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
+
+        <div className="text-center mt-12">
+          <Button
+            asChild
+            variant="outline"
+            className="border-primary text-primary hover:bg-primary hover:text-white tracking-widest uppercase text-xs px-8 py-5 font-semibold"
+          >
+            <Link to="/gallery">
+              View Full Portfolio <ArrowRight className="h-4 w-4 ml-2" />
+            </Link>
+          </Button>
+        </div>
       </div>
 
-      <div className="text-center mt-12">
-        <Button
-          asChild
-          variant="outline"
-          className="border-primary text-primary hover:bg-primary hover:text-white tracking-widest uppercase text-xs px-8 py-5 font-semibold"
-        >
-          <Link to="/gallery">
-            View Full Portfolio <ArrowRight className="h-4 w-4 ml-2" />
-          </Link>
-        </Button>
-      </div>
-    </div>
-  </section>
-);
+      <ImageLightbox
+        images={lightboxImages}
+        currentIndex={lightboxIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        onNavigate={setLightboxIndex}
+      />
+    </section>
+  );
+};
 
 export default FeaturedProjects;
