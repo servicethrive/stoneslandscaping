@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import Layout from "@/components/layout/Layout";
 import TestimonialBlock from "@/components/sections/TestimonialBlock";
 import CTABanner from "@/components/sections/CTABanner";
@@ -15,9 +15,10 @@ const reviewHighlights = [
 ];
 
 const Reviews = () => {
-  useEffect(() => {
-    document.title = "Reviews | Stones Landscaping Inc. | 5-Star Rated San Jose Contractor";
-  }, []);
+  usePageMeta(
+    "Reviews | Stones Landscaping Inc. | 5-Star Rated San Jose Contractor",
+    "5-star rated hardscape & landscaping contractor in San Jose. Read reviews from Silicon Valley homeowners."
+  );
 
   return (
     <Layout>

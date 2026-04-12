@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
@@ -13,9 +13,10 @@ import outdoorKitchenFirepit from "@/assets/projects/outdoor_kitchen_and_firepit
 import { CheckCircle, ArrowRight } from "lucide-react";
 
 const Saratoga = () => {
-  useEffect(() => {
-    document.title = "Premium Landscaping & Hardscape Saratoga, CA | Luxury Outdoor Living | Stones Landscaping";
-  }, []);
+  usePageMeta(
+    "Premium Landscaping & Hardscape Saratoga, CA | Luxury Outdoor Living | Stones Landscaping",
+    "Premium landscaping & hardscape in Saratoga. Luxury outdoor living design & construction."
+  );
 
   return (
     <Layout>

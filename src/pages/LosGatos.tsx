@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
@@ -13,9 +13,10 @@ import catalinaPavers from "@/assets/projects/Catalina_Grana_pavers.jpg";
 import { CheckCircle, ArrowRight } from "lucide-react";
 
 const LosGatos = () => {
-  useEffect(() => {
-    document.title = "Landscaping & Hardscape Los Gatos, CA | Hillside & Luxury Outdoor Renovation | Stones Landscaping";
-  }, []);
+  usePageMeta(
+    "Landscaping & Hardscape Los Gatos, CA | Hillside & Luxury Outdoor Renovation | Stones Landscaping",
+    "Premium landscaping & hardscape in Los Gatos. Hillside solutions, luxury outdoor renovations."
+  );
 
   return (
     <Layout>

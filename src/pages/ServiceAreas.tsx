@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
 import TrustBar from "@/components/sections/TrustBar";
@@ -11,9 +11,10 @@ import landscapingSanJose from "@/assets/projects/landscaping-san-jose-ca.jpg";
 import pebbleStonesLandscape from "@/assets/projects/pebble-stones-landscape-2.jpg";
 
 const ServiceAreas = () => {
-  useEffect(() => {
-    document.title = "Service Areas | San Jose & Bay Area | Landscaping & Hardscape Contractor | Stones Landscaping";
-  }, []);
+  usePageMeta(
+    "Service Areas | San Jose & Bay Area | Landscaping & Hardscape Contractor | Stones Landscaping",
+    "Serving San Jose, Atherton, Los Gatos, Saratoga & Silicon Valley. Premium hardscape & landscaping contractor."
+  );
 
   return (
     <Layout>

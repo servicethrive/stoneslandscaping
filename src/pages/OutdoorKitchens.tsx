@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
 import TrustBar from "@/components/sections/TrustBar";
@@ -12,9 +12,10 @@ import outdoorKitchenPergola from "@/assets/projects/outdoor_kitchen_with_a_perg
 import { CheckCircle } from "lucide-react";
 
 const OutdoorKitchens = () => {
-  useEffect(() => {
-    document.title = "Outdoor Kitchens & Living Structures San Jose | Custom BBQ Islands, Pergolas & Shade | Stones Landscaping";
-  }, []);
+  usePageMeta(
+    "Outdoor Kitchens & Living Structures San Jose | Custom BBQ Islands, Pergolas & Shade | Stones Landscaping",
+    "Custom outdoor kitchens & BBQ islands in San Jose. Pergolas, shade structures & outdoor living spaces. Licensed contractor, free consultation."
+  );
 
   const kitchenStyles = [
     { name: "Custom BBQ Islands", desc: "Stone-veneer islands with built-in grills, side burners, and prep space. The foundation of most outdoor kitchens." },

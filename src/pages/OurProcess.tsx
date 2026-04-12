@@ -1,13 +1,14 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import Layout from "@/components/layout/Layout";
 import ProcessSteps from "@/components/sections/ProcessSteps";
 import DesignProcessBlock from "@/components/sections/DesignProcessBlock";
 import CTABanner from "@/components/sections/CTABanner";
 
 const OurProcess = () => {
-  useEffect(() => {
-    document.title = "Our Process | How We Work | Stones Landscaping Inc.";
-  }, []);
+  usePageMeta(
+    "Our Process | San Jose Hardscape Contractor | Stones Landscaping Inc.",
+    "Our proven process from consultation to completion. San Jose's trusted hardscape contractor. Transparent pricing, detailed proposals."
+  );
 
   return (
     <Layout>

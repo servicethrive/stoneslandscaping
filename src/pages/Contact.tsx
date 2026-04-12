@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
+import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import CTABanner from "@/components/sections/CTABanner";
 import { Button } from "@/components/ui/button";
@@ -11,10 +12,10 @@ import { useToast } from "@/hooks/use-toast";
 const Contact = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
-
-  useEffect(() => {
-    document.title = "Contact Us | Request a Free Estimate | Stones Landscaping Inc.";
-  }, []);
+  usePageMeta(
+    "Contact Us | Request a Free Estimate in San Jose, CA | Stones Landscaping Inc.",
+    "Contact Stones Landscaping for a free estimate in San Jose. Call, email, or fill out our form. Licensed hardscape & landscaping contractor."
+  );
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

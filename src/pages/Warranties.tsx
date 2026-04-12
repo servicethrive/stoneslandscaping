@@ -1,13 +1,14 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import Layout from "@/components/layout/Layout";
 import WarrantyBlock from "@/components/sections/WarrantyBlock";
 import CTABanner from "@/components/sections/CTABanner";
 import { BUSINESS } from "@/lib/constants";
 
 const Warranties = () => {
-  useEffect(() => {
-    document.title = "Warranties | Stones Landscaping Inc. | 21-Year Paver & 90-Day Landscape";
-  }, []);
+  usePageMeta(
+    "Warranties | San Jose Hardscape Contractor | Stones Landscaping Inc.",
+    "Industry-leading warranties from San Jose's premier hardscape contractor. 21-year paver warranty, 90-day landscape guarantee."
+  );
 
   return (
     <Layout>

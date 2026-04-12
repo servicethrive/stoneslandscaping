@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { usePageMeta } from "@/hooks/use-page-meta";
 import { Link } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
@@ -14,9 +14,10 @@ import frontYardPavers from "@/assets/projects/front_yard_pavers.jpg";
 import { CheckCircle } from "lucide-react";
 
 const Pavers = () => {
-  useEffect(() => {
-    document.title = "Paver Patio Contractor San Jose | Custom Patios, Walkways & Driveways | Stones Landscaping";
-  }, []);
+  usePageMeta(
+    "Paver Patio Contractor San Jose | Custom Patios, Walkways & Driveways | Stones Landscaping",
+    "San Jose paver patio contractor. Custom patios, walkways & driveways with 21-year warranty. Belgard & Tremron certified. Free estimates."
+  );
 
   const materials = [
     { name: "Techo-Bloc", desc: "Industry-leading interlocking pavers with advanced surface textures and color-through technology. Preferred by discerning homeowners for their superior finish and durability." },
