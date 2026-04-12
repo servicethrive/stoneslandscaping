@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ImageLightbox from "@/components/ui/ImageLightbox";
 
 interface GalleryImage {
   src: string;
@@ -15,6 +16,8 @@ const GalleryGrid = ({ images, categories }: GalleryGridProps) => {
   const cats = categories || [...new Set(images.map((img) => img.category))];
   const [active, setActive] = useState("All");
   const filtered = active === "All" ? images : images.filter((img) => img.category === active);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   return (
     <div>
@@ -35,7 +38,11 @@ const GalleryGrid = ({ images, categories }: GalleryGridProps) => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {filtered.map((img, i) => (
-          <div key={i} className="aspect-[4/3] overflow-hidden rounded-sm group relative">
+          <div
+            key={i}
+            className="aspect-[4/3] overflow-hidden rounded-sm group relative cursor-pointer"
+            onClick={() => { setLightboxIndex(i); setLightboxOpen(true); }}
+          >
             <img
               src={img.src}
               alt={img.alt}
@@ -48,6 +55,13 @@ const GalleryGrid = ({ images, categories }: GalleryGridProps) => {
           </div>
         ))}
       </div>
+      <ImageLightbox
+        images={filtered}
+        currentIndex={lightboxIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        onNavigate={setLightboxIndex}
+      />
     </div>
   );
 };
