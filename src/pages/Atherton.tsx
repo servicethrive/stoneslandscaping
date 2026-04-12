@@ -8,6 +8,8 @@ import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS, SERVICES } from "@/lib/constants";
+import prefabPergola from "@/assets/projects/Prefabricated_placebo-2.jpg";
+import outdoorKitchenPergola from "@/assets/projects/outdoor_kitchen_with_a_pergola.jpg";
 import { CheckCircle, ArrowRight } from "lucide-react";
 
 const Atherton = () => {
@@ -42,17 +44,17 @@ const Atherton = () => {
         {
           title: "Estate-Scale Outdoor Living",
           text: "We've built expansive paver motor courts with heated radiant systems, multi-zone outdoor kitchens with custom tile backsplashes and built-in BBQ islands, sunken seating areas surrounding natural stone fireplaces, and complete landscape installations that transform raw acreage into curated outdoor living environments.",
-          image: IMAGES.zigzag1,
+          image: prefabPergola,
         },
         {
           title: "Seamless Coordination",
           text: "What sets our Atherton work apart is the level of coordination involved. Many projects here require close collaboration with architects, general contractors, and property managers. We're comfortable working within larger build schedules, adhering to town permitting requirements, and delivering results that integrate seamlessly with existing architecture.",
-          image: IMAGES.zigzag4,
+          image: outdoorKitchenPergola,
         },
         {
           title: "Licensed & Warranty-Backed",
           text: `Whether you're reimagining the entire rear grounds of your estate, adding a resort-style pool deck with natural travertine, or building a grand front entry approach with an interlocking paver driveway and custom lighting, our team brings the experience and attention to detail that Atherton homeowners expect. Licensed (#${BUSINESS.license}), fully insured, and backed by our ${BUSINESS.paverWarrantyYears}-year paver warranty.`,
-          image: IMAGES.zigzag5,
+          image: "/images/california-gold-tile-walkway.jpg",
         },
       ]} />
 

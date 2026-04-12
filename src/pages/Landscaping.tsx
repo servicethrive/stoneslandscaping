@@ -7,6 +7,8 @@ import FAQAccordion from "@/components/sections/FAQAccordion";
 import DesignProcessBlock from "@/components/sections/DesignProcessBlock";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS } from "@/lib/constants";
+import sodLandscape from "@/assets/projects/sod_landscape_with_circle_accent.jpg";
+import lowMaintenanceLandscape from "@/assets/projects/Low_maintenance_Landscape.jpg";
 import { CheckCircle } from "lucide-react";
 
 const landscapeTypes = [
@@ -46,12 +48,12 @@ const Landscaping = () => {
         {
           title: "Every Property, Every Scale",
           text: "We've designed and built landscapes for properties across the Bay Area spectrum - from San Jose homes where a front yard renovation transforms the entire street presence, to grand estates in Atherton and Hillsborough where the landscape needs to complement world-class architecture. The scope varies, but our approach doesn't: we start with your property's specific conditions, your lifestyle, and your vision.",
-          image: IMAGES.zigzag8,
+          image: sodLandscape,
         },
         {
           title: "Climate-Smart Plant Selection",
           text: "One thing we've learned building landscapes in this climate: the Bay Area's Mediterranean weather - warm dry summers and cool wet winters - rewards certain plants and punishes others. We select species that are proven performers in our specific microclimate, which means your landscape looks healthy and vibrant in August heat just as it does after January rains.",
-          image: IMAGES.zigzag6,
+          image: lowMaintenanceLandscape,
         },
       ]} />
 

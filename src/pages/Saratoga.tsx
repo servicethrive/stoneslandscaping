@@ -8,6 +8,8 @@ import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS, SERVICES } from "@/lib/constants";
+import woodFinishWalkway from "@/assets/projects/Wood_finish_Porcelain_walkway.jpg";
+import outdoorKitchenFirepit from "@/assets/projects/outdoor_kitchen_and_firepit.jpg";
 import { CheckCircle, ArrowRight } from "lucide-react";
 
 const Saratoga = () => {
@@ -41,12 +43,12 @@ const Saratoga = () => {
         {
           title: "Terrain-Specific Design",
           text: "Here's what most homeowners don't realize about outdoor renovation in Saratoga: the terrain varies significantly from one street to the next. Properties closer to the foothills often require retaining walls, terraced layouts, and sophisticated drainage engineering, while lots in the flatland neighborhoods present different opportunities for expansive entertainment patios and resort-style pool surrounds.",
-          image: IMAGES.zigzag2,
+          image: woodFinishWalkway,
         },
         {
           title: "Refined Craftsmanship",
           text: `We've built sunken conversation pits around custom gas fireplaces, grand front walkways with natural bluestone and landscape lighting, complete outdoor kitchen pavilions with countertops, built-in grills, and bar seating, and multi-zone backyards that transition seamlessly from entertaining space to quiet garden retreats. Every project is licensed (#${BUSINESS.license}), fully insured, and backed by our ${BUSINESS.paverWarrantyYears}-year paver warranty.`,
-          image: IMAGES.zigzag4,
+          image: outdoorKitchenFirepit,
         },
       ]} />
 

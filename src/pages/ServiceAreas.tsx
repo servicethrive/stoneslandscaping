@@ -7,6 +7,8 @@ import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { BUSINESS, IMAGES } from "@/lib/constants";
+import landscapingSanJose from "@/assets/projects/landscaping-san-jose-ca.jpg";
+import pebbleStonesLandscape from "@/assets/projects/pebble-stones-landscape-2.jpg";
 
 const ServiceAreas = () => {
   useEffect(() => {
@@ -40,12 +42,12 @@ const ServiceAreas = () => {
         {
           title: "Wide Range of Homeowners",
           text: "Our client base spans a wide range of homeowners - from families upgrading a starter home's backyard in Campbell or Santa Clara, to executives creating resort-style outdoor living on expansive Bay Area estates. The common thread is a commitment to quality: every client receives the same level of craftsmanship, communication, and warranty protection regardless of project size.",
-          image: IMAGES.zigzag1,
+          image: landscapingSanJose,
         },
         {
           title: "Local Knowledge, Regional Reach",
           text: "Each community we serve has unique characteristics - terrain, lot sizes, architectural styles, HOA requirements, and permitting processes. We know these details because we work in these neighborhoods regularly. From the foothills of Saratoga to the flatlands of Santa Clara, our experience with local conditions translates into better outcomes for our clients.",
-          image: IMAGES.zigzag2,
+          image: pebbleStonesLandscape,
         },
       ]} />
 

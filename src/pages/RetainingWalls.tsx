@@ -7,6 +7,8 @@ import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS } from "@/lib/constants";
+import seatedRetainingWalls from "@/assets/projects/seated_retaining_walls.jpg";
+import woodFinishWalkway from "@/assets/projects/Wood_finish_Porcelain_walkway.jpg";
 import { CheckCircle } from "lucide-react";
 
 const RetainingWalls = () => {
@@ -47,12 +49,12 @@ const RetainingWalls = () => {
         {
           title: "Engineered for Your Property",
           text: `At ${BUSINESS.name}, we build retaining walls that are engineered for the specific soil conditions, slope grades, and drainage patterns of your property. Every wall we construct includes proper footings sized to the height and soil type, compacted gravel backfill, perforated drain pipe with filter fabric, and appropriate batter for long-term stability. Our work is backed by our contractor's license #${BUSINESS.license}.`,
-          image: IMAGES.zigzag5,
+          image: seatedRetainingWalls,
         },
         {
           title: "Real-World Problem Solving",
           text: "We recently completed a multi-tiered natural stone wall system for a property in the Saratoga foothills that had been dealing with erosion for years. The previous homeowner had tried landscape timbers - they rotted within four seasons. Our solution used three stepped wall segments with integrated drainage that redirects water away from the foundation while creating beautiful terraced planting areas.",
-          image: IMAGES.zigzag3,
+          image: woodFinishWalkway,
         },
       ]} />
 

@@ -7,6 +7,8 @@ import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS } from "@/lib/constants";
+import outdoorKitchenFirepit from "@/assets/projects/outdoor_kitchen_and_firepit.jpg";
+import outdoorKitchenPergola from "@/assets/projects/outdoor_kitchen_with_a_pergola.jpg";
 import { CheckCircle } from "lucide-react";
 
 const OutdoorKitchens = () => {
@@ -54,12 +56,12 @@ const OutdoorKitchens = () => {
         {
           title: "Layout, Workflow & Integration",
           text: "Here's what separates a great outdoor kitchen from a mediocre one: it's not the appliances - it's the layout, the workflow, and the integration with the rest of your outdoor space. We think about where the cook stands relative to guests, how smoke and heat travel, where utilities connect, and how the kitchen relates to your patio, seating areas, and landscape.",
-          image: IMAGES.zigzag4,
+          image: outdoorKitchenFirepit,
         },
         {
           title: "Complete Build, Every Detail",
           text: "We handle every aspect of the build: structural foundation, steel or block framing, stone veneer or tile finishing, granite or quartzite countertops, gas and electrical connections, plumbing for sinks, and integrated lighting. Our outdoor kitchens are built with the same attention to detail you'd expect from an interior kitchen remodel.",
-          image: IMAGES.zigzag1,
+          image: outdoorKitchenPergola,
         },
       ]} />
 

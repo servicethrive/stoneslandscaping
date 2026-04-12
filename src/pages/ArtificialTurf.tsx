@@ -7,6 +7,8 @@ import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS } from "@/lib/constants";
+import turfLargeYard from "@/assets/projects/articifical_turf_in_large_yard.jpg";
+import turfFrontYard from "@/assets/projects/artifical_turf_in_front_yard.jpg";
 import { CheckCircle } from "lucide-react";
 
 const ArtificialTurf = () => {
@@ -40,12 +42,12 @@ const ArtificialTurf = () => {
         {
           title: "Installation Is Everything",
           text: "Here's what most homeowners don't realize about artificial turf: the installation is everything. The turf product itself matters, but even premium turf will fail if the base isn't graded correctly, the seams aren't properly glued, or the infill ratio is wrong. Proper base work, precise seaming, and correct infill application are what make the difference.",
-          image: IMAGES.zigzag6,
+          image: turfLargeYard,
         },
         {
           title: "Real Savings, Real Results",
           text: "We recently converted a 2,500-square-foot backyard in the Willow Glen area of San Jose from patchy, water-hungry natural grass to premium artificial turf with integrated paver borders. Within the first year, the turf installation paid for itself in water savings alone - and the yard looked better on day 365 than their natural lawn ever did.",
-          image: IMAGES.zigzag8,
+          image: turfFrontYard,
         },
       ]} />
 
