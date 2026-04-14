@@ -2,9 +2,9 @@ import { usePageMeta } from "@/hooks/use-page-meta";
 import Layout from "@/components/layout/Layout";
 import HeroSection from "@/components/sections/HeroSection";
 import TrustBar from "@/components/sections/TrustBar";
+import ProcessSteps from "@/components/sections/ProcessSteps";
 import CTABanner from "@/components/sections/CTABanner";
 import FAQAccordion from "@/components/sections/FAQAccordion";
-import DesignProcessBlock from "@/components/sections/DesignProcessBlock";
 import ZigZagSection from "@/components/sections/ZigZagSection";
 import { IMAGES, BUSINESS, SERVICES } from "@/lib/constants";
 import { getServiceSchema, getBreadcrumbSchema, getFAQSchema } from "@/lib/structured-data";
@@ -46,6 +46,7 @@ const Landscaping = () => {
       />
       <TrustBar />
 
+      {/* Intro — bg-background */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
@@ -54,11 +55,12 @@ const Landscaping = () => {
             Landscaping is far more than planting a few shrubs and laying sod. A thoughtfully designed landscape changes how you experience your home every single day - it creates functional outdoor rooms, improves curb appeal, reduces long-term maintenance, and adds real, measurable value to your property.
           </p>
           <p className="text-muted-foreground leading-relaxed font-light text-lg">
-            At {BUSINESS.name}, we take a design-build approach to every landscaping project. That means we handle the entire process in-house: site evaluation, design concepts, material selection, irrigation planning, grading, drainage, and full installation.
+            At {BUSINESS.name}, we take a design-build approach to every landscaping project. That means we handle the entire process in-house: site evaluation, design concepts, material selection, irrigation planning, grading, drainage, and full installation. Every landscaping project we complete includes a {BUSINESS.landscapeWarrantyDays}-day warranty on plants and materials.
           </p>
         </div>
       </section>
 
+      {/* ZigZag — alternating bg */}
       <ZigZagSection items={[
         {
           title: "Every Property, Every Scale",
@@ -72,6 +74,7 @@ const Landscaping = () => {
         },
       ]} />
 
+      {/* Card grid — bg-brand-cream */}
       <section className="py-20 lg:py-28 bg-brand-cream">
         <div className="container mx-auto px-4 max-w-5xl">
           <div className="text-center mb-14">
@@ -90,6 +93,7 @@ const Landscaping = () => {
         </div>
       </section>
 
+      {/* Checklist — bg-background */}
       <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
@@ -116,18 +120,15 @@ const Landscaping = () => {
         </div>
       </section>
 
-      <DesignProcessBlock />
+      {/* ProcessSteps — bg-brand-light-grey (component default) */}
+      <ProcessSteps title="Our Landscaping Process" steps={[
+        { title: "Consultation & Site Evaluation", description: "We assess your property's soil, sun exposure, drainage, and existing conditions - then discuss your vision and lifestyle needs." },
+        { title: "Design & Plant Selection", description: "Receive a detailed landscape plan with plant selections, irrigation layout, and material choices. 2D/3D renderings available for qualifying projects." },
+        { title: "Professional Installation", description: "Our crew handles grading, irrigation, planting, mulching, and all finishing details with clean job sites and clear communication." },
+        { title: "Final Walkthrough & Care Guide", description: `Walk the finished landscape with us, receive your ${BUSINESS.landscapeWarrantyDays}-day warranty, and get a detailed care and watering guide.` },
+      ]} />
 
-      <section className="py-20 lg:py-28 bg-background">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="w-12 h-0.5 bg-primary mb-6" />
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Our Landscape Warranty</h2>
-          <p className="text-muted-foreground leading-relaxed font-light text-lg">
-            Every landscaping project we complete includes a {BUSINESS.landscapeWarrantyDays}-day warranty on plants and materials. If anything we installed doesn't perform as expected within that period, we'll address it - no runaround, no excuses. We also provide detailed care instructions, watering schedules, and seasonal maintenance guidance.
-          </p>
-        </div>
-      </section>
-
+      {/* FAQ — bg-background */}
       <FAQAccordion faqs={faqs} />
 
       <CTABanner title="Plan Your Landscape Renovation" subtitle="Request a complimentary consultation and receive a clear, detailed proposal for your landscaping project." />

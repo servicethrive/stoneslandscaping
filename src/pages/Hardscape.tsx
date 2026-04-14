@@ -128,8 +128,34 @@ const Hardscape = () => {
         </div>
       </section>
 
-      {/* Hardscape Services */}
+      {/* Checklist — bg-background */}
       <section className="py-20 lg:py-28 bg-background">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <div className="w-12 h-0.5 bg-primary mb-6" />
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Why Invest in Professional Hardscape</h2>
+          <p className="text-muted-foreground mb-8 font-light leading-relaxed">
+            A well-built hardscape project changes how you use your property. It gives you defined spaces for cooking, dining, relaxing, and entertaining.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {[
+              "Adds usable square footage to your property",
+              "Increases home value and market appeal",
+              "Reduces long-term maintenance costs",
+              "Creates defined outdoor living zones",
+              "Solves drainage and grading problems",
+              "Delivers decades of performance with minimal upkeep",
+            ].map((item) => (
+              <div key={item} className="flex items-center gap-3 py-2">
+                <CheckCircle className="h-4 w-4 text-primary shrink-0" />
+                <span className="text-sm text-foreground font-light">{item}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Hardscape Services — bg-brand-cream */}
+      <section className="py-20 lg:py-28 bg-brand-cream">
         <div className="container mx-auto px-4">
           <div className="text-center mb-14">
             <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
@@ -150,30 +176,13 @@ const Hardscape = () => {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-brand-cream">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <div className="w-12 h-0.5 bg-primary mb-6" />
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Why Invest in Professional Hardscape</h2>
-          <p className="text-muted-foreground mb-5 leading-relaxed font-light text-lg">
-            A well-built hardscape project changes how you use your property. It gives you defined spaces for cooking, dining, relaxing, and entertaining - without the limitations of a basic lawn or deteriorating concrete slab.
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
-            {[
-              "Adds usable square footage to your property",
-              "Increases home value and market appeal",
-              "Reduces long-term maintenance costs",
-              "Creates defined outdoor living zones",
-              "Solves drainage and grading problems",
-              "Delivers decades of performance with minimal upkeep",
-            ].map((item) => (
-              <div key={item} className="flex items-center gap-3 py-2">
-                <CheckCircle className="h-4 w-4 text-primary shrink-0" />
-                <span className="text-sm text-foreground font-light">{item}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* ProcessSteps */}
+      <ProcessSteps title="Our Hardscape Process" steps={[
+        { title: "Consultation & Assessment", description: "We evaluate your property, discuss your vision, and assess grading, drainage, and structural requirements." },
+        { title: "Design & Proposal", description: "Receive a detailed proposal with scope, materials, timeline, and pricing. 2D/3D renderings available for qualifying projects." },
+        { title: "Professional Construction", description: "Excavation, grading, base preparation, and precision construction with premium materials - built to last decades." },
+        { title: "Final Walkthrough & Warranty", description: `Walk the completed project with us, confirm every detail, and receive your ${BUSINESS.paverWarrantyYears}-year warranty documentation.` },
+      ]} />
 
       <FAQAccordion faqs={faqs} />
 
