@@ -1,51 +1,46 @@
 
 
-## Maximize Structured Data (JSON-LD) for SEO & AI Search
+## Standardize Service Page Layouts
 
-### Current State
-Zero structured data exists on the site — no JSON-LD, no schema.org markup at all.
+### Problem
+The 5 service pages were built at different times and drifted into different section orders, background alternations, and process components. This creates an inconsistent user experience.
 
-### Plan
-Create a reusable `StructuredData` React component and inject rich JSON-LD schemas across key pages. All data pulls from the existing `BUSINESS` and `SERVICES` constants.
+### Standard Template
+Every service page will follow this exact section order:
 
-### Schemas to Add
+```text
+1. Hero
+2. TrustBar
+3. Intro text block          (bg-background)
+4. ZigZag image/text         (auto-alternating bg)
+5. Card grid (types/styles)  (bg-brand-cream)
+6. Checklist (applications)  (bg-background)
+7. ProcessSteps              (bg-brand-cream)
+8. FAQAccordion              (bg-background)
+9. CTABanner                 (dark)
+```
 
-| Schema Type | Page | Purpose |
-|---|---|---|
-| **LocalBusiness** (HomeAndConstructionBusiness) | Homepage (`/`) | Core business entity — name, address, phone, hours, geo coords, logo, license, priceRange, payment methods, founding date, service areas |
-| **WebSite** + SearchAction | Homepage | Tells Google this is the canonical site; enables sitelinks searchbox |
-| **Organization** | Homepage | Brand identity — logo, social profiles, contact points |
-| **Service** (×7) | Each service page | One per service — name, description, provider reference, area served, image |
-| **BreadcrumbList** | All inner pages | Navigation breadcrumbs for rich snippets |
-| **FAQPage** | Any page with FAQ accordion | FAQ rich results in search |
-| **Review** / **AggregateRating** | Reviews page | Star ratings in search results (5.0, 56 Google + 123 Yelp reviews) |
-| **GeoCircle** / **ServiceArea** | Service area pages | Geographic coverage for local pack |
-| **ContactPage** | Contact page | Marks the contact page for AI crawlers |
-| **AboutPage** | About page | Marks the about page |
-| **ImageGallery** | Gallery page | Image collection markup |
+Pages with extra content (Hardscape's service links, Outdoor Kitchens' pergola section, Landscaping's warranty block) keep those sections — they just slot into the correct position in the alternation pattern so backgrounds never repeat.
 
-### Files Changed
+### Changes per page
 
-1. **`src/components/StructuredData.tsx`** (new) — Generic component that accepts a JSON-LD object and renders a `<script type="application/ld+json">` tag via `dangerouslySetInnerHTML`
-2. **`src/lib/structured-data.ts`** (new) — Helper functions that generate each schema object from constants:
-   - `getLocalBusinessSchema()`
-   - `getWebSiteSchema()`
-   - `getOrganizationSchema()`
-   - `getServiceSchema(title, description, image, url)`
-   - `getBreadcrumbSchema(items)`
-   - `getFAQSchema(questions)`
-   - `getAggregateRatingSchema()`
-   - `getContactPageSchema()`
-   - `getAboutPageSchema()`
-3. **`src/pages/Index.tsx`** — Add LocalBusiness + WebSite + Organization schemas
-4. **`src/pages/About.tsx`** — Add AboutPage + BreadcrumbList
-5. **`src/pages/Contact.tsx`** — Add ContactPage + BreadcrumbList
-6. **`src/pages/Reviews.tsx`** — Add AggregateRating + Review + BreadcrumbList
-7. **`src/pages/Gallery.tsx`** — Add ImageGallery + BreadcrumbList
-8. **Each service page** (Pavers, Hardscape, Landscaping, etc.) — Add Service + BreadcrumbList
-9. **Each service area page** (Atherton, LosGatos, Saratoga) — Add LocalBusiness variant with specific areaServed + BreadcrumbList
-10. **FAQ sections** — Add FAQPage schema wherever `FAQAccordion` is used
+**Pavers** — Already closest to the template. Minor background alternation fix if needed. No structural changes.
 
-### What You'll See
-After implementation I'll output the full JSON-LD for the homepage so you can review exactly what search engines and AI will consume — the complete LocalBusiness entity with all 15+ fields, plus every other schema type.
+**Landscaping** — Replace `DesignProcessBlock` with `ProcessSteps` (using the same 4-step content). Move the warranty text into the intro or after the checklist, maintaining background alternation.
+
+**Outdoor Kitchens** — Already has ProcessSteps. Fix background alternation so the two card-grid sections (kitchen styles + pergola types) alternate cream/bg correctly instead of both being cream.
+
+**Hardscape** — Add a `ProcessSteps` section (4 steps: consultation, design, construction, walkthrough). Fix background alternation on the "Why Invest" and service links sections.
+
+**Retaining Walls** — Already matches the template. Confirm background alternation is correct.
+
+### Files changed
+- `src/pages/Landscaping.tsx` — swap DesignProcessBlock → ProcessSteps, reorder warranty block
+- `src/pages/Hardscape.tsx` — add ProcessSteps section
+- `src/pages/OutdoorKitchens.tsx` — fix background alternation on doubled cream sections
+- `src/pages/Pavers.tsx` — minor bg alternation check (likely no change)
+- `src/pages/RetainingWalls.tsx` — minor bg alternation check (likely no change)
+
+### Result
+All 5 service pages will feel like a cohesive set — same rhythm, same visual cadence, same component usage — while keeping their unique content.
 
