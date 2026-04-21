@@ -19,6 +19,13 @@ const ArtificialTurf = () => {
     "Artificial turf installation in San Jose. Premium synthetic lawns for residential & commercial. Low maintenance, year-round green. Free quotes."
   );
 
+  const turfTypes = [
+    { name: "Landscape Turf", desc: "Natural-looking residential lawns with a soft 1.5\"–2\" pile height. Designed to mimic the appearance and feel of healthy natural grass - the most popular choice for full front and backyard installations." },
+    { name: "Pet Turf", desc: "Engineered for homes with dogs and other pets. Antimicrobial infill controls odor, faster-draining backing handles daily use, and a more durable fiber stands up to running, digging, and play without matting." },
+    { name: "Putting Green Turf", desc: "Short-pile, dense turf engineered for true ball roll and consistent green speeds. Custom-contoured to your space with cup placements, fringe, and optional chipping zones for a backyard practice green." },
+    { name: "Playground Turf", desc: "IPEMA-certified safety-rated turf installed over a shock-absorbing pad. Provides a soft, clean, all-weather play surface for swing sets, climbing structures, and dedicated kids' play areas." },
+  ];
+
   const svc = SERVICES.find(s => s.path === "/artificial-turf")!;
   const faqs = [
     { question: "How long does artificial turf last?", answer: "Professionally installed premium turf typically lasts 15–20 years with minimal maintenance. The quality of the base preparation and the turf product itself are the two biggest factors in lifespan. We use commercial-grade products and proper base construction to maximize longevity." },
@@ -66,7 +73,27 @@ const ArtificialTurf = () => {
         },
       ]} />
 
+      {/* Card grid — bg-brand-cream */}
       <section className="py-20 lg:py-28 bg-brand-cream">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <div className="text-center mb-14">
+            <div className="w-12 h-0.5 bg-primary mx-auto mb-6" />
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Artificial Turf Options</h2>
+            <p className="text-muted-foreground mt-3 font-light">Premium synthetic turf systems matched to how you'll actually use the space</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {turfTypes.map((t) => (
+              <div key={t.name} className="bg-background p-8 rounded-sm border border-border/60 hover:border-primary/30 transition-colors duration-300">
+                <h3 className="font-display text-lg font-bold text-foreground mb-3">{t.name}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed font-light">{t.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Checklist — bg-background */}
+      <section className="py-20 lg:py-28 bg-background">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">Where Artificial Turf Works Best</h2>
@@ -93,7 +120,7 @@ const ArtificialTurf = () => {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="py-20 lg:py-28 bg-brand-cream">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Benefits of Professional Turf Installation</h2>

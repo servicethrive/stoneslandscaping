@@ -23,6 +23,7 @@ const ConcreteDriveways = () => {
     { name: "Standard Brushed Concrete", desc: "Clean, durable, and cost-effective. A brushed finish with proper reinforcement and control joints delivers the reliable, professional look that most Bay Area homes need - and it performs beautifully for decades." },
     { name: "Stamped Concrete", desc: "Textured patterns that replicate the look of natural stone, brick, slate, or flagstone. Stamped concrete adds distinctive visual character to your driveway at a fraction of the cost of natural materials - a popular upgrade for homeowners seeking visual impact." },
     { name: "Colored & Stained Concrete", desc: "Integral color mixed throughout the concrete for a consistent, fade-resistant tone, or acid stains applied after curing for rich, variegated earth tones. Available in a range of colors to complement your home's exterior palette." },
+    { name: "Exposed Aggregate", desc: "A pebble-finish concrete created by washing the surface to reveal the natural stone aggregate beneath. Delivers a textured, slip-resistant surface that's especially popular for driveways, pool decks, and walkways where added grip and visual depth are desired." },
   ];
 
   const svc = SERVICES.find(s => s.path === "/concrete-driveways")!;
@@ -79,7 +80,7 @@ const ConcreteDriveways = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">Concrete Driveway Options</h2>
             <p className="text-muted-foreground mt-3 font-light">Select the finish that matches your home's style and your expectations</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {concreteTypes.map((c) => (
               <div key={c.name} className="bg-background p-8 rounded-sm border border-border/60 hover:border-primary/30 transition-colors duration-300">
                 <h3 className="font-display text-lg font-bold text-foreground mb-3">{c.name}</h3>
