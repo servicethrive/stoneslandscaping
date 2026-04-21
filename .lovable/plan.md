@@ -1,46 +1,50 @@
 
 
-## Standardize Service Page Layouts
+## Standardize Card Grid to 2-Column Layout
 
 ### Problem
-The 5 service pages were built at different times and drifted into different section orders, background alternations, and process components. This creates an inconsistent user experience.
+Three service pages have inconsistent card grid layouts:
+- **Landscaping** "What We Build" — 3 columns (3 items)
+- **Concrete Driveways** "Concrete Driveway Options" — 3 columns (3 items)
+- **Artificial Turf** — missing the card grid section entirely
 
-### Standard Template
-Every service page will follow this exact section order:
+The reference pages (Pavers, Outdoor Kitchens, Hardscape, Retaining Walls) all use a **2-column** grid (`md:grid-cols-2`) inside a `max-w-5xl` container with `bg-brand-cream` background.
 
+### Standard Pattern
 ```text
-1. Hero
-2. TrustBar
-3. Intro text block          (bg-background)
-4. ZigZag image/text         (auto-alternating bg)
-5. Card grid (types/styles)  (bg-brand-cream)
-6. Checklist (applications)  (bg-background)
-7. ProcessSteps              (bg-brand-cream)
-8. FAQAccordion              (bg-background)
-9. CTABanner                 (dark)
+section.py-20.lg:py-28.bg-brand-cream
+  container.max-w-5xl
+    centered heading + accent bar
+    grid.grid-cols-1.md:grid-cols-2.gap-6
+      cards (4–6 items)
 ```
-
-Pages with extra content (Hardscape's service links, Outdoor Kitchens' pergola section, Landscaping's warranty block) keep those sections — they just slot into the correct position in the alternation pattern so backgrounds never repeat.
 
 ### Changes per page
 
-**Pavers** — Already closest to the template. Minor background alternation fix if needed. No structural changes.
+**1. `src/pages/Landscaping.tsx`** — "What We Build"
+- Change `md:grid-cols-3` → `md:grid-cols-2`
+- Expand `landscapeTypes` from 3 → 4 items by adding one more category (e.g. "Estate-Scale Property Landscapes" — large-lot full-property design for Atherton/Hillsborough estates)
 
-**Landscaping** — Replace `DesignProcessBlock` with `ProcessSteps` (using the same 4-step content). Move the warranty text into the intro or after the checklist, maintaining background alternation.
+**2. `src/pages/ConcreteDriveways.tsx`** — "Concrete Driveway Options"
+- Change `md:grid-cols-3` → `md:grid-cols-2`
+- Expand `concreteTypes` from 3 → 4 items by adding one more finish (e.g. "Exposed Aggregate" — pebble-finish concrete for a textured, slip-resistant surface popular for driveways and pool decks)
 
-**Outdoor Kitchens** — Already has ProcessSteps. Fix background alternation so the two card-grid sections (kitchen styles + pergola types) alternate cream/bg correctly instead of both being cream.
+**3. `src/pages/ArtificialTurf.tsx`** — add a new card grid section
+- Insert a new `bg-brand-cream` section titled "Artificial Turf Options" between the ZigZag and the existing "Where Artificial Turf Works Best" checklist
+- Use `md:grid-cols-2` with 4 cards:
+  - **Landscape Turf** — natural-looking residential lawns, soft pile, 1.5"–2"
+  - **Pet Turf** — antimicrobial infill, faster drainage, durable backing
+  - **Putting Green Turf** — short-pile, true ball roll, custom contours
+  - **Playground Turf** — IPEMA-certified safety-rated turf with shock pad
 
-**Hardscape** — Add a `ProcessSteps` section (4 steps: consultation, design, construction, walkthrough). Fix background alternation on the "Why Invest" and service links sections.
-
-**Retaining Walls** — Already matches the template. Confirm background alternation is correct.
+### Background rhythm impact
+Adding the new section on Artificial Turf shifts the next section. Update the following "Where Artificial Turf Works Best" section from `bg-brand-cream` → `bg-background`, and the "Benefits of Professional Turf Installation" stays as `bg-brand-cream`-or-`bg-background` to maintain the cream/background alternation through the rest of the page.
 
 ### Files changed
-- `src/pages/Landscaping.tsx` — swap DesignProcessBlock → ProcessSteps, reorder warranty block
-- `src/pages/Hardscape.tsx` — add ProcessSteps section
-- `src/pages/OutdoorKitchens.tsx` — fix background alternation on doubled cream sections
-- `src/pages/Pavers.tsx` — minor bg alternation check (likely no change)
-- `src/pages/RetainingWalls.tsx` — minor bg alternation check (likely no change)
+- `src/pages/Landscaping.tsx`
+- `src/pages/ConcreteDriveways.tsx`
+- `src/pages/ArtificialTurf.tsx`
 
 ### Result
-All 5 service pages will feel like a cohesive set — same rhythm, same visual cadence, same component usage — while keeping their unique content.
+All 7 service pages will share the identical "Options/Materials/Types" section: 2-column grid, cream background, max-w-5xl, centered heading — visually unified across the entire service set.
 
