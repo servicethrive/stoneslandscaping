@@ -17,6 +17,7 @@ const landscapeTypes = [
   { name: "Front Yard Landscaping", desc: "Transform your home's first impression with structured planting, clean hardscape borders, and drought-tolerant design that elevates curb appeal." },
   { name: "Backyard Living Landscapes", desc: "Create functional outdoor living areas with defined zones for dining, cooking, relaxation, and entertaining - all connected by thoughtful landscape design." },
   { name: "Low-Maintenance Luxury", desc: "Designed for busy professionals who want a beautiful, polished landscape without constant upkeep. Drought-tolerant natives, efficient smart irrigation, and premium ground covers." },
+  { name: "Estate-Scale Property Landscapes", desc: "Large-lot, full-property landscape design for estates in Atherton, Hillsborough, and Los Altos Hills. Coordinated plantings, mature specimen trees, and integrated hardscape that complements world-class architecture." },
 ];
 
 const Landscaping = () => {
@@ -82,7 +83,7 @@ const Landscaping = () => {
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground">What We Build</h2>
             <p className="text-muted-foreground mt-3 font-light">Every landscape project is custom-designed for your property and lifestyle</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {landscapeTypes.map((item) => (
               <div key={item.name} className="bg-background p-8 rounded-sm border border-border/60 hover:border-primary/30 transition-colors duration-300">
                 <h3 className="font-display text-lg font-bold text-foreground mb-3">{item.name}</h3>
