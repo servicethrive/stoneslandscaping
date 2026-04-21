@@ -120,7 +120,7 @@ const ArtificialTurf = () => {
         </div>
       </section>
 
-      <section className="py-20 lg:py-28 bg-background">
+      <section className="py-20 lg:py-28 bg-brand-cream">
         <div className="container mx-auto px-4 max-w-4xl">
           <div className="w-12 h-0.5 bg-primary mb-6" />
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">Benefits of Professional Turf Installation</h2>
