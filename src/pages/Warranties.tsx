@@ -8,8 +8,8 @@ import StructuredData from "@/components/StructuredData";
 
 const Warranties = () => {
   usePageMeta(
-    "Warranties | San Jose Hardscape Contractor | Stones Landscaping Inc.",
-    "Industry-leading warranties from San Jose's premier hardscape contractor. 21-year paver warranty, 90-day landscape guarantee."
+    "Warranties | 21-Year Paver Warranty | Stones Landscaping",
+    "Industry-leading 21-year paver warranty & 90-day landscape guarantee from San Jose's premier hardscape contractor. Build with confidence."
   );
 
   return (

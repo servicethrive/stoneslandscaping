@@ -1,50 +1,44 @@
+## SEO Meta Tag Optimization — All 18 Pages
 
+### Deliverable 1: Audit Spreadsheet (already generated)
 
-## Standardize Card Grid to 2-Column Layout
+`meta-tags-audit.xlsx` — color-coded comparison of current vs. recommended titles and descriptions for all 18 pages with character counts, search intent classification, and Google compliance flags (green = within limits, red = over).
 
-### Problem
-Three service pages have inconsistent card grid layouts:
-- **Landscaping** "What We Build" — 3 columns (3 items)
-- **Concrete Driveways** "Concrete Driveway Options" — 3 columns (3 items)
-- **Artificial Turf** — missing the card grid section entirely
+<lov-artifact path="meta-tags-audit.xlsx" mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></lov-artifact>
 
-The reference pages (Pavers, Outdoor Kitchens, Hardscape, Retaining Walls) all use a **2-column** grid (`md:grid-cols-2`) inside a `max-w-5xl` container with `bg-brand-cream` background.
+### Deliverable 2: Update `usePageMeta()` calls in all 18 page files
 
-### Standard Pattern
-```text
-section.py-20.lg:py-28.bg-brand-cream
-  container.max-w-5xl
-    centered heading + accent bar
-    grid.grid-cols-1.md:grid-cols-2.gap-6
-      cards (4–6 items)
-```
+**Standards applied:**
+- Titles: 50–60 characters, primary keyword front-loaded, brand suffix only where space allows
+- Descriptions: 130–160 characters, includes CTA verb (Get, Browse, See, Read, Contact), location keyword, and value prop
+- Removed "Inc." and shortened brand suffix to free up keyword budget
+- Aligned each page to its dominant search intent (commercial/service, informational, local, transactional)
 
-### Changes per page
+### Files to update (18)
 
-**1. `src/pages/Landscaping.tsx`** — "What We Build"
-- Change `md:grid-cols-3` → `md:grid-cols-2`
-- Expand `landscapeTypes` from 3 → 4 items by adding one more category (e.g. "Estate-Scale Property Landscapes" — large-lot full-property design for Atherton/Hillsborough estates)
+| Page | New Title (chars) |
+|------|-------------------|
+| `src/pages/Index.tsx` | San Jose Landscape & Hardscape Contractor \| Stones Landscaping (62) |
+| `src/pages/Pavers.tsx` | Paver Patios San Jose \| Patio, Walkway & Driveway Installation (62) |
+| `src/pages/Hardscape.tsx` | Hardscape Contractor San Jose \| Patios, Walls & Fire Features (61) |
+| `src/pages/OutdoorKitchens.tsx` | Outdoor Kitchens San Jose \| Custom BBQ Islands & Pergolas (57) |
+| `src/pages/RetainingWalls.tsx` | Retaining Walls San Jose \| Structural & Hillside Wall Builder (61) |
+| `src/pages/ConcreteDriveways.tsx` | Concrete Driveways San Jose \| Stamped & Decorative Concrete (59) |
+| `src/pages/Landscaping.tsx` | Landscape Design San Jose \| Luxury Design-Build Landscaping (59) |
+| `src/pages/ArtificialTurf.tsx` | Artificial Turf San Jose \| Synthetic Lawn Installation (54) |
+| `src/pages/About.tsx` | About Stones Landscaping \| Licensed San Jose Contractor (55) |
+| `src/pages/OurProcess.tsx` | Our Process \| How We Build Hardscape Projects in San Jose (57) |
+| `src/pages/Warranties.tsx` | Warranties \| 21-Year Paver Warranty \| Stones Landscaping (56) |
+| `src/pages/Reviews.tsx` | Reviews \| 5-Star San Jose Landscape & Hardscape Contractor (58) |
+| `src/pages/Gallery.tsx` | Project Gallery \| San Jose Hardscape & Landscape Photos (55) |
+| `src/pages/ServiceAreas.tsx` | Service Areas \| San Jose, Atherton, Los Gatos & Saratoga (56) |
+| `src/pages/Atherton.tsx` | Atherton Landscaping & Hardscape \| Luxury Estate Contractor (59) |
+| `src/pages/LosGatos.tsx` | Los Gatos Landscaping & Hardscape \| Hillside Specialists (56) |
+| `src/pages/Saratoga.tsx` | Saratoga Landscaping & Hardscape \| Luxury Outdoor Living (56) |
+| `src/pages/Contact.tsx` | Contact Us \| Free Estimate in San Jose \| Stones Landscaping (59) |
 
-**2. `src/pages/ConcreteDriveways.tsx`** — "Concrete Driveway Options"
-- Change `md:grid-cols-3` → `md:grid-cols-2`
-- Expand `concreteTypes` from 3 → 4 items by adding one more finish (e.g. "Exposed Aggregate" — pebble-finish concrete for a textured, slip-resistant surface popular for driveways and pool decks)
-
-**3. `src/pages/ArtificialTurf.tsx`** — add a new card grid section
-- Insert a new `bg-brand-cream` section titled "Artificial Turf Options" between the ZigZag and the existing "Where Artificial Turf Works Best" checklist
-- Use `md:grid-cols-2` with 4 cards:
-  - **Landscape Turf** — natural-looking residential lawns, soft pile, 1.5"–2"
-  - **Pet Turf** — antimicrobial infill, faster drainage, durable backing
-  - **Putting Green Turf** — short-pile, true ball roll, custom contours
-  - **Playground Turf** — IPEMA-certified safety-rated turf with shock pad
-
-### Background rhythm impact
-Adding the new section on Artificial Turf shifts the next section. Update the following "Where Artificial Turf Works Best" section from `bg-brand-cream` → `bg-background`, and the "Benefits of Professional Turf Installation" stays as `bg-brand-cream`-or-`bg-background` to maintain the cream/background alternation through the rest of the page.
-
-### Files changed
-- `src/pages/Landscaping.tsx`
-- `src/pages/ConcreteDriveways.tsx`
-- `src/pages/ArtificialTurf.tsx`
+All matching descriptions (130–143 chars each) are in the spreadsheet — full copy is ready and will be written verbatim into each `usePageMeta()` call.
 
 ### Result
-All 7 service pages will share the identical "Options/Materials/Types" section: 2-column grid, cream background, max-w-5xl, centered heading — visually unified across the entire service set.
 
+Every page hits Google's title (≤60 chars target, all ≤62) and description (130–160) sweet spots, primary keywords are front-loaded, and each page reflects its actual search intent. Approve to apply all 18 file edits.

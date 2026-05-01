@@ -8,8 +8,8 @@ import StructuredData from "@/components/StructuredData";
 
 const OurProcess = () => {
   usePageMeta(
-    "Our Process | San Jose Hardscape Contractor | Stones Landscaping Inc.",
-    "Our proven process from consultation to completion. San Jose's trusted hardscape contractor. Transparent pricing, detailed proposals."
+    "Our Process | How We Build Hardscape Projects in San Jose",
+    "See our step-by-step hardscape process: consultation, design, transparent pricing & expert build. San Jose's trusted contractor."
   );
 
   return (

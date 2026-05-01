@@ -16,8 +16,8 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 
 const Atherton = () => {
   usePageMeta(
-    "Luxury Landscaping & Hardscape Atherton, CA | Estate Outdoor Renovation | Stones Landscaping",
-    "Luxury estate landscaping & hardscape in Atherton. Custom outdoor living for prestigious properties."
+    "Atherton Landscaping & Hardscape | Luxury Estate Contractor",
+    "Luxury landscaping & hardscape contractor in Atherton, CA. Estate-scale outdoor living, custom design-build for prestigious properties."
   );
 
   return (

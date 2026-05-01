@@ -30,8 +30,8 @@ const patioTypes = [
 
 const Hardscape = () => {
   usePageMeta(
-    "Hardscape Contractor San Jose | Patios, Walls & Outdoor Living | Stones Landscaping",
-    "Full-service hardscape contractor in San Jose. Patios, retaining walls, fire features & outdoor living. Premium materials, expert craftsmanship."
+    "Hardscape Contractor San Jose | Patios, Walls & Fire Features",
+    "San Jose hardscape contractor for patios, retaining walls, fire pits & outdoor living. Premium materials & expert craftsmanship. Free quote."
   );
 
   const svc = SERVICES.find(s => s.path === "/hardscape")!;

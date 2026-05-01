@@ -17,8 +17,8 @@ import { CheckCircle } from "lucide-react";
 
 const Pavers = () => {
   usePageMeta(
-    "Paver Patio Contractor San Jose | Custom Patios, Walkways & Driveways | Stones Landscaping",
-    "San Jose paver patio contractor. Custom patios, walkways & driveways with 21-year warranty. Belgard & Tremron certified. Free estimates."
+    "Paver Patios San Jose | Patio, Walkway & Driveway Installation",
+    "San Jose paver installation: patios, walkways & driveways. Belgard & Tremron certified, 21-year warranty. Get a free design estimate today."
   );
 
   const materials = [

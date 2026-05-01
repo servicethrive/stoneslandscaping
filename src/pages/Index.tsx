@@ -18,8 +18,8 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 
 const Index = () => {
   usePageMeta(
-    "Stones Landscaping Inc. | Premium Hardscape & Outdoor Living | San Jose, CA",
-    "Premium hardscape contractor in San Jose. Custom paver patios, outdoor kitchens, retaining walls & backyard remodels. Free estimates."
+    "San Jose Landscape & Hardscape Contractor | Stones Landscaping",
+    "Premium San Jose landscape & hardscape contractor. Paver patios, outdoor kitchens, retaining walls & full backyard design-build. Free estimate."
   );
 
   return (

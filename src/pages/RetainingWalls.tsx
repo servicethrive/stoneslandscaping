@@ -15,8 +15,8 @@ import { CheckCircle } from "lucide-react";
 
 const RetainingWalls = () => {
   usePageMeta(
-    "Retaining Wall Contractor San Jose | Structural & Decorative Walls | Stones Landscaping",
-    "Retaining wall contractor in San Jose. Structural & decorative walls, hillside solutions. Expert engineering, premium materials."
+    "Retaining Walls San Jose | Structural & Hillside Wall Builder",
+    "San Jose retaining wall contractor: structural, decorative & hillside walls. Engineered solutions, premium block & stone. Free site visit."
   );
 
   const wallTypes = [

@@ -15,8 +15,8 @@ import { CheckCircle } from "lucide-react";
 
 const ArtificialTurf = () => {
   usePageMeta(
-    "Artificial Turf Installation San Jose | Premium Synthetic Lawns | Stones Landscaping",
-    "Artificial turf installation in San Jose. Premium synthetic lawns for residential & commercial. Low maintenance, year-round green. Free quotes."
+    "Artificial Turf San Jose | Synthetic Lawn Installation",
+    "San Jose artificial turf installation. Premium synthetic lawns, pet & putting green turf. Low-maintenance, year-round green. Free quote."
   );
 
   const turfTypes = [

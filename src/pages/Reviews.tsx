@@ -18,8 +18,8 @@ const reviewHighlights = [
 
 const Reviews = () => {
   usePageMeta(
-    "Reviews | Stones Landscaping Inc. | 5-Star Rated San Jose Contractor",
-    "5-star rated hardscape & landscaping contractor in San Jose. Read reviews from Silicon Valley homeowners."
+    "Reviews | 5-Star San Jose Landscape & Hardscape Contractor",
+    "Read 5-star reviews from Silicon Valley homeowners. San Jose's top-rated hardscape & landscaping contractor. See real client testimonials."
   );
 
   return (

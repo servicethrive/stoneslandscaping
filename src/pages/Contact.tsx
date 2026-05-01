@@ -15,8 +15,8 @@ const Contact = () => {
   const { toast } = useToast();
   const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", message: "" });
   usePageMeta(
-    "Contact Us | Request a Free Estimate in San Jose, CA | Stones Landscaping Inc.",
-    "Contact Stones Landscaping for a free estimate in San Jose. Call, email, or fill out our form. Licensed hardscape & landscaping contractor."
+    "Contact Us | Free Estimate in San Jose | Stones Landscaping",
+    "Contact Stones Landscaping for a free San Jose estimate. Call, email, or request a quote online. Licensed hardscape & landscape contractor."
   );
 
   const handleSubmit = (e: React.FormEvent) => {

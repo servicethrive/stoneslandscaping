@@ -17,8 +17,8 @@ const About = () => {
   const [fleetLightboxOpen, setFleetLightboxOpen] = useState(false);
   const [fleetLightboxIndex, setFleetLightboxIndex] = useState(0);
   usePageMeta(
-    "About Stones Landscaping | Licensed San Jose Hardscape & Outdoor Living Contractor",
-    "Meet Stones Landscaping — licensed San Jose hardscape & outdoor living contractor. Experienced crews, premium materials, proven results."
+    "About Stones Landscaping | Licensed San Jose Contractor",
+    "Meet Stones Landscaping: licensed San Jose hardscape & outdoor living contractor with experienced crews and a proven track record."
   );
 
   return (

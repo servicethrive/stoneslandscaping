@@ -15,8 +15,8 @@ import { CheckCircle } from "lucide-react";
 
 const OutdoorKitchens = () => {
   usePageMeta(
-    "Outdoor Kitchens & Living Structures San Jose | Custom BBQ Islands, Pergolas & Shade | Stones Landscaping",
-    "Custom outdoor kitchens & BBQ islands in San Jose. Pergolas, shade structures & outdoor living spaces. Licensed contractor, free consultation."
+    "Outdoor Kitchens San Jose | Custom BBQ Islands & Pergolas",
+    "Custom outdoor kitchens, BBQ islands & pergolas in San Jose. Licensed contractor designing luxury outdoor living spaces. Free consultation."
   );
 
   const kitchenStyles = [

@@ -15,8 +15,8 @@ import { CheckCircle } from "lucide-react";
 
 const ConcreteDriveways = () => {
   usePageMeta(
-    "Concrete Driveway Contractor San Jose | Stamped & Decorative | Stones Landscaping",
-    "Stamped & decorative concrete driveway contractor in San Jose. Custom finishes, expert installation. Licensed & insured. Free estimates."
+    "Concrete Driveways San Jose | Stamped & Decorative Concrete",
+    "San Jose concrete driveway contractor specializing in stamped & decorative finishes. Licensed, insured & built to last. Free estimate."
   );
 
   const concreteTypes = [
