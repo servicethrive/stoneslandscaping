@@ -12,6 +12,7 @@ import ConcreteDriveways from "./pages/ConcreteDriveways";
 import OutdoorKitchens from "./pages/OutdoorKitchens";
 import RetainingWalls from "./pages/RetainingWalls";
 import ArtificialTurf from "./pages/ArtificialTurf";
+import Services from "./pages/Services";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Reviews from "./pages/Reviews";
@@ -33,6 +34,7 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/hardscape" element={<Hardscape />} />
           <Route path="/pavers" element={<Pavers />} />
           <Route path="/landscaping" element={<Landscaping />} />

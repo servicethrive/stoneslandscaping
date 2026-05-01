@@ -57,7 +57,7 @@ const Index = () => {
               />
             ))}
             <Link
-              to="/service-areas"
+              to="/services"
               className="group relative aspect-[3/4] rounded-sm overflow-hidden bg-brand-charcoal flex flex-col items-center justify-center text-center p-8 hover:bg-brand-charcoal/90 transition-colors"
             >
               <div className="w-12 h-0.5 bg-primary mb-6" />
