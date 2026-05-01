@@ -1,44 +1,79 @@
-## SEO Meta Tag Optimization — All 18 Pages
+## Build a Robust Main Services Page (`/services`)
 
-### Deliverable 1: Audit Spreadsheet (already generated)
+### The Problem
+- No `/services` route exists at all.
+- The "See All Services" card on the home page wrongly links to `/service-areas` (a geographic page, not a services page).
+- The navbar "Services" dropdown has no parent landing page — users can only jump straight into a sub-service.
 
-`meta-tags-audit.xlsx` — color-coded comparison of current vs. recommended titles and descriptions for all 18 pages with character counts, search intent classification, and Google compliance flags (green = within limits, red = over).
+### The Fix
+Create a new `src/pages/Services.tsx` that acts as the central hub for all 7 services — with content and structure that does NOT duplicate the Home page or any individual service page.
 
-<lov-artifact path="meta-tags-audit.xlsx" mime_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"></lov-artifact>
+### Page Structure (unique sections — none copied from Home or service pages)
 
-### Deliverable 2: Update `usePageMeta()` calls in all 18 page files
+```text
+1. Hero (dark, full-width)
+   - H1: "Outdoor Living, Designed & Built in One Place"
+   - Sub: positioning copy on what makes a true full-service design-build firm
+   - Primary CTA: "Request a Free Consultation"
+   - Secondary CTA: "View Our Gallery"
 
-**Standards applied:**
-- Titles: 50–60 characters, primary keyword front-loaded, brand suffix only where space allows
-- Descriptions: 130–160 characters, includes CTA verb (Get, Browse, See, Read, Contact), location keyword, and value prop
-- Removed "Inc." and shortened brand suffix to free up keyword budget
-- Aligned each page to its dominant search intent (commercial/service, informational, local, transactional)
+2. Intro / Philosophy band (cream)
+   - Short narrative: "Why we offer every service under one roof"
+   - 3 short value props (single-team accountability, integrated design, one warranty owner)
+   - NOT the same copy as the homepage "Why Choose Us" section
 
-### Files to update (18)
+3. The Full Service Catalog (background)
+   - Category-grouped layout (NOT the same 3-card grid as the homepage)
+   - Group A: Hardscape & Stonework — Pavers, Hardscape, Retaining Walls, Concrete Driveways
+   - Group B: Outdoor Living — Outdoor Kitchens
+   - Group C: Landscape & Greenery — Landscaping, Artificial Turf
+   - Each item: icon + title + 1-line description + "Learn More →"
+   - Visual treatment: list-style with subtle dividers (not square image cards), so it's clearly distinct from the Home grid
 
-| Page | New Title (chars) |
-|------|-------------------|
-| `src/pages/Index.tsx` | San Jose Landscape & Hardscape Contractor \| Stones Landscaping (62) |
-| `src/pages/Pavers.tsx` | Paver Patios San Jose \| Patio, Walkway & Driveway Installation (62) |
-| `src/pages/Hardscape.tsx` | Hardscape Contractor San Jose \| Patios, Walls & Fire Features (61) |
-| `src/pages/OutdoorKitchens.tsx` | Outdoor Kitchens San Jose \| Custom BBQ Islands & Pergolas (57) |
-| `src/pages/RetainingWalls.tsx` | Retaining Walls San Jose \| Structural & Hillside Wall Builder (61) |
-| `src/pages/ConcreteDriveways.tsx` | Concrete Driveways San Jose \| Stamped & Decorative Concrete (59) |
-| `src/pages/Landscaping.tsx` | Landscape Design San Jose \| Luxury Design-Build Landscaping (59) |
-| `src/pages/ArtificialTurf.tsx` | Artificial Turf San Jose \| Synthetic Lawn Installation (54) |
-| `src/pages/About.tsx` | About Stones Landscaping \| Licensed San Jose Contractor (55) |
-| `src/pages/OurProcess.tsx` | Our Process \| How We Build Hardscape Projects in San Jose (57) |
-| `src/pages/Warranties.tsx` | Warranties \| 21-Year Paver Warranty \| Stones Landscaping (56) |
-| `src/pages/Reviews.tsx` | Reviews \| 5-Star San Jose Landscape & Hardscape Contractor (58) |
-| `src/pages/Gallery.tsx` | Project Gallery \| San Jose Hardscape & Landscape Photos (55) |
-| `src/pages/ServiceAreas.tsx` | Service Areas \| San Jose, Atherton, Los Gatos & Saratoga (56) |
-| `src/pages/Atherton.tsx` | Atherton Landscaping & Hardscape \| Luxury Estate Contractor (59) |
-| `src/pages/LosGatos.tsx` | Los Gatos Landscaping & Hardscape \| Hillside Specialists (56) |
-| `src/pages/Saratoga.tsx` | Saratoga Landscaping & Hardscape \| Luxury Outdoor Living (56) |
-| `src/pages/Contact.tsx` | Contact Us \| Free Estimate in San Jose \| Stones Landscaping (59) |
+4. How Services Combine (cream) — UNIQUE to this page
+   - "Most projects use 2–4 of our services together"
+   - 3 example bundle cards:
+     • "The Backyard Refresh" (Pavers + Landscaping + Artificial Turf)
+     • "The Entertainer's Yard" (Hardscape + Outdoor Kitchen + Landscaping)
+     • "The Curb Appeal Upgrade" (Concrete Driveway + Pavers + Landscaping)
+   - Each shows what's included and starting price range concept (no fake numbers — "Project scopes typically start around X")
 
-All matching descriptions (130–143 chars each) are in the spreadsheet — full copy is ready and will be written verbatim into each `usePageMeta()` call.
+5. What's Included With Every Service (background) — UNIQUE
+   - Comparison-style row list (not the trust bar)
+   - 6 items: licensed crews, in-house design, permit handling, transparent quotes, project manager, warranty-backed
+   - Distinct from the homepage trust bar (different copy + different layout)
+
+6. Service Area + Pricing Transparency band (cream)
+   - 2-column: left = "Where we work" (link to /service-areas), right = "How we price" (link to /our-process)
+   - This deliberately routes users to the OTHER hubs so /services becomes the true crossroads
+
+7. FAQ (background) — services-specific (not on any other page)
+   - "Can I hire you for just one service?"
+   - "Do you subcontract any work?"
+   - "What's the typical timeline for a multi-service project?"
+   - "Do you handle HOA / city permits?"
+   - "Can I phase the project over multiple years?"
+
+8. Final CTA banner (existing CTABanner component, fresh copy)
+   - "Not sure which services you need? We'll help you scope it."
+```
+
+### Routing & Navigation Wiring
+- **Add route** in `src/App.tsx`: `<Route path="/services" element={<Services />} />`
+- **Fix Home page card** in `src/pages/Index.tsx` line 60: change `to="/service-areas"` → `to="/services"`
+- **Add navbar parent link** in `src/components/layout/Navbar.tsx`: add an "All Services →" link at the top of the desktop dropdown panel and as the first item in the mobile services section, both pointing to `/services`
+
+### SEO
+- Title: `Services | Hardscape, Landscape & Outdoor Living | San Jose` (60 chars)
+- Description: `Explore every service offered by Stones Landscaping: paver patios, hardscape, outdoor kitchens, retaining walls, landscape design & turf in San Jose.` (148 chars)
+- Add Service-list / ItemList structured data via existing `StructuredData` component
+- Add breadcrumb schema
+
+### Files
+- **New**: `src/pages/Services.tsx`
+- **Edit**: `src/App.tsx` (route)
+- **Edit**: `src/pages/Index.tsx` (fix the broken "See All Services" link)
+- **Edit**: `src/components/layout/Navbar.tsx` (add parent "All Services" link in dropdown + mobile)
 
 ### Result
-
-Every page hits Google's title (≤60 chars target, all ≤62) and description (130–160) sweet spots, primary keywords are front-loaded, and each page reflects its actual search intent. Approve to apply all 18 file edits.
+A genuine services hub with unique sections (philosophy, service-bundle examples, services-only FAQ, cross-hub pricing/area band) — not a rehash of the homepage grid or individual service pages. The "See All Services" CTA finally lands where it should, and the navbar dropdown gets a proper landing page.
