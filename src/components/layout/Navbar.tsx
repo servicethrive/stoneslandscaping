@@ -59,7 +59,17 @@ const Navbar = () => {
               Services <ChevronDown className={`h-3.5 w-3.5 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
             </button>
             {servicesOpen && (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[520px] bg-white rounded-sm shadow-2xl border border-border/60 pt-2 px-6 pb-6 before:absolute before:content-[''] before:-top-4 before:left-0 before:right-0 before:h-4">
+              <div className="absolute top-full left-1/2 -translate-x-1/2 w-[520px] bg-white rounded-sm shadow-2xl border border-border/60 pt-2 px-6 pb-4 before:absolute before:content-[''] before:-top-4 before:left-0 before:right-0 before:h-4">
+                <Link
+                  to="/services"
+                  className="flex items-center justify-between px-4 py-3 mb-2 rounded-sm bg-brand-cream/60 hover:bg-brand-cream transition-colors group"
+                  onClick={() => setServicesOpen(false)}
+                >
+                  <span className="text-xs font-bold text-foreground uppercase tracking-widest group-hover:text-primary transition-colors">
+                    All Services Overview
+                  </span>
+                  <ChevronDown className="h-3.5 w-3.5 -rotate-90 text-primary" />
+                </Link>
                 <div className="grid grid-cols-2 gap-x-6 gap-y-1">
                   {SERVICES.map((s) => (
                     <Link
@@ -136,6 +146,13 @@ const Navbar = () => {
         <div className="lg:hidden bg-white border-t border-border/40 shadow-2xl max-h-[80vh] overflow-y-auto">
           <div className="px-4 py-6 space-y-1">
             <p className="text-xs font-semibold uppercase text-muted-foreground px-3 pb-3 tracking-widest">Services</p>
+            <Link
+              to="/services"
+              className="block px-3 py-3 text-sm font-bold text-primary hover:bg-brand-light-grey rounded-sm transition-colors"
+              onClick={() => setMobileOpen(false)}
+            >
+              All Services Overview
+            </Link>
             {SERVICES.map((s) => (
               <Link
                 key={s.path}
