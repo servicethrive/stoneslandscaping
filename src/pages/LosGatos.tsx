@@ -16,8 +16,8 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 
 const LosGatos = () => {
   usePageMeta(
-    "Landscaping & Hardscape Los Gatos, CA | Hillside & Luxury Outdoor Renovation | Stones Landscaping",
-    "Premium landscaping & hardscape in Los Gatos. Hillside solutions, luxury outdoor renovations."
+    "Los Gatos Landscaping & Hardscape | Hillside Specialists",
+    "Premium Los Gatos landscaping & hardscape contractor. Hillside retaining walls, luxury outdoor renovations & full backyard design-build."
   );
 
   return (

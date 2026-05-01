@@ -80,8 +80,8 @@ const galleryImages = [
 
 const Gallery = () => {
   usePageMeta(
-    "Project Gallery | Stones Landscaping Inc. | San Jose, CA",
-    "Browse completed hardscape & landscaping projects in San Jose. Paver patios, outdoor kitchens, retaining walls & more."
+    "Project Gallery | San Jose Hardscape & Landscape Photos",
+    "Browse our San Jose project gallery: paver patios, outdoor kitchens, retaining walls & full backyard transformations. Get inspired."
   );
 
   return (

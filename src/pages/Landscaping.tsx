@@ -22,8 +22,8 @@ const landscapeTypes = [
 
 const Landscaping = () => {
   usePageMeta(
-    "Luxury Landscaping San Jose | Design-Build Landscape Contractor | Stones Landscaping",
-    "Luxury landscaping contractor in San Jose. Full design-build services for Bay Area homeowners. Drought-tolerant, custom plantings & more."
+    "Landscape Design San Jose | Luxury Design-Build Landscaping",
+    "San Jose luxury landscape design-build firm. Custom plantings, drought-tolerant designs & full backyard transformations. Free consultation."
   );
 
   const svc = SERVICES.find(s => s.path === "/landscaping")!;

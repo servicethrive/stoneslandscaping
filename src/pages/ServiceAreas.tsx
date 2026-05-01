@@ -14,8 +14,8 @@ import pebbleStonesLandscape from "@/assets/projects/pebble-stones-landscape-2.j
 
 const ServiceAreas = () => {
   usePageMeta(
-    "Service Areas | San Jose & Bay Area | Landscaping & Hardscape Contractor | Stones Landscaping",
-    "Serving San Jose, Atherton, Los Gatos, Saratoga & Silicon Valley. Premium hardscape & landscaping contractor."
+    "Service Areas | San Jose, Atherton, Los Gatos & Saratoga",
+    "Premium hardscape & landscaping serving San Jose, Atherton, Los Gatos, Saratoga & all of Silicon Valley. See our full service area."
   );
 
   return (

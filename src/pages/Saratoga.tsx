@@ -16,8 +16,8 @@ import { CheckCircle, ArrowRight } from "lucide-react";
 
 const Saratoga = () => {
   usePageMeta(
-    "Premium Landscaping & Hardscape Saratoga, CA | Luxury Outdoor Living | Stones Landscaping",
-    "Premium landscaping & hardscape in Saratoga. Luxury outdoor living design & construction."
+    "Saratoga Landscaping & Hardscape | Luxury Outdoor Living",
+    "Premium Saratoga landscaping & hardscape contractor. Luxury outdoor living design-build for upscale Saratoga homes. Free consultation."
   );
 
   return (
